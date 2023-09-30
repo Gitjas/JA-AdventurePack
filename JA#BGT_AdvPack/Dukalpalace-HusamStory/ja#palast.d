@@ -198,39 +198,7 @@ END
 
 
 ALTER_TRANS FLAM10 // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~Wait(5)
-SetGlobal("JA#ALERT","%NBaldursGate_DucalPalace_L3%",1)~
-END
-
-ALTER_TRANS FLAM10 // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~Wait(5)
-SetGlobal("JA#ALERT","%NBaldursGate_DucalPalace_L3%",1)~
-END
-
-ALTER_TRANS FLAM10 // file name
-BEGIN 4 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~Wait(5)
-SetGlobal("JA#ALERT","%NBaldursGate_DucalPalace_L3%",1)~
-END
-
-ALTER_TRANS FLAM10 // file name
-BEGIN 5 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~Wait(5)
-SetGlobal("JA#ALERT","%NBaldursGate_DucalPalace_L3%",1)~
-END
-
-ALTER_TRANS FLAM10 // file name
-BEGIN 6 END // state number (can be more than one)
+BEGIN 1 3 4 5 6 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~Wait(5)

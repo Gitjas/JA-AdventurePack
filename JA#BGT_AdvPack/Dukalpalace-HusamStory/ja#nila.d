@@ -19,16 +19,7 @@ NumTimesTalkedToGT(0)
 !Global("JA#NILA","%NBaldursGate_DucalPalace_L2%",2)~
 
 ALTER_TRANS NILA // file name
-BEGIN 0 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#NILA_WHO","LOCALS",1)~
-  "REPLY" ~@8~
-  "EPILOGUE" ~GOTO JA#NILA_3~
-END
-
-ALTER_TRANS NILA // file name
-BEGIN 1 END // state number (can be more than one)
+BEGIN 0 1 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#NILA_WHO","LOCALS",1)~
