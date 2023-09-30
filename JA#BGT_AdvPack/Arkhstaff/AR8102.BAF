@@ -4,7 +4,7 @@ IF
 	Global("JA#KILL","%BaldursGateDocks_OgreMagiHouse_L2%",0)
 THEN
 	RESPONSE #100
-		SetGlobal("JA#KILL","%BaldursGateDocks_OgreMagiHouse_L2%",0)
+		SetGlobal("JA#KILL","%BaldursGateDocks_OgreMagiHouse_L2%",1)
 		Kill("JA#ARKHS")
 		Kill("JA#THALD")
 END
