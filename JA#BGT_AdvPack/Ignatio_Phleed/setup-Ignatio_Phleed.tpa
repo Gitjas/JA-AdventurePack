@@ -7,4 +7,4 @@ COPY ~JA#BGT_AdvPack/Ignatio_Phleed/JA#IGNAT.CRE~ ~override~
 	SAY NAME2 #11740 //~Ignatio Phleed~ (string ref is true for BGT and BG:EE)
 COMPILE ~JA#BGT_AdvPack/Ignatio_Phleed/JA#IGNAT.D~
 
-EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/Ignatio_Phleed/AR7705_ignatio.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/Ignatio_Phleed/AR7705.BAF~ EVALUATE_BUFFER
