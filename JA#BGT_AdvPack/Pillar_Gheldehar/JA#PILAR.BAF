@@ -2,8 +2,8 @@ IF
 	Die()
 	Global("P5Drop","LOCALS",0)
 	OR(2)
-	StateCheck(Myself,STATE_FROZEN_DEATH)
-	StateCheck(Myself,STATE_EXPLODING_DEATH)
+		StateCheck(Myself,STATE_FROZEN_DEATH)
+		StateCheck(Myself,STATE_EXPLODING_DEATH)
 THEN
 	RESPONSE #100
 		DropInventory()
