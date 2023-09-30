@@ -2,28 +2,58 @@
 //RESTORED: Nim Furlwing
 ////////////////////////////
 
-ACTION_IF (FILE_EXISTS_IN_GAME ntnimfur.cre) OR (FILE_EXISTS_IN_GAME ubnimfur.cre) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ubnimfur.cre) BEGIN
 	PRINT ~Skipping NimFurlwing and Her Hounds: Is already restored by another mod.~
-END ELSE BEGIN
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.CRE~ ~override~
-		SAY NAME1 #15611 // ~Nim Furlwing~ (string ref is true for BGT and BG:EE)
-		SAY NAME2 #15611 //~Nim Furlwing~ (string ref is true for BGT and BG:EE)
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.CRE~ ~override~
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.CRE~ ~override~
-		SAY NAME1 @2059
-		SAY NAME2 @2059
-	
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.BAF~
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.BAF~
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.BAF~
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#CUNIM.BAF~
+
+END ELSE ACTION_IF (FILE_EXISTS_IN_GAME ntnimfur.cre) BEGIN
+	// PRINT ~Skipping NimFurlwing and Her Hounds: Is already restored by another mod.~
+	COPY_EXISTING ~AR60PB.bcs~	~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTNIMFUR",[543.3051],0)~ ~CreateCreature("JA#NIMFU",[543.3051],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFUN",[468.3032],0)~ ~CreateCreature("JA#HOUND",[468.3032],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFU1",[527.2982],0)~ ~CreateCreature("JA#HOUND",[527.2982],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFU2",[590.2972],0)~ ~CreateCreature("JA#HOUND",[590.2972],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[689.2958],0)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[710.3008],0)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[646.2913],0)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTNIMFUR",[543.3051],S)~ ~CreateCreature("JA#NIMFU",[543.3051],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFUN",[468.3032],S)~ ~CreateCreature("JA#HOUND",[468.3032],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFU1",[527.2982],S)~ ~CreateCreature("JA#HOUND",[527.2982],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTDOGFU2",[590.2972],S)~ ~CreateCreature("JA#HOUND",[590.2972],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[689.2958],S)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[710.3008],S)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTWOLFVA",[646.2913],S)~ ~~
+	END
+
+<<<<<<<< ...inlined/ja#cunim.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("JA#NIMFU")
+		CreateCreature("JA#DWOLF",[689.2958],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[710.3008],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[646.2913],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[679.3090],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[717.2871],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[701.2905],5) // Schreckenswolf
+		SmallWait(3)
+		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
+		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
+		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
+		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
+		ActionOverride("JA#DWOLF",MoveToObject("JA#HOUND"))
+		ActionOverride("JA#DWOLF",Attack("JA#NIMFU"))
+		Wait(1)
+		DisplayStringHead(Myself,999999) //no such index
+END
+>>>>>>>>
+
+	COMPILE EVALUATE_BUFFER ~...inlined/ja#cunim.baf~
 		REPLACE ~999999~ @42
-	
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.D~
-	
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.ITM~ ~override~
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.BAM~ ~override~
-	
+
+
+END ELSE BEGIN
 	COPY_EXISTING ~%Peldvale%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure
@@ -75,4 +105,24 @@ END ELSE BEGIN
 		fj_name           = ~Jagdhund~
 		fj_cre_resref     = ~JA#HOUND~
 	END
+	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nim_Furlwing/JA#CUNIM.BAF~
+		REPLACE ~999999~ @42
+
 END
+
+	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.CRE~ ~override~
+		SAY NAME1 #15611 // ~Nim Furlwing~ (string ref is true for BGT and BG:EE)
+		SAY NAME2 #15611 //~Nim Furlwing~ (string ref is true for BGT and BG:EE)
+	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.CRE~ ~override~
+	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.CRE~ ~override~
+		SAY NAME1 @2059
+		SAY NAME2 @2059
+	
+	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.BAF~
+	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.BAF~
+	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.BAF~ EVALUATE_BUFFER
+	
+	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.D~
+	
+	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.ITM~ ~override~
+	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.BAM~ ~override~

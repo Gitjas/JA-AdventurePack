@@ -3,12 +3,12 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneId("JA#NIMFU")
-		CreateCreature("WOLFDI",[4433.3142],5) // Schreckenswolf
-		CreateCreature("WOLFDI",[4389.3184],5) // Schreckenswolf
-		CreateCreature("WOLFDI",[4433.3206],5) // Schreckenswolf
-		CreateCreature("WOLFDI",[4423.3274],5) // Schreckenswolf
-		CreateCreature("WOLFDI",[4461.3055],5) // Schreckenswolf
-		CreateCreature("WOLFDI",[4445.3089],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4433.3142],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4389.3184],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4433.3206],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4423.3274],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4461.3055],5) // Schreckenswolf
+		CreateCreature("JA#DWOLF",[4445.3089],5) // Schreckenswolf
 		SmallWait(3)
 		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
 		ActionOverride("JA#DWOLF",Attack("JA#HOUND"))
@@ -17,6 +17,6 @@ THEN
 		ActionOverride("JA#DWOLF",MoveToObject("JA#HOUND"))
 		ActionOverride("JA#DWOLF",Attack("JA#NIMFU"))
 		Wait(1)
-//		DisplayStringHead(Myself,257698) //no such index
+		DisplayStringHead(Myself,999999) //no such index
 END
 

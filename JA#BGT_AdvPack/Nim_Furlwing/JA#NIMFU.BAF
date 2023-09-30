@@ -1,5 +1,17 @@
 IF
 	See([PC])
+	AreaCheck("AR60PB")
+	Global("JA#CUNIM","AR60PB",0)
+THEN
+	RESPONSE #100
+		SetGlobal("JA#CUNIM","AR60PB",1)
+		ClearAllActions()
+		StartCutScene("JA#CUNIM")
+END
+
+IF
+	See([PC])
+	AreaCheck("%Peldvale%")
 	Global("JA#CUNIM","%Peldvale%",0)
 THEN
 	RESPONSE #100
