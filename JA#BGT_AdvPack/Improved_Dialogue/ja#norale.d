@@ -7,7 +7,7 @@ Enemy()~
 END
 
 ALTER_TRANS NORALE // file name
-BEGIN 3 END // state number (can be more than one)
+BEGIN 3 4 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "REPLY" ~@11~
@@ -15,13 +15,6 @@ END
 
 EXTEND_TOP NORALE 3 #1
 ++ @0 GOTO JA#NORALE_02 //6
-END
-
-ALTER_TRANS NORALE // file name
-BEGIN 4 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "REPLY" ~@11~
 END
 
 EXTEND_TOP NORALE 4 #1

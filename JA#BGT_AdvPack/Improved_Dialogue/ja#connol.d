@@ -1,14 +1,7 @@
 REPLACE_STATE_TRIGGER CONNOL 0 ~NumTimesTalkedTo(0)~
 
 ALTER_TRANS CONNOL // file name
-BEGIN 2 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~NoAction()~
-END
-
-ALTER_TRANS CONNOL // file name
-BEGIN 3 END // state number (can be more than one)
+BEGIN 2 3 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~NoAction()~
@@ -34,32 +27,3 @@ IF ~~ THEN REPLY @6 EXIT
 END
 
 END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

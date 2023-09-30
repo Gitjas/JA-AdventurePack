@@ -19,7 +19,7 @@ BEGIN // list of changes, see below for flags
 END
 
 ALTER_TRANS HALBAZ // file name
-BEGIN 3 END // state number (can be more than one)
+BEGIN 3 8 END // state number (can be more than one)
 BEGIN 1 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#MISC51","LOCALS",100)~
@@ -35,13 +35,6 @@ END
 
 EXTEND_BOTTOM HALBAZ 3
 IF ~~ THEN REPLY @1 DO ~SetGlobal("JA#MISC51","LOCALS",0)GiveGoldForce(500)TakePartyItem("MISC51")~ EXIT
-END
-
-ALTER_TRANS HALBAZ // file name
-BEGIN 8 END // state number (can be more than one)
-BEGIN 1 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#MISC51","LOCALS",100)~
 END
 
 ALTER_TRANS HALBAZ // file name

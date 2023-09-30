@@ -33,9 +33,9 @@ COPY_EXISTING ~MTOWUBSC.CRE~ ~override~
 COPY_EXISTING ~MTOWBASC.CRE~ ~override~
 	WRITE_ASCII 0x2cc ~MTOWBASC~	#8
 COPY_EXISTING ~MTOWBASN.CRE~ ~override~
-	WRITE_ASCII 0x2cc ~MTWOBASN~	#8
+	WRITE_ASCII 0x2cc ~MTOWBASN~	#8
 COPY_EXISTING ~MTOWBAST.CRE~ ~override~
-	WRITE_ASCII 0x2cc ~MTWOBAST~	#8
+	WRITE_ASCII 0x2cc ~MTOWBAST~	#8
 
 COPY_EXISTING ~FLAMVAI.CRE~ ~override~
 	WRITE_ASCII 0x280 ~FLAMVAI~	#32
@@ -44,5 +44,5 @@ COPY_EXISTING ~FLAMVAI.CRE~ ~override~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Vai.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Bently.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Greywo.d~
-// COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Jondal.d~
+// COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Jondal.d~ not needed for EE and BGT
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Zordral.D~

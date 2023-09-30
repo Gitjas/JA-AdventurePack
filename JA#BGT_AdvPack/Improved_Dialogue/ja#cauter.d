@@ -4,14 +4,7 @@ REPLACE_STATE_TRIGGER CAUTER 3 ~NumTimesTalkedToGT(0)~
 
 
 ALTER_TRANS CAUTER // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~NoAction()~
-END
-
-ALTER_TRANS CAUTER // file name
-BEGIN 2 END // state number (can be more than one)
+BEGIN 1 2 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~NoAction()~
