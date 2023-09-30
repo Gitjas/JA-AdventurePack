@@ -1,6 +1,6 @@
 
 ALTER_TRANS BART8 // file name
-BEGIN 0 END // state number (can be more than one)
+BEGIN 0 1 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "REPLY" ~@26~
@@ -8,7 +8,7 @@ END
 
 
 ALTER_TRANS BART8 // file name
-BEGIN 0 END // state number (can be more than one)
+BEGIN 0 1 END // state number (can be more than one)
 BEGIN 1 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "REPLY" ~@27~
@@ -18,23 +18,6 @@ END
 EXTEND_BOTTOM BART8 0
 IF ~~ THEN REPLY @0 GOTO JA#BART8_1
 END
-
-
-ALTER_TRANS BART8 // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "REPLY" ~@26~
-END
-
-
-ALTER_TRANS BART8 // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 1 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "REPLY" ~@27~
-END
-
 
 EXTEND_BOTTOM BART8 1
 IF ~~ THEN REPLY @0 GOTO JA#BART8_1
@@ -116,32 +99,3 @@ IF ~~ THEN REPLY @9 EXIT
 END
 
 END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

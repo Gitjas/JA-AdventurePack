@@ -32,10 +32,14 @@ END ELSE BEGIN
 	//WRITE_SHORT 0x272 0x03
 	//WRITE_SHORT 0x273 0x04
 
-	ACTION_IF (FILE_EXISTS_IN_GAME ubtavern.mve) BEGIN
-		PRINT ~Skipping Restored Elfsong Tavern Movie: Is already restored by another mod.~
+	ACTION_IF (FILE_EXISTS_IN_GAME ubtavern.mve) OR GAME_IS ~bgee~ BEGIN
+		PRINT ~Skipping Restored Elfsong Tavern Movie.~
 	END ELSE BEGIN
-		COPY ~JA#BGT_AdvPack/Miniquest/JA#TAVER.MVE~ ~override~
+		AT_EXIT ~JA#BGT_AdvPack/ja#movie_in.bat~
+	END
+
+	ACTION_IF (FILE_EXISTS_IN_GAME JA#TAVER.MVE) BEGIN
+		AT_UNINSTALL ~JA#BGT_AdvPack/ja#movie_un.bat~
 	END
 
 

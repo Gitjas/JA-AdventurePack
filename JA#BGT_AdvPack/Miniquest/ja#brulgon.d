@@ -131,14 +131,6 @@ IF ~~ THEN EXIT
 END
 
 
-
-
-
-
-
-
-
-
 IF ~Global("JA#TALKTOBRULG","%EBaldursGate_ElfsongTavern_L1%",1)~ THEN BEGIN JA#BRULG_4
 SAY @44
 IF ~~ THEN REPLY @45 DO ~SetGlobal("JA#TALKTOBRULG","%EBaldursGate_ElfsongTavern_L1%",2)~ GOTO JA#BRULG_5

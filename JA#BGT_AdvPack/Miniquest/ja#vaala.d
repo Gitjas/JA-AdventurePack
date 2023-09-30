@@ -84,20 +84,3 @@ IF ~~ THEN DO ~SetGlobal("JA#ELFSONG_QUEST","GLOBAL",7)
 GiveItem("JA#HRP01",LastTalkedToBy(Myself))
 EscapeArea()~ UNSOLVED_JOURNAL #999994 EXIT
 END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
