@@ -21,14 +21,7 @@ END
 
 ALTER_TRANS JHASSO // file name
 BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "TRIGGER" ~Global("JA#DOPPSE_TALK","GLOBAL",1)~
-END
-
-ALTER_TRANS JHASSO // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 1 END // transition number (can be more than one)
+BEGIN 0 1 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "TRIGGER" ~Global("JA#DOPPSE_TALK","GLOBAL",1)~
 END
@@ -49,14 +42,14 @@ BEGIN // list of changes, see below for flags
 END
 
 ALTER_TRANS JHASSO // file name
-BEGIN 6 END // state number (can be more than one)
+BEGIN 6 18 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#JHASSO_MOVE","GLOBAL",1)EscapeAreaDestroy(90)~
 END
 
 ALTER_TRANS JHASSO // file name
-BEGIN 7 END // state number (can be more than one)
+BEGIN 7 12 15 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#JHASSO_TALK","LOCALS",1)~
@@ -70,33 +63,11 @@ BEGIN // list of changes, see below for flags
 END
 
 ALTER_TRANS JHASSO // file name
-BEGIN 12 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#JHASSO_TALK","LOCALS",1)~
-END
-
-ALTER_TRANS JHASSO // file name
 BEGIN 14 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#JHASSO_QUEST","GLOBAL",1)~
   "UNSOLVED_JOURNAL" ~@1012~
-END
-
-
-ALTER_TRANS JHASSO // file name
-BEGIN 15 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#JHASSO_TALK","LOCALS",1)~
-END
-
-ALTER_TRANS JHASSO // file name
-BEGIN 18 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#JHASSO_MOVE","GLOBAL",1)EscapeAreaDestroy(90)~
 END
 
 EXTEND_BOTTOM JHASSO 3

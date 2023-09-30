@@ -1,6 +1,6 @@
 
 ALTER_TRANS SCAR // file name
-BEGIN 14 END // state number (can be more than one)
+BEGIN 8 14 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "TRIGGER" ~Global("JA#DOPPSE_TALK","GLOBAL",0)~
@@ -22,13 +22,6 @@ BEGIN // list of changes, see below for flags
   "TRIGGER" ~NumDeadGT("SSDOPPLE",4)
 Global("Doppleganger","GLOBAL",1)
 Dead("Jhasso")~
-END
-
-ALTER_TRANS SCAR // file name
-BEGIN 8 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "TRIGGER" ~Global("JA#DOPPSE_TALK","GLOBAL",0)~
 END
 
 ALTER_TRANS SCAR // file name

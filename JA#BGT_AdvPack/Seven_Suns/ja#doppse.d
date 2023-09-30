@@ -77,16 +77,6 @@ IF ~~ THEN DO ~AddJournalEntry(%ssungu2%,QUEST)EscapeArea()~ EXIT
 END
 
 ADD_TRANS_ACTION DOPPSM
-BEGIN 3 END
-BEGIN 0 END
-~AddJournalEntry(%ssungu1%,QUEST)~
-
-ADD_TRANS_ACTION DOPPSM
-BEGIN 7 END
-BEGIN 0 END
-~AddJournalEntry(%ssungu1%,QUEST)~
-
-ADD_TRANS_ACTION DOPPSM
-BEGIN 8 END
+BEGIN 3 7 8 END
 BEGIN 0 END
 ~AddJournalEntry(%ssungu1%,QUEST)~
