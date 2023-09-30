@@ -1,23 +1,7 @@
 ADD_STATE_TRIGGER BARDOL 0 ~NumTimesTalkedTo(0)~
 
 ALTER_TRANS BARDOL // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~MoveToPoint([1104.722])
-Face(11)~
-END
-
-ALTER_TRANS BARDOL // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~MoveToPoint([1104.722])
-Face(11)~
-END
-
-ALTER_TRANS BARDOL // file name
-BEGIN 4 END // state number (can be more than one)
+BEGIN 1 3 4 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~MoveToPoint([1104.722])
