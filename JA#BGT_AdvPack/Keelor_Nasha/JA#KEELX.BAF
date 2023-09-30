@@ -16,8 +16,8 @@ THEN
 END
 
 IF
-	HPPercent(Myself,100)
-	Global("JA#KEELOR","LOCALS",1)
+	HPPercentGT(Myself,90)
+	Global("JA#KEELOR","LOCALS",0)
 THEN
 	RESPONSE #100
 		SetGlobal("JA#KEELOR","LOCALS",1)

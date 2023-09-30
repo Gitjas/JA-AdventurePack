@@ -3,44 +3,21 @@
 ///////////////////////////////
 
 ACTION_IF FILE_EXISTS_IN_GAME ntkeelor.cre BEGIN
-	PRINT ~Skipping Keelor and Nasha: Is already restored by another mod.~
-END ELSE BEGIN
-
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.CRE~ ~override~
-		SAY NAME1 @2078
-		SAY NAME2 @2078
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.CRE~ ~override~
-		SAY NAME1 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
-		SAY NAME2 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.CRE~ ~override~
-		SAY NAME1 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
-		SAY NAME2 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
-	
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.ITM~ ~override~
-		SAY NAME1 #6852 //Amulet (string ref is true for BGT and BG:EE)
-		SAY NAME2 @2081
-		SAY DESC @2082
-		SAY UNIDENTIFIED_DESC #6900
-	/*
-	COPY_EXISTING ~AR7269.ARE~ ~override~
-	SPRINT ~item_to_delete~ ~AMUL14~
-	LAUNCH_PATCH_MACRO ~DELETE_AREA_ITEM~
-	*/
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C05.ARE~ ~override~
-	PATCH_IF GAME_IS ~bgee eet~ BEGIN
-		LPF ALTER_AREA_REGION
-			STR_VAR region_name			= ~Door8100~
-					destination_area	= EVAL ~%BaldursGateDocks%~
-		END
+	// PRINT ~Skipping Keelor and Nasha: Is already restored by another mod.~
+	COPY_EXISTING ~%BaldursGateDocks_WaterQueensHouse%.bcs~	~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTNASHA",[1147.602],0)~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTNASHA",[1147.602],S)~ ~~
 	END
-	COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C06.ARE~ ~override~
 	
-	COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.BAF~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAF~
-	COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.BAF~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.D~
-	COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.D~
+	COPY_EXISTING ~AR01PB.bcs~	~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTKEELOR",[3953.2582],0)~ ~CreateCreature("JA#KEELO",[3953.2582],0)~
+		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTKEELOR",[3953.2582],S)~ ~CreateCreature("JA#KEELO",[3953.2582],0)~
+	END
+BUT_ONLY
+	
+END ELSE BEGIN
 	
 	COPY_EXISTING ~%BearRiver%.ARE~ ~override~
 	//add new actors
@@ -129,37 +106,71 @@ END ELSE BEGIN
 		fj_name           = ~Gnoll~
 		fj_cre_resref     = ~GNOLL~
 	END
-	
-	/* BG Docks District: Nasha's temple */
-	COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~ 
-		LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
-			INT_VAR
-			fj_type         = 2    //travel
-			fj_box_left     = 147  //kleinstes x
-			fj_box_top      = 3001  //kleinstes y
-			fj_box_right    = 293  //größtes x
-			fj_box_bottom   = 3179   //größtes y
-			fj_cursor_idx   = 30   //door
-			fj_vertex_0     = 147 + (3001 << 16)   //kleinstes x +  kleinstes y
-			fj_vertex_1     = 293 + (3001 << 16)   //größtes x + kleinstes y
-			fj_vertex_2     = 293 + (3179 << 16)   //größtes x + größtes y
-			fj_vertex_3     = 147 + (3179 << 16)   //kleinstes x + größtes y
-			STR_VAR
-			fj_structure_type   = region
-			fj_name             = DOORJA#C05
-			fj_destination_area = JA#C05
-			fj_destination_name = FR8100
-		END
-	/* add entrance from JA#C05 to Docks District */
-		LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
-			INT_VAR
-			fj_loc_x       = 191    //x
-			fj_loc_y       = 3255   //y
-			fj_orientation = 10   
-			STR_VAR
-			fj_structure_type = entrance
-			fj_name           = FRJA#C05
-		END
-	BUT_ONLY
-
 END //ACTION_IF
+
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.CRE~ ~override~
+	SAY NAME1 @2078
+	SAY NAME2 @2078
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.CRE~ ~override~
+	SAY NAME1 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
+	SAY NAME2 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.CRE~ ~override~
+	SAY NAME1 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
+	SAY NAME2 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
+
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAM~ ~override~
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.ITM~ ~override~
+	SAY NAME1 #6852 //Amulet (string ref is true for BGT and BG:EE)
+	SAY NAME2 @2081
+	SAY DESC @2082
+	SAY UNIDENTIFIED_DESC #6900
+	/*
+	COPY_EXISTING ~AR7269.ARE~ ~override~
+	SPRINT ~item_to_delete~ ~AMUL14~
+	LAUNCH_PATCH_MACRO ~DELETE_AREA_ITEM~
+	*/
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C05.ARE~ ~override~
+	PATCH_IF GAME_IS ~bgee eet~ BEGIN
+		LPF ALTER_AREA_REGION
+			STR_VAR region_name			= ~Door8100~
+				destination_area	= EVAL ~%BaldursGateDocks%~
+		END
+	END
+COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C06.ARE~ ~override~
+	
+COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.BAF~
+COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAF~
+COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.BAF~
+COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.D~
+COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.D~
+/* BG Docks District: Nasha's temple */
+COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~ 
+	LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+		INT_VAR
+		fj_type         = 2    //travel
+		fj_box_left     = 20  //kleinstes x
+		fj_box_top      = 2840  //kleinstes y
+		fj_box_right    = 95  //größtes x
+		fj_box_bottom   = 2950   //größtes y
+		fj_cursor_idx   = 20   //door
+		fj_vertex_0     = 20 + (2840 << 16)   //kleinstes x +  kleinstes y
+		fj_vertex_1     = 95 + (2840 << 16)   //größtes x + kleinstes y
+		fj_vertex_2     = 95 + (2950 << 16)   //größtes x + größtes y
+		fj_vertex_3     = 20 + (2950 << 16)   //kleinstes x + größtes y
+		STR_VAR
+		fj_structure_type   = region
+		fj_name             = DOORJA#C05
+		fj_destination_area = JA#C05
+		fj_destination_name = FR8100
+	END
+/* add entrance from JA#C05 to Docks District */
+	LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+		INT_VAR
+		fj_loc_x       = 120    //x
+		fj_loc_y       = 2915   //y
+		fj_orientation = 10   
+		STR_VAR
+		fj_structure_type = entrance
+		fj_name           = FRJA#C05
+	END
+BUT_ONLY
