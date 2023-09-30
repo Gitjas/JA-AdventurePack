@@ -85,7 +85,7 @@ EXTEND_TOP ~%NBaldursGate_RamazithsTower_L3%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR724
 EXTEND_TOP ~%NBaldursGate_RamazithsTower_L4%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7241.BAF~ EVALUATE_BUFFER 
 EXTEND_TOP ~%NBaldursGate_RamazithsTower_L5%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7242.BAF~ EVALUATE_BUFFER 
 EXTEND_TOP ~%WBaldursGate%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7600.BAF~ EVALUATE_BUFFER
-	
+EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7300.BAF~ EVALUATE_BUFFER
 	//get stringref for journal entry
 /*	COPY_EXISTING ~RAMAZI.dlg~ ~override~
 		LPF ~READ_JOURNAL_STRREF~

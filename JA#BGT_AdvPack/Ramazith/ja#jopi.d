@@ -1,21 +1,7 @@
 ADD_STATE_TRIGGER JOPI 0 ~NumTimesTalkedTo(0)~
 
 ALTER_TRANS JOPI // file name
-BEGIN 2 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~NoAction()~
-END
-
-ALTER_TRANS JOPI // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~NoAction()~
-END
-
-ALTER_TRANS JOPI // file name
-BEGIN 4 END // state number (can be more than one)
+BEGIN 2 3 4 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~NoAction()~

@@ -1,0 +1,10 @@
+IF
+	Global("RamazithMove","GLOBAL",1)
+	Global("JA#RAMAZITH_DOOR","%NBaldursGate%",0)
+THEN
+	RESPONSE #100
+		SetGlobal("JA#RAMAZITH_DOOR","%NBaldursGate%",1)
+		Wait(3)
+		CloseDoor("Door0137")
+		Lock("Door0137")
+END
