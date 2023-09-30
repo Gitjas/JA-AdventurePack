@@ -64,6 +64,8 @@ COPY_EXISTING ~BOYBA1.CRE~ ~override/JA#BOYBA.CRE~ //7200,7300,7600,7700s.u.
 COPY ~JA#BGT_AdvPack/Nobles/JA#LOWLG.CRE~ ~override~
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nobles/JA#LOWLG.D~
 COMPILE ~JA#BGT_AdvPack/Nobles/JA#LOWLG.BAF~
+EXTEND_TOP ~%BaldursGateDocks%.BCS~ ~JA#BGT_AdvPack/Nobles/AR8100.BAF~ EVALUATE_BUFFER
+
 
 COPY_EXISTING ~%BaldursGate_DocksLowLantern_D1%.ARE~ ~override~
 	//add new actors

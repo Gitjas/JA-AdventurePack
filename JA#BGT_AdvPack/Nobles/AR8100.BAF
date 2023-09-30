@@ -1,0 +1,9 @@
+
+IF
+	OnCreation()
+	Global("JA#LOWLG","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("JA#LOWLG","GLOBAL",0)
+		Continue()
+END
