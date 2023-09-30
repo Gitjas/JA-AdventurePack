@@ -40,6 +40,66 @@ END
 
 IF
 	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY1",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY1",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY2",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY2",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY3",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY3",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY4",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY4",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY5",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY5",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
+	HasItem("GBERRY6",Myself) // Gute Beeren
+THEN
+	RESPONSE #100
+		UseItem("GBERRY6",Myself) // Gute Beeren
+		SetGlobal("JA#_HelpedMechant","MYAREA",2)
+		ChangeAnimationNoEffect("JA#MERCX") // Kaufmann
+END
+
+IF
+	GlobalLT("JA#_HelpedMechant","MYAREA",2)
 	GlobalTimerExpired("JA#MERC3","GLOBAL")
 THEN
 	RESPONSE #100
@@ -51,13 +111,13 @@ END
 
 IF
 	GlobalLT("JA#_HelpedMechant","MYAREA",2)
-	OR(8)	
-		SpellCastOnMe([GOODCUTOFF],CLERIC_HEAL)  // SPPR607.SPL (Heilung)	
+	OR(8)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_CURE_LIGHT_WOUNDS)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_CURE_MEDIUM_WOUNDS)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_CURE_SERIOUS_WOUNDS)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_CURE_CRITICAL_WOUNDS)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_MASS_CURE)
+		SpellCastOnMe([GOODCUTOFF],CLERIC_HEAL)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_REGENERATE)
 		SpellCastOnMe([GOODCUTOFF],CLERIC_RESTORATION)
 	See([PC])
