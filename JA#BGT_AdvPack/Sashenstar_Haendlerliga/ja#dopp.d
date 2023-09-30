@@ -154,14 +154,3 @@ IF ~RandomNum(4,4)~ THEN BEGIN JA#DOPPX_4
 SAY @14
 IF ~~ THEN EXIT
 END
-
-
-
-
-
-
-
-
-
-
-

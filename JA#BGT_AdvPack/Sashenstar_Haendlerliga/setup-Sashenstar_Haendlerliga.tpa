@@ -135,6 +135,7 @@ EXTEND_TOP ~%NBaldursGate_ThreeOldKegs_L1%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haend
 EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L1%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7227.BAF~ EVALUATE_BUFFER
 EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L2%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7228.BAF~ EVALUATE_BUFFER
 EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L3%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7229.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7300.BAF~ EVALUATE_BUFFER
 EXTEND_TOP ~FLAMAL.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
 EXTEND_TOP ~FFHUNT.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
 

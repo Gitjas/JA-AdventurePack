@@ -1,6 +1,6 @@
 IF
 	Global("JA#ALDETHCHP8","GLOBAL",4)
-	AreaCheck("AR7228")
+	AreaCheck("%SWBaldursGate_MerchantLeague_L2%")
 THEN
 	RESPONSE #100
 		ActionOverride(Myself,DestroySelf())

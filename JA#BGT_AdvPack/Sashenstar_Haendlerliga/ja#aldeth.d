@@ -613,32 +613,3 @@ IF ~Global("HelpAldeth","GLOBAL",2)~ THEN BEGIN JA#MLCOK_8
 SAY @67
 IF ~~ THEN EXIT
 END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
