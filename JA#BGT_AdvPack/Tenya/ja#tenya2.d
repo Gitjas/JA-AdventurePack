@@ -46,7 +46,7 @@ END
 
 /* ## this is for removing the EscapeAreaDestroy(90) */
 ALTER_TRANS TENYA2 // file name
-BEGIN 2 END // state number (can be more than one)
+BEGIN 2 4 8 9 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
@@ -55,62 +55,13 @@ END
 
 /* ## this is for removing the EscapeAreaDestroy(90) and setting SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1) */
 ALTER_TRANS TENYA2 // file name
-BEGIN 3 END // state number (can be more than one)
+BEGIN 3 5 7 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
 GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)
 SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
 Enemy()~
-END
-
-/* ## this is for removing the EscapeAreaDestroy(90) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 4 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)~
-END
-
-/* ## this is for removing the EscapeAreaDestroy(90) and setting SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 5 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)
-SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
-Enemy()~
-END
-
-/* ## this is for removing the EscapeAreaDestroy(90) and setting SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 7 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)
-SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
-Enemy()~
-END
-
-/* ## this is for removing the EscapeAreaDestroy(90) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 8 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)~
-END
-
-/* ## this is for removing the EscapeAreaDestroy(90) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 9 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)~
 END
 
 ALTER_TRANS TENYA2 // file name
@@ -119,6 +70,14 @@ BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
 Enemy()~
+END
+
+
+ALTER_TRANS TENYA2 // file name
+BEGIN 11 END // state number (can be more than one)
+BEGIN 0 END // transition number (can be more than one)
+BEGIN // list of changes, see below for flags
+  "JOURNAL" ~%tenya10%~
 END
 
 
