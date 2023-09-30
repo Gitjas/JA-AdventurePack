@@ -115,7 +115,14 @@ LANGUAGE ~English~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
+/////////////////////////////////////////////////////////////
+//Useful Tweaks & Repairs
+/////////////////////////////////////////////////////////////
 
+BEGIN ~Useful Tweaks & Repairs~ DESIGNATED 0
+DEPRECATED ~This Component is included in JA#BGT_TWEAK~
+LABEL "JA#BGT_AdvPack-Tweaks"
+INCLUDE ~JA#BGT_AdvPack/Tweaks/setup-Tweaks.tpa~
 
 /////////////////////////////////////////////////////////////
 //LAW-SYSTEM FRIENDLY ARM INN, ELFSONG TAVERN, BL. MERMAID

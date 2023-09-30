@@ -1,35 +1,86 @@
 //INCLUDE ~JA#BGT_AdvPack/tph/ja#area_macro.tph~
 
-/* ## included in Tweakpack
-//BG1-Item descriptions restored
-ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 31 BEGIN
-INCLUDE ~JA#BGT_AdvPack/fixes/items/bgtitems.tph~
+	/////////////////////////////////////////////////////////////
+	//Mulahey Half-Orc
+	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 101 BEGIN
+	COPY_EXISTING ~MULAHE.CRE~ ~override~
+		WRITE_SHORT 0x28 24581
+		WRITE_SHORT 0x272 7
+		WRITE_BYTE 0x2f 15
+END	
+	/////////////////////////////////////////////////////////////
+	//Tazok - Orog
+	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 102 BEGIN
+	ACTION_IF GAME_IS ~eet~ THEN BEGIN
+		COPY_EXISTING ~TAZOK_.CRE~ ~override~
+					~TAZOK2.CRE~ ~override~
+			WRITE_SHORT 0x28 59168
+			WRITE_BYTE 0x2c 27
+			WRITE_BYTE 0x2d 47
+			WRITE_BYTE 0x2e 65
+			WRITE_BYTE 0x2f 12
+			WRITE_BYTE 0x30 94
+			WRITE_BYTE 0x31 27
+			WRITE_BYTE 0x32 0
+			WRITE_BYTE 0x272 143
+	END
+	ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+		COPY_EXISTING ~BGTAZOK.CRE~ ~override~
+					~TAZOK2.CRE~ ~override~
+			WRITE_SHORT 0x28 59168
+			WRITE_BYTE 0x2c 27
+			WRITE_BYTE 0x2d 47
+			WRITE_BYTE 0x2e 65
+			WRITE_BYTE 0x2f 12
+			WRITE_BYTE 0x30 94
+			WRITE_BYTE 0x31 27
+			WRITE_BYTE 0x32 0
+			WRITE_BYTE 0x272 143
+	END
+	COPY_EXISTING ~TAZOK.CRE~ ~override~
+		SAY INITIAL_MEETING #4466
+		SAY UNHAPPY_BREAKING_POINT #4467
+		SAY BATTLE_CRY1 #4468
+		SAY SELECT_COMMON1 #4469
+		SAY SELECT_COMMON2 #4467
+		SAY SELECT_COMMON3 #4468
+		SAY SELECT_ACTION4 #4470
+		SAY SELECT_ACTION5 #4471
+		SAY SELECT_ACTION6 #4472
 END
-*/
-
-ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 20 BEGIN
+	/////////////////////////////////////////////////////////////
+	//Firebead's avatar colours
+	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 103 BEGIN
+	COPY_EXISTING ~FIREBE.CRE~ ~override~
+		WRITE_BYTE 0x2c 102
+		WRITE_BYTE 0x2d 58
+		WRITE_BYTE 0x2e 53
+		WRITE_BYTE 0x2f 84
+		WRITE_BYTE 0x30 99
+		WRITE_BYTE 0x31 102
+		WRITE_BYTE 0x32 110
+END
 	/////////////////////////////////////////////////////////////
 	//BG1-Skull - black item icon (Melicamp-Quest) restored
 	/////////////////////////////////////////////////////////////
-	COPY ~JA#BGT_AdvPack/fixes/JA#SKULL.BAM~ ~override~
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 135 BEGIN
+	COPY ~JA#BGT_AdvPack/tweaks/JA#SKULL.BAM~ ~override~
 	COPY_EXISTING ~MISC50.ITM~    ~override~
 		WRITE_ASCII 0x3a ~JA#SKULL~ #8
-	
+END
 	/////////////////////////////////////////////////////////////
-	//dagger of poison & shadow armor moved from taerom to silence
-	/////////////////////////////////////////////////////////////
-	COPY_EXISTING ~TAERUM.STO~ ~override~
-		SPRINT ~item_to_delete~ ~MISC75~
-		LAUNCH_PATCH_MACRO ~DELETE_STORE_ITEM~
-		SPRINT ~item_to_delete~ ~LEAT08~
-		LAUNCH_PATCH_MACRO ~DELETE_STORE_ITEM~
-	COPY_EXISTING ~STOSILEN.STO~ ~override~
-		ADD_STORE_ITEM ~LEAT08~ AFTER ~LEAT05~ #0 #0 #0 ~IDENTIFIED~ #1
-		ADD_STORE_ITEM ~MISC75~ AFTER ~DAGG01~ #0 #0 #0 ~IDENTIFIED~ #1
-	
+	//BG1-Item descriptions restored
+	///////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 136 BEGIN
+	INCLUDE ~JA#BGT_AdvPack/tweaks/items/bgtitems.tph~
+END
 	/////////////////////////////////////////////////////////////
 	//backdoor added to Gellana's temple
 	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 	COPY_EXISTING ~%FriendlyArmInn%.ARE~ ~override~
 		LPF fj_are_structure
 			INT_VAR
@@ -92,7 +143,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 20 BEGIN
 			fj_structure_type = entrance
 			fj_name           = JA#FR6800
 		END
-		
+
 	/////////////////////////////////////////////////////////////
 	//backdoor added to Waterqueen's House
 	/////////////////////////////////////////////////////////////
@@ -156,88 +207,42 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 20 BEGIN
 			fj_structure_type = entrance
 			fj_name           = JA#FR8100
 		END
-	
-	/////////////////////////////////////////////////////////////
-	//Mulahey Half-Orc
-	/////////////////////////////////////////////////////////////
-	COPY_EXISTING ~MULAHE.CRE~ ~override~
-		WRITE_SHORT 0x28 24581
-		WRITE_SHORT 0x272 7
-		WRITE_BYTE 0x2f 15
-	
-	/////////////////////////////////////////////////////////////
-	//Tazok - Orog
-	/////////////////////////////////////////////////////////////
-	ACTION_IF GAME_IS ~eet~ THEN BEGIN
-		COPY_EXISTING ~TAZOK_.CRE~ ~override~
-					~TAZOK2.CRE~ ~override~
-			WRITE_SHORT 0x28 59168
-			WRITE_BYTE 0x2c 27
-			WRITE_BYTE 0x2d 47
-			WRITE_BYTE 0x2e 65
-			WRITE_BYTE 0x2f 12
-			WRITE_BYTE 0x30 94
-			WRITE_BYTE 0x31 27
-			WRITE_BYTE 0x32 0
-			WRITE_BYTE 0x272 143
-	END
-	ACTION_IF GAME_IS ~bgt~ THEN BEGIN
-		COPY_EXISTING ~BGTAZOK.CRE~ ~override~
-					~TAZOK2.CRE~ ~override~
-			WRITE_SHORT 0x28 59168
-			WRITE_BYTE 0x2c 27
-			WRITE_BYTE 0x2d 47
-			WRITE_BYTE 0x2e 65
-			WRITE_BYTE 0x2f 12
-			WRITE_BYTE 0x30 94
-			WRITE_BYTE 0x31 27
-			WRITE_BYTE 0x32 0
-			WRITE_BYTE 0x272 143
-	END
-	COPY_EXISTING ~TAZOK.CRE~ ~override~
-		SAY INITIAL_MEETING #4466
-		SAY UNHAPPY_BREAKING_POINT #4467
-		SAY BATTLE_CRY1 #4468
-		SAY SELECT_COMMON1 #4469
-		SAY SELECT_COMMON2 #4467
-		SAY SELECT_COMMON3 #4468
-		SAY SELECT_ACTION4 #4470
-		SAY SELECT_ACTION5 #4471
-		SAY SELECT_ACTION6 #4472
-
+END	
 	/////////////////////////////////////////////////////////////
 	//Nashkel & Gnollfortress - improved Searchmap and Wallgroups, ar8100
 	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 BEGIN
 	INCLUDE ~%MOD_FOLDER%/lib/alter_searchmap.tpa~
 	LAF ALTER_SEARCHMAP
 		STR_VAR
-		path_to_2da_file = EVAL ~%MOD_FOLDER%/Fixes/areas/AR3700SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
+		path_to_2da_file = EVAL ~%MOD_FOLDER%/Tweaks/areas/AR3700SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
 		areaname = EVAL ~%Nashkel%~ 							  		 			// area name, e.g. ~AR3700~
 	END
 	
 	LAF ALTER_SEARCHMAP
 		STR_VAR
-		path_to_2da_file = EVAL ~%MOD_FOLDER%/Fixes/areas/AR4100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
+		path_to_2da_file = EVAL ~%MOD_FOLDER%/Tweaks/areas/AR4100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
 		areaname = EVAL ~%GnollStronghold%~ 							  		 			// area name, e.g. ~AR3700~
 	END	
 	
 	LAF ALTER_SEARCHMAP
 		STR_VAR
-		path_to_2da_file = EVAL ~%MOD_FOLDER%/Fixes/areas/AR8100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
+		path_to_2da_file = EVAL ~%MOD_FOLDER%/Tweaks/areas/AR8100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
 		areaname = EVAL ~%BaldursGateDocks%~ 							  		 			// area name, e.g. ~AR3700~
 	END
-	COPY ~JA#BGT_AdvPack/fixes/Areas/AR3700.wed~ ~override/%Nashkel%.wed~
-	COPY ~JA#BGT_AdvPack/fixes/Areas/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
-
-	/////////////////////////////////////////////////////////////
-	//Firebead's avatar colours
-	/////////////////////////////////////////////////////////////
-	COPY_EXISTING ~FIREBE.CRE~ ~override~
-		WRITE_BYTE 0x2c 102
-		WRITE_BYTE 0x2d 58
-		WRITE_BYTE 0x2e 53
-		WRITE_BYTE 0x2f 84
-		WRITE_BYTE 0x30 99
-		WRITE_BYTE 0x31 102
-		WRITE_BYTE 0x32 110
+	COPY ~JA#BGT_AdvPack/Tweaks/Areas/AR3700.wed~ ~override/%Nashkel%.wed~
+	COPY ~JA#BGT_AdvPack/Tweaks/Areas/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
 END
+	/////////////////////////////////////////////////////////////
+	//dagger of poison & shadow armor moved from taerom to silence
+	/////////////////////////////////////////////////////////////
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 153 BEGIN	
+	COPY_EXISTING ~TAERUM.STO~ ~override~
+		SPRINT ~item_to_delete~ ~MISC75~
+		LAUNCH_PATCH_MACRO ~DELETE_STORE_ITEM~
+		SPRINT ~item_to_delete~ ~LEAT08~
+		LAUNCH_PATCH_MACRO ~DELETE_STORE_ITEM~
+	COPY_EXISTING ~STOSILEN.STO~ ~override~
+		ADD_STORE_ITEM ~LEAT08~ AFTER ~LEAT05~ #0 #0 #0 ~IDENTIFIED~ #1
+		ADD_STORE_ITEM ~MISC75~ AFTER ~DAGG01~ #0 #0 #0 ~IDENTIFIED~ #1
+END	
