@@ -6,9 +6,11 @@
 
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#FRIENDLYARM.D~
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#LAW.D~
+COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#GUABE.D~
 
 EXTEND_TOP ~BENTLY.BCS~ ~JA#BGT_AdvPack/LawSystem/JA#FRGUB.BAF~
 EXTEND_TOP ~%FriendlyArmInn%.BCS~ ~JA#BGT_AdvPack/LawSystem/AR6800.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/LawSystem/AR7705.BAF~
 
 COMPILE ~JA#BGT_AdvPack/LawSystem/JA#FRINI.BAF~
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#FRCUT.BAF~ 
@@ -41,6 +43,15 @@ COPY ~JA#BGT_AdvPack/LawSystem/JA#FACAP.CRE~ ~override~
 	SAY NAME1 @2037
 	SAY NAME2 @2037
 
+COPY ~JA#BGT_AdvPack/LawSystem/JA#GUAB5.CRE~ ~override~
+	~JA#BGT_AdvPack/LawSystem/JA#GUAB6.CRE~ ~override~
+	~JA#BGT_AdvPack/LawSystem/JA#GUAB7.CRE~ ~override~
+	~JA#BGT_AdvPack/LawSystem/JA#GUAB8.CRE~ ~override~
+	~JA#BGT_AdvPack/LawSystem/JA#GUAB9.CRE~ ~override~
+	SAY NAME1 @2085
+	SAY NAME2 @2085
+
+
 COPY_EXISTING 	~FAFIGHT.CRE~ ~override~
 				~FRIEND.CRE~ ~override~
 	WRITE_ASCII SCRIPT_RACE	~JA#FRGUB~	#8	//Script
@@ -54,22 +65,117 @@ COPY_EXISTING ~BENTLY.CRE~ ~override~ // Bently Mirrorshade, FAI
 BUT_ONLY
 
 
-//Change container and actor scripts and new candle light
-COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L2%.ARE~ ~override~
-	LPF ALTER_AREA_CONTAINER
+//Change container and actor scripts
+COPY_EXISTING ~%Beregost%.ARE~ ~override~
+	//add new actors
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 4194
+		fj_loc_y          = 3651
+		fj_dest_x         = 4194
+		fj_dest_y         = 3651
+		fj_orientation    = 13     
 		STR_VAR
-		container_name = ~Container 2~
-		container_script = ~JA#LAW00~
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB4~
+		fj_dlg_resref	  = ~JA#GUAB4~
 	END
-	LPF ALTER_AREA_CONTAINER
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 2509
+		fj_loc_y          = 554 
+		fj_dest_x         = 2509
+		fj_dest_y         = 554 
+		fj_orientation    = 6      
 		STR_VAR
-		container_name = ~Container 3~
-		container_script = ~JA#LAW00~
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB5~
+		fj_dlg_resref	  = ~JA#GUAB5~
 	END
-	LPF ALTER_AREA_CONTAINER
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 1535
+		fj_loc_y          = 3287
+		fj_dest_x         = 1535
+		fj_dest_y         = 3287
+		fj_orientation    = 1      
 		STR_VAR
-		container_name = ~Container 4~
-		container_script = ~JA#LAW00~
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB6~
+		fj_dlg_resref	  = ~JA#GUAB6~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 452 
+		fj_loc_y          = 2095
+		fj_dest_x         = 452 
+		fj_dest_y         = 2095
+		fj_orientation    = 4      
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB7~
+		fj_dlg_resref	  = ~JA#GUAB7~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 3948
+		fj_loc_y          = 2745
+		fj_dest_x         = 3948
+		fj_dest_y         = 2745
+		fj_orientation    = 14     
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB7~
+		fj_dlg_resref	  = ~JA#GUAB7~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 1768
+		fj_loc_y          = 1634
+		fj_dest_x         = 1768
+		fj_dest_y         = 1634
+		fj_orientation    = 5      
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB7~
+		fj_dlg_resref	  = ~JA#GUAB7~
+	END
+
+COPY_EXISTING ~%Beregost_JovialJuggler_L1%.ARE~ ~override~
+	//add new actors
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 700
+		fj_loc_y          = 638
+		fj_dest_x         = 700
+		fj_dest_y         = 638
+		fj_orientation    = 5     
+		fj_schedule 	  = 0b111100000000000001111111
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB9~
+		fj_dlg_resref	  = ~JA#GUAB9~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 709
+		fj_loc_y          = 591
+		fj_dest_x         = 709
+		fj_dest_y         = 591
+		fj_orientation    = 1     
+		fj_schedule 	  = 0b111100000000000001111111
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Guard~   
+		fj_cre_resref     = ~JA#GUAB8~
+		fj_dlg_resref	  = ~JA#GUAB8~
 	END
 
 COPY_EXISTING ~%FriendlyArmInn%.ARE~ ~override~
@@ -188,6 +294,23 @@ COPY_EXISTING ~%FriendlyArmInn_L3%.ARE~ ~override~
 		container_script = ~JA#LAW03~
 	END
 BUT_ONLY
+
+COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L2%.ARE~ ~override~
+	LPF ALTER_AREA_CONTAINER
+		STR_VAR
+		container_name = ~Container 2~
+		container_script = ~JA#LAW00~
+	END
+	LPF ALTER_AREA_CONTAINER
+		STR_VAR
+		container_name = ~Container 3~
+		container_script = ~JA#LAW00~
+	END
+	LPF ALTER_AREA_CONTAINER
+		STR_VAR
+		container_name = ~Container 4~
+		container_script = ~JA#LAW00~
+	END
 
 COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L1%.ARE~ ~override~	//Bl. Mermaid
 	//change container script

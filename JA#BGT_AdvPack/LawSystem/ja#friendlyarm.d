@@ -6,35 +6,7 @@ REPLACE_STATE_TRIGGER FRIEND 7 ~GlobalTimerNotExpired("JA#FRBLOCKED","GLOBAL")~
 REPLACE_STATE_TRIGGER FRIEND 8 ~!GlobalTimerNotExpired("JA#FRBLOCKED","GLOBAL")~
 
 ALTER_TRANS FRIEND // file name
-BEGIN 1 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#FR_RULES","%FriendlyArmInn%",1)~
-END
-
-ALTER_TRANS FRIEND // file name
-BEGIN 2 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#FR_RULES","%FriendlyArmInn%",1)~
-END
-
-ALTER_TRANS FRIEND // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#FR_RULES","%FriendlyArmInn%",1)~
-END
-
-ALTER_TRANS FRIEND // file name
-BEGIN 4 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#FR_RULES","%FriendlyArmInn%",1)~
-END
-
-ALTER_TRANS FRIEND // file name
-BEGIN 5 END // state number (can be more than one)
+BEGIN 1 2 3 4 5 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#FR_RULES","%FriendlyArmInn%",1)~
@@ -96,9 +68,3 @@ IF ~~ THEN BEGIN JA#FACAP_05
 SAY @13
 IF ~~ THEN DO ~EscapeAreaDestroy(90)~ EXIT
 END
-
-
-
-
-
-

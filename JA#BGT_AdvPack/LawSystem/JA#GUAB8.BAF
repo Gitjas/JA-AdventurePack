@@ -1,0 +1,42 @@
+IF
+	Global("JA#GUABE_BAS","%Beregost_JovialJuggler_L1%",0)
+	!Dead("Bassilus")
+	Allegiance(Myself,NEUTRAL)
+	CombatCounter(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		SetGlobal("JA#GUABE_BAS","%Beregost_JovialJuggler_L1%",1)
+		SetGlobal("JA#GUABE_ACT","%Beregost_JovialJuggler_L1%",1)
+		Wait(1)
+		StartDialogueNoSet([PC])
+END
+
+IF
+	Global("JA#GUABE_ROB","%Beregost_JovialJuggler_L1%",0)
+	Dead("Bassilus")
+	Allegiance(Myself,NEUTRAL)
+	CombatCounter(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		SetGlobal("JA#GUABE_ROB","%Beregost_JovialJuggler_L1%",1)
+		SetGlobal("JA#GUABE_ACT","%Beregost_JovialJuggler_L1%",1)
+		Wait(1)
+		StartDialogueNoSet([PC])
+END
+
+IF
+	Global("JA#GUABE_NAS","%Beregost_JovialJuggler_L1%",0)
+	Dead("Bassilus")
+	Dead("Mulahey")
+	Allegiance(Myself,NEUTRAL)
+	CombatCounter(0)
+	See([PC])
+THEN
+	RESPONSE #100
+		SetGlobal("JA#GUABE_NAS","%Beregost_JovialJuggler_L1%",1)
+		SetGlobal("JA#GUABE_ACT","%Beregost_JovialJuggler_L1%",1)
+		Wait(1)
+		StartDialogueNoSet([PC])
+END
