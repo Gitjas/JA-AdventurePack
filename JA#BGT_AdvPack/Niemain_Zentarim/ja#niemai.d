@@ -46,14 +46,7 @@ END
 
 
 ALTER_TRANS NIEMAI // file name
-BEGIN 6 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#ZENTEXIT","%EBaldursGate_SorcerousSundries_L2%",2)~
-END
-
-ALTER_TRANS NIEMAI // file name
-BEGIN 7 END // state number (can be more than one)
+BEGIN 6 7 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~SetGlobal("JA#ZENTEXIT","%EBaldursGate_SorcerousSundries_L2%",2)~
@@ -326,19 +319,3 @@ IF ~Global("JA#TalkedNiemai","LOCALS",2)~ THEN BEGIN JA#ZENT1_6
 SAY @46
 IF ~~ THEN EXIT
 END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

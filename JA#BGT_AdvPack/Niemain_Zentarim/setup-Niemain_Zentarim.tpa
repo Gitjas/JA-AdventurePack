@@ -37,8 +37,8 @@ ACTION_IF GAME_IS ~bgee~ BEGIN
 		WRITE_ASCII 0x2cc ~JA#ZENT1~	#8 //DLG
 END
 
-EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7704_niemain.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7706_niemain.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7704.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7706.BAF~ EVALUATE_BUFFER
 
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Niemain_Zentarim/JA#NIEMAI.D~
 
