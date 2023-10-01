@@ -22,7 +22,9 @@ HPPercentLT(Player6,100)~ THEN BEGIN 2
   IF ~~ THEN DO ~SetGlobal("JA#NASHA_HEAL","LOCALS",1)~ EXIT
 END
 
-IF ~HPPercent(Player1,100)
+IF ~Global("JA#NASHA","GLOBAL",2)
+OR(6)
+HPPercent(Player1,100)
 HPPercent(Player2,100)
 HPPercent(Player3,100)
 HPPercent(Player4,100)

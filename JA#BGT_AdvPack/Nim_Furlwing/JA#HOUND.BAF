@@ -1,16 +1,21 @@
 IF
-	See("wolfdi")
+	!Allegiance(Myself,ENEMY)
+	OR(3)
+		AttackedBy([GOODCUTOFF],DEFAULT)
+		Allegiance("JA#NIMFU",ENEMY)  // Nim Furlwing
+		Allegiance("JA#HOUND",ENEMY)  // Hound
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),15)
+		Enemy()
 		Continue()
 END
 
 IF
-	See(NearestEnemyOf(Myself))
+	See("JA#DWOLF")  // Dire Wolf
+	!StateCheck("JA#DWOLF",STATE_DEAD)  // Dire Wolf
 THEN
 	RESPONSE #100
-		AttackReevaluate(NearestEnemyOf(Myself),15)
+		AttackReevaluate(LastSeenBy(Myself),15)
 END
 
 IF
@@ -18,7 +23,6 @@ IF
 THEN
 	RESPONSE #100
 		RunAwayFrom(NearestEnemyOf(Myself),3)
-		Continue()
 END
 
 IF
@@ -30,7 +34,7 @@ THEN
 	RESPONSE #100
 		Wait(2)
 	RESPONSE #100
-		MoveToObject("JA#NIMFU")
+		MoveToObject("JA#NIMFU")  // Nim Furlwing
 	RESPONSE #100
 		RandomWalk()
 END

@@ -152,7 +152,7 @@ COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~
 		fj_box_top      = 2840  //kleinstes y
 		fj_box_right    = 95  //größtes x
 		fj_box_bottom   = 2950   //größtes y
-		fj_cursor_idx   = 20   //door
+		fj_cursor_idx   = 30   //door
 		fj_vertex_0     = 20 + (2840 << 16)   //kleinstes x +  kleinstes y
 		fj_vertex_1     = 95 + (2840 << 16)   //größtes x + kleinstes y
 		fj_vertex_2     = 95 + (2950 << 16)   //größtes x + größtes y

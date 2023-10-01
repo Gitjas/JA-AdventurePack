@@ -1,21 +1,9 @@
 IF
 	See([PC])
-	AreaCheck("AR60PB")
-	Global("JA#CUNIM","AR60PB",0)
+	Global("JA#CUNIM","MYAREA",0)
 THEN
 	RESPONSE #100
-		SetGlobal("JA#CUNIM","AR60PB",1)
-		ClearAllActions()
-		StartCutScene("JA#CUNIM")
-END
-
-IF
-	See([PC])
-	AreaCheck("%Peldvale%")
-	Global("JA#CUNIM","%Peldvale%",0)
-THEN
-	RESPONSE #100
-		SetGlobal("JA#CUNIM","%Peldvale%",1)
+		SetGlobal("JA#CUNIM","MYAREA",1)
 		ClearAllActions()
 		StartCutScene("JA#CUNIM")
 END
@@ -25,6 +13,17 @@ IF
 	OR(2)
 		AttackedBy([GOODCUTOFF],DEFAULT)
 		PickPocketFailed([PC])
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	!Allegiance(Myself,ENEMY)
+	OR(3)
+		AttackedBy([GOODCUTOFF],DEFAULT)
+		PickPocketFailed([PC])
+		Allegiance("JA#HOUND",ENEMY)
 THEN
 	RESPONSE #100
 		Enemy()
@@ -47,7 +46,7 @@ THEN
 END
 
 IF
-	Range(NearestEnemyOf(Myself),2)
+	Range(NearestEnemyOf(Myself),7)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -55,7 +54,7 @@ THEN
 END
 
 IF
-	!Range(NearestEnemyOf(Myself),2)
+	!Range(NearestEnemyOf(Myself),7)
 THEN
 	RESPONSE #100
 		EquipRanged()

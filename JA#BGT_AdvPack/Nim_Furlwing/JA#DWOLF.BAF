@@ -8,7 +8,7 @@ END
 
 IF
 	See("JA#HOUND")
-	Range(LastSeenBy(Myself),2)
+	Range(LastSeenBy(Myself),20)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),300)
