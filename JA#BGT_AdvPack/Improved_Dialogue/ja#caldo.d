@@ -41,16 +41,7 @@ END
 END
 
 REPLACE_ACTION_TEXT DRYAD
-~EscapeAreaDestroy(90)~
+~EscapeAreaDestroy(5)~
 ~ForceSpell(Myself,DRYAD_TELEPORT)
 Wait(1)
 DestroySelf()~
-
-APPEND DRYAD
-
-IF ~Global("JA#CALDOQU1","%DryadFalls%",1)~ THEN BEGIN JA#DRYAD_1
-SAY @8
-IF ~~ THEN + 6
-END
-
-END

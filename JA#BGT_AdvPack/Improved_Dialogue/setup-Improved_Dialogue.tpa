@@ -4,12 +4,49 @@
 
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#HALBAZ.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#NORALE.D~
-COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#PHLYDI.D~
+// COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#PHLYDI.D~ 
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#NOBL2.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CONNOL.D~
-
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CENTEO.D~
+
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Improved_Dialogue/JA#CALDO.D~
+/* if bg1npc interjections are installd, Faldorn will not tolerate if Voltine is attacked. Taken from bg1npc Project */
+<<<<<<<< ...inlined/ja#caldo_bg1npc.d
+APPEND DRYAD
+
+IF ~Global("JA#CALDOQU1","%DryadFalls%",1)~ THEN BEGIN JA#DRYAD_1
+SAY @8
+IF ~!IfValidForPartyDialogue("xzar") Dead("xzar")~ THEN + 6
+IF ~IfValidForPartyDialogue("xzar") InMyArea("xzar")~ THEN + "%xzardryad%"
+END
+
+END
+>>>>>>>>
+
+<<<<<<<< ...inlined/ja#caldo_bg1.d
+APPEND DRYAD
+
+IF ~Global("JA#CALDOQU1","%DryadFalls%",1)~ THEN BEGIN JA#DRYAD_1
+SAY @8
+IF ~~ THEN + 6
+END
+
+END
+>>>>>>>>
+
+/* The BG1 NPC Project: Banters, Quests, and Interjections */
+/* BEGIN @1007 DESIGNATED 10 */
+
+ACTION_IF (MOD_IS_INSTALLED ~BG1NPC/BG1NPC.TP2~ "10") BEGIN
+	
+	PRINT ~The BG1 NPC Project: Banters, Quests, and Interjections Component detected~
+
+	OUTER_SET xzardryad = STATE_WHICH_SAYS 112 IN ~bg1npc/tra/%s/x#xzqu.tra~ FROM ~dryad.dlg~
+	COMPILE EVALUATE_BUFFER ~...inlined/ja#caldo_bg1npc.d~
+END ELSE BEGIN
+	COMPILE EVALUATE_BUFFER ~...inlined/ja#caldo_bg1.d~
+END
+
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CAUTER.D~
 ACTION_IF GAME_IS ~bgee eet~ BEGIN
 	<<<<<<<< ...inlined/JA#CAUTER_eet.d

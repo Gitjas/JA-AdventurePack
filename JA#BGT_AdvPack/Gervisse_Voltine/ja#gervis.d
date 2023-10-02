@@ -242,7 +242,7 @@ END
 
 APPEND VOLTIN
 
-/* Gervisse is dead - not PC can acceot Gervisse's thanks or kill her, too. This will work with bg1npc as long as no othr mod introduces a weighted dialogue higher than this one */
+/* Gervisse is dead - not PC can acceot Gervisse's thanks or kill her, too. This will work with bg1npc as long as no other mod introduces a weighted dialogue higher than this one */
 
 IF WEIGHT #-1 ~Dead("Gervisse")
 Global("HelpVoltine","GLOBAL",0)

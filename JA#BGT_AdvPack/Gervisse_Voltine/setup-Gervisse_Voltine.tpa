@@ -133,7 +133,7 @@ END
 
 ACTION_IF (MOD_IS_INSTALLED ~BG1NPC/BG1NPC.TP2~ "10") BEGIN
 
-	PRINT ~BG1 NPC Quest und Banter Component detected~
+	PRINT ~The BG1 NPC Project: Banters, Quests, and Interjections Component detected~
 
 	COMPILE EVALUATE_BUFFER 
 		~...inlined/ja#gervis_bg1npc.d~ 
