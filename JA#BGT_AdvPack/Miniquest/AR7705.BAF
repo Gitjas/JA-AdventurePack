@@ -13,9 +13,9 @@ THEN
 	RESPONSE #100
 		SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",1)
 		CreateCreature("JA#KEG01",[648.257],0) // Fass
-		ActionOverride("JA#MCOOK2",JumpToPoint([562.458]))
+		ActionOverride("JA#COOK1",JumpToPoint([562.458]))
 		MoveToObject([PC])
-		ActionOverride("JA#MCOOK2",Dialogue([PC]))
+		ActionOverride("JA#COOK1",Dialogue([PC]))
 END
 
 IF
