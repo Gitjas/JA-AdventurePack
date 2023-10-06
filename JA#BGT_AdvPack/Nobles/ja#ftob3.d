@@ -15,17 +15,17 @@ IF ~NumTimesTalkedTo(2)~ THEN BEGIN 2
   IF ~~ THEN EXIT
 END
 
-IF ~True()~ THEN BEGIN 3
+IF ~RandomNum(3,1)~ THEN BEGIN 3
   SAY @3
   IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN 4
+IF ~RandomNum(3,2)~ THEN BEGIN 4
   SAY @4
   IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN 5
+IF ~RandomNum(3,3)~ THEN BEGIN 5
   SAY @5
   IF ~~ THEN EXIT
 END

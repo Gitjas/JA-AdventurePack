@@ -4,13 +4,14 @@
 
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#HALBAZ.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#NORALE.D~
-// COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#PHLYDI.D~ 
+// COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#PHLYDI.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#NOBL2.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CONNOL.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CENTEO.D~
 
+
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Improved_Dialogue/JA#CALDO.D~
-/* if bg1npc interjections are installd, Faldorn will not tolerate if Voltine is attacked. Taken from bg1npc Project */
+/* if bg1npc interjections are installd, xzar will kill the dryad. compatibility with bg1npc Project */
 <<<<<<<< ...inlined/ja#caldo_bg1npc.d
 APPEND DRYAD
 
@@ -43,8 +44,10 @@ ACTION_IF (MOD_IS_INSTALLED ~BG1NPC/BG1NPC.TP2~ "10") BEGIN
 
 	OUTER_SET xzardryad = STATE_WHICH_SAYS 112 IN ~bg1npc/tra/%s/x#xzqu.tra~ FROM ~dryad.dlg~
 	COMPILE EVALUATE_BUFFER ~...inlined/ja#caldo_bg1npc.d~
+	USING ~JA#BGT_AdvPack/languages/%s/JA#CALDO.tra~
 END ELSE BEGIN
 	COMPILE EVALUATE_BUFFER ~...inlined/ja#caldo_bg1.d~
+	USING ~JA#BGT_AdvPack/languages/%s/JA#CALDO.tra~
 END
 
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CAUTER.D~
@@ -83,3 +86,6 @@ COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Bently.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Greywo.d~
 // COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Jondal.d~ not needed for EE and BGT
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Zordral.D~
+COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Yago.D~
+COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Dillar.D~
+COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Nobl14.D~

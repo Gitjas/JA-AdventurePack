@@ -235,10 +235,10 @@ LABEL "JA#BGT_AdvPack-Galtoth"
 INCLUDE ~JA#BGT_AdvPack/Galtoth/setup-Galtoth.tpa~
 
 //////////////////////////////////
-//FIXED: Moved Phandalyn to the Elfsong
+//FIXED: Moved Phandalyn to the Jopalins Tavern
 //////////////////////////////////
 
-BEGIN ~Phandalyn to the Elfsong~ DESIGNATED 14
+BEGIN ~Phandalyn to the Jopalins Tavern~ DESIGNATED 14
 LABEL "JA#BGT_AdvPack-Phandalyn"
 INCLUDE ~JA#BGT_AdvPack/Phandalyn/setup-Phandalyn.tpa~
 

@@ -1,7 +1,7 @@
-@5    = ~Bis jetzt! Zieht Eure Waffe, scheinheiliger Dummschwätzer!~
-@6    = ~Helm wird mich schützen vor solchen wie Euch!~
+@0    = ~Bis jetzt! Zieht Eure Waffe, scheinheiliger Dummschwätzer!~
+@1    = ~Helm wird mich schützen vor solchen wie Euch!~
 /* #27359 */
-@7    = ~Böse Taten werden bestraft
+@2    = ~Böse Taten werden bestraft
 
 Meine Gruppe wurde von Phandalyn, einem übertrieben wachsamen Paladin, der sich in der Taverne "Elfgesang" in Baldurs Tor herumtreibt, angegriffen. Eines muss man sich merken: Wenn man von einer Gruppe von Bösewichten abhängig ist, sollte man muskulösen Paladinen besser aus dem Weg gehen.~
-@11	= ~Geht so. Einen schönen Tag wünsche ich!~
+@3	= ~Geht so. Einen schönen Tag wünsche ich!~

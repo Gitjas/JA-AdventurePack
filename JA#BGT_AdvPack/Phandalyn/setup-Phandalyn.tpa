@@ -1,24 +1,11 @@
 ////////////////////////////////////////
-//FIXED: Moved Phandalyn to the Elfsong
+//FIXED: Moved Phandalyn to the Jopalins Tavern
 ////////////////////////////////////////
 
 /* remove SHOUT script - or the whole inn will turn hostile! */
 COPY_EXISTING ~PHANDA.CRE~ ~override~
-	WRITE_ASCIIE 0x248 ~PHANDALY~ #8       // remove SHOUT OVERRIDE script
+	WRITE_ASCIIE 0x248 ~~ #8       // remove SHOUT OVERRIDE script
 BUT_ONLY
-
-
-
-
-/* this is not fail-proof in case other mods changed the area already
-COPY_EXISTING ~AR8009.ARE~ ~override~
-PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN 
-READ_SHORT 0x54 "JA#OFF_ACT"
-WRITE_LONG "JA#OFF_ACT" + (0x110 * 15) + 0x38        0x00000000	//Remove Phandalyn
-END
-BUT_ONLY
-*/
-
 
 /* Better: cycle through the existing actors, first (in case area was altered by another mod) */
 
@@ -34,6 +21,22 @@ COPY_EXISTING ~%SWBaldursGate_Tavern_L1%.are~ ~override~
 	END
 BUT_ONLY
 
+COPY_EXISTING ~%BaldursGateDocks_JopalinsTavern%.ARE~ ~override~
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 738
+		fj_loc_y          = 275
+		fj_dest_x         = 738
+		fj_dest_y         = 275
+		fj_schedule		  = 0b000001111111111111100000 // during the day only
+		fj_orientation    = 4     
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = Phandalyn
+		fj_cre_resref     = PHANDA
+		fj_dlg_resref	  = PHANDA
+	END
+
 /* correct Phandalyn's script: should attack evil party member, not other evil (quest) NPCs! */
 COPY_EXISTING ~PHANDALY.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -48,8 +51,15 @@ COPY_EXISTING ~PHANDALY.bcs~ ~override~
 	END
 BUT_ONLY
 
-EXTEND_TOP ~PHANDALY.BCS~ ~JA#BGT_AdvPack/Phandalyn/PHANDALY.BAF~
+COPY_EXISTING ~PHANDA.DLG~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~EscapeArea()~ ~NoAction()~
+	END
+BUT_ONLY
+
+EXTEND_TOP ~PHANDALY.BCS~ ~JA#BGT_AdvPack/Phandalyn/JA#Phanda.BAF~
 
 //misc.d
-COMPILE ~JA#BGT_AdvPack/Phandalyn/PHANDALY.D~
-COMPILE ~JA#BGT_AdvPack/Phandalyn/Bellamy.D~
+COMPILE ~JA#BGT_AdvPack/Phandalyn/JA#Phanda.d~
+USING ~JA#BGT_AdvPack/languages/%s/JA#Phanda.tra~
+COMPILE ~JA#BGT_AdvPack/Phandalyn/JA#Bellamy.D~
