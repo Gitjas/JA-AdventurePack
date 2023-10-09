@@ -1,14 +1,17 @@
 IF
-	Global("JA#RamazithDeal","GLOBAL",0)
+	OR(2)
+		Global("JA#RamazithDeal","GLOBAL",0)
+		Global("JA#RamazithDeal","GLOBAL",10)
 	Global("RamazithMove","GLOBAL",2)
 	Global("JA#RAMAZITH_AR7240","%NBaldursGate_RamazithsTower_L3%",0)
 	!Dead("Ramazith")
 THEN
 	RESPONSE #100
 		SetGlobal("JA#RAMAZITH_AR7240","%NBaldursGate_RamazithsTower_L3%",1)
-		CreateCreature("ELEMEP08",[78.235],15)
-		CreateCreature("MEPICE01",[172.140],6)
-		CreateCreature("MEPSAL01",[424.286],1)
+		CreateCreature("SPIDSW",[419.275],0)
+		CreateCreature("SPIDSW",[162.355],11)
+		CreateCreature("SPIDGI",[99.213],6)
+		CreateCreature("SPIDHU",[249.143],14)
 		CreateCreature("RAMAZI",[422.293],6)
 		ActionOverride("Ramazith",SetNumTimesTalkedTo(1))
 //		ActionOverride("RAMAZITH",Enemy())

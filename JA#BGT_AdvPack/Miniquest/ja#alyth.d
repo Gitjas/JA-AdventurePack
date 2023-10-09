@@ -160,13 +160,13 @@ END
 IF ~~ THEN BEGIN JA#ALYTH_21
 SAY @57
 = @58
-IF ~~ THEN DO ~EraseJournalEntry(999999)
-EraseJournalEntry(999998)
-EraseJournalEntry(999997)
-EraseJournalEntry(999996)
-EraseJournalEntry(999995)
-EraseJournalEntry(999994)
-EraseJournalEntry(999993)
+IF ~~ THEN DO ~EraseJournalEntry(@1000)
+EraseJournalEntry(@1001)
+EraseJournalEntry(@1002)
+EraseJournalEntry(@1003)
+EraseJournalEntry(@1004)
+EraseJournalEntry(@1005)
+EraseJournalEntry(@1006)
 AddExperienceParty(500)
 GiveGoldForce(400)SetGlobalTimer("JA#HARP_TIMER","AR7706",ONE_DAY)~ SOLVED_JOURNAL @70 EXIT
 END

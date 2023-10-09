@@ -1,5 +1,7 @@
 IF
-	Global("JA#RamazithDeal","GLOBAL",0)
+	OR(2)
+		Global("JA#RamazithDeal","GLOBAL",0)
+		Global("JA#RamazithDeal","GLOBAL",10)
 	Global("RamazithMove","GLOBAL",2)
 	Global("JA#RAMAZITH_AR7242","%NBaldursGate_RamazithsTower_L5%",0)
 	!Dead("Ramazith")

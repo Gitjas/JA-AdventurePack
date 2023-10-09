@@ -69,6 +69,3 @@ COPY_EXISTING ~%NEBaldursGate_IlmatersShrine%.ARE~ ~override~
 		fj_cre_resref     = JA#PILL1
 		fj_dlg_resref	  = JA#PILL1
 	END
-
-//GOND
-COMPILE ~JA#BGT_AdvPack/Priester/JA#PGOND.d~

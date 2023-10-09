@@ -77,7 +77,7 @@ END
 
 IF ~~ THEN BEGIN JA#COOK1_14
 SAY @28
-IF ~~ THEN DO ~SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",6) EraseJournalEntry(999992)~ SOLVED_JOURNAL @81 EXIT
+IF ~~ THEN DO ~AddexperienceParty(100) SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",6) EraseJournalEntry(@80)~ SOLVED_JOURNAL @81 EXIT
 END
 
 IF ~GlobalGT("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",5)RandomNum(3,1)~ THEN BEGIN JA#COOK1_15
@@ -216,8 +216,6 @@ IF ~~ THEN BEGIN JA#KEG01_16
 SAY @76 
 IF ~~ THEN DO ~DestroyItem("misc07")SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",4)~ EXIT
 END
-
-
 
 
 BEGIN ~JA#KEG02~

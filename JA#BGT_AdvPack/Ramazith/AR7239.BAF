@@ -1,11 +1,13 @@
 IF
-	Global("JA#RamazithDeal","GLOBAL",0)
+	OR(2)
+		Global("JA#RamazithDeal","GLOBAL",0)
+		Global("JA#RamazithDeal","GLOBAL",10)
 	Global("RamazithMove","GLOBAL",2)
-	Global("JA#SPAWN_AR7239","%NBaldursGate_RamazithsTower_L2%",0)
+	Global("JA#RAMAZITH_AR7239","%NBaldursGate_RamazithsTower_L2%",0)
 	!Dead("Ramazith")
 THEN
 	RESPONSE #100
-		SetGlobal("JA#SPAWN_AR7239","%NBaldursGate_RamazithsTower_L2%",1)
+		SetGlobal("JA#RAMAZITH_AR7239","%NBaldursGate_RamazithsTower_L2%",1)
 		CreateCreature("JELLYMU",[131.166],0)
 		CreateCreature("JELLYMU",[110.333],0)
 END

@@ -26,110 +26,36 @@ COPY_EXISTING ~RAMAZITH.BCS~ ~override~
 BUT_ONLY_IF_IT_CHANGES
 	
 //delete existing creatures	
-COPY_EXISTING ~%NBaldursGate_RamazithsTower_L2%.ARE~ ~override~
-	FOR (cnt=BYTE_AT 0x58 -1; cnt>=0; --cnt) BEGIN
-		READ_ASCII SHORT_AT 0x54 +(0x110 * (cnt))+0x80 actors_filename (32) NULL
-		PATCH_IF (~%actors_filename%~ STR_EQ  ~JELLYMU~) BEGIN
-			LPF fj_are_structure
-				INT_VAR fj_delete_mode = EVAL %cnt%
-				STR_VAR fj_structure_type = actor
-			END
-		END
-	END
-BUT_ONLY
-
-ACTION_IF NOT (MOD_IS_INSTALLED ~setup-FotD.tp2~ 0) BEGIN
-	COPY_EXISTING ~%NBaldursGate_RamazithsTower_L3%.ARE~ ~override~
+ACTION_FOR_EACH tower_level IN ~2~ ~3~ ~4~ ~5~ BEGIN
+	COPY_EXISTING ~%NBaldursGate_RamazithsTower_L%tower_level%%.ARE~ ~override~
 		FOR (cnt=BYTE_AT 0x58 -1; cnt>=0; --cnt) BEGIN
 			READ_ASCII SHORT_AT 0x54 +(0x110 * (cnt))+0x80 actors_filename (32) NULL
-			PATCH_IF (~%actors_filename%~ STR_EQ  ~GHAST~) BEGIN
-				LPF fj_are_structure
-					INT_VAR fj_delete_mode = EVAL %cnt%
-					STR_VAR fj_structure_type = actor
+			PATCH_FOR_EACH cre_name IN ~JELLYMU~ ~GHAST~ ~HOBELITE~ ~KOBCOMM~ BEGIN
+				PATCH_IF (~%actors_filename%~ STR_EQ  ~%cre_name%~) BEGIN
+					LPF fj_are_structure
+						INT_VAR fj_delete_mode = EVAL %cnt%
+						STR_VAR fj_structure_type = actor
+					END
 				END
 			END
 		END
 	BUT_ONLY
 END
 
-COPY_EXISTING ~%NBaldursGate_RamazithsTower_L4%.ARE~ ~override~
-	FOR (cnt=BYTE_AT 0x58 -1; cnt>=0; --cnt) BEGIN
-		READ_ASCII SHORT_AT 0x54 +(0x110 * (cnt))+0x80 actors_filename (32) NULL
-		PATCH_IF (~%actors_filename%~ STR_EQ  ~HOBELITE~) BEGIN
-			LPF fj_are_structure
-				INT_VAR fj_delete_mode = EVAL %cnt%
-				STR_VAR fj_structure_type = actor
-			END
-		END
-	END
-BUT_ONLY
-	
-COPY_EXISTING ~%NBaldursGate_RamazithsTower_L5%.ARE~ ~override~
-	FOR (cnt=BYTE_AT 0x58 -1; cnt>=0; --cnt) BEGIN
-		READ_ASCII SHORT_AT 0x54 +(0x110 * (cnt))+0x80 actors_filename (32) NULL
-		PATCH_IF (~%actors_filename%~ STR_EQ  ~KOBCOMM~) BEGIN
-			LPF fj_are_structure
-				INT_VAR fj_delete_mode = EVAL %cnt%
-				STR_VAR fj_structure_type = actor
-			END
-		END
-	END
-BUT_ONLY
-
 //Add Ramazith and new creatures by script
-EXTEND_TOP ~%WBaldursGate_RagefastsHouse%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7226.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%NBaldursGate_RamazithsTower_L1%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7237.BAF~ EVALUATE_BUFFER 
-EXTEND_BOTTOM ~%NBaldursGate_RamazithsTower_L6%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7238.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%NBaldursGate_RamazithsTower_L2%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7239.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%NBaldursGate_RamazithsTower_L3%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7240.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%NBaldursGate_RamazithsTower_L4%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7241.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%NBaldursGate_RamazithsTower_L5%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7242.BAF~ EVALUATE_BUFFER 
-EXTEND_TOP ~%WBaldursGate%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7600.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7300.BAF~ EVALUATE_BUFFER
-	//get stringref for journal entry
-/*	COPY_EXISTING ~RAMAZI.dlg~ ~override~
-		LPF ~READ_JOURNAL_STRREF~
-			INT_VAR
-			state         = "9"  // state index
-			stateResponse = 0     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
-			RET
-			strref    // returned string reference, or -1 if not available
-		END
-		SET ramazi1 = strref
-		LPF ~READ_JOURNAL_STRREF~
-			INT_VAR
-			state         = "18"  // state index
-			stateResponse = 0     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
-			RET
-			strref    // returned string reference, or -1 if not available
-		END
-		SET ramazi3 = strref
-	COPY_EXISTING ~RAGEFA.dlg~ ~override~
-		LPF ~READ_JOURNAL_STRREF~
-			INT_VAR
-			state         = "3"  // state index
-			stateResponse = 0     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
-			RET
-			strref    // returned string reference, or -1 if not available
-		END
-		SET ramazi2 = strref
-	COPY_EXISTING ~HANNAH.dlg~ ~override~
-		LPF ~READ_JOURNAL_STRREF~
-			INT_VAR
-			state         = "3"  // state index
-			stateResponse = 0     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
-			RET
-			strref    // returned string reference, or -1 if not available
-		END
-		SET ramazi4 = strref*/
+EXTEND_TOP ~%WBaldursGate_RagefastsHouse%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7226.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%NBaldursGate_RamazithsTower_L1%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7237.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~%NBaldursGate_RamazithsTower_L6%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7238.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%NBaldursGate_RamazithsTower_L2%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7239.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%NBaldursGate_RamazithsTower_L3%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7240.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%NBaldursGate_RamazithsTower_L4%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7241.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%NBaldursGate_RamazithsTower_L5%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7242.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~%WBaldursGate%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7600.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7300.BAF~ EVALUATE_BUFFER
 
-	COMPILE ~JA#BGT_AdvPack/Ramazith/JA#RAMAZI.D~
-/*		REPLACE ~999999~ ~%ramazi1%~
-		REPLACE ~999998~ ~%ramazi2%~
-		REPLACE ~999997~ ~%ramazi3%~
-		REPLACE ~999996~ ~%ramazi4%~*/
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Ramazith/JA#JOPI.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Ramazith/JA#ABELA.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Ramazith/JA#RAMAZI.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Ramazith/JA#JOPI.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Ramazith/JA#ABELA.D~
 	
 	
 	COPY_EXISTING ~RAGEFA.CRE~ ~override~
@@ -142,21 +68,21 @@ EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Ramazith/AR7300.BAF~ EVALUATE_BU
 	COPY_EXISTING ~JOPI.CRE~ ~override/JA#JOPI.CRE~
 		WRITE_ASCII 0x268 ~RUNENEMY~ #8
 		WRITE_ASCII 0x2cc ~JA#JOPI~ #8
-	COPY ~JA#BGT_AdvPack/Ramazith/JA#GOLC1.CRE~ ~override~
-	COPY ~JA#BGT_AdvPack/Ramazith/JA#IMP01.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Ramazith/JA#GOLC1.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Ramazith/JA#IMP01.CRE~ ~override~
 		SAY NAME1 @2042
 		SAY NAME2 @2042
 
-	COMPILE ~JA#BGT_AdvPack/Ramazith/JA#CURA1.BAF~
-	COMPILE ~JA#BGT_AdvPack/Ramazith/JA#CUJO1.BAF~
-	COMPILE ~JA#BGT_AdvPack/Ramazith/JA#IMP01.BAF~
+	COMPILE ~%MOD_FOLDER%/Ramazith/JA#CURA1.BAF~
+	COMPILE ~%MOD_FOLDER%/Ramazith/JA#CUJO1.BAF~
+	COMPILE ~%MOD_FOLDER%/Ramazith/JA#IMP01.BAF~
 
-	COPY ~JA#BGT_AdvPack/Ramazith/AR7226.WED~ ~override/%WBaldursGate_RagefastsHouse%.WED~
-	COPY ~JA#BGT_AdvPack/Ramazith/AR7238.WED~ ~override/%NBaldursGate_RamazithsTower_L6%.WED~
+	COPY ~%MOD_FOLDER%/Ramazith/AR7226.WED~ ~override/%WBaldursGate_RagefastsHouse%.WED~
+	COPY ~%MOD_FOLDER%/Ramazith/AR7238.WED~ ~override/%NBaldursGate_RamazithsTower_L6%.WED~
 	INCLUDE ~%MOD_FOLDER%/lib/alter_searchmap.tpa~
 	LAF ALTER_SEARCHMAP
 		STR_VAR
-		path_to_2da_file = EVAL ~%MOD_FOLDER%/Ramazith/AR7238SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
-		areaname = EVAL ~%NBaldursGate_RamazithsTower_L6%~ 							  		 			// area name, e.g. ~AR3700~
+		path_to_2da_file = EVAL ~%MOD_FOLDER%/Ramazith/AR7238SR_changes.2da~
+		areaname = EVAL ~%NBaldursGate_RamazithsTower_L6%~
 	END
 

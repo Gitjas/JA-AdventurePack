@@ -11,7 +11,7 @@ COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#CENTEO.D~
 
 
 COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Improved_Dialogue/JA#CALDO.D~
-/* if bg1npc interjections are installd, xzar will kill the dryad. compatibility with bg1npc Project */
+/* if bg1npc interjections are installed, xzar will kill the dryad. compatibility with bg1npc Project */
 <<<<<<<< ...inlined/ja#caldo_bg1npc.d
 APPEND DRYAD
 
@@ -89,3 +89,4 @@ COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Zordral.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Yago.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Dillar.D~
 COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#Nobl14.D~
+COMPILE ~JA#BGT_AdvPack/Improved_Dialogue/JA#PGond.D~

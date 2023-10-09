@@ -7,11 +7,6 @@ BEGIN // list of changes, see below for flags
   "ACTION" ~NoAction()~
 END
 
-/* addition for v1.07: give Jopi a dialogue state if talked to again before chapter 5 */
-
-ADD_STATE_TRIGGER JOPI 2 ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_4%)~
-
-
 
 APPEND JOPI
 
@@ -26,17 +21,19 @@ SAY @3
 IF ~~ THEN DO ~SetGlobal("JA#JOPIMOVE","GLOBAL",1)EscapeArea()~ EXIT
 END
 
-IF ~RandomNum(3,1)~ THEN BEGIN JA#JOPI_3
+/* addition for v0.9b3: give Jopi a dialogue state if talked to again before chapter 5 to new stats */
+
+IF ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_4%) RandomNum(3,1)~ THEN BEGIN JA#JOPI_3
 SAY @4
 IF ~~ THEN EXIT
 END
 
-IF ~RandomNum(3,2)~ THEN BEGIN JA#JOPI_4
+IF ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_4%) RandomNum(3,2)~ THEN BEGIN JA#JOPI_4
 SAY @5
 IF ~~ THEN EXIT
 END
 
-IF ~RandomNum(3,3)~ THEN BEGIN JA#JOPI_5
+IF ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_4%) RandomNum(3,3)~ THEN BEGIN JA#JOPI_5
 SAY @6
 IF ~~ THEN EXIT
 END

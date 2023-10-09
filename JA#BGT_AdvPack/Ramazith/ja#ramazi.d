@@ -210,7 +210,25 @@ END
 
 IF ~~ THEN BEGIN JA#RAMAZITH_X1
 SAY @23
-IF ~~ THEN DO ~SetGlobal("JA#RamazithDeal","GLOBAL",10)ForceSpell(Myself,WIZARD_STONE_SKIN)Enemy()~ EXIT
+IF ~~ THEN DO ~SetGlobal("JA#RamazithDeal","GLOBAL",10)
+SetGlobal("RamazithMove","GLOBAL",2)
+DialogueInterrupt(FALSE)
+ForceSpell(Player1,DRYAD_TELEPORT)
+ForceSpell(Player2,DRYAD_TELEPORT)
+ForceSpell(Player3,DRYAD_TELEPORT)
+ForceSpell(Player4,DRYAD_TELEPORT)
+ForceSpell(Player5,DRYAD_TELEPORT)
+ForceSpell(Player6,DRYAD_TELEPORT)
+Wait(2)
+Enemy()
+ActionOverride(Player1,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[239.277],W))
+ActionOverride(Player2,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[184.293],W))
+ActionOverride(Player3,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[188.231],W))
+ActionOverride(Player4,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[152.252],W))
+ActionOverride(Player5,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[162.178],W))
+ActionOverride(Player6,LeaveAreaLUA("%NBaldursGate_RamazithsTower_L1%","",[110.197],W))
+DialogueInterrupt(TRUE)
+~ EXIT
 END
 
 IF ~Global("JA#RamazithDeal","GLOBAL",2)~ THEN BEGIN JA#RAMAZITH_X2
@@ -255,8 +273,7 @@ IF ~AreaCheck("%NBaldursGate_RamazithsTower_L3%")
 Global("RamazithMove","GLOBAL",2)~ 
 THEN BEGIN JA#RAMAZITH_1
 SAY @5
-IF ~~ THEN DO ~ForceSpell(LastTalkedToBy(Myself),SPIDER_SUMMON)
-Wait(1)
+IF ~~ THEN DO ~Wait(1)
 ForceSpell(Myself,DRYAD_TELEPORT)
 Wait(1)
 DestroySelf()~ EXIT
@@ -357,9 +374,3 @@ ForceSpell(Myself,DRYAD_TELEPORT)
 Wait(1)
 DestroySelf()~ EXIT
 END
-
-
-
-
-
-

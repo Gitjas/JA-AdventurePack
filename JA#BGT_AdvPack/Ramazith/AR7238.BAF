@@ -20,7 +20,9 @@ END
 IF
 	Global("RamazithMove","GLOBAL",2)
 	Global("JA#RAMAZITH_AR7238","%NBaldursGate_RamazithsTower_L6%",0)
-	Global("JA#RamazithDeal","GLOBAL",0)
+	OR(2)
+		Global("JA#RamazithDeal","GLOBAL",0)
+		Global("JA#RamazithDeal","GLOBAL",10)
 	!Dead("Ramazith")
 THEN
 	RESPONSE #100
