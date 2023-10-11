@@ -243,21 +243,13 @@ ALTER_TRANS IVANNE // file name
 BEGIN 4 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
-  "TRIGGER" ~Global("JA#JHASSO_QUEST","GLOBAL",0)~
   "UNSOLVED_JOURNAL" ~@1014~
 END
-
-EXTEND_BOTTOM IVANNE 4
-IF ~Global("JA#JHASSO_QUEST","GLOBAL",1)~ THEN UNSOLVED_JOURNAL @1014 EXIT
-END
-
-
 
 ALTER_TRANS IVANNE // file name
 BEGIN 5 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("TalkedToIvanne","GLOBAL",1)~
   "TRIGGER" ~!Dead("JA#KIZSKA")
 !Dead("Cythan")~
   "UNSOLVED_JOURNAL" ~@1015~

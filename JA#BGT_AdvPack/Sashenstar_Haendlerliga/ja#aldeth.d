@@ -344,12 +344,12 @@ END //APPEND ALDETH
 IF WEIGHT #-1
 ~Global("Chapter","GLOBAL",%tutu_chapter_7%)
 Global("JA#CUDED","%SWBaldursGate_MerchantLeague_L2%",3)~ THEN BEGIN JA#ALDETH_37
-SAY @41
-++ @72 /* ~Ich gehe hier nicht so einfach weg. Ihr solltet mir besser einen guten Grund für Euren Verrat liefern – ich habe Euch oft geholfen und Ihr vergeltet es mir mit Verrat!~ */ + versoehnung
-++ @73 /* ~Lebt wohl.~ */ EXIT
-++ @74 /* ~Ich habe es mir anders überlegt. Ihr werdet für Euren Verrat bezahlen!~ */ DO ~SetGlobal("JA#MGUAR","GLOBAL",1) Enemy()~ EXIT
-END
-*/
+SAY @41*/
+// ++ @72  /*~Ich gehe hier nicht so einfach weg. Ihr solltet mir besser einen guten Grund für Euren Verrat liefern – ich habe Euch oft geholfen und Ihr vergeltet es mir mit Verrat!~ */ /*+ versoehnung*/
+// ++ @73 /* ~Lebt wohl.~ */ EXIT
+// ++ @74 /* ~Ich habe es mir anders überlegt. Ihr werdet für Euren Verrat bezahlen!~ */ DO ~SetGlobal("JA#MGUAR","GLOBAL",1) Enemy()~ EXIT
+// END
+
 /* patch it to state 28 instead */
 ADD_TRANS_TRIGGER ALDETH 28 ~False()~ DO 0
 

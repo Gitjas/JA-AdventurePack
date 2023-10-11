@@ -2,22 +2,22 @@
 //SIEBEN SONNEN / SEVEN SUNS
 //////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSGU1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSGU4.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#JHASS.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSMR1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSMR2.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSGU3.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSGU2.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSGU5.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSMR3.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#SSMR4.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSGU1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSGU4.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#JHASS.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSMR1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSMR2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSGU3.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSGU2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSGU5.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSMR3.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#SSMR4.CRE~ ~override~
 
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#DPKIZ.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#DPKIZ.CRE~ ~override~
 	SAY NAME1 @2048
 	SAY NAME2 @2048
 
-COPY ~JA#BGT_AdvPack/Seven_Suns/JA#DPKIZ.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Seven_Suns/JA#DPKIZ.ITM~ ~override~
 
 COPY_EXISTING ~DOPPSE.DLG~ ~override~
 	LPF READ_JOURNAL_STRREF
@@ -44,9 +44,9 @@ COPY_EXISTING ~DOPPSE.DLG~ ~override~
 	END
 	SET ssungu3 = strref 
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Seven_Suns/JA#DOPPSE.D~	//Cutscene oben
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Seven_Suns/JA#DOPPSE.D~	//Cutscene oben
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Seven_Suns/JA#SSUNG.D~		//Wache unten
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Seven_Suns/JA#SSUNG.D~		//Wache unten
 
 COPY_EXISTING ~DOPPSM.CRE~ ~override~
 	WRITE_ASCII 0x248	~NONE~	#8
@@ -65,9 +65,8 @@ ACTION_IF GAME_IS ~bgee~ BEGIN
 	ADD_JOURNAL EXISTING TITLE (#31394) @1012 @1013 @1014 @1015 @1016 @1017 @1018 @1019
 END*/
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Seven_Suns/JA#JHASSO.D~
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#SCAR.D~
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#laola.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Seven_Suns/JA#JHASSO.D~
+COMPILE ~%MOD_FOLDER%/Seven_Suns/JA#SCAR.D~
 
 COPY_EXISTING ~%SWBaldursGate_SevenSuns_L1%.ARE~ ~override~
 	GET_OFFSET_ARRAY actors_array ARE_V10_ACTORS 
@@ -268,12 +267,12 @@ COPY_EXISTING ~%SWBaldursGate%.BCS~ ~override~
 	END
 BUT_ONLY
 
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#DPKIZ.BAF~
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#INITD.BAF~
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#INITF.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Seven_Suns/JA#SSDOP.BAF~
-COMPILE ~JA#BGT_AdvPack/Seven_Suns/JA#SSGUA.BAF~
+COMPILE ~%MOD_FOLDER%/Seven_Suns/JA#DPKIZ.BAF~
+COMPILE ~%MOD_FOLDER%/Seven_Suns/JA#INITD.BAF~
+COMPILE ~%MOD_FOLDER%/Seven_Suns/JA#INITF.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Seven_Suns/JA#SSDOP.BAF~
+COMPILE ~%MOD_FOLDER%/Seven_Suns/JA#SSGUA.BAF~
 
-EXTEND_TOP ~%SWBaldursGate_SevenSuns_L1%.BCS~ ~JA#BGT_AdvPack/Seven_Suns/AR7601.BAF~
-EXTEND_TOP ~%SWBaldursGate_SevenSuns_L2%.BCS~ ~JA#BGT_AdvPack/Seven_Suns/AR7602.BAF~
-EXTEND_TOP ~%SWBaldursGate%.BCS~ ~JA#BGT_AdvPack/Seven_Suns/AR8000.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%SWBaldursGate_SevenSuns_L1%.BCS~ ~%MOD_FOLDER%/Seven_Suns/AR7601.BAF~
+EXTEND_TOP ~%SWBaldursGate_SevenSuns_L2%.BCS~ ~%MOD_FOLDER%/Seven_Suns/AR7602.BAF~
+EXTEND_TOP ~%SWBaldursGate%.BCS~ ~%MOD_FOLDER%/Seven_Suns/AR8000.BAF~ EVALUATE_BUFFER

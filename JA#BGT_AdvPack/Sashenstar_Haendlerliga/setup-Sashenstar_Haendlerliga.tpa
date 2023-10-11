@@ -9,9 +9,9 @@
 Änderungen in der Gilde + Verrat sind in BG:EE bereits restauriert.
 */
 
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#BRANDI.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DEAGAN.D~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP.D~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#BRANDI.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DEAGAN.D~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP.D~
 
 COPY_EXISTING ~ALDETH.dlg~ ~override~
   LPF READ_JOURNAL_STRREF
@@ -34,7 +34,7 @@ COPY_EXISTING ~IRLENT.DLG~ ~override~
   END
   SET aldeth5 = strref
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#IRLENT.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLENT.D~
 
 
 /* bg1npc is installed: Viconia's interjection kills the new reply option to settle the discpute with Seniyad peacefully. Add the reply option to Viconia's new state, as well: */
@@ -99,13 +99,13 @@ ACTION_IF ((vic_state >= 0) AND (jaheira_state >= 0)) BEGIN
 
 	COMPILE EVALUATE_BUFFER 
 		~...inlined/aldeth_bg1npc.d~ 
-		~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ALDETH.D~
-		USING ~JA#BGT_AdvPack/languages/%s/JA#ALDETH.tra~
+		~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDETH.D~
+		USING ~%MOD_FOLDER%/languages/%s/JA#ALDETH.tra~
 	
 	
 END ELSE BEGIN //Viconia interjection from bg1npc is not installed or couldn't be detected
   
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ALDETH.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDETH.D~
 END
 
 
@@ -118,26 +118,26 @@ COPY_EXISTING ~ALDETH.dlg~ ~override~
 	END
 BUT_ONLY
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUALD.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUDEA.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUDEB.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUDEC.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUDED.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DEAGA.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DEAGB.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#CUIRL.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DPZRL.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP1.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ALDET.BAF~
-COMPILE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#MGUAR.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUALD.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUDEA.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUDEB.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUDEC.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUDED.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DEAGA.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DEAGB.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#CUIRL.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPZRL.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDET.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#MGUAR.BAF~
 
-EXTEND_TOP ~%NBaldursGate_ThreeOldKegs_L1%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7219.BAF~
-EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L1%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7227.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L2%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7228.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L3%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7229.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7300.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~FLAMAL.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~FFHUNT.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate_ThreeOldKegs_L1%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7219.BAF~
+EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L1%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7227.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L2%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7228.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L3%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7229.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7300.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~FLAMAL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~FFHUNT.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#FFHUN.BAF~ EVALUATE_BUFFER
 
 
 COPY_EXISTING ~FLAMAL.BCS~ ~override~
@@ -147,8 +147,8 @@ COPY_EXISTING ~FLAMAL.BCS~ ~override~
 BUT_ONLY
 
 
-EXTEND_BOTTOM ~IRLENTRE.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/IRLENTRE.BAF~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ZORL.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/ZORL.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~IRLENTRE.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLENT.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ZORL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/ZORL.BAF~ EVALUATE_BUFFER
 	REPLACE ~999999~ @41
 
 /* changed the following REPLACE_TEXTUALLY so the former extra script blocks in the area script are not needed */
@@ -213,25 +213,25 @@ COPY_EXISTING ~ZORL.BCS~ ~override~
 	END
 BUT_ONLY
 
-EXTEND_TOP ~%EBaldursGate%.BCS~ ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/AR7800.BAF~
+EXTEND_TOP ~%EBaldursGate%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7800.BAF~
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#MLBAR.STO~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#MLBAR.STO~ ~override~
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DEAGA.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DEAGB.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DEAGA.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DEAGB.CRE~ ~override~
 	SAY NAME1 #3224 //~Deagan~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #3224 //~Deagan~ (string ref is true for BGT and BG:EE)
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP0.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP1.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP2.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP3.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP4.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP5.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP6.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP7.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP8.CRE~ ~override~
-	~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP9.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP0.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP1.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP2.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP3.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP4.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP5.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP6.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP7.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP8.CRE~ ~override~
+	~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP9.CRE~ ~override~
 	SAY NAME1 @2120
 	SAY NAME2 @2120
 	WRITE_ASCII 0x248 ~NONE~	#8
@@ -241,37 +241,37 @@ COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DOPP0.CRE~ ~override~
 	WRITE_ASCII 0x258 ~JA#DOPP1~	#8
 	WRITE_ASCII 0x280 ~DopZorl~	#32
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DPZRL.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPZRL.CRE~ ~override~
 	SAY NAME1 @2099
 	SAY NAME2 @2099
 	WRITE_ASCII 0x280 ~Zorl~	#32
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DPIRL.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPIRL.CRE~ ~override~
 	SAY NAME1 @2100
 	SAY NAME2 @2100
 	WRITE_ASCII 0x280 ~Irlentre~	#32
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DPZRL.ITM~ ~override~
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DPIRL.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPZRL.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPIRL.ITM~ ~override~
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ALDET.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ALDET.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDET.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDET.ITM~ ~override~
 	SAY NAME1 @2101
 	SAY NAME2 @2101
 	SAY DESC @2102
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ZRLKY.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#ZRLKY.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZRLKY.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZRLKY.ITM~ ~override~
 	SAY NAME1 @2103
 	SAY NAME2 @2103
 	SAY DESC @2104
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DZORL.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DZORL.ITM~ ~override~
 	SAY NAME1 @2105
 	SAY NAME2 @2105
 	SAY DESC @2106
 
-COPY ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/JA#DIRLE.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DIRLE.ITM~ ~override~
 	SAY NAME1 @2107
 	SAY NAME2 @2107
 	SAY DESC @2108
