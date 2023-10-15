@@ -25,28 +25,28 @@ COPY_EXISTING ~VOLTIN.CRE~ ~override~
 	ADD_MEMORIZED_SPELL ~SPPR302~ #2 ~priest~
 	ADD_MEMORIZED_SPELL ~SPPR402~ #3 ~priest~
 
-COPY ~JA#BGT_AdvPack/Gervisse_Voltine/JA#C07.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Gervisse_Voltine/JA#C07.ARE~ ~override~
 	PATCH_IF GAME_IS ~bgee eet~ BEGIN
 		LPF ALTER_AREA_REGION
 			STR_VAR region_name			= ~Door7200~
 					destination_area	= EVAL ~%NWBaldursGate%~
 		END
 	END
-COPY ~JA#BGT_AdvPack/Gervisse_Voltine/JA#C08.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Gervisse_Voltine/JA#C08.ARE~ ~override~
 
 COPY_EXISTING ~%NWBaldursGate%.ARE~ ~override~
 	LPF  ~fj_are_structure~
 		INT_VAR
 		fj_type         = 2    //travel
-		fj_box_left     = 4000  //kleinstes x
-		fj_box_top      = 1780  //kleinstes y
-		fj_box_right    = 4200  //größtes x
-		fj_box_bottom   = 1950   //größtes y
+		fj_box_left     = 4020  //kleinstes x
+		fj_box_top      = 1810  //kleinstes y
+		fj_box_right    = 4143  //größtes x
+		fj_box_bottom   = 1953   //größtes y
 		fj_cursor_idx   = 30   //door
-		fj_vertex_0     = 4000 + (1780 << 16)   //kleinstes x +  kleinstes y
-		fj_vertex_1     = 4200 + (1780 << 16)   //größtes x + kleinstes y
-		fj_vertex_2     = 4200 + (1950 << 16)   //größtes x + größtes y
-		fj_vertex_3     = 4000 + (1950 << 16)   //kleinstes x + größtes y
+		fj_vertex_0     = 4020 + (1810 << 16)   //kleinstes x +  kleinstes y
+		fj_vertex_1     = 4020 + (1894 << 16)   //größtes x + kleinstes y
+		fj_vertex_2     = 4143 + (1953 << 16)   //größtes x + größtes y
+		fj_vertex_3     = 4143 + (1867 << 16)   //kleinstes x + größtes y
 		STR_VAR
 		fj_structure_type   = region
 		fj_name             = DOORJA#C07
@@ -79,8 +79,8 @@ COPY_EXISTING ~%NWBaldursGate%.ARE~ ~override~
 
 COPY_EXISTING ~AMB_E14A.WAV~ ~override~
 
-COPY ~JA#BGT_AdvPack/Gervisse_Voltine/JA#VOLTI.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Gervisse_Voltine/JA#VOLTJ.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Gervisse_Voltine/JA#VOLTI.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Gervisse_Voltine/JA#VOLTJ.CRE~ ~override~
 
 COPY_EXISTING ~LAERTA.DLG~ ~override~
 	LPF READ_JOURNAL_STRREF
@@ -137,20 +137,20 @@ ACTION_IF (MOD_IS_INSTALLED ~BG1NPC/BG1NPC.TP2~ "10") BEGIN
 
 	COMPILE EVALUATE_BUFFER 
 		~...inlined/ja#gervis_bg1npc.d~ 
-		~JA#BGT_AdvPack/Gervisse_Voltine/JA#GERVIS.D~
-		USING ~JA#BGT_AdvPack/languages/%s/JA#GERVIS.tra~
+		~%MOD_FOLDER%/Gervisse_Voltine/JA#GERVIS.D~
+		USING ~%MOD_FOLDER%/languages/%s/JA#GERVIS.tra~
 END ELSE BEGIN
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Gervisse_Voltine/JA#GERVIS.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Gervisse_Voltine/JA#GERVIS.D~
 END
 
 ACTION_IF GAME_IS ~bgee eet~ BEGIN
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Gervisse_Voltine/JA#Laerta_Gervis_EE.D~ USING ~JA#BGT_AdvPack/languages/%s/JA#GERVIS.tra~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Gervisse_Voltine/JA#Laerta_Gervis_EE.D~ USING ~%MOD_FOLDER%/languages/%s/JA#GERVIS.tra~
 END
 
 
-COMPILE ~JA#BGT_AdvPack/Gervisse_Voltine/JA#C08.BAF~
-COMPILE ~JA#BGT_AdvPack/Gervisse_Voltine/JA#CUVOL.BAF~
-COMPILE ~JA#BGT_AdvPack/Gervisse_Voltine/JA#CUVOM.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Gervisse_Voltine/JA#VOLTI.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Gervisse_Voltine/JA#VOLTJ.BAF~
-EXTEND_TOP ~%NWBaldursGate_LaertasHouse_L1%.BCS~ ~JA#BGT_AdvPack/Gervisse_Voltine/AR7262.BAF~ EVALUATE_BUFFER
+COMPILE ~%MOD_FOLDER%/Gervisse_Voltine/JA#C08.BAF~
+COMPILE ~%MOD_FOLDER%/Gervisse_Voltine/JA#CUVOL.BAF~
+COMPILE ~%MOD_FOLDER%/Gervisse_Voltine/JA#CUVOM.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Gervisse_Voltine/JA#VOLTI.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Gervisse_Voltine/JA#VOLTJ.BAF~
+EXTEND_TOP ~%NWBaldursGate_LaertasHouse_L1%.BCS~ ~%MOD_FOLDER%/Gervisse_Voltine/AR7262.BAF~ EVALUATE_BUFFER
