@@ -42,17 +42,17 @@ END ELSE BEGIN
 		END
 END
 
-COPY ~JA#BGT_AdvPack/Llindellyn/JA#LLIND.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Llindellyn/JA#LLIND.CRE~ ~override~
 	SAY NAME1 #15620 //~Llindellyn~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #15620 //~Llindellyn~ (string ref is true for BGT and BG:EE)
-COPY ~JA#BGT_AdvPack/Llindellyn/JA#TASL1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Llindellyn/JA#TASL1.CRE~ ~override~
 
-COPY ~JA#BGT_AdvPack/Llindellyn/JA#LLIND.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Llindellyn/JA#LLIND.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Llindellyn/JA#LLIND.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Llindellyn/JA#LLIND.ITM~ ~override~
 	SAY NAME1 @2075
 	SAY NAME2 @2075
 	SAY UNIDENTIFIED_DESC @2076
 
-COMPILE ~JA#BGT_AdvPack/Llindellyn/JA#LLIND.D~
+COMPILE ~%MOD_FOLDER%/Llindellyn/JA#LLIND.D~
 
 

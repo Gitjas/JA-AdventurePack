@@ -148,7 +148,7 @@ BUT_ONLY
 
 
 EXTEND_BOTTOM ~IRLENTRE.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLENT.BAF~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ZORL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/ZORL.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~ZORL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZORL.BAF~ EVALUATE_BUFFER
 	REPLACE ~999999~ @41
 
 /* changed the following REPLACE_TEXTUALLY so the former extra script blocks in the area script are not needed */

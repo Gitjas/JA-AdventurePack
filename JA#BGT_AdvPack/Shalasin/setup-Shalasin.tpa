@@ -2,10 +2,10 @@
 //RESTORED: Shalasin
 ////////////////////////
 
-COPY ~JA#BGT_AdvPack/Shalasin/JA#SHALA.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Shalasin/JA#SHALA.CRE~ ~override~
 	SAY NAME1 #19614 //~Shalasin~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #19614 //~Shalasin~ (string ref is true for BGT and BG:EE)
-COMPILE ~JA#BGT_AdvPack/Shalasin/JA#SHALA.D~
+COMPILE ~%MOD_FOLDER%/Shalasin/JA#SHALA.D~
 COPY_EXISTING ~%EBaldursGate_ElfsongTavern_L2%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure

@@ -6,7 +6,7 @@
 
 JA#BARDOL.D is added content for Bardolan after the first meeting at the bridge. */
 
-COMPILE ~JA#BGT_AdvPack/Nashkel/JA#BARDOL.D~
+COMPILE ~%MOD_FOLDER%/Nashkel/JA#BARDOL.D~
 
 /* compatibility with bg1npc and bg1re if JAP is installed after them / if bg1re lets Bardolan disappear from main area: Bardolan will be respawned after/no bg1re encounter
 */
@@ -46,7 +46,7 @@ COPY_EXISTING ~INNKN2.CRE~ ~override~
 COPY_EXISTING ~INN4801.STO~ ~override~
 	SAY 0xc @2119
 
-COMPILE ~JA#BGT_AdvPack/Nashkel/JA#AMNNA.BAF~
+COMPILE ~%MOD_FOLDER%/Nashkel/JA#AMNNA.BAF~
 
 COPY_EXISTING ~%Nashkel%.ARE~ ~override~
 	GET_OFFSET_ARRAY actors_array ARE_V10_ACTORS 

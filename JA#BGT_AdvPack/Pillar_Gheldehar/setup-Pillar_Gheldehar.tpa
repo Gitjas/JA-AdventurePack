@@ -6,41 +6,41 @@ ACTION_IF (FILE_EXISTS_IN_GAME ntghelde.cre) BEGIN
 	PRINT ~Skipping Pilar und Gheldehar: Is already restored by another mod.~
 END ELSE BEGIN
 
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#GHELD.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#GHELD.CRE~ ~override~
 		SAY NAME1 #15555 //~Gheldehar~ (string ref is true for BGT and BG:EE)
 		SAY NAME2 #15555 //~Gheldehar~ (string ref is true for BGT and BG:EE)
 
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAR.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAR.CRE~ ~override~
 		SAY NAME1 #15548 // ~Pilar~ (string ref is true for BGT and BG:EE)
 		SAY NAME2 #15548 // ~Pilar~ (string ref is true for BGT and BG:EE)
 
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#GHELD.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#GHELD.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#GHELD.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#GHELD.ITM~ ~override~
 		SAY NAME1 @2068
 		SAY NAME2 @2068
 		SAY UNIDENTIFIED_DESC @2069
 
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#CPIL1.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAR.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAR.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#CPIL1.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAR.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAR.ITM~ ~override~
 		SAY NAME1 @2070
 		SAY NAME2 @2070
 		SAY UNIDENTIFIED_DESC @2071
 
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#CPIL2.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAX.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAX.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#CPIL2.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAX.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAX.ITM~ ~override~
 		SAY NAME1 #6348 //Ring (string ref is true for BGT and BG:EE)
 		SAY NAME2 @2072
 		SAY UNIDENTIFIED_DESC #17054 //(string ref is true for BGT and BG:EE)
 		SAY DESC @2073
 
 
-	COMPILE ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAR.D~
-	COMPILE ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#GHELD.D~
-	COMPILE ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#GHELD.BAF~
-	COMPILE ~JA#BGT_AdvPack/Pillar_Gheldehar/JA#PILAR.BAF~
-	EXTEND_TOP ~%FriendlyArmInn_L1%.BCS~ ~JA#BGT_AdvPack/Pillar_Gheldehar/AR6801.BAF~ EVALUATE_BUFFER
+	COMPILE ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAR.D~
+	COMPILE ~%MOD_FOLDER%/Pillar_Gheldehar/JA#GHELD.D~
+	COMPILE ~%MOD_FOLDER%/Pillar_Gheldehar/JA#GHELD.BAF~
+	COMPILE ~%MOD_FOLDER%/Pillar_Gheldehar/JA#PILAR.BAF~
+	EXTEND_TOP ~%FriendlyArmInn_L1%.BCS~ ~%MOD_FOLDER%/Pillar_Gheldehar/AR6801.BAF~ EVALUATE_BUFFER
 
 	COPY_EXISTING ~%SWBaldursGate%.ARE~ ~override~
 		//add new actors

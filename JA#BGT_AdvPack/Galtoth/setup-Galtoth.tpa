@@ -2,13 +2,13 @@
 //RESTORED: Galtoth - the fence
 //////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Galtoth/JA#GALTO.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Galtoth/JA#GALTO.CRE~ ~override~
 	SAY NAME1 @2060
 	SAY NAME2 @2060
 
-COPY ~JA#BGT_AdvPack/Galtoth/JA#GALTO.STO~ ~override~
+COPY ~%MOD_FOLDER%/Galtoth/JA#GALTO.STO~ ~override~
 
-COMPILE ~JA#BGT_AdvPack/Galtoth/JA#GALTO.D~
+COMPILE ~%MOD_FOLDER%/Galtoth/JA#GALTO.D~
 
 COPY_EXISTING ~%NashkelCarnival%.ARE~ ~override~
 	//add new actors

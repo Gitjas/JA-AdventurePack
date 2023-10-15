@@ -2,8 +2,8 @@
 //RESTORED: AMNIS2 - Amnish Soldier
 ////////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/AMNIS2/JA#AMNI2.CRE~ ~override~
-COMPILE ~JA#BGT_AdvPack/AMNIS2/JA#AMNI2.D~
+COPY ~%MOD_FOLDER%/AMNIS2/JA#AMNI2.CRE~ ~override~
+COMPILE ~%MOD_FOLDER%/AMNIS2/JA#AMNI2.D~
 COPY_EXISTING ~%Nashkel_Garrison%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure

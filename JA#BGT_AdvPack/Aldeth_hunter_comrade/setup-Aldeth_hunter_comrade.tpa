@@ -2,13 +2,13 @@
 //RESTORED: Aldeth's hunter comrade
 /////////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Aldeth_hunter_comrade/JA#PALIN.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.CRE~ ~override~
 	SAY NAME1 @2054
 	SAY NAME2 @2054
 
-COMPILE ~JA#BGT_AdvPack/Aldeth_hunter_comrade/JA#PALIN.D~
+COMPILE ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.D~
 
-COMPILE ~JA#BGT_AdvPack/Aldeth_hunter_comrade/JA#PALIN.BAF~
+COMPILE ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.BAF~
 
 COPY_EXISTING ~%CloakwoodLodge%.ARE~ ~override~
 	//add new actors

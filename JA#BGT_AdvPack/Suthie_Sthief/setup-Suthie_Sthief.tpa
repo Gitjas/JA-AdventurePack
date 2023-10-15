@@ -2,19 +2,19 @@
 //RESTORED: SUTHIE & STHIEF at Silence's Store
 ///////////////////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Suthie_Sthief/JA#STHIE.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Suthie_Sthief/JA#STHIE.CRE~ ~override~
 	SAY NAME1 #1082 //~Dieb~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #1082 //~Dieb~ (string ref is true for BGT and BG:EE)
 
-COMPILE ~JA#BGT_AdvPack/Suthie_Sthief/JA#STHIE.D~
+COMPILE ~%MOD_FOLDER%/Suthie_Sthief/JA#STHIE.D~
 
-COPY ~JA#BGT_AdvPack/Suthie_Sthief/JA#SUTHI.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Suthie_Sthief/JA#SUTHI.CRE~ ~override~
 	SAY NAME1 #1082 //~Dieb~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #1082 //~Dieb~ (string ref is true for BGT and BG:EE)
 
-COMPILE ~JA#BGT_AdvPack/Suthie_Sthief/JA#SUTHI.D~
+COMPILE ~%MOD_FOLDER%/Suthie_Sthief/JA#SUTHI.D~
 
-EXTEND_TOP ~%EBaldursGate_SilencesShop%.BCS~ ~JA#BGT_AdvPack/Suthie_Sthief/AR7809.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_SilencesShop%.BCS~ ~%MOD_FOLDER%/Suthie_Sthief/AR7809.BAF~ EVALUATE_BUFFER
 
 COPY_EXISTING ~%EBaldursGate_SilencesShop%.ARE~ ~override~
 	//add new actors
@@ -31,5 +31,4 @@ COPY_EXISTING ~%EBaldursGate_SilencesShop%.ARE~ ~override~
 		fj_cre_resref     = JA#STHIE
 		fj_dlg_resref	  = JA#STHIE
 	END
-
 BUT_ONLY

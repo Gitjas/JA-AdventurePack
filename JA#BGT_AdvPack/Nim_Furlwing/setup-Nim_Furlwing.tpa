@@ -105,24 +105,24 @@ END ELSE BEGIN
 		fj_name           = ~Jagdhund~
 		fj_cre_resref     = ~JA#HOUND~
 	END
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nim_Furlwing/JA#CUNIM.BAF~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Nim_Furlwing/JA#CUNIM.BAF~
 		REPLACE ~999999~ @42
 
 END
 
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Nim_Furlwing/JA#NIMFU.CRE~ ~override~
 		SAY NAME1 #15611 // ~Nim Furlwing~ (string ref is true for BGT and BG:EE)
 		SAY NAME2 #15611 //~Nim Furlwing~ (string ref is true for BGT and BG:EE)
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.CRE~ ~override~
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Nim_Furlwing/JA#DWOLF.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Nim_Furlwing/JA#HOUND.CRE~ ~override~
 		SAY NAME1 @2059
 		SAY NAME2 @2059
 	
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#HOUND.BAF~
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#DWOLF.BAF~
-	COMPILE ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.BAF~ EVALUATE_BUFFER
+	COMPILE ~%MOD_FOLDER%/Nim_Furlwing/JA#HOUND.BAF~
+	COMPILE ~%MOD_FOLDER%/Nim_Furlwing/JA#DWOLF.BAF~
+	COMPILE ~%MOD_FOLDER%/Nim_Furlwing/JA#NIMFU.BAF~ EVALUATE_BUFFER
 	
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nim_Furlwing/JA#NIMFU.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Nim_Furlwing/JA#NIMFU.D~
 	
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.ITM~ ~override~
-	COPY ~JA#BGT_AdvPack/Nim_Furlwing/JA#PR402.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Nim_Furlwing/JA#PR402.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Nim_Furlwing/JA#PR402.BAM~ ~override~

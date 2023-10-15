@@ -6,15 +6,15 @@ ACTION_IF (FILE_EXISTS_IN_GAME UBMALKAL.CRE) BEGIN
 	PRINT ~Skipping Mal-Kalen, the Ulcaster Ghost: Is already restored by another mod.~
 END ELSE BEGIN
 
-COPY ~JA#BGT_AdvPack/Mal-Kalen/JA#MALKA.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Mal-Kalen/JA#MALKA.CRE~ ~override~
 	SAY NAME1 #12701 //~Mal-Kalen~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #12701 //~Mal-Kalen~ (string ref is true for BGT and BG:EE)
 
-COPY ~JA#BGT_AdvPack/Mal-Kalen/JA#SPWN1.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Mal-Kalen/JA#SPWN1.VVC~ ~override~
+COPY ~%MOD_FOLDER%/Mal-Kalen/JA#SPWN1.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Mal-Kalen/JA#SPWN1.VVC~ ~override~
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Mal-Kalen/JA#MALKA.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Mal-Kalen/JA#MALKA.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Mal-Kalen/JA#MALKA.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Mal-Kalen/JA#MALKA.BAF~
 
 COPY_EXISTING ~%Ulcaster%.ARE~ ~override~
 	//add new actors

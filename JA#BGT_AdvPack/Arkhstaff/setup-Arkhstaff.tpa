@@ -2,16 +2,16 @@
 //ARKHSTAFF
 /////////////////
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#A8101.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#A8101.BAM~ ~override~
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#C04.TIS~ ~override~
-	~JA#BGT_AdvPack/Arkhstaff/JA#C04.WED~ ~override~
-	~JA#BGT_AdvPack/Arkhstaff/JA#C04.MOS~ ~override~
-	~JA#BGT_AdvPack/Arkhstaff/JA#C04HT.BMP~ ~override~
-	~JA#BGT_AdvPack/Arkhstaff/JA#C04LM.BMP~ ~override~
-	~JA#BGT_AdvPack/Arkhstaff/JA#C04SR.BMP~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.TIS~ ~override~
+	~%MOD_FOLDER%/Arkhstaff/JA#C04.WED~ ~override~
+	~%MOD_FOLDER%/Arkhstaff/JA#C04.MOS~ ~override~
+	~%MOD_FOLDER%/Arkhstaff/JA#C04HT.BMP~ ~override~
+	~%MOD_FOLDER%/Arkhstaff/JA#C04LM.BMP~ ~override~
+	~%MOD_FOLDER%/Arkhstaff/JA#C04SR.BMP~ ~override~
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#C04.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.ARE~ ~override~
 	PATCH_IF GAME_IS ~bgee eet~ BEGIN
 		LPF ALTER_AREA_REGION
 			STR_VAR region_name			= ~Door7607~
@@ -27,11 +27,11 @@ COPY ~JA#BGT_AdvPack/Arkhstaff/JA#C04.ARE~ ~override~
 		END
 	END
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#ARKHS.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.CRE~ ~override~
 	SAY NAME1 @2049
 	SAY NAME2 @2049
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#IRONH.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#IRONH.CRE~ ~override~
 
 COPY_EXISTING ~THALDO.CRE~ ~override/JA#THALD.CRE~
 	WRITE_ASCII 0x250  ~SHOUT~ 	#8
@@ -39,32 +39,32 @@ COPY_EXISTING ~THALDO.CRE~ ~override/JA#THALD.CRE~
 	WRITE_ASCII 0x280  ~JA#THALD~ 	#32	//Scriptname
 	WRITE_ASCII 0x2cc  ~JA#THALD~ 	#8
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#ARKKY.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#ARKKY.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKKY.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKKY.ITM~ ~override~
 	SAY NAME1 @2050
 	SAY NAME2 @2050
 	SAY UNIDENTIFIED_DESC @2051
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#ARKHS.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#ARKHS.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.ITM~ ~override~
 	SAY NAME1 #6913 //Necklace (string ref is true for BGT and BG:EE)
 	SAY NAME2 @2052
 	SAY DESC @2053
 	SAY UNIDENTIFIED_DESC #6912 //general description Necklace (string ref is true for BGT and BG:EE)
 
-COPY ~JA#BGT_AdvPack/Arkhstaff/JA#7611D.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Arkhstaff/JA#7611D.BAM~ ~override~
 
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#ARKHS.BAF~
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#C04DR.BAF~
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#C04.BAF~
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#IRONH.BAF~
-EXTEND_TOP ~%BaldursGateDocks%.BCS~ ~JA#BGT_AdvPack/Arkhstaff/AR8100.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%BaldursGateDocks_OgreMagiHouse_L1%.BCS~ ~JA#BGT_AdvPack/Arkhstaff/AR8101.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%BaldursGateDocks_OgreMagiHouse_L2%.BCS~ ~JA#BGT_AdvPack/Arkhstaff/AR8102.BAF~ EVALUATE_BUFFER
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.BAF~
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#C04DR.BAF~
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#C04.BAF~
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#IRONH.BAF~
+EXTEND_TOP ~%BaldursGateDocks%.BCS~ ~%MOD_FOLDER%/Arkhstaff/AR8100.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%BaldursGateDocks_OgreMagiHouse_L1%.BCS~ ~%MOD_FOLDER%/Arkhstaff/AR8101.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%BaldursGateDocks_OgreMagiHouse_L2%.BCS~ ~%MOD_FOLDER%/Arkhstaff/AR8102.BAF~ EVALUATE_BUFFER
 
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#KRAMMOCH.D~
-COMPILE ~JA#BGT_AdvPack/Arkhstaff/JA#THALDO.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Arkhstaff/JA#IRONH.D~
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#KRAMMOCH.D~
+COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#THALDO.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Arkhstaff/JA#IRONH.D~
 
 COPY_EXISTING ~%BaldursGateDocks_IronThrone_Cellar%.ARE~ ~override~
 	LPF	ALTER_AREA_REGION

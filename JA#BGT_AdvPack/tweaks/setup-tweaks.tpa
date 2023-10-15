@@ -1,3 +1,5 @@
+//INCLUDE ~%MOD_FOLDER%/tph/ja#area_macro.tph~
+
 	/////////////////////////////////////////////////////////////
 	//Mulahey Half-Orc
 	/////////////////////////////////////////////////////////////
@@ -65,7 +67,7 @@ END
 	//BG1-Skull - black item icon (Melicamp-Quest) restored
 	/////////////////////////////////////////////////////////////
 ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 135 BEGIN
-	COPY ~JA#BGT_AdvPack/tweaks/JA#SKULL.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/tweaks/JA#SKULL.BAM~ ~override~
 	COPY_EXISTING ~MISC50.ITM~    ~override~
 		WRITE_ASCII 0x3a ~JA#SKULL~ #8
 END
@@ -73,7 +75,7 @@ END
 	//BG1-Item descriptions restored
 	///////////////////////////////////////////////////////////////
 ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 136 BEGIN
-	INCLUDE ~JA#BGT_AdvPack/tweaks/items/bgtitems.tph~
+	INCLUDE ~%MOD_FOLDER%/tweaks/items/bgtitems.tph~
 END
 	/////////////////////////////////////////////////////////////
 	//backdoor added to Gellana's temple
@@ -209,7 +211,7 @@ END
 	/////////////////////////////////////////////////////////////
 	//Nashkel & Gnollfortress - improved Searchmap and Wallgroups, ar8100
 	/////////////////////////////////////////////////////////////
-ACTION_IF (NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 AND  NOT MOD_IS_INSTALLED "bggo.tp2" (ID_OF_LABEL "bggo.tp2" "baldurs_gate_graphical_overhaul")) BEGIN
+ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 BEGIN
 	INCLUDE ~%MOD_FOLDER%/lib/alter_searchmap.tpa~
 	LAF ALTER_SEARCHMAP
 		STR_VAR
@@ -228,8 +230,8 @@ ACTION_IF (NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 AND  NOT MOD_IS_INS
 		path_to_2da_file = EVAL ~%MOD_FOLDER%/Tweaks/areas/AR8100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
 		areaname = EVAL ~%BaldursGateDocks%~ 							  		 			// area name, e.g. ~AR3700~
 	END
-	COPY ~JA#BGT_AdvPack/Tweaks/Areas/AR3700.wed~ ~override/%Nashkel%.wed~
-	COPY ~JA#BGT_AdvPack/Tweaks/Areas/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
+	COPY ~%MOD_FOLDER%/Tweaks/Areas/AR3700.wed~ ~override/%Nashkel%.wed~
+	COPY ~%MOD_FOLDER%/Tweaks/Areas/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
 END
 	/////////////////////////////////////////////////////////////
 	//dagger of poison & shadow armor moved from taerom to silence

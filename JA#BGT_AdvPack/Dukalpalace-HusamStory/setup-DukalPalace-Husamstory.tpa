@@ -9,11 +9,11 @@ COPY_EXISTING ~CYTHAN.CRE~ ~override~
 	SPRINT item_to_delete ~SCRL3F~
 	LAUNCH_PATCH_MACRO DELETE_CRE_ITEM
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#KAEM1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#KAEM1.CRE~ ~override~
 	SAY NAME1 @2044
 	SAY NAME2 @2044
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLAM3.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLAM3.CRE~ ~override~
 
 COPY_EXISTING ~SLYTHE.CRE~ ~override~
 	WRITE_ASCII 0x250 ~SHOUTDLG~ #8
@@ -51,32 +51,32 @@ COPY_EXISTING ~FLAM10.CRE~ ~override~
 COPY_EXISTING ~FLAM11.CRE~ ~override~
 	WRITE_ASCII 0x260 ~WTASIGHT~ #8
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLAM1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLAM2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLAM1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLAM2.CRE~ ~override~
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#PRISO.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#PRISO.CRE~ ~override~
 	SAY NAME1 @2045
 	SAY NAME2 @2046
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA6.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA6.CRE~ ~override~
 	SAY NAME1 @2047
 	SAY NAME2 @2047
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STH03.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STH04.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STH05.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STH06.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STH07.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STH03.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STH04.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STH05.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STH06.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STH07.CRE~ ~override~
 					 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA2.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA3.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA4.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NOPA5.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA3.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA4.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NOPA5.CRE~ ~override~
 					 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#SPWN1.VVC~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#SPWN1.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#SPWN1.WAV~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#SPWN1.VVC~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#SPWN1.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#SPWN1.WAV~ ~override~
 
 
 COPY_EXISTING ~%NBaldursGate_DucalPalace_L1%.ARE~ ~override~
@@ -664,13 +664,13 @@ COPY_EXISTING ~NOBL12.dlg~ ~override~
 	SET noblba2 = strref
 
 ACTION_IF GAME_IS ~BGT~ BEGIN
-	COMPILE ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#BELT.D~
+	COMPILE ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#BELT.D~
 END
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NILA.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#PALAST.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#PRISO.D~	//noblba1 noblba2 Journalstring
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#HUSAM.D~	//husam1 Journalstring
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#MCOOK4.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NILA.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#PALAST.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#PRISO.D~	//noblba1 noblba2 Journalstring
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#HUSAM.D~	//husam1 Journalstring
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#MCOOK4.D~
 
 COPY_EXISTING ~%NBaldursGate_DucalPalace_L1%.BCS~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -699,33 +699,33 @@ BUT_ONLY
 
 
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#NILA.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM01.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM02.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM03.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM04.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM05.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM06.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM07.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM08.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#FLM09.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#7209T.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#7211T.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#STHFX.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#CANDL.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#HUCU1.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#HUCU2.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#HUCU3.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#CUSAR.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#CUBEL.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NILA.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM01.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM02.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM03.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM04.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM05.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM06.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM07.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM08.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#FLM09.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#7209T.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#7211T.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#STHFX.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#CANDL.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#HUCU1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#HUCU2.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#HUCU3.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#CUSAR.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#CUBEL.BAF~
 
-EXTEND_TOP ~%NBaldursGate_DucalPalace_L1%.BCS~ ~JA#BGT_AdvPack/Dukalpalace-HusamStory/AR7208.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%NBaldursGate_DucalPalace_L2%.BCS~ ~JA#BGT_AdvPack/Dukalpalace-HusamStory/AR7209.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%NBaldursGate_DucalPalace_Cellar%.BCS~ ~JA#BGT_AdvPack/Dukalpalace-HusamStory/AR7211.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%NBaldursGate%.BCS~ ~JA#BGT_AdvPack/Dukalpalace-HusamStory/AR7300.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%CentralSewers%.BCS~ ~JA#BGT_AdvPack/Dukalpalace-HusamStory/AR7325.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate_DucalPalace_L1%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7208.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate_DucalPalace_L2%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7209.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate_DucalPalace_Cellar%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7211.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7300.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%CentralSewers%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7325.BAF~ EVALUATE_BUFFER
 
-COPY ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#7211A.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#7211A.BAM~ ~override~
 
 //misc.d
-COMPILE ~JA#BGT_AdvPack/Dukalpalace-HusamStory/JA#Denkod.d~
+COMPILE ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#Denkod.d~

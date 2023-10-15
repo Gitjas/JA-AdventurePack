@@ -10,7 +10,7 @@ COPY_EXISTING ~XvartH.CRE~ ~override~
     WRITE_ASCIIE 0x280  ~%SOURCE_RES%~     #32    //Scriptname
 
 
-COMPILE ~JA#BGT_AdvPack/Hulrik/JA#HULRIK.D~
+COMPILE ~%MOD_FOLDER%/Hulrik/JA#HULRIK.D~
 
 ACTION_IF GAME_IS ~bgt~ THEN BEGIN
 

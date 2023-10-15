@@ -12,8 +12,8 @@ COPY_EXISTING ~NIEMAIN.BCS~ ~override~
 	END
 BUT_ONLY
   
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Niemain_Zentarim/JA#ZENT1.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Niemain_Zentarim/JA#NIEMA.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Niemain_Zentarim/JA#ZENT1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Niemain_Zentarim/JA#NIEMA.BAF~
 
 COPY_EXISTING ~NIEMAI.CRE~ ~override/JA#NIEMA.CRE~
 	WRITE_ASCII 0x248 ~NONE~	#8
@@ -37,10 +37,10 @@ ACTION_IF GAME_IS ~bgee~ BEGIN
 		WRITE_ASCII 0x2cc ~JA#ZENT1~	#8 //DLG
 END
 
-EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7704.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~JA#BGT_AdvPack/Niemain_Zentarim/AR7706.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~%MOD_FOLDER%/Niemain_Zentarim/AR7704.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~%MOD_FOLDER%/Niemain_Zentarim/AR7706.BAF~ EVALUATE_BUFFER
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Niemain_Zentarim/JA#NIEMAI.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Niemain_Zentarim/JA#NIEMAI.D~
 
 /* Den cres werden über die Area ein Specifics script zugewiesen: */
 

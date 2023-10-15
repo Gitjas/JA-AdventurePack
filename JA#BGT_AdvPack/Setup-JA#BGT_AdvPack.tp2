@@ -8,7 +8,7 @@ known issues:
 
 
 
-BACKUP ~JA#BGT_AdvPack/backup~
+BACKUP ~weidu_external/backup/JA#BGT_AdvPack~
 //AUTHOR ~Jarl~
 SUPPORT ~Please post at G3 or Kerzenburgforum, refer to readme.~
 
@@ -21,22 +21,22 @@ ALWAYS
 		FAIL @90000
 	END 
 
-	INCLUDE ~JA#BGT_AdvPack/lib/func_fetch_journal_entries.tph~
-	INCLUDE ~JA#BGT_AdvPack/lib/extend_area_script_DW.tph~
+	INCLUDE ~%MOD_FOLDER%/lib/func_fetch_journal_entries.tph~
+	INCLUDE ~%MOD_FOLDER%/lib/extend_area_script_DW.tph~
 
 
-	ACTION_IF !FILE_EXISTS ~JA#BGT_AdvPack/Install/JA#BGT_AdvPack_reinstall.mrk~ BEGIN
+	ACTION_IF !FILE_EXISTS ~%MOD_FOLDER%/Install/JA#BGT_AdvPack_reinstall.mrk~ BEGIN
 			
 		/* and GTIMES.IDS, ANIMATE.IDS patching to ToB, courtesy of the BG2 Fix Pack */
-		INCLUDE ~JA#BGT_AdvPack/lib/ids_entries_cleanup.tph~
+		INCLUDE ~%MOD_FOLDER%/lib/ids_entries_cleanup.tph~
 		APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 			UNLESS ~CD_STATE_NOTVALID~
 		DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-			COPY ~JA#BGT_AdvPack/languages/english~ ~JA#BGT_AdvPack/languages/autotra/%LANGUAGE%~
-			COPY ~JA#BGT_AdvPack/languages/%LANGUAGE%~ ~JA#BGT_AdvPack/languages/autotra/%LANGUAGE%~
+			COPY ~%MOD_FOLDER%/languages/english~ ~%MOD_FOLDER%/languages/autotra/%LANGUAGE%~
+			COPY ~%MOD_FOLDER%/languages/%LANGUAGE%~ ~%MOD_FOLDER%/languages/autotra/%LANGUAGE%~
 		END
 		LAF autotra_workaround END
-		COPY_EXISTING sw1h01.itm ~JA#BGT_AdvPack/Install/JA#BGT_AdvPack_reinstall.mrk~
+		COPY_EXISTING sw1h01.itm ~%MOD_FOLDER%/Install/JA#BGT_AdvPack_reinstall.mrk~
 	END
 	
 		ACTION_IF ENGINE_IS ~bgee bg2ee~ BEGIN
@@ -49,10 +49,10 @@ ALWAYS
 				INT_VAR
 					infer_charsets = 1
 				STR_VAR
-					tra_path = ~JA#BGT_AdvPack/languages/autotra~
+					tra_path = ~%MOD_FOLDER%/languages/autotra~
 					noconvert_array = tra#noconvert
 					reload_array = tra#reload
-					iconv_path = ~JA#BGT_AdvPack/tools/iconv~
+					iconv_path = ~%MOD_FOLDER%/tools/iconv~
 			END
 			
 		
@@ -61,22 +61,22 @@ ALWAYS
 		END
 	
 	
-	INCLUDE ~JA#BGT_AdvPack/lib/extra_regexp_vars.tph~
+	INCLUDE ~%MOD_FOLDER%/lib/extra_regexp_vars.tph~
 	OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~
 	
 	ACTION_IF GAME_IS ~eet~ THEN BEGIN
 		/* Tell the player it is using eet */
 		PRINT ~EET detected...~
-		INCLUDE ~JA#BGT_AdvPack/lib/eet_cpmvars.tpa~
+		INCLUDE ~%MOD_FOLDER%/lib/eet_cpmvars.tpa~
 	END
 	ACTION_IF GAME_IS ~bgee~ THEN BEGIN
 		/* Tell the player it is using bgee */
 		PRINT ~BG:EE detected...~
-		INCLUDE ~JA#BGT_AdvPack/lib/g3_bgee_cpmvars.tpa~
+		INCLUDE ~%MOD_FOLDER%/lib/g3_bgee_cpmvars.tpa~
 	END
 	ACTION_IF GAME_IS ~bgt~ THEN BEGIN
 		PRINT ~Baldur's Gate Trilogy detected~
-		INCLUDE ~JA#BGT_AdvPack/lib/g3_bgt_cpmvars.tpa~ 
+		INCLUDE ~%MOD_FOLDER%/lib/g3_bgt_cpmvars.tpa~ 
 	END
 	
 	ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN
@@ -94,15 +94,15 @@ ALWAYS
 
 END
 
-AUTO_TRA ~JA#BGT_AdvPack/Languages/autotra/%s~
+AUTO_TRA ~%MOD_FOLDER%/Languages/autotra/%s~
 
 LANGUAGE ~Deutsch~
          ~german~
-         ~JA#BGT_AdvPack/languages/german/Setup.tra~
+         ~%MOD_FOLDER%/languages/german/Setup.tra~
 
 LANGUAGE ~English~
          ~english~
-         ~JA#BGT_AdvPack/languages/english/Setup.tra~
+         ~%MOD_FOLDER%/languages/english/Setup.tra~
 
 
 
@@ -122,7 +122,7 @@ LANGUAGE ~English~
 BEGIN ~Useful Tweaks & Repairs~ DESIGNATED 0
 DEPRECATED ~This Component is included in JA#BGT_TWEAK~
 LABEL "JA#BGT_AdvPack-Tweaks"
-INCLUDE ~JA#BGT_AdvPack/Tweaks/setup-Tweaks.tpa~
+INCLUDE ~%MOD_FOLDER%/Tweaks/setup-Tweaks.tpa~
 
 /////////////////////////////////////////////////////////////
 //LAW-SYSTEM FRIENDLY ARM INN, ELFSONG TAVERN, BL. MERMAID
@@ -130,7 +130,7 @@ INCLUDE ~JA#BGT_AdvPack/Tweaks/setup-Tweaks.tpa~
 
 BEGIN ~Extended Tavern Guard System~ DESIGNATED 1
 LABEL "JA#BGT_AdvPack-Law"
-INCLUDE ~JA#BGT_AdvPack/Lawsystem/setup-lawsystem.tpa~
+INCLUDE ~%MOD_FOLDER%/Lawsystem/setup-lawsystem.tpa~
 
 /////////////////////////
 //Ramaziths Turm
@@ -138,7 +138,7 @@ INCLUDE ~JA#BGT_AdvPack/Lawsystem/setup-lawsystem.tpa~
 
 BEGIN ~Ramazith~ DESIGNATED 2
 LABEL "JA#BGT_AdvPack-Ramazith"
-INCLUDE ~JA#BGT_AdvPack/Ramazith/setup-Ramazith.tpa~
+INCLUDE ~%MOD_FOLDER%/Ramazith/setup-Ramazith.tpa~
 
 ///////////////////////////////////////////////////////////////////////
 //Komplett überarbeitete Herzogspalast-Szene mit restaurierten Inhalten
@@ -147,7 +147,7 @@ INCLUDE ~JA#BGT_AdvPack/Ramazith/setup-Ramazith.tpa~
  
 BEGIN ~Dukal Palace and Husam Story~ DESIGNATED 3
 LABEL "JA#BGT_AdvPack-Husam"
-INCLUDE ~JA#BGT_AdvPack/Dukalpalace-HusamStory/setup-DukalPalace-Husamstory.tpa~
+INCLUDE ~%MOD_FOLDER%/Dukalpalace-HusamStory/setup-DukalPalace-Husamstory.tpa~
 
 
 
@@ -157,7 +157,7 @@ INCLUDE ~JA#BGT_AdvPack/Dukalpalace-HusamStory/setup-DukalPalace-Husamstory.tpa~
 
 BEGIN ~Gervisse and Voltine~ DESIGNATED 4
 LABEL "JA#BGT_AdvPack-Gervisse_Voltine"
-INCLUDE ~JA#BGT_AdvPack/Gervisse_Voltine/setup-Gervisse_Voltine.tpa~
+INCLUDE ~%MOD_FOLDER%/Gervisse_Voltine/setup-Gervisse_Voltine.tpa~
 
 
 //////////////////////////////
@@ -166,7 +166,7 @@ INCLUDE ~JA#BGT_AdvPack/Gervisse_Voltine/setup-Gervisse_Voltine.tpa~
 
 BEGIN ~Seven Suns~ DESIGNATED 5
 LABEL "JA#BGT_AdvPack-Seven_Suns"
-INCLUDE ~JA#BGT_AdvPack/Seven_Suns/setup-Seven_Suns.tpa~
+INCLUDE ~%MOD_FOLDER%/Seven_Suns/setup-Seven_Suns.tpa~
 
 
 /////////////////
@@ -175,7 +175,7 @@ INCLUDE ~JA#BGT_AdvPack/Seven_Suns/setup-Seven_Suns.tpa~
 
 BEGIN ~Arkhstuff~ DESIGNATED 6
 LABEL "JA#BGT_AdvPack-Arkhstuff"
-INCLUDE ~JA#BGT_AdvPack/Arkhstaff/setup-Arkhstaff.tpa~
+INCLUDE ~%MOD_FOLDER%/Arkhstaff/setup-Arkhstaff.tpa~
 
 
 /////////////////////////////////////
@@ -184,7 +184,7 @@ INCLUDE ~JA#BGT_AdvPack/Arkhstaff/setup-Arkhstaff.tpa~
 
 BEGIN ~Aldeth's hunter comrade~ DESIGNATED 7
 LABEL "JA#BGT_AdvPack-Aldeth"
-INCLUDE ~JA#BGT_AdvPack/Aldeth_hunter_comrade/setup-Aldeth_hunter_comrade.tpa~
+INCLUDE ~%MOD_FOLDER%/Aldeth_hunter_comrade/setup-Aldeth_hunter_comrade.tpa~
 
 ////////////////////////////////////////
 //RESTORED: Svlast - the fallen Paladin
@@ -192,7 +192,7 @@ INCLUDE ~JA#BGT_AdvPack/Aldeth_hunter_comrade/setup-Aldeth_hunter_comrade.tpa~
 
 BEGIN ~Svlast - the fallen Paladin~ DESIGNATED 8
 LABEL "JA#BGT_AdvPack-Svlast"
-INCLUDE ~JA#BGT_AdvPack/Svlast/setup-Svlast.tpa~
+INCLUDE ~%MOD_FOLDER%/Svlast/setup-Svlast.tpa~
 
 ////////////////////////////////////
 //RESTORED: AMNIS2 - Amnish Soldier
@@ -200,7 +200,7 @@ INCLUDE ~JA#BGT_AdvPack/Svlast/setup-Svlast.tpa~
 
 BEGIN ~Amnis2 - Amnish Soldier~ DESIGNATED 9
 LABEL "JA#BGT_AdvPack-Amnis2"
-INCLUDE ~JA#BGT_AdvPack/AMNIS2/setup-AMNIS2.tpa~
+INCLUDE ~%MOD_FOLDER%/AMNIS2/setup-AMNIS2.tpa~
 
 ///////////////////////////////
 //RESTORED: Velvet - Cockfight
@@ -208,7 +208,7 @@ INCLUDE ~JA#BGT_AdvPack/AMNIS2/setup-AMNIS2.tpa~
 
 BEGIN ~Velvet - Cockfight~ DESIGNATED 10
 LABEL "JA#BGT_AdvPack-Velvet"
-INCLUDE ~JA#BGT_AdvPack/velvet/setup-velvet.tpa~
+INCLUDE ~%MOD_FOLDER%/velvet/setup-velvet.tpa~
 
 ////////////////////////////
 //RESTORED: Nim Furlwing
@@ -216,7 +216,7 @@ INCLUDE ~JA#BGT_AdvPack/velvet/setup-velvet.tpa~
 
 BEGIN ~Nim Furlwing~ DESIGNATED 11
 LABEL "JA#BGT_AdvPack-Nim_Furlwing"
-INCLUDE ~JA#BGT_AdvPack/Nim_Furlwing/setup-Nim_Furlwing.tpa~
+INCLUDE ~%MOD_FOLDER%/Nim_Furlwing/setup-Nim_Furlwing.tpa~
 
 ////////////////////////////////////////
 //RESTORED: MERCH03 - Caravane Merchant
@@ -224,7 +224,7 @@ INCLUDE ~JA#BGT_AdvPack/Nim_Furlwing/setup-Nim_Furlwing.tpa~
 
 BEGIN ~Merch03 - Caravane Merchant~ DESIGNATED 12
 LABEL "JA#BGT_AdvPack-Merch03"
-INCLUDE ~JA#BGT_AdvPack/Merch03/setup-Merch03.tpa~
+INCLUDE ~%MOD_FOLDER%/Merch03/setup-Merch03.tpa~
 
 //////////////////////////////////
 //RESTORED: Galtoth - the fence
@@ -232,7 +232,7 @@ INCLUDE ~JA#BGT_AdvPack/Merch03/setup-Merch03.tpa~
 
 BEGIN ~Galtoth - the fence~ DESIGNATED 13
 LABEL "JA#BGT_AdvPack-Galtoth"
-INCLUDE ~JA#BGT_AdvPack/Galtoth/setup-Galtoth.tpa~
+INCLUDE ~%MOD_FOLDER%/Galtoth/setup-Galtoth.tpa~
 
 //////////////////////////////////
 //FIXED: Moved Phandalyn to the Jopalins Tavern
@@ -240,7 +240,7 @@ INCLUDE ~JA#BGT_AdvPack/Galtoth/setup-Galtoth.tpa~
 
 BEGIN ~Phandalyn to the Jopalins Tavern~ DESIGNATED 14
 LABEL "JA#BGT_AdvPack-Phandalyn"
-INCLUDE ~JA#BGT_AdvPack/Phandalyn/setup-Phandalyn.tpa~
+INCLUDE ~%MOD_FOLDER%/Phandalyn/setup-Phandalyn.tpa~
 
 ///////////////////////////////////////////////
 //RESTORED: SUTHIE & STHIEF at Silence's Store
@@ -248,7 +248,7 @@ INCLUDE ~JA#BGT_AdvPack/Phandalyn/setup-Phandalyn.tpa~
 
 BEGIN ~Suthie & Sthief at Silence's Store~ DESIGNATED 15
 LABEL "JA#BGT_AdvPack-Suthie_Sthief"
-INCLUDE ~JA#BGT_AdvPack/Suthie_Sthief/setup-Suthie_Sthief.tpa~
+INCLUDE ~%MOD_FOLDER%/Suthie_Sthief/setup-Suthie_Sthief.tpa~
 
 ////////////////////////////////
 //RESTORED: WAREHOUSE WORKERS
@@ -256,7 +256,7 @@ INCLUDE ~JA#BGT_AdvPack/Suthie_Sthief/setup-Suthie_Sthief.tpa~
 
 BEGIN ~Warehouse Workers~ DESIGNATED 16
 LABEL "JA#BGT_AdvPack-Warehouse_Workers"
-INCLUDE ~JA#BGT_AdvPack/Warehouse_Workers/setup-Warehouse_Workers.tpa~
+INCLUDE ~%MOD_FOLDER%/Warehouse_Workers/setup-Warehouse_Workers.tpa~
 
 ////////////////////////////////
 //RESTORED: Nobles
@@ -266,7 +266,7 @@ INCLUDE ~JA#BGT_AdvPack/Warehouse_Workers/setup-Warehouse_Workers.tpa~
 
 BEGIN ~Nobles~ DESIGNATED 17
 LABEL "JA#BGT_AdvPack-nobles"
-INCLUDE ~JA#BGT_AdvPack/nobles/setup-nobles.tpa~
+INCLUDE ~%MOD_FOLDER%/nobles/setup-nobles.tpa~
 
 /////////////////////////////
 //RESTORED: Ignatio Phleed
@@ -274,7 +274,7 @@ INCLUDE ~JA#BGT_AdvPack/nobles/setup-nobles.tpa~
 
 BEGIN ~Ignatio Phleed~ DESIGNATED 18
 LABEL "JA#BGT_AdvPack-Ignatio_Phleed"
-INCLUDE ~JA#BGT_AdvPack/Ignatio_Phleed/setup-Ignatio_Phleed.tpa~
+INCLUDE ~%MOD_FOLDER%/Ignatio_Phleed/setup-Ignatio_Phleed.tpa~
 
 ////////////////////////
 //RESTORED: Shalasin
@@ -282,7 +282,7 @@ INCLUDE ~JA#BGT_AdvPack/Ignatio_Phleed/setup-Ignatio_Phleed.tpa~
 
 BEGIN ~Shalasin~ DESIGNATED 19
 LABEL "JA#BGT_AdvPack-Shalasin"
-INCLUDE ~JA#BGT_AdvPack/Shalasin/setup-Shalasin.tpa~
+INCLUDE ~%MOD_FOLDER%/Shalasin/setup-Shalasin.tpa~
 
 //////////////////////////////////
 //RESTORED: ARTOLA - Sir Artolas
@@ -290,7 +290,7 @@ INCLUDE ~JA#BGT_AdvPack/Shalasin/setup-Shalasin.tpa~
 
 BEGIN ~Artola - Sir Artolas~ DESIGNATED 20
 LABEL "JA#BGT_AdvPack-Artola"
-INCLUDE ~JA#BGT_AdvPack/ARTOLA/setup-ARTOLA.tpa~
+INCLUDE ~%MOD_FOLDER%/ARTOLA/setup-ARTOLA.tpa~
 
 ////////////////////////////////
 //RESTORED: Pilar & Gheldehar
@@ -298,7 +298,7 @@ INCLUDE ~JA#BGT_AdvPack/ARTOLA/setup-ARTOLA.tpa~
 
 BEGIN ~Pilar & Gheldehar~ DESIGNATED 21
 LABEL "JA#BGT_AdvPack-Pillar_Gheldehar"
-INCLUDE ~JA#BGT_AdvPack/Pillar_Gheldehar/setup-Pillar_Gheldehar.tpa~
+INCLUDE ~%MOD_FOLDER%/Pillar_Gheldehar/setup-Pillar_Gheldehar.tpa~
 
 ////////////////////////////////////
 //RESTORED: Llindellyn - the archer
@@ -306,7 +306,7 @@ INCLUDE ~JA#BGT_AdvPack/Pillar_Gheldehar/setup-Pillar_Gheldehar.tpa~
 
 BEGIN ~Llindellyn - the archer~ DESIGNATED 22
 LABEL "JA#BGT_AdvPack-Llindellyn"
-INCLUDE ~JA#BGT_AdvPack/Llindellyn/setup-Llindellyn.tpa~
+INCLUDE ~%MOD_FOLDER%/Llindellyn/setup-Llindellyn.tpa~
 
 /////////////////////////////////////////
 //RESTORED: Mal-Kalen - Ulcaster's Adept
@@ -314,7 +314,7 @@ INCLUDE ~JA#BGT_AdvPack/Llindellyn/setup-Llindellyn.tpa~
 
 BEGIN ~Mal-Kalen - Ulcaster's Adept~ DESIGNATED 23
 LABEL "JA#BGT_AdvPack-Mal-Kalen"
-INCLUDE ~JA#BGT_AdvPack/Mal-Kalen/setup-Mal-Kalen.tpa~
+INCLUDE ~%MOD_FOLDER%/Mal-Kalen/setup-Mal-Kalen.tpa~
 
 ///////////////////////////////
 //RESTORED: Keelor & Nasha
@@ -322,7 +322,7 @@ INCLUDE ~JA#BGT_AdvPack/Mal-Kalen/setup-Mal-Kalen.tpa~
 
 BEGIN ~Keelor & Nasha~ DESIGNATED 24
 LABEL "JA#BGT_AdvPack-Keelor_Nasha"
-INCLUDE ~JA#BGT_AdvPack/Keelor_Nasha/setup-Keelor_Nasha.tpa~
+INCLUDE ~%MOD_FOLDER%/Keelor_Nasha/setup-Keelor_Nasha.tpa~
 
 ///////////////////////////////
 //RESTORED: Marl & the Guard
@@ -330,7 +330,7 @@ INCLUDE ~JA#BGT_AdvPack/Keelor_Nasha/setup-Keelor_Nasha.tpa~
 
 BEGIN ~Marl & the Guard~ DESIGNATED 25
 LABEL "JA#BGT_AdvPack-Marl"
-INCLUDE ~JA#BGT_AdvPack/Marl/setup-Marl.tpa~
+INCLUDE ~%MOD_FOLDER%/Marl/setup-Marl.tpa~
 
 ///////////////////////////////////////////////////
 //RESTORED: Item-descriptions - Rythe's Last Arrow
@@ -338,7 +338,7 @@ INCLUDE ~JA#BGT_AdvPack/Marl/setup-Marl.tpa~
 
 BEGIN ~Item-descriptions - Rythe's Last Arrow~ DESIGNATED 26
 LABEL "JA#BGT_AdvPack-RythesLastArrow"
-INCLUDE ~JA#BGT_AdvPack/RythesLastArrow/setup-RythesLastArrow.tpa~
+INCLUDE ~%MOD_FOLDER%/RythesLastArrow/setup-RythesLastArrow.tpa~
 
 /////////////////////////////////
 //IMPROVED/FIXED: Counting House
@@ -346,7 +346,7 @@ INCLUDE ~JA#BGT_AdvPack/RythesLastArrow/setup-RythesLastArrow.tpa~
 
 BEGIN ~IMPROVED/FIXED: Counting House~ DESIGNATED 27
 LABEL "JA#BGT_AdvPack-Counting_House"
-INCLUDE ~JA#BGT_AdvPack/Counting_House/setup-Counting_House.tpa~
+INCLUDE ~%MOD_FOLDER%/Counting_House/setup-Counting_House.tpa~
 
 ///////////////////////////////////
 //ALDETH SASHENSTAR & HAENDLERLIGA
@@ -355,7 +355,7 @@ INCLUDE ~JA#BGT_AdvPack/Counting_House/setup-Counting_House.tpa~
 BEGIN ~Aldeth Sashenstar & the Merchant League~ DESIGNATED 28
 REQUIRE_PREDICATE GAME_IS ~bgt~ ~Not compatible with EE~
 LABEL "JA#BGT_AdvPack-Sashenstar_Haendlerliga"
-INCLUDE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/setup-Sashenstar_Haendlerliga.tpa~
+INCLUDE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/setup-Sashenstar_Haendlerliga.tpa~
 
 ///////////////////////////////////////////////////
 //ERWEITERTE TENYA-HANDLUNG & TEMPEL DER UMBERLEE
@@ -363,7 +363,7 @@ INCLUDE ~JA#BGT_AdvPack/Sashenstar_Haendlerliga/setup-Sashenstar_Haendlerliga.tp
 
 BEGIN ~Tenya Extended Plot & Temple of Umberlee~ DESIGNATED 29
 LABEL "JA#BGT_AdvPack-Tenya"
-INCLUDE ~JA#BGT_AdvPack/Tenya/setup-Tenya.tpa~
+INCLUDE ~%MOD_FOLDER%/Tenya/setup-Tenya.tpa~
 
 ///////////
 //NASHKEL
@@ -371,7 +371,7 @@ INCLUDE ~JA#BGT_AdvPack/Tenya/setup-Tenya.tpa~
 
 BEGIN ~Nashkel~ DESIGNATED 30
 LABEL "JA#BGT_AdvPack-Nashkel"
-INCLUDE ~JA#BGT_AdvPack/Nashkel/setup-Nashkel.tpa~
+INCLUDE ~%MOD_FOLDER%/Nashkel/setup-Nashkel.tpa~
 
 ///////////////////////////////////////////////
 //IMOENS ERWEITERTER AUFTRITT IN KERZENBURG
@@ -379,7 +379,7 @@ INCLUDE ~JA#BGT_AdvPack/Nashkel/setup-Nashkel.tpa~
 
 BEGIN ~Imoen's Extended Play~ DESIGNATED 31
 LABEL "JA#BGT_AdvPack-Imoen_candlekeep"
-INCLUDE ~JA#BGT_AdvPack/Imoen_candlekeep/setup-Imoen_candlekeep.tpa~
+INCLUDE ~%MOD_FOLDER%/Imoen_candlekeep/setup-Imoen_candlekeep.tpa~
 
 /////////////////////////////////////////////////
 //PRIESTER DES OGHMA, GOND UND ILMATER IN BALDURS TOR
@@ -387,7 +387,7 @@ INCLUDE ~JA#BGT_AdvPack/Imoen_candlekeep/setup-Imoen_candlekeep.tpa~
 
 BEGIN ~Priest of Oghma, Gond and Ilmater in Baldur's Gate~ DESIGNATED 32
 LABEL "JA#BGT_AdvPack-Priester"
-INCLUDE ~JA#BGT_AdvPack/Priester/setup-Priester.tpa~
+INCLUDE ~%MOD_FOLDER%/Priester/setup-Priester.tpa~
 
 ///////////////////////////////////////
 //ERWEITERTE-VERBESSERTE DIALOGE IN BG1
@@ -396,7 +396,7 @@ INCLUDE ~JA#BGT_AdvPack/Priester/setup-Priester.tpa~
 
 BEGIN ~Extended-Improved Dialogues in BG1~ DESIGNATED 33
 LABEL "JA#BGT_AdvPack-Improved_Dialogue"
-INCLUDE ~JA#BGT_AdvPack/Improved_Dialogue/setup-Improved_Dialogue.tpa~
+INCLUDE ~%MOD_FOLDER%/Improved_Dialogue/setup-Improved_Dialogue.tpa~
 
 
 /////////////////////////
@@ -405,7 +405,7 @@ INCLUDE ~JA#BGT_AdvPack/Improved_Dialogue/setup-Improved_Dialogue.tpa~
 
 BEGIN ~Hulrik and his cows~ DESIGNATED 34
 LABEL "JA#BGT_AdvPack-Hulrik"
-INCLUDE ~JA#BGT_AdvPack/Hulrik/setup-Hulrik.tpa~
+INCLUDE ~%MOD_FOLDER%/Hulrik/setup-Hulrik.tpa~
 
 ///////////////////////////////////////
 //VERBESSERTES GESCHAEFT DER STILLE
@@ -413,7 +413,7 @@ INCLUDE ~JA#BGT_AdvPack/Hulrik/setup-Hulrik.tpa~
 
 BEGIN ~Improved Business of Silence~ DESIGNATED 35
 LABEL "JA#BGT_AdvPack-Shop_of_Silence"
-INCLUDE ~JA#BGT_AdvPack/Shop_of_Silence/setup-Shop_of_Silence.tpa~
+INCLUDE ~%MOD_FOLDER%/Shop_of_Silence/setup-Shop_of_Silence.tpa~
 
 ///////////////////////
 //ENDER SAI in TAVERNE
@@ -421,7 +421,7 @@ INCLUDE ~JA#BGT_AdvPack/Shop_of_Silence/setup-Shop_of_Silence.tpa~
 
 BEGIN ~Ender Sai in Taverne~ DESIGNATED 36
 LABEL "JA#BGT_AdvPack-Ender_Sai"
-INCLUDE ~JA#BGT_AdvPack/Ender_Sai/setup-Ender_Sai.tpa~
+INCLUDE ~%MOD_FOLDER%/Ender_Sai/setup-Ender_Sai.tpa~
 
 ///////////////////////
 //SORCEROUS SUNDRIES
@@ -431,7 +431,7 @@ INCLUDE ~JA#BGT_AdvPack/Ender_Sai/setup-Ender_Sai.tpa~
 
 BEGIN ~Sorcerous Sundries~ DESIGNATED 37
 LABEL "JA#BGT_AdvPack-Sorcerous_Sundries"
-INCLUDE ~JA#BGT_AdvPack/Sorcerous_Sundries/setup-Sorcerous_Sundries.tpa~
+INCLUDE ~%MOD_FOLDER%/Sorcerous_Sundries/setup-Sorcerous_Sundries.tpa~
 
 ////////////////////////////////////////////////////////////
 // Mini-Quest: "Das Rätsel um die verstummte Geisterstimme" 
@@ -439,7 +439,7 @@ INCLUDE ~JA#BGT_AdvPack/Sorcerous_Sundries/setup-Sorcerous_Sundries.tpa~
 
 BEGIN ~Mini-Quest: "The mystery of the silent ghost voice"~ DESIGNATED 38
 LABEL "JA#BGT_AdvPack-Miniquest"
-INCLUDE ~JA#BGT_AdvPack/Miniquest/setup-Miniquest.tpa~
+INCLUDE ~%MOD_FOLDER%/Miniquest/setup-Miniquest.tpa~
 
 ////////////////////////
 //Black Alaric's Cave
@@ -447,7 +447,7 @@ INCLUDE ~JA#BGT_AdvPack/Miniquest/setup-Miniquest.tpa~
 
 BEGIN ~Black Alaric's Cave~ DESIGNATED 39
 LABEL "JA#BGT_AdvPack-Black_Alarics_Cave"
-INCLUDE ~JA#BGT_AdvPack/Black_Alarics_Cave/setup-Black_Alarics_Cave.tpa~
+INCLUDE ~%MOD_FOLDER%/Black_Alarics_Cave/setup-Black_Alarics_Cave.tpa~
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Zweites Treffen und Dialogverbesserungen für Niemain und die Zentarim (Kampf kann leichter vermieden werden) 
@@ -458,7 +458,7 @@ INCLUDE ~JA#BGT_AdvPack/Black_Alarics_Cave/setup-Black_Alarics_Cave.tpa~
 
 BEGIN @2121 DESIGNATED 40
 LABEL "JA#BGT_AdvPack-Niemain_Zentarim"
-INCLUDE ~JA#BGT_AdvPack/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
+INCLUDE ~%MOD_FOLDER%/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
 
 
 ///////////////////////////////////////////////////
@@ -468,4 +468,4 @@ INCLUDE ~JA#BGT_AdvPack/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
 BEGIN ~Animated torches and candles~ DESIGNATED 100
 LABEL "JA#BGT_AdvPack-Graphical"
 REQUIRE_PREDICATE NOT MOD_IS_INSTALLED "bggo.tp2" (ID_OF_LABEL "bggo.tp2" "baldurs_gate_graphical_overhaul") "Graphical changes is part of BGGO"
-INCLUDE ~JA#BGT_AdvPack/Graphical/setup-Graphical.tpa~
+INCLUDE ~%MOD_FOLDER%/Graphical/setup-Graphical.tpa~

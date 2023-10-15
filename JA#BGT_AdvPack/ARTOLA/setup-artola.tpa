@@ -2,11 +2,11 @@
 //RESTORED: ARTOLA - Sir Artolas
 //////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/ARTOLA/JA#ARTOL.CRE~ ~override~
+COPY ~%MOD_FOLDER%/ARTOLA/JA#ARTOL.CRE~ ~override~
 	SAY NAME1 @2065
 	SAY NAME2 @2065
-COMPILE ~JA#BGT_AdvPack/ARTOLA/JA#ARTOL.D~
-COMPILE ~JA#BGT_AdvPack/ARTOLA/JA#ARTOL.BAF~
+COMPILE ~%MOD_FOLDER%/ARTOLA/JA#ARTOL.D~
+COMPILE ~%MOD_FOLDER%/ARTOLA/JA#ARTOL.BAF~
 COPY_EXISTING ~%ESewers%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure

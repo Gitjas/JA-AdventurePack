@@ -2,12 +2,12 @@
 //RESTORED: WAREHOUSE WORKERS
 ////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Warehouse_Workers/JA#WARE1.CRE~ ~override~
-	~JA#BGT_AdvPack/Warehouse_Workers/JA#WARE2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Warehouse_Workers/JA#WARE1.CRE~ ~override~
+	~%MOD_FOLDER%/Warehouse_Workers/JA#WARE2.CRE~ ~override~
 	SAY NAME1 @2062
 	SAY NAME2 @2062
 
-COMPILE ~JA#BGT_AdvPack/Warehouse_Workers/JA#WARE1.D~
+COMPILE ~%MOD_FOLDER%/Warehouse_Workers/JA#WARE1.D~
 ACTION_IF GAME_IS ~bgt~ BEGIN
 	OUTER_SPRINT ~sound~ ~BEDWIN43~
 END
@@ -17,7 +17,7 @@ END
 ACTION_IF GAME_IS ~eet~ BEGIN
 	OUTER_SPRINT ~sound~ ~EDWIN43_~
 END
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Warehouse_Workers/JA#WAREH.BAF~ //sound
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Warehouse_Workers/JA#WAREH.BAF~ //sound
 
 COPY_EXISTING ~%BaldursGateDocks_BasiliskWarehouse%.ARE~ ~override~
 	//add new actors

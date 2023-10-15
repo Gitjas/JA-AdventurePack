@@ -2,9 +2,9 @@
 //RESTORED: Ignatio Phleed
 /////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Ignatio_Phleed/JA#IGNAT.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Ignatio_Phleed/JA#IGNAT.CRE~ ~override~
 	SAY NAME1 #11740 // ~Ignatio Phleed~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #11740 //~Ignatio Phleed~ (string ref is true for BGT and BG:EE)
-COMPILE ~JA#BGT_AdvPack/Ignatio_Phleed/JA#IGNAT.D~
+COMPILE ~%MOD_FOLDER%/Ignatio_Phleed/JA#IGNAT.D~
 
-EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/Ignatio_Phleed/AR7705.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~%MOD_FOLDER%/Ignatio_Phleed/AR7705.BAF~ EVALUATE_BUFFER

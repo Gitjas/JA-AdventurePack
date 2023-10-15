@@ -5,16 +5,16 @@ ACTION_IF GAME_IS ~bgt~ AND NOT MOD_IS_INSTALLED ~setup-infinityanimations.tp2~ 
 	PRINT @37
 END ELSE BEGIN
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#BEHOL.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#HRP01.BAM~ ~override~
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#CHRP1.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#BEHOL.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#HRP01.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#CHRP1.BAM~ ~override~
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#HRP01.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#HRP01.ITM~ ~override~
 		SAY NAME1 @13
 		SAY NAME2 @13
 		SAY DESC @14
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#HRP02.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#HRP02.ITM~ ~override~
 		SAY NAME1 @13
 		SAY NAME2 @13
 		SAY UNIDENTIFIED_DESC @14
@@ -22,37 +22,37 @@ END ELSE BEGIN
 
 	ACTION_IF GAME_IS ~bgt~ BEGIN
 		ACTION_IF NOT FILE_EXISTS ~µbea1.bam~ THEN BEGIN		//0x525B µbe BGT+Infinity   0xCC00 MKG1 BGEE
-			COPY ~JA#BGT_AdvPack/Miniquest/Keg1~ ~override~
+			COPY ~%MOD_FOLDER%/Miniquest/Keg1~ ~override~
 		END
 	END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ubtavern.mve) OR GAME_IS ~bgee~ BEGIN
 		PRINT ~Skipping Restored Elfsong Tavern Movie.~
 	END ELSE BEGIN
-		AT_EXIT ~JA#BGT_AdvPack/ja#movie_in.bat~
+		AT_EXIT ~%MOD_FOLDER%/ja#movie_in.bat~
 	END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME JA#TAVER.MVE) BEGIN
-		AT_UNINSTALL ~JA#BGT_AdvPack/ja#movie_un.bat~
+		AT_UNINSTALL ~%MOD_FOLDER%/ja#movie_un.bat~
 	END
 
-	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~JA#BGT_AdvPack/Miniquest/AR7704.BAF~ EVALUATE_BUFFER
-	EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/Miniquest/AR7705.BAF~ EVALUATE_BUFFER
-	EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~JA#BGT_AdvPack/Miniquest/AR7706.BAF~ EVALUATE_BUFFER
+	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L2%.BCS~ ~%MOD_FOLDER%/Miniquest/AR7704.BAF~ EVALUATE_BUFFER
+	EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~%MOD_FOLDER%/Miniquest/AR7705.BAF~ EVALUATE_BUFFER
+	EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~%MOD_FOLDER%/Miniquest/AR7706.BAF~ EVALUATE_BUFFER
 
-	EXTEND_BOTTOM ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/Miniquest/AR7705B.BAF~
+	EXTEND_BOTTOM ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~%MOD_FOLDER%/Miniquest/AR7705B.BAF~
 		REPLACE_TEXTUALLY 999999 ~%JA#ESTA%~
-	EXTEND_BOTTOM ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~JA#BGT_AdvPack/Miniquest/AR7706B.BAF~
+	EXTEND_BOTTOM ~%EBaldursGate_ElfsongTavern_L2%.BCS~ ~%MOD_FOLDER%/Miniquest/AR7706B.BAF~
 		REPLACE_TEXTUALLY 999999 ~%JA#ESTA%~
 
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#CUKEG.BAF~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#KEG01.BAF~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#ESELY.BAF~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#THF01.BAF~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#THF02.BAF~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#705TR.BAF~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#WILY1.BAF~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#WILY2.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#CUKEG.BAF~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#KEG01.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#ESELY.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#THF01.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#THF02.BAF~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#705TR.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#WILY1.BAF~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#WILY2.BAF~
 
 
 	ACTION_IF GAME_IS ~bgt~ BEGIN
@@ -64,20 +64,20 @@ END ELSE BEGIN
 	COPY_EXISTING ~%storename%.STO~ ~override~
 		WRITE_ASCII 0x44 ~JA#RUM01~ #8
 
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#ALYTH.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#COOK1.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#BRULGON.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#BARTLEY.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#NATHAN.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#SERW1.D~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#RUM01.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#MTOB5.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#WILY1.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#WILY2.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#WILYN.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#VAALA.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#ESELY.D~
-	COMPILE ~JA#BGT_AdvPack/Miniquest/JA#ETC00.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#ALYTH.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#COOK1.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#BRULGON.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#BARTLEY.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#NATHAN.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#SERW1.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#RUM01.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#MTOB5.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#WILY1.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#WILY2.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#WILYN.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#VAALA.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#ESELY.D~
+	COMPILE ~%MOD_FOLDER%/Miniquest/JA#ETC00.D~
 
 
 
@@ -92,17 +92,17 @@ END ELSE BEGIN
 	//WRITE_SHORT 0x272 0x03
 	//WRITE_SHORT 0x273 0x04
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#THF01.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#THF02.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#THF03.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#THF04.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#THF05.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#THF06.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#THF01.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#THF02.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#THF03.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#THF04.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#THF05.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#THF06.CRE~ ~override~
 		SAY NAME1 @19
 		SAY NAME2 @19
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#ETC01.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#ETC02.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#ETC01.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#ETC02.CRE~ ~override~
 		SAY NAME1 @20
 		SAY NAME2 @20
 
@@ -111,26 +111,26 @@ END ELSE BEGIN
 	COPY_EXISTING ~JA#ETC02.CRE~ ~override/JA#ETC04.CRE~
 		WRITE_ASCII 0x2CC ~JA#ETC04~ #8 //DLG
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#BRULG.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#BRULG.CRE~ ~override~
 		SAY NAME1 @21
 		SAY NAME2 @22
 		WRITE_ASCII 0x2CC ~JA#BRULG~ #8 //DLG
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#NATHA.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#NATHA.CRE~ ~override~
 		SAY NAME1 @23
 		SAY NAME2 @23
 		WRITE_ASCII 0x2CC ~JA#NATHA~ #8 //DLG
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#WILYN.CRE~ ~override~
-		~JA#BGT_AdvPack/Miniquest/JA#WILY1.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#WILYN.CRE~ ~override~
+		~%MOD_FOLDER%/Miniquest/JA#WILY1.CRE~ ~override~
 		SAY NAME1 @24
 		SAY NAME2 @24
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#VAALA.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#VAALA.CRE~ ~override~
 		SAY NAME1 @25
 		SAY NAME2 @25
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#ESELY.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#ESELY.CRE~ ~override~
 		SAY NAME1 @26
 		SAY NAME2 @26
 
@@ -139,14 +139,14 @@ END ELSE BEGIN
 		SAY NAME2 @28
 		WRITE_ASCII 0x2cc ~JA#SERW1~ #8 //DLG
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#KEG01.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#KEG01.CRE~ ~override~
 		SAY NAME1 @29
 		SAY NAME2 @29
 		PATCH_IF GAME_IS ~eet bgee~ BEGIN
 			WRITE_LONG 0x28	0xCC00
 		END
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#KEG02.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#KEG02.CRE~ ~override~
 		SAY NAME1 @30
 		SAY NAME2 @31
 
@@ -154,14 +154,14 @@ END ELSE BEGIN
 		WRITE_ASCII 0x280 ~JA#COOK1~ #32
 		WRITE_ASCII 0x2cc ~JA#COOK1~ #8 //DLG
 
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#C00.ARE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#C00.ARE~ ~override~
 		PATCH_IF GAME_IS ~bgee eet~ BEGIN
 			LPF ALTER_AREA_REGION
 				STR_VAR region_name			= ~Door8200~
 						destination_area	= EVAL ~%SEBaldursGate%~
 			END
 		END
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#C01.ARE~ ~override~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#C01.ARE~ ~override~
 
 	COPY_EXISTING ~%SEBaldursGate%.ARE~ ~override~
 		LPF  ~fj_are_structure~
@@ -470,8 +470,8 @@ END ELSE BEGIN
 	BUT_ONLY
 
 	MKDIR ~Music\JA#ESTA~
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#ESTAA.ACM~ ~Music\JA#ESTA~
-	COPY ~JA#BGT_AdvPack/Miniquest/JA#ESTA.MUS~ ~Music~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#ESTAA.ACM~ ~Music\JA#ESTA~
+	COPY ~%MOD_FOLDER%/Miniquest/JA#ESTA.MUS~ ~Music~
 
 	ADD_MUSIC ~JA#ESTA~ ~Music\JA#ESTA.mus~ 
 END

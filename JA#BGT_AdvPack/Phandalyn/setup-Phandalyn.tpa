@@ -57,9 +57,9 @@ COPY_EXISTING ~PHANDA.DLG~ ~override~
 	END
 BUT_ONLY
 
-EXTEND_TOP ~PHANDALY.BCS~ ~JA#BGT_AdvPack/Phandalyn/JA#Phanda.BAF~
+EXTEND_TOP ~PHANDALY.BCS~ ~%MOD_FOLDER%/Phandalyn/JA#Phanda.BAF~
 
 //misc.d
-COMPILE ~JA#BGT_AdvPack/Phandalyn/JA#Phanda.d~
-USING ~JA#BGT_AdvPack/languages/%s/JA#Phanda.tra~
-COMPILE ~JA#BGT_AdvPack/Phandalyn/JA#Bellamy.D~
+COMPILE ~%MOD_FOLDER%/Phandalyn/JA#Phanda.d~
+USING ~%MOD_FOLDER%/languages/%s/JA#Phanda.tra~
+COMPILE ~%MOD_FOLDER%/Phandalyn/JA#Bellamy.D~

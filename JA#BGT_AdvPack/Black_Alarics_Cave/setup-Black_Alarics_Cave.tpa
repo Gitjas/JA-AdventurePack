@@ -2,19 +2,19 @@
 //Black Alaric's Cave
 ////////////////////////
 
-COPY ~JA#BGT_AdvPack/Black_Alarics_Cave/JA#PIRA1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Black_Alarics_Cave/JA#PIRA1.CRE~ ~override~
 	SAY NAME1 @35
 	SAY NAME2 @36
 	SAY INITIAL_MEETING #5659
 	SAY DAMAGE #5840
 	SAY DYING #5841
 
-COPY ~JA#BGT_AdvPack/Black_Alarics_Cave/JA#SKEL1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Black_Alarics_Cave/JA#SKEL1.CRE~ ~override~
 	SAY NAME1 @34
 	SAY NAME2 @34
 
-COMPILE ~JA#BGT_AdvPack/Black_Alarics_Cave/JA#PIRA1.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Black_Alarics_Cave/JA#PIRA1.D~
+COMPILE ~%MOD_FOLDER%/Black_Alarics_Cave/JA#PIRA1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Black_Alarics_Cave/JA#PIRA1.D~
 
 COPY_EXISTING ~%Lighthouse_BlackAlaricsCave%.ARE~ ~override~
 	//delete not needed actors

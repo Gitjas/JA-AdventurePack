@@ -6,16 +6,16 @@ ACTION_IF (FILE_EXISTS_IN_GAME ntsvlast.cre) OR (FILE_EXISTS_IN_GAME UBSVLAST.CR
 	PRINT ~Skipping Svlast, the Fallen Paladin: Is already restored by another mod.~
 END ELSE BEGIN
 
-	COPY ~JA#BGT_AdvPack/Svlast/JA#SVLST.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Svlast/JA#SVLST.CRE~ ~override~
 		SAY NAME1 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
 		SAY NAME2 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
 	
-	COPY ~JA#BGT_AdvPack/Svlast/JA#ZOMB1.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/Svlast/JA#ZOMB1.CRE~ ~override~
 	
-	EXTEND_TOP ~%FirewineBridge%.BCS~ ~JA#BGT_AdvPack/Svlast/AR3400.BAF~ EVALUATE_BUFFER
-	COMPILE ~JA#BGT_AdvPack/Svlast/JA#ZOMB1.BAF~
-	COMPILE ~JA#BGT_AdvPack/Svlast/JA#SVLST.BAF~
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Svlast/JA#SVLST.D~
+	EXTEND_TOP ~%FirewineBridge%.BCS~ ~%MOD_FOLDER%/Svlast/AR3400.BAF~ EVALUATE_BUFFER
+	COMPILE ~%MOD_FOLDER%/Svlast/JA#ZOMB1.BAF~
+	COMPILE ~%MOD_FOLDER%/Svlast/JA#SVLST.BAF~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Svlast/JA#SVLST.D~
 	
 	COPY_EXISTING ~%FirewineBridge%.ARE~ ~override~
 		//add new actors

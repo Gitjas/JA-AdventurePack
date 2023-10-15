@@ -1,4 +1,4 @@
-COMPILE ~JA#BGT_AdvPack/Counting_House/JA#ULF.D~
+COMPILE ~%MOD_FOLDER%/Counting_House/JA#ULF.D~
 
 COPY_EXISTING ~%NEBaldursGate_CountingHouse_L1%.ARE~ ~override~
 	//delete not needed actors
@@ -57,7 +57,7 @@ COPY_EXISTING ~%NEBaldursGate_CountingHouse_L2%.BCS~ ~override~
 	END
 BUT_ONLY
 
-EXTEND_TOP ~%NEBaldursGate_CountingHouse_L2%.BCS~ ~JA#BGT_AdvPack/Counting_House/AR7408.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%NEBaldursGate_CountingHouse_L2%.BCS~ ~%MOD_FOLDER%/Counting_House/AR7408.BAF~ EVALUATE_BUFFER
 
 COPY_EXISTING ~%NEBaldursGate_CountingHouse_L1%.ARE~ ~override~
 	//add new actors

@@ -108,18 +108,18 @@ END ELSE BEGIN
 	END
 END //ACTION_IF
 
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELO.CRE~ ~override~
 	SAY NAME1 @2078
 	SAY NAME2 @2078
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELX.CRE~ ~override~
 	SAY NAME1 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #15625 //~Keelor~ (string ref is true for BGT and BG:EE)
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#NASHA.CRE~ ~override~
 	SAY NAME1 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #15671 //~Nasha~ (string ref is true for BGT and BG:EE)
 
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELX.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELX.ITM~ ~override~
 	SAY NAME1 #6852 //Amulet (string ref is true for BGT and BG:EE)
 	SAY NAME2 @2081
 	SAY DESC @2082
@@ -129,20 +129,20 @@ COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.ITM~ ~override~
 	SPRINT ~item_to_delete~ ~AMUL14~
 	LAUNCH_PATCH_MACRO ~DELETE_AREA_ITEM~
 	*/
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C05.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#C05.ARE~ ~override~
 	PATCH_IF GAME_IS ~bgee eet~ BEGIN
 		LPF ALTER_AREA_REGION
 			STR_VAR region_name			= ~Door8100~
 				destination_area	= EVAL ~%BaldursGateDocks%~
 		END
 	END
-COPY ~JA#BGT_AdvPack/Keelor_Nasha/JA#C06.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Keelor_Nasha/JA#C06.ARE~ ~override~
 	
-COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELX.BAF~
-COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Keelor_Nasha/JA#KEELO.D~
-COMPILE ~JA#BGT_AdvPack/Keelor_Nasha/JA#NASHA.D~
+COMPILE ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELO.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELX.BAF~
+COMPILE ~%MOD_FOLDER%/Keelor_Nasha/JA#NASHA.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Keelor_Nasha/JA#KEELO.D~
+COMPILE ~%MOD_FOLDER%/Keelor_Nasha/JA#NASHA.D~
 /* BG Docks District: Nasha's temple */
 COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~ 
 	LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
@@ -152,7 +152,7 @@ COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~
 		fj_box_top      = 2840  //kleinstes y
 		fj_box_right    = 95  //größtes x
 		fj_box_bottom   = 2950   //größtes y
-		fj_cursor_idx   = 30   //door
+		fj_cursor_idx   = 30  //door
 		fj_vertex_0     = 20 + (2840 << 16)   //kleinstes x +  kleinstes y
 		fj_vertex_1     = 95 + (2840 << 16)   //größtes x + kleinstes y
 		fj_vertex_2     = 95 + (2950 << 16)   //größtes x + größtes y

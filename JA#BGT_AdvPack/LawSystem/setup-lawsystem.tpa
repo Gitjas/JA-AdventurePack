@@ -4,51 +4,51 @@
 
 
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#FRIENDLYARM.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#LAW.D~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#GUABE.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/LawSystem/JA#FRIENDLYARM.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/LawSystem/JA#LAW.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/LawSystem/JA#GUABE.D~
 
-EXTEND_TOP ~BENTLY.BCS~ ~JA#BGT_AdvPack/LawSystem/JA#FRGUB.BAF~
-EXTEND_TOP ~%FriendlyArmInn%.BCS~ ~JA#BGT_AdvPack/LawSystem/AR6800.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~JA#BGT_AdvPack/LawSystem/AR7705.BAF~
+EXTEND_TOP ~BENTLY.BCS~ ~%MOD_FOLDER%/LawSystem/JA#FRGUB.BAF~
+EXTEND_TOP ~%FriendlyArmInn%.BCS~ ~%MOD_FOLDER%/LawSystem/AR6800.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%EBaldursGate_ElfsongTavern_L1%.BCS~ ~%MOD_FOLDER%/LawSystem/AR7705.BAF~
 
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#FRINI.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#FRCUT.BAF~ 
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#FRGUA.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#FRGUB.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#GUAR1.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#GUAR2.BAF~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/LawSystem/JA#GUAB8.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#FRINI.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/LawSystem/JA#FRCUT.BAF~ 
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#FRGUA.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#FRGUB.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#GUAR1.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#GUAR2.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/LawSystem/JA#GUAB8.BAF~
 
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW00.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW00.BAF~
 	REPLACE ~999999~ @39
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW01.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW02.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW03.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW04.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW01.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW02.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW03.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW04.BAF~
 
-COPY ~JA#BGT_AdvPack/LawSystem/JA#LAW00.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#LAW01.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#LAW04.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#LAW05.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#LAW06.CRE~ ~override~
+COPY ~%MOD_FOLDER%/LawSystem/JA#LAW00.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#LAW01.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#LAW04.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#LAW05.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#LAW06.CRE~ ~override~
 	SAY NAME1 @2035
 	SAY NAME2 @2035
 
-COPY ~JA#BGT_AdvPack/LawSystem/JA#LAW02.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#LAW03.CRE~ ~override~
+COPY ~%MOD_FOLDER%/LawSystem/JA#LAW02.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#LAW03.CRE~ ~override~
 	SAY NAME1 @2036
 	SAY NAME2 @2036
 
-COPY ~JA#BGT_AdvPack/LawSystem/JA#FACAP.CRE~ ~override~
+COPY ~%MOD_FOLDER%/LawSystem/JA#FACAP.CRE~ ~override~
 	SAY NAME1 @2037
 	SAY NAME2 @2037
 
-COPY ~JA#BGT_AdvPack/LawSystem/JA#GUAB5.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#GUAB6.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#GUAB7.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#GUAB8.CRE~ ~override~
-	~JA#BGT_AdvPack/LawSystem/JA#GUAB9.CRE~ ~override~
+COPY ~%MOD_FOLDER%/LawSystem/JA#GUAB5.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#GUAB6.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#GUAB7.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#GUAB8.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#GUAB9.CRE~ ~override~
 	SAY NAME1 @2085
 	SAY NAME2 @2085
 
@@ -328,8 +328,8 @@ COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L1%.ARE~ ~override~	//Bl. Mermaid
 BUT_ONLY
 
 //From Dukal Palace and Husam Story
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW05.BAF~
-COMPILE ~JA#BGT_AdvPack/LawSystem/JA#LAW06.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW05.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW06.BAF~
 
 COPY_EXISTING ~%NBaldursGate_DucalPalace_L1%.ARE~ ~override~
 	//Edit Container Script

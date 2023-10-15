@@ -4,8 +4,8 @@
 
 //RESTORED: NOBLAY.CRE (Undercellars), NOBL15.CRE (3 Old Kegs), FTOWB3.CRE (Bl. Merm.), BOYBA3, LOWLGU
 
-COPY ~JA#BGT_AdvPack/Nobles/JA#NOBLY.CRE~ ~override~
-COMPILE ~JA#BGT_AdvPack/Nobles/JA#NOBLY.D~
+COPY ~%MOD_FOLDER%/Nobles/JA#NOBLY.CRE~ ~override~
+COMPILE ~%MOD_FOLDER%/Nobles/JA#NOBLY.D~
 COPY_EXISTING ~%BaldursGate_Undercellars%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure
@@ -22,8 +22,8 @@ COPY_EXISTING ~%BaldursGate_Undercellars%.ARE~ ~override~
 		fj_dlg_resref	  = ~JA#NOBLY~
 	END
 
-COPY ~JA#BGT_AdvPack/Nobles/JA#NOB15.CRE~ ~override~
-COMPILE ~JA#BGT_AdvPack/Nobles/JA#NOB15.D~
+COPY ~%MOD_FOLDER%/Nobles/JA#NOB15.CRE~ ~override~
+COMPILE ~%MOD_FOLDER%/Nobles/JA#NOB15.D~
 COPY_EXISTING ~%NBaldursGate_ThreeOldKegs_L3%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure
@@ -40,8 +40,8 @@ COPY_EXISTING ~%NBaldursGate_ThreeOldKegs_L3%.ARE~ ~override~
 		fj_dlg_resref	  = ~JA#NOB15~
 	END
 
-COPY ~JA#BGT_AdvPack/Nobles/JA#FTOB3.CRE~ ~override~
-COMPILE ~JA#BGT_AdvPack/Nobles/JA#FTOB3.D~
+COPY ~%MOD_FOLDER%/Nobles/JA#FTOB3.CRE~ ~override~
+COMPILE ~%MOD_FOLDER%/Nobles/JA#FTOB3.D~
 COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L2%.ARE~ ~override~
 	//add new actors
 	LPF fj_are_structure
@@ -61,10 +61,10 @@ COPY_EXISTING ~%NEBaldursGate_BlushingMermaid_L2%.ARE~ ~override~
 COPY_EXISTING ~BOYBA1.CRE~ ~override/JA#BOYBA.CRE~ //7200,7300,7600,7700s.u.
 	WRITE_ASCII 0x2cc ~BOYBA3~	#8
 
-COPY ~JA#BGT_AdvPack/Nobles/JA#LOWLG.CRE~ ~override~
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Nobles/JA#LOWLG.D~
-COMPILE ~JA#BGT_AdvPack/Nobles/JA#LOWLG.BAF~
-EXTEND_TOP ~%BaldursGateDocks%.BCS~ ~JA#BGT_AdvPack/Nobles/AR8100.BAF~ EVALUATE_BUFFER
+COPY ~%MOD_FOLDER%/Nobles/JA#LOWLG.CRE~ ~override~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Nobles/JA#LOWLG.D~
+COMPILE ~%MOD_FOLDER%/Nobles/JA#LOWLG.BAF~
+EXTEND_TOP ~%BaldursGateDocks%.BCS~ ~%MOD_FOLDER%/Nobles/AR8100.BAF~ EVALUATE_BUFFER
 
 
 COPY_EXISTING ~%BaldursGate_DocksLowLantern_D1%.ARE~ ~override~

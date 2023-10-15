@@ -3,9 +3,9 @@
 /////////////////////////////////////////////////
 
 //OGHMA
-COMPILE ~JA#BGT_AdvPack/Priester/JA#OGHM1.D~
-COPY ~JA#BGT_AdvPack/Priester/JA#OGHM1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Priester/JA#OGHM1.STO~ ~override~
+COMPILE ~%MOD_FOLDER%/Priester/JA#OGHM1.D~
+COPY ~%MOD_FOLDER%/Priester/JA#OGHM1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Priester/JA#OGHM1.STO~ ~override~
 	SAY 0xc @2 // Unrolling Scroll
 
 OUTER_SET Unrolling_Scroll = RESOLVE_STR_REF (@2)
@@ -50,9 +50,9 @@ COPY_EXISTING ~%CentralBaldursGate%.ARE~ ~override~
 		fj_structure_type = note
 	END
 //ILMATER
-COMPILE ~JA#BGT_AdvPack/Priester/JA#PILL1.D~
-COPY ~JA#BGT_AdvPack/Priester/JA#PILL1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Priester/JA#ILMA1.STO~ ~override~
+COMPILE ~%MOD_FOLDER%/Priester/JA#PILL1.D~
+COPY ~%MOD_FOLDER%/Priester/JA#PILL1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Priester/JA#ILMA1.STO~ ~override~
 	SAY 0xc @3
 COPY_EXISTING ~%NEBaldursGate_IlmatersShrine%.ARE~ ~override~
 	//add new actors

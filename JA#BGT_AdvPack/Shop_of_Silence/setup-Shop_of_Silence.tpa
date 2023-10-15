@@ -24,20 +24,20 @@ COPY_EXISTING ~SILENC.dlg~ ~override~
 SET garrick1 = strref
 
 ACTION_IF GAME_IS ~bgt~ BEGIN
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Shop_of_Silence/JA#SILENC.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#SILENC.D~
 END
 ACTION_IF GAME_IS ~eet bgee~ BEGIN
 	COPY_EXISTING ~SILENC.DLG~ ~override~
 		DECOMPILE_AND_PATCH BEGIN
 			REPLACE_TEXTUALLY EXACT_MATCH ~!Global("Chapter","GLOBAL",7)~ ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_7%)~
 		END	
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Shop_of_Silence/JA#SILENC_eet.D~ USING ~JA#BGT_AdvPack/languages/%s/JA#SILENC.tra~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#SILENC_eet.D~ USING ~%MOD_FOLDER%/languages/%s/JA#SILENC.tra~
 END
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Shop_of_Silence/JA#MONGO.D~
-COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH01.D~
-COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH02.D~
-COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#SILC1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#MONGO.D~
+COMPILE ~%MOD_FOLDER%/Shop_of_Silence/JA#STH01.D~
+COMPILE ~%MOD_FOLDER%/Shop_of_Silence/JA#STH02.D~
+COMPILE ~%MOD_FOLDER%/Shop_of_Silence/JA#SILC1.BAF~
 ACTION_IF !FILE_EXISTS_IN_GAME ~JA#RUM01.DLG~ BEGIN // rumors needed to reveal the temple of Mask
 	ACTION_IF GAME_IS ~bgt~ BEGIN
 		OUTER_SPRINT storename ~TAV0705~
@@ -47,16 +47,16 @@ ACTION_IF !FILE_EXISTS_IN_GAME ~JA#RUM01.DLG~ BEGIN // rumors needed to reveal t
 	END
 	COPY_EXISTING ~%storename%.STO~ ~override~
 		WRITE_ASCII 0x44 ~JA#RUM01~ #8
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#RUM01.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Miniquest/JA#RUM01.D~
 END
 
-COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH01.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH02.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#MONGO.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Shop_of_Silence/JA#STH01.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Shop_of_Silence/JA#STH02.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Shop_of_Silence/JA#MONGO.CRE~ ~override~
 	SAY NAME1 @4
 	SAY NAME2 @4
 
-COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#MASK1.STO~ ~override~
+COPY ~%MOD_FOLDER%/Shop_of_Silence/JA#MASK1.STO~ ~override~
 	SAY 0xc @5
 
 COPY_EXISTING ~%EBaldursGate_Inn_L2%.ARE~ ~override~
