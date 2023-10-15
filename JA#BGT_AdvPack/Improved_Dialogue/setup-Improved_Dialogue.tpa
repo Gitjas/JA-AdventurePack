@@ -4,11 +4,26 @@
 
 COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#HALBAZ.D~
 COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#NORALE.D~
-// COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PHLYDI.D~
+// COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PHLYDI.D~ it is a bit too explicit and out of place
 COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#NOBL2.D~
 COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#CONNOL.D~
 COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#CENTEO.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PRSBX.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#MTOWBA.D~ //MTOWBASC.CRE MTWOBASN.CRE MTWOBAST.CRE
 
+//misc.d
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Vai.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Yago.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Laola.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Mcook4.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Denkod.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Zordral.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PGond.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Greywo.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Bently.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Dillar.D~
+COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Nobl14.D~
+// COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Jondal.d~ not needed for EE and BGT
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Improved_Dialogue/JA#CALDO.D~
 /* if bg1npc interjections are installed, xzar will kill the dryad. compatibility with bg1npc Project */
@@ -59,9 +74,6 @@ ACTION_IF GAME_IS ~bgee eet~ BEGIN
 	COMPILE EVALUATE_BUFFER ~...inlined/JA#CAUTER_eet.d~ 
 END
 
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PRSBX.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#MTOWBA.D~ //MTOWBASC.CRE MTWOBASN.CRE MTWOBAST.CRE
-
 COPY_EXISTING ~PRSBAX_A.CRE~ ~override~
 	WRITE_ASCII 0x2cc ~JA#PRS01~	#8
 COPY_EXISTING ~PRSBAX_B.CRE~ ~override~
@@ -80,14 +92,3 @@ COPY_EXISTING ~MTOWBAST.CRE~ ~override~
 COPY_EXISTING ~FLAMVAI.CRE~ ~override~
 	WRITE_ASCII 0x280 ~FLAMVAI~	#32
 
-//misc.d
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Vai.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Bently.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Greywo.d~
-// COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Jondal.d~ not needed for EE and BGT
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Zordral.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Yago.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Dillar.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#Nobl14.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#PGond.D~
-COMPILE ~%MOD_FOLDER%/Improved_Dialogue/JA#laola.D~
