@@ -670,7 +670,6 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#NILA.D~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#PALAST.D~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#PRISO.D~	//noblba1 noblba2 Journalstring
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#HUSAM.D~	//husam1 Journalstring
-COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#MCOOK4.D~
 
 COPY_EXISTING ~%NBaldursGate_DucalPalace_L1%.BCS~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -726,6 +725,3 @@ EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7300.BAF~
 EXTEND_TOP ~%CentralSewers%.BCS~ ~%MOD_FOLDER%/Dukalpalace-HusamStory/AR7325.BAF~ EVALUATE_BUFFER
 
 COPY ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#7211A.BAM~ ~override~
-
-//misc.d
-COMPILE ~%MOD_FOLDER%/Dukalpalace-HusamStory/JA#Denkod.d~
