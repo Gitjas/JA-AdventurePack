@@ -465,6 +465,7 @@ INCLUDE ~JA#BGT_AdvPack/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
 //Animierte Fackeln und Kerzen
 ///////////////////////////////////////////////////
 
-BEGIN ~Animierte Fackeln und Kerzen~ DESIGNATED 100
+BEGIN ~Animated torches and candles~ DESIGNATED 100
 LABEL "JA#BGT_AdvPack-Graphical"
+REQUIRE_PREDICATE NOT MOD_IS_INSTALLED "bggo.tp2" (ID_OF_LABEL "bggo.tp2" "baldurs_gate_graphical_overhaul") "Graphical changes is part of BGGO"
 INCLUDE ~JA#BGT_AdvPack/Graphical/setup-Graphical.tpa~
