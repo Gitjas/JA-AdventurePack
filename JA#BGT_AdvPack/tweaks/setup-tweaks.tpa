@@ -211,7 +211,7 @@ END
 	/////////////////////////////////////////////////////////////
 	//Nashkel & Gnollfortress - improved Searchmap and Wallgroups, ar8100
 	/////////////////////////////////////////////////////////////
-ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 BEGIN
+ACTION_IF (NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 AND  NOT MOD_IS_INSTALLED "bggo.tp2" (ID_OF_LABEL "bggo.tp2" "baldurs_gate_graphical_overhaul")) BEGIN
 	INCLUDE ~%MOD_FOLDER%/lib/alter_searchmap.tpa~
 	LAF ALTER_SEARCHMAP
 		STR_VAR
