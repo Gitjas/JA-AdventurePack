@@ -35,11 +35,7 @@ ActionOverride("Tenya2",SetNumTimesTalkedTo(1))
 ActionOverride("Tenya2",Dialogue([PC]))~
 END
 
-
-ALTER_TRANS JALANT // file name
+ADD_TRANS_ACTION JALANT
 BEGIN 11 14 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
-Enemy()~
-END
+~SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)~

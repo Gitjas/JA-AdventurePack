@@ -45,33 +45,29 @@ Global("BOYBODY","GLOBAL",0)~
 END
 
 /* ## this is for removing the EscapeAreaDestroy(90) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 2 4 8 9 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)~
-END
+// ALTER_TRANS TENYA2 // file name
+// BEGIN 2 4 8 9 END // state number (can be more than one)
+// BEGIN 0 END // transition number (can be more than one)
+// BEGIN // list of changes, see below for flags
+  // "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
+// GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)~
+// END
 
 /* ## this is for removing the EscapeAreaDestroy(90) and setting SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1) */
-ALTER_TRANS TENYA2 // file name
-BEGIN 3 5 7 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
-GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)
-SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
-Enemy()~
-END
+// ALTER_TRANS TENYA2 // file name
+// BEGIN 3 5 7 END // state number (can be more than one)
+// BEGIN 0 END // transition number (can be more than one)
+// BEGIN // list of changes, see below for flags
+  // "ACTION" ~SetGlobal("BOYBODY","GLOBAL",1)
+// GiveItemCreate("MISC54",LastTalkedToBy,0,0,0)
+// SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
+// Enemy()~
+// END
 
-ALTER_TRANS TENYA2 // file name
+ADD_TRANS_ACTION TENYA2
 BEGIN 10 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "ACTION" ~SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)
-Enemy()~
-END
-
+~SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)~
 
 ALTER_TRANS TENYA2 // file name
 BEGIN 11 END // state number (can be more than one)
@@ -80,10 +76,9 @@ BEGIN // list of changes, see below for flags
   "JOURNAL" ~%tenya10%~
 END
 
-
 REPLACE_STATE_TRIGGER TENYA2 11 ~Global("Chapter","GLOBAL",%tutu_chapter_7%)~
 
-REPLACE_STATE_TRIGGER TENYA2 6 ~Global("JA#TENYA_QUEST","GLOBAL",0) Global("HelpTenya","GLOBAL",1)~
+ADD_STATE_TRIGGER TENYA2 6 ~Global("JA#TENYA_QUEST","GLOBAL",0)~
 
 ALTER_TRANS TENYA2 // file name
 BEGIN 6 END // state number (can be more than one)
@@ -128,7 +123,6 @@ END
 EXTEND_BOTTOM TENYA2 6
 IF ~~ THEN REPLY @1 GOTO JA#TENYA_X0
 END
-
 
 APPEND TENYA2
 
@@ -191,20 +185,12 @@ SAY @24
 IF ~~ THEN DO ~EraseJournalEntry(@1022)SetGlobal("JA#TENYA_QUEST","GLOBAL",10)SetGlobal("JA#UMBERL_HOST","%BaldursGateDocks_WaterQueensHouse%",1)Enemy()~ EXIT
 END
 
-
 ////APPEND END/////
 END
-
-
-
-
-
-
 
 ///TENYA NICHT TENYA2!!
 
 /* this doesn't change anything in my install */
-
 
 /* This is a fix */
 ALTER_TRANS TENYA // file name

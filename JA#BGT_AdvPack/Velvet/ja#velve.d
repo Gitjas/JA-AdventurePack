@@ -57,8 +57,6 @@ IF ~NumTimesTalkedToGT(0)Global("JA#COCKFIGHT","%NashkelCarnival%",0)~ THEN BEGI
   IF ~~ THEN REPLY @11 DO ~SetGlobal("JA#VELVET_BRAUN","LOCALS",0)SetGlobal("JA#VELVET_WEISS","LOCALS",0)~ GOTO 12
 END
 
-
-
 IF ~Global("JA#COCKFIGHT","%NashkelCarnival%",2)~ THEN BEGIN 9
   SAY @19
   IF ~~ THEN EXIT
@@ -74,9 +72,7 @@ IF ~~ THEN BEGIN 11
   IF ~~ THEN EXIT
 END
 
-
 IF ~~ THEN BEGIN 12
   SAY @23
   IF ~~ THEN EXIT
 END
-

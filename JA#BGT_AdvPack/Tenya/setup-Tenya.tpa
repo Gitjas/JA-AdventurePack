@@ -2,24 +2,24 @@
 //ERWEITERTE TENYA-HANDLUNG & TEMPEL DER UMBERLEE
 ///////////////////////////////////////////////////
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#C02.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#C02.ARE~ ~override~
 	PATCH_IF GAME_IS ~bgee eet~ BEGIN
 		LPF ALTER_AREA_REGION
 			STR_VAR region_name			= ~Door8200~
 					destination_area	= EVAL ~%SEBaldursGate%~
 		END
 	END
-COPY ~JA#BGT_AdvPack/Tenya/JA#C03.ARE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#C03.ARE~ ~override~
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#WATW1.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#WATW1.ITM~ ~override~
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#WATW1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#WATW1.CRE~ ~override~
 	SAY NAME1 @2111
 	SAY NAME2 @2111
 
 ACTION_IF GAME_IS ~bgt~ BEGIN
 	ACTION_IF NOT FILE_EXISTS ~t-wei01.wav~ BEGIN		//0xEF10 WATER_WEIRD
-		COPY ~JA#BGT_AdvPack/Tenya/WaterWeird~ ~override~
+		COPY ~%MOD_FOLDER%/Tenya/WaterWeird~ ~override~
 		APPEND ~animate.ids~ ~0xEF10 WATER_WEIRD~ UNLESS ~^0x[Ee][Ff]10~
 	END
 END
@@ -27,14 +27,14 @@ END
 COPY_EXISTING ~WATERELE.ITM~ ~override~
   WRITE_BYTE 0x72 1 // melee instead of range
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#SUTY1.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Tenya/JA#SUTY2.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Tenya/JA#SUTY3.CRE~ ~override~
-COPY ~JA#BGT_AdvPack/Tenya/JA#SUTY4.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#SUTY1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#SUTY2.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#SUTY3.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#SUTY4.CRE~ ~override~
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#TENYA.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Tenya/JA#CTENY.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Tenya/JA#TENYA.ITM~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#TENYA.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#CTENY.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#TENYA.ITM~ ~override~
 	SAY NAME1 @2112
 	SAY NAME2 @2113
 	SAY UNIDENTIFIED_DESC @2115
@@ -45,17 +45,17 @@ COPY_EXISTING ~%SEBaldursGate%.are~ ~override~
 	LPF fj_are_structure
 		INT_VAR
 		fj_type         = 2    //travel
-		fj_box_left     = 1030
-		fj_box_top      = 806
-		fj_box_right    = 1260
-		fj_box_bottom   = 990
+		fj_box_left     = 970
+		fj_box_top      = 750
+		fj_box_right    = 1133
+		fj_box_bottom   = 908
 		fj_cursor_idx	= 30
 		fj_loc_x		= 1068
 		fj_loc_y		= 850
-		fj_vertex_0     = 1133 + (806 << 16)
-		fj_vertex_1     = 1030 + (881 << 16)
-		fj_vertex_2     = 1114 + (990 << 16)
-		fj_vertex_3     = 1260 + (886 << 16)
+		fj_vertex_0     = 1042 + (750 << 16)
+		fj_vertex_1     = 970 + (830 << 16)
+		fj_vertex_2     = 1053 + (908 << 16)
+		fj_vertex_3     = 1133 + (826 << 16)
 		STR_VAR
 		fj_structure_type   = region
 		fj_destination_area	= JA#C02
@@ -179,7 +179,7 @@ COPY_EXISTING ~TENYA.dlg~ ~override~
 
 
 //Sonner.dlg Dialog
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Tenya/JA#SONNER.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Tenya/JA#SONNER.D~
 
 ACTION_IF GAME_IS ~bgt~ BEGIN
 	<<<<<<<< ...inlined/JA#Sonner_bgt.d
@@ -208,14 +208,19 @@ ACTION_IF GAME_IS ~bgee eet~ BEGIN
 		DECOMPILE_AND_PATCH BEGIN
 			REPLACE_TEXTUALLY EXACT_MATCH  ~SetGlobal("HelpJebadoh","GLOBAL",3)~ ~SetGlobal("HelpJebadoh","GLOBAL",2)~
 		END
-	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Tenya/JA#SONNER_ee.D~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Tenya/JA#SONNER_ee.D~
 END
 
-COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Tenya/JA#JALANT.D~
-COMPILE ~JA#BGT_AdvPack/Tenya/JA#STORWYN.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Tenya/JA#JALANT.D~
+COMPILE ~%MOD_FOLDER%/Tenya/JA#STORWYN.D~
 
 //Tenya 1 und 2
-COMPILE EVALUATE_BUFFER  ~JA#BGT_AdvPack/Tenya/JA#TENYA2.D~
+COPY_EXISTING ~TENYA2.DLG~ ~override~ // For compatibility
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~EscapeAreaDestroy(90)~ ~~
+	END
+BUT_ONLY
+COMPILE EVALUATE_BUFFER  ~%MOD_FOLDER%/Tenya/JA#TENYA2.D~
 ACTION_IF GAME_IS ~bgt~ BEGIN
 	<<<<<<<< ...inlined/JA#TENYA2_bgt.d
 	
@@ -241,13 +246,13 @@ ACTION_IF GAME_IS ~eet bgee~ BEGIN
 	OUTER_SPRINT bgt_journal_entry  ~~
 END
 
-EXTEND_TOP ~FISHER.BCS~ ~JA#BGT_AdvPack/Tenya/JA#FISHE.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~PUMBER.BCS~ ~JA#BGT_AdvPack/Tenya/JA#PUMB1.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%BaldursGateDocks_WaterQueensHouse%.BCS~ ~JA#BGT_AdvPack/Tenya/AR7609.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%WyrmsCrossing%.BCS~ ~JA#BGT_AdvPack/Tenya/AR7900.BAF~ EVALUATE_BUFFER
-EXTEND_TOP	~%FishingVillage%.BCS~ ~JA#BGT_AdvPack/Tenya/AR8300.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~FISHER.BCS~ ~%MOD_FOLDER%/Tenya/JA#FISHE.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~PUMBER.BCS~ ~%MOD_FOLDER%/Tenya/JA#PUMB1.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%BaldursGateDocks_WaterQueensHouse%.BCS~ ~%MOD_FOLDER%/Tenya/AR7609.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%WyrmsCrossing%.BCS~ ~%MOD_FOLDER%/Tenya/AR7900.BAF~ EVALUATE_BUFFER
+EXTEND_TOP	~%FishingVillage%.BCS~ ~%MOD_FOLDER%/Tenya/AR8300.BAF~ EVALUATE_BUFFER
 
-COPY ~JA#BGT_AdvPack/Tenya/JA#TLOS1.CRE~ ~override~
+COPY ~%MOD_FOLDER%/Tenya/JA#TLOS1.CRE~ ~override~
 	SAY NAME1 @2116
 	SAY NAME2 @2116
 
@@ -300,7 +305,7 @@ COPY_EXISTING ~%BaldursGateDocks_WaterQueensHouse%.ARE~ ~override~
 	END
 BUT_ONLY
 
-COMPILE ~JA#BGT_AdvPack/TENYA/JA#TENYA.BAF~
+COMPILE ~%MOD_FOLDER%/TENYA/JA#TENYA.BAF~
 
 /* cpmpatibility with Garrick Tales of a Troubadour - if installed, Tenya's questvariable and initiate dialogue will only happen if Tenya did not flirt with Garrick before.
 This prevents:
@@ -320,4 +325,4 @@ ACTION_IF (MOD_IS_INSTALLED ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ "0") BEGIN
 	BUT_ONLY
 END
 
-COMPILE ~JA#BGT_AdvPack/TENYA/JA#WATW1.BAF~
+COMPILE ~%MOD_FOLDER%/TENYA/JA#WATW1.BAF~
