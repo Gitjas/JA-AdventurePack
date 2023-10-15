@@ -4,6 +4,25 @@
 
 //Im Blade & Stars: Der Besitzer heißt Aundegul Shawn, spricht wenn Geld kommt
 
+// safty check for intalled mod
+ACTION_IF MOD_IS_INSTALLED ~GARRICK-TT.TP2~ ~0~ BEGIN
+	OUTER_SET check_for_garrick = 1
+	OUTER_SET check_for_garrick1 = 2	
+END ELSE BEGIN
+	OUTER_SET check_for_garrick = 0
+	OUTER_SET check_for_garrick1 = 1
+END
+
+COPY_EXISTING ~SILENC.dlg~ ~override~		
+	LPF ~READ_RESPONSE_STRREF~
+		INT_VAR
+		state         = "1"  // state index
+		stateResponse = 1     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
+		RET
+		strref    // returned string reference, or -1 if not available
+	END
+SET garrick1 = strref
+
 ACTION_IF GAME_IS ~bgt~ BEGIN
 	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Shop_of_Silence/JA#SILENC.D~
 END
@@ -19,6 +38,17 @@ COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Shop_of_Silence/JA#MONGO.D~
 COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH01.D~
 COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH02.D~
 COMPILE ~JA#BGT_AdvPack/Shop_of_Silence/JA#SILC1.BAF~
+ACTION_IF !FILE_EXISTS_IN_GAME ~JA#RUM01.DLG~ BEGIN // rumors needed to reveal the temple of Mask
+	ACTION_IF GAME_IS ~bgt~ BEGIN
+		OUTER_SPRINT storename ~TAV0705~
+	END
+	ACTION_IF GAME_IS ~eet bgee~ BEGIN
+		OUTER_SPRINT storename ~inn0705~
+	END
+	COPY_EXISTING ~%storename%.STO~ ~override~
+		WRITE_ASCII 0x44 ~JA#RUM01~ #8
+	COMPILE EVALUATE_BUFFER ~JA#BGT_AdvPack/Miniquest/JA#RUM01.D~
+END
 
 COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH01.CRE~ ~override~
 COPY ~JA#BGT_AdvPack/Shop_of_Silence/JA#STH02.CRE~ ~override~
