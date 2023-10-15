@@ -1,21 +1,21 @@
 IF
 	GlobalTimerExpired("JA#DEADCOCK","GLOBAL")
-	Global("JA#BRAUN_TOT","AR3800",1)
-	Global("JA#COCKFIGHT","AR3800",2)
+	Global("JA#BRAUN_TOT","%NashkelCarnival%",1)
+	Global("JA#COCKFIGHT","%NashkelCarnival%",2)
 THEN
 	RESPONSE #100
-		SetGlobal("JA#BRAUN_TOT","AR3800",0)
-		SetGlobal("JA#COCKFIGHT","AR3800",0)
+		SetGlobal("JA#BRAUN_TOT","%NashkelCarnival%",0)
+		SetGlobal("JA#COCKFIGHT","%NashkelCarnival%",0)
 		CreateCreature("JA#COCK1",[2586.3399],12)
 END
 
 IF
 	GlobalTimerExpired("JA#DEADCOCK","GLOBAL")
-	Global("JA#WEISS_TOT","AR3800",1)
-	Global("JA#COCKFIGHT","AR3800",2)
+	Global("JA#WEISS_TOT","%NashkelCarnival%",1)
+	Global("JA#COCKFIGHT","%NashkelCarnival%",2)
 THEN
 	RESPONSE #100
-		SetGlobal("JA#WEISS_TOT","AR3800",0)
-		SetGlobal("JA#COCKFIGHT","AR3800",0)
+		SetGlobal("JA#WEISS_TOT","%NashkelCarnival%",0)
+		SetGlobal("JA#COCKFIGHT","%NashkelCarnival%",0)
 		CreateCreature("JA#COCK2",[2640.3405],5)
 END
