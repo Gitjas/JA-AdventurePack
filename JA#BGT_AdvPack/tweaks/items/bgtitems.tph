@@ -6,7 +6,7 @@ COPY_EXISTING ~GRETEK.CRE~	~override~
 REPLACE_CRE_ITEM ~JA#AX1H4~ #0 #0 #0 ~none~ ~weapon1~ EQUIP
 
 
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#PLAT1.BAM~ ~override~
+COPY ~%MOD_FOLDER%/tweaks/items/JA#PLAT1.BAM~ ~override~
 COPY_EXISTING ~PLAT02.ITM~	~override/JA#PLAT1.ITM~		//Fallorains Panzer
 SAY NAME2 @2029
 SAY DESC @2020
@@ -17,7 +17,7 @@ COPY_EXISTING ~GENTHO.CRE~	~override~
 REPLACE_CRE_ITEM ~JA#PLAT1~ #0 #0 #0 ~none~ ~armor~ EQUIP
 
 
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#PLAT2.BAM~ ~override~
+COPY ~%MOD_FOLDER%/tweaks/items/JA#PLAT2.BAM~ ~override~
 COPY_EXISTING ~PLAT05.ITM~	~override/JA#PLAT2.ITM~		//Panzer der Finsternis
 SAY NAME2 @2028
 SAY DESC @2015
@@ -40,7 +40,7 @@ COPY_EXISTING ~ULGOTH.STO~	~override~
 LAUNCH_PATCH_MACRO ~DELETE_STORE_ITEM~
 ADD_STORE_ITEM ~JA#STAF1~ AFTER ~STAF01~ #0 #0 #0 ~IDENTIFIED~ #1
 
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#SWX01.BAM~ ~override~
+COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX01.BAM~ ~override~
 COPY_EXISTING ~SW1H09.ITM~	~override/JA#SWX01.ITM~		//Das pfeifende Schwert
 SAY NAME2 @2026
 SAY DESC @2016
@@ -54,14 +54,14 @@ SPRINT item_to_delete ~SW1H09~
 LAUNCH_PATCH_MACRO ~DELETE_CRE_ITEM~
 
 
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#SWX02.BAM~ ~override~
+COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX02.BAM~ ~override~
 COPY_EXISTING ~BGSW2H07.ITM~	~override~		//Der Rand der Welt
 SAY NAME2 @2025
 WRITE_ASCII 0x3a ~JA#SWX02~	#8
 WRITE_ASCII 0x76 ~JA#SWX02~	#8
 
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#SWX03.BAM~ ~override~
-COPY ~JA#BGT_AdvPack/Fixes/items/JA#SWX03.ITM~ ~override~	//Durlags Stolz
+COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX03.BAM~ ~override~
+COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX03.ITM~ ~override~	//Durlags Stolz
 SAY NAME2 @2024
 SAY DESC @2018
 WRITE_ASCII 0x3a ~JA#SWX03~	#8
