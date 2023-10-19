@@ -32,7 +32,7 @@ APPEND DRYAD
 
 IF ~Global("JA#CALDOQU1","%DryadFalls%",1)~ THEN BEGIN JA#DRYAD_1
 SAY @8
-IF ~!IfValidForPartyDialogue("xzar") Dead("xzar")~ THEN + 6
+IF ~OR(2) !IfValidForPartyDialogue("xzar") Dead("xzar")~ THEN + 6
 IF ~IfValidForPartyDialogue("xzar") InMyArea("xzar")~ THEN + "%xzardryad%"
 END
 
