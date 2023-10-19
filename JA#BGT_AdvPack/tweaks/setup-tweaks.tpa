@@ -228,8 +228,26 @@ ACTION_IF (NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 151 AND  NOT MOD_IS_INS
 		path_to_2da_file = EVAL ~%MOD_FOLDER%/Tweaks/areas/AR8100SR_changes.2da~ 	// full path to the *changes.2da file containing your icons, e.g. ~mymod/bam/AR3700SR_changes_ee.2da~
 		areaname = EVAL ~%BaldursGateDocks%~ 							  		 			// area name, e.g. ~AR3700~
 	END
-	COPY ~%MOD_FOLDER%/Tweaks/Areas/AR3700.wed~ ~override/%Nashkel%.wed~
-	COPY ~%MOD_FOLDER%/Tweaks/Areas/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
+	ACTION_IF GAME_IS ~eet bgee~ BEGIN
+		COPY ~JA#BGT_AdvPack/fixes/Areas/ee/AR3700.wed~ ~override/%Nashkel%.wed~
+			READ_LONG 0x08 ovl_num
+			READ_LONG 0x10 ovl_off
+			WRITE_ASCIIE ovl_off+0x04 ~%Nashkel%~ #8
+		COPY ~JA#BGT_AdvPack/fixes/Areas/ee/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
+			READ_LONG 0x08 ovl_num
+			READ_LONG 0x10 ovl_off
+			WRITE_ASCIIE ovl_off+0x04 ~%GnollStronghold%~ #8
+	END
+	ACTION_IF GAME_IS ~bgt~ BEGIN
+		COPY ~JA#BGT_AdvPack/fixes/Areas/non-ee/AR3700.wed~ ~override/%Nashkel%.wed~
+			READ_LONG 0x08 ovl_num
+			READ_LONG 0x10 ovl_off
+			WRITE_ASCIIE ovl_off+0x04 ~%Nashkel%~ #8
+		COPY ~JA#BGT_AdvPack/fixes/Areas/non-ee/AR4100.wed~ ~override/%GnollStronghold%.wed~	//wed Dateien
+			READ_LONG 0x08 ovl_num
+			READ_LONG 0x10 ovl_off
+			WRITE_ASCIIE ovl_off+0x04 ~%GnollStronghold%~ #8
+	END
 END
 	/////////////////////////////////////////////////////////////
 	//dagger of poison & shadow armor moved from taerom to silence
