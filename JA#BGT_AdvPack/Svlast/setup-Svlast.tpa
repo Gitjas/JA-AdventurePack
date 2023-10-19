@@ -2,34 +2,29 @@
 //RESTORED: Svlast - the fallen Paladin
 ////////////////////////////////////////
 
-ACTION_IF (FILE_EXISTS_IN_GAME ntsvlast.cre) OR (FILE_EXISTS_IN_GAME UBSVLAST.CRE) BEGIN
-	PRINT ~Skipping Svlast, the Fallen Paladin: Is already restored by another mod.~
-END ELSE BEGIN
+COPY ~%MOD_FOLDER%/Svlast/JA#SVLST.CRE~ ~override~
+	SAY NAME1 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
+	SAY NAME2 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
 
-	COPY ~%MOD_FOLDER%/Svlast/JA#SVLST.CRE~ ~override~
-		SAY NAME1 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
-		SAY NAME2 #15610 //~Svlast~ (string ref is true for BGT and BG:EE)
+COPY ~%MOD_FOLDER%/Svlast/JA#ZOMB1.CRE~ ~override~
 	
-	COPY ~%MOD_FOLDER%/Svlast/JA#ZOMB1.CRE~ ~override~
-	
-	EXTEND_TOP ~%FirewineBridge%.BCS~ ~%MOD_FOLDER%/Svlast/AR3400.BAF~ EVALUATE_BUFFER
-	COMPILE ~%MOD_FOLDER%/Svlast/JA#ZOMB1.BAF~
-	COMPILE ~%MOD_FOLDER%/Svlast/JA#SVLST.BAF~
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Svlast/JA#SVLST.D~
-	
-	COPY_EXISTING ~%FirewineBridge%.ARE~ ~override~
-		//add new actors
-		LPF fj_are_structure
-			INT_VAR
-			fj_loc_x          = 3346
-			fj_loc_y          = 2570
-			fj_dest_x         = 3346
-			fj_dest_y         = 2570
-			fj_orientation    = 11     
-			STR_VAR
-			fj_structure_type = actor
-			fj_name           = ~Svlast~
-			fj_cre_resref     = JA#SVLST
-			fj_dlg_resref	  = JA#SVLST
-		END
-END
+EXTEND_TOP ~%FirewineBridge%.BCS~ ~%MOD_FOLDER%/Svlast/AR3400.BAF~ EVALUATE_BUFFER
+COMPILE ~%MOD_FOLDER%/Svlast/JA#ZOMB1.BAF~
+COMPILE ~%MOD_FOLDER%/Svlast/JA#SVLST.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Svlast/JA#SVLST.D~
+
+COPY_EXISTING ~%FirewineBridge%.ARE~ ~override~
+	//add new actors
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 3346
+		fj_loc_y          = 2570
+		fj_dest_x         = 3346
+		fj_dest_y         = 2570
+		fj_orientation    = 11     
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Svlast~
+		fj_cre_resref     = JA#SVLST
+		fj_dlg_resref	  = JA#SVLST
+	END

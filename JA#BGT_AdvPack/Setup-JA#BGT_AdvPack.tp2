@@ -15,51 +15,35 @@ SUPPORT ~Please post at G3 or Kerzenburgforum, refer to readme.~
 VERSION ~0.9.0 beta3~ //
 
 ALWAYS
-
 	/* check for a ready SoD */
-	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN
-		FAIL @90000
+	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~) OR (GAME_IS ~BG1 TOTSC BG2 TUTU TUTU_TOTSC~)) THEN BEGIN
+		FAIL ~Your game is not compatible with ja#BGT_AdvPack~
 	END 
 
 	INCLUDE ~%MOD_FOLDER%/lib/func_fetch_journal_entries.tph~
 	INCLUDE ~%MOD_FOLDER%/lib/extend_area_script_DW.tph~
 
-
-	ACTION_IF !FILE_EXISTS ~%MOD_FOLDER%/Install/JA#BGT_AdvPack_reinstall.mrk~ BEGIN
-			
+	ACTION_IF !FILE_EXISTS ~%MOD_FOLDER%/Install/JA#BGT_AdvPack_reinstall.mrk~ BEGIN	
 		/* and GTIMES.IDS, ANIMATE.IDS patching to ToB, courtesy of the BG2 Fix Pack */
 		INCLUDE ~%MOD_FOLDER%/lib/ids_entries_cleanup.tph~
-		APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
-			UNLESS ~CD_STATE_NOTVALID~
-		DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-			COPY ~%MOD_FOLDER%/languages/english~ ~%MOD_FOLDER%/languages/autotra/%LANGUAGE%~
-			COPY ~%MOD_FOLDER%/languages/%LANGUAGE%~ ~%MOD_FOLDER%/languages/autotra/%LANGUAGE%~
-		END
-		LAF autotra_workaround END
 		COPY_EXISTING sw1h01.itm ~%MOD_FOLDER%/Install/JA#BGT_AdvPack_reinstall.mrk~
 	END
 	
-		ACTION_IF ENGINE_IS ~bgee bg2ee~ BEGIN
-			
-		
-			ACTION_DEFINE_ARRAY tra#reload BEGIN setup END
-			ACTION_DEFINE_ARRAY tra#noconvert BEGIN END
-		
-			LAF HANDLE_CHARSETS
-				INT_VAR
-					infer_charsets = 1
-				STR_VAR
-					tra_path = ~%MOD_FOLDER%/languages/autotra~
-					noconvert_array = tra#noconvert
-					reload_array = tra#reload
-					iconv_path = ~%MOD_FOLDER%/tools/iconv~
-			END
-			
-		
-			//TRAs declared in LANGUAGE must be reloaded
-			//LOAD_TRA "JA#BGT_AdvPack/languages/autotra/%LANGUAGE%/Setup.tra"
+	ACTION_IF ENGINE_IS ~bgee bg2ee~ BEGIN
+
+		ACTION_DEFINE_ARRAY tra#reload BEGIN setup END
+		ACTION_DEFINE_ARRAY tra#noconvert BEGIN END
+		LAF HANDLE_CHARSETS
+			INT_VAR
+				infer_charsets = 1
+			STR_VAR
+				tra_path = ~%MOD_FOLDER%/languages~
+				noconvert_array = tra#noconvert
+				reload_array = tra#reload
+				iconv_path = ~%MOD_FOLDER%/tools/iconv~
 		END
-	
+
+	END
 	
 	INCLUDE ~%MOD_FOLDER%/lib/extra_regexp_vars.tph~
 	OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~
@@ -91,10 +75,9 @@ ALWAYS
 			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 		END
 	END
-
 END
 
-AUTO_TRA ~%MOD_FOLDER%/Languages/autotra/%s~
+AUTO_TRA ~%MOD_FOLDER%/Languages/%s~
 
 LANGUAGE ~Deutsch~
          ~german~
@@ -191,6 +174,7 @@ INCLUDE ~%MOD_FOLDER%/Aldeth_hunter_comrade/setup-Aldeth_hunter_comrade.tpa~
 ////////////////////////////////////////
 
 BEGIN ~Svlast - the fallen Paladin~ DESIGNATED 8
+REQUIRE_PREDICATE ((NOT FILE_EXISTS_IN_GAME ~ntsvlast.cre~) AND (NOT FILE_EXISTS_IN_GAME ~UBSVLAST.cre~)) ~Svlast, the Fallen Paladin, is already restored by another mod.~
 LABEL "JA#BGT_AdvPack-Svlast"
 INCLUDE ~%MOD_FOLDER%/Svlast/setup-Svlast.tpa~
 
@@ -207,6 +191,7 @@ INCLUDE ~%MOD_FOLDER%/AMNIS2/setup-AMNIS2.tpa~
 ///////////////////////////////
 
 BEGIN ~Velvet - Cockfight~ DESIGNATED 10
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~ OR (GAME_IS ~bgt~ AND MOD_IS_INSTALLED ~setup-infinityanimations.tp2~ 0)) @37
 LABEL "JA#BGT_AdvPack-Velvet"
 INCLUDE ~%MOD_FOLDER%/velvet/setup-velvet.tpa~
 
@@ -215,6 +200,7 @@ INCLUDE ~%MOD_FOLDER%/velvet/setup-velvet.tpa~
 ////////////////////////////
 
 BEGIN ~Nim Furlwing~ DESIGNATED 11
+REQUIRE_PREDICATE (NOT FILE_EXISTS_IN_GAME ~ubnimfur.cre~) ~NimFurlwing and Her Hounds is already restored by another mod.~
 LABEL "JA#BGT_AdvPack-Nim_Furlwing"
 INCLUDE ~%MOD_FOLDER%/Nim_Furlwing/setup-Nim_Furlwing.tpa~
 
@@ -297,6 +283,7 @@ INCLUDE ~%MOD_FOLDER%/ARTOLA/setup-ARTOLA.tpa~
 ////////////////////////////////
 
 BEGIN ~Pilar & Gheldehar~ DESIGNATED 21
+REQUIRE_PREDICATE (NOT FILE_EXISTS_IN_GAME ~ntghelde.cre~) ~Pilar and Gheldehar are already restored by another mod.~
 LABEL "JA#BGT_AdvPack-Pillar_Gheldehar"
 INCLUDE ~%MOD_FOLDER%/Pillar_Gheldehar/setup-Pillar_Gheldehar.tpa~
 
@@ -313,6 +300,7 @@ INCLUDE ~%MOD_FOLDER%/Llindellyn/setup-Llindellyn.tpa~
 /////////////////////////////////////////
 
 BEGIN ~Mal-Kalen - Ulcaster's Adept~ DESIGNATED 23
+REQUIRE_PREDICATE (NOT FILE_EXISTS_IN_GAME ~UBMALKAL.CRE~) ~Mal-Kalen, the Ulcaster Ghost, Is already restored by another mod.~
 LABEL "JA#BGT_AdvPack-Mal-Kalen"
 INCLUDE ~%MOD_FOLDER%/Mal-Kalen/setup-Mal-Kalen.tpa~
 

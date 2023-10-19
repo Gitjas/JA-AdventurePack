@@ -2,11 +2,7 @@
 //RESTORED: Nim Furlwing
 ////////////////////////////
 
-ACTION_IF (FILE_EXISTS_IN_GAME ubnimfur.cre) BEGIN
-	PRINT ~Skipping NimFurlwing and Her Hounds: Is already restored by another mod.~
-
-END ELSE ACTION_IF (FILE_EXISTS_IN_GAME ntnimfur.cre) BEGIN
-	// PRINT ~Skipping NimFurlwing and Her Hounds: Is already restored by another mod.~
+ACTION_IF (FILE_EXISTS_IN_GAME ntnimfur.cre) BEGIN
 	COPY_EXISTING ~AR60PB.bcs~	~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("NTNIMFUR",[543.3051],0)~ ~CreateCreature("JA#NIMFU",[543.3051],0)~

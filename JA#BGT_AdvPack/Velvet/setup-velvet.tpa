@@ -1,85 +1,82 @@
 ///////////////////////////////
 //RESTORED: Velvet - Cockfight
 ///////////////////////////////
-ACTION_IF (GAME_IS ~bgt~ AND NOT MOD_IS_INSTALLED ~setup-infinityanimations.tp2~ 0) BEGIN
-	PRINT @37
-END ELSE BEGIN
-	//Fix Animation BGT only
-	ACTION_IF GAME_IS ~bgt~ BEGIN
 
-		APPEND ~ANIMATE.IDS~ ~0x547C CHICKEN_BROWN~ UNLESS ~^0x547C~  //0x547C £AC BGT+Infinity		0x7D2 ACHB BGEE
-		APPEND ~ANISND.IDS~ ~0x547C £AC      CGAMEANIMATIONTYPE_CHICKEN_BROWN~ UNLESS ~^0x547C~
+//Fix Animation BGT only
+ACTION_IF GAME_IS ~bgt~ BEGIN
 
-		ACTION_IF NOT FILE_EXISTS ~£ACG1.bam~ THEN BEGIN
-			COPY ~%MOD_FOLDER%/Velvet/chicken_brown~ ~override~
-		END
+	APPEND ~ANIMATE.IDS~ ~0x547C CHICKEN_BROWN~ UNLESS ~^0x547C~  //0x547C £AC BGT+Infinity		0x7D2 ACHB BGEE
+	APPEND ~ANISND.IDS~ ~0x547C £AC      CGAMEANIMATIONTYPE_CHICKEN_BROWN~ UNLESS ~^0x547C~
+
+	ACTION_IF NOT FILE_EXISTS ~£ACG1.bam~ THEN BEGIN
+		COPY ~%MOD_FOLDER%/Velvet/chicken_brown~ ~override~
+	END
+END
+
+//Animate.ids in BGEE and EET
+//0xEF10 MWWE	WATER_WEIRD				JA#WATW1.cre
+//0xCC00 MKG1	KEG1					JA#Keg01.cre
+//0x7D02 ACHB	CHICKEN_BROWN			JA#Cock1.cre JA#Cock1.cre
+
+
+COPY ~%MOD_FOLDER%/velvet/JA#VELVE.CRE~ ~override~
+	SAY NAME1 @2056
+	SAY NAME2 @2056
+
+COPY ~%MOD_FOLDER%/velvet/JA#COCK1.CRE~ ~override~
+	~%MOD_FOLDER%/velvet/JA#COCK2.CRE~ ~override~
+	SAY NAME1 @2057
+	SAY NAME2 @2057
+	PATCH_IF (GAME_IS ~bgee eet~ AND ("%SOURCE_RES%" STR_EQ ~JA#COCK1~))  BEGIN
+		WRITE_LONG 0x28	0x7D02
 	END
 
-	//Animate.ids in BGEE and EET
-	//0xEF10 MWWE	WATER_WEIRD				JA#WATW1.cre
-	//0xCC00 MKG1	KEG1					JA#Keg01.cre
-	//0x7D02 ACHB	CHICKEN_BROWN			JA#Cock1.cre JA#Cock1.cre
+// COPY ~%MOD_FOLDER%/velvet/JA#S1-2.ITM~ ~override~
 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#VELVE.D~
 
-	COPY ~%MOD_FOLDER%/velvet/JA#VELVE.CRE~ ~override~
-		SAY NAME1 @2056
-		SAY NAME2 @2056
+EXTEND_TOP ~%NashkelCarnival%.BCS~ ~%MOD_FOLDER%/velvet/AR3800.BAF~ EVALUATE_BUFFER
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#COCK1.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#COCK2.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#VELVE.BAF~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#CCKF1.BAF~
 
-	COPY ~%MOD_FOLDER%/velvet/JA#COCK1.CRE~ ~override~
-		~%MOD_FOLDER%/velvet/JA#COCK2.CRE~ ~override~
-		SAY NAME1 @2057
-		SAY NAME2 @2057
-		PATCH_IF (GAME_IS ~bgee eet~ AND ("%SOURCE_RES%" STR_EQ ~JA#COCK1~))  BEGIN
-			WRITE_LONG 0x28	0x7D02
-		END
-
-	// COPY ~%MOD_FOLDER%/velvet/JA#S1-2.ITM~ ~override~
-
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#VELVE.D~
-
-	EXTEND_TOP ~%NashkelCarnival%.BCS~ ~%MOD_FOLDER%/velvet/AR3800.BAF~ EVALUATE_BUFFER
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#COCK1.BAF~
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#COCK2.BAF~
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#VELVE.BAF~
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/velvet/JA#CCKF1.BAF~
-
-	COPY_EXISTING ~%NashkelCarnival%.ARE~ ~override~
-		//add new actors
-		LPF fj_are_structure
-			INT_VAR
-			fj_loc_x          = 2509
-			fj_loc_y          = 3344
-			fj_dest_x         = 2509
-			fj_dest_y         = 3344
-			fj_orientation    = 13     
-			STR_VAR
-			fj_structure_type = actor
-			fj_name           = ~Velvet~
-			fj_cre_resref     = ~JA#VELVE~
-			fj_dlg_resref	  = ~JA#VELVE~
-		END
-		LPF fj_are_structure
-			INT_VAR
-			fj_loc_x          = 2586
-			fj_loc_y          = 3399
-			fj_dest_x         = 2586
-			fj_dest_y         = 3399
-			fj_orientation    = 12     
-			STR_VAR
-			fj_structure_type = actor
-			fj_name           = ~Cock1~
-			fj_cre_resref     = ~JA#COCK1~
-		END
-		LPF fj_are_structure
-			INT_VAR
-			fj_loc_x          = 2640
-			fj_loc_y          = 3405
-			fj_dest_x         = 2640
-			fj_dest_y         = 3405
-			fj_orientation    = 5      
-			STR_VAR
-			fj_structure_type = actor
-			fj_name           = ~Cock2~
-			fj_cre_resref     = ~JA#COCK2~
-		END
-END
+COPY_EXISTING ~%NashkelCarnival%.ARE~ ~override~
+	//add new actors
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 2509
+		fj_loc_y          = 3344
+		fj_dest_x         = 2509
+		fj_dest_y         = 3344
+		fj_orientation    = 13     
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Velvet~
+		fj_cre_resref     = ~JA#VELVE~
+		fj_dlg_resref	  = ~JA#VELVE~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 2586
+		fj_loc_y          = 3399
+		fj_dest_x         = 2586
+		fj_dest_y         = 3399
+		fj_orientation    = 12     
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Cock1~
+		fj_cre_resref     = ~JA#COCK1~
+	END
+	LPF fj_are_structure
+		INT_VAR
+		fj_loc_x          = 2640
+		fj_loc_y          = 3405
+		fj_dest_x         = 2640
+		fj_dest_y         = 3405
+		fj_orientation    = 5      
+		STR_VAR
+		fj_structure_type = actor
+		fj_name           = ~Cock2~
+		fj_cre_resref     = ~JA#COCK2~
+	END

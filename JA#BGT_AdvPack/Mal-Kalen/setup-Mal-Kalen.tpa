@@ -2,10 +2,6 @@
 //RESTORED: Mal-Kalen - Ulcaster's Adept
 /////////////////////////////////////////
 
-ACTION_IF (FILE_EXISTS_IN_GAME UBMALKAL.CRE) BEGIN
-	PRINT ~Skipping Mal-Kalen, the Ulcaster Ghost: Is already restored by another mod.~
-END ELSE BEGIN
-
 COPY ~%MOD_FOLDER%/Mal-Kalen/JA#MALKA.CRE~ ~override~
 	SAY NAME1 #12701 //~Mal-Kalen~ (string ref is true for BGT and BG:EE)
 	SAY NAME2 #12701 //~Mal-Kalen~ (string ref is true for BGT and BG:EE)
@@ -31,4 +27,3 @@ COPY_EXISTING ~%Ulcaster%.ARE~ ~override~
 		fj_cre_resref     = ~JA#MALKA~ 
 		fj_dlg_resref	  = ~JA#MALKA~ 
 	END
-END
