@@ -44,7 +44,8 @@ COPY ~%MOD_FOLDER%/LawSystem/JA#FACAP.CRE~ ~override~
 	SAY NAME1 @2037
 	SAY NAME2 @2037
 
-COPY ~%MOD_FOLDER%/LawSystem/JA#GUAB5.CRE~ ~override~
+COPY ~%MOD_FOLDER%/LawSystem/JA#GUAB4.CRE~ ~override~
+	~%MOD_FOLDER%/LawSystem/JA#GUAB5.CRE~ ~override~
 	~%MOD_FOLDER%/LawSystem/JA#GUAB6.CRE~ ~override~
 	~%MOD_FOLDER%/LawSystem/JA#GUAB7.CRE~ ~override~
 	~%MOD_FOLDER%/LawSystem/JA#GUAB8.CRE~ ~override~
