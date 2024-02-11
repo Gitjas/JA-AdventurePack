@@ -377,7 +377,7 @@ END ELSE BEGIN
 		//add region triggers
 		LPF fj_are_structure
 			INT_VAR
-			fj_type         = 1    //info
+			fj_type         = 0    //info
 			fj_box_left     = 882
 			fj_box_top      = 203
 			fj_box_right    = 931

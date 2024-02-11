@@ -7,7 +7,6 @@ THEN
 		Deactivate(Myself)
 END
 
-
 IF
 	Global("JA#PHANDA","GLOBAL",1)
 	!IsActive(Myself)
@@ -21,6 +20,7 @@ IF
 	NumTimesTalkedToGT(0)
 	InParty([0.0.0.0.0.0.MASK_EVIL])
 	See([PC.0.0.0.0.0.MASK_EVIL])
+	!Allegiance(Myself,EVILCUTOFF)
 THEN
 	RESPONSE #100
 		Dialogue([PC])

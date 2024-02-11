@@ -37,10 +37,10 @@ ALWAYS
 			INT_VAR
 				infer_charsets = 1
 			STR_VAR
-				tra_path = ~%MOD_FOLDER%/languages~
+				tra_path = ~JA#BGT_AdvPack/languages~
 				noconvert_array = tra#noconvert
 				reload_array = tra#reload
-				iconv_path = ~%MOD_FOLDER%/tools/iconv~
+				iconv_path = ~JA#BGT_AdvPack/tools/iconv~
 		END
 
 	END
@@ -103,7 +103,7 @@ LANGUAGE ~English~
 /////////////////////////////////////////////////////////////
 
 BEGIN ~Useful Tweaks & Repairs~ DESIGNATED 0
-DEPRECATED ~This Component is included in JA#BGT_TWEAK~
+// DEPRECATED ~This Component is included in JA#BGT_TWEAK~
 LABEL "JA#BGT_AdvPack-Tweaks"
 INCLUDE ~%MOD_FOLDER%/Tweaks/setup-Tweaks.tpa~
 
