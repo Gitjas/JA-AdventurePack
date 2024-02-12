@@ -360,20 +360,6 @@ END ELSE BEGIN
 			fj_cre_resref     = JA#WILY1
 			fj_dlg_resref	  = JA#WILY1
 		END
-		LPF fj_are_structure
-			INT_VAR
-			fj_loc_x          = 980
-			fj_loc_y          = 577
-			fj_dest_x         = 980
-			fj_dest_y         = 577
-			fj_orientation    = 1    
-			fj_schedule		  = 0b000000011111111111100000
-			STR_VAR
-			fj_structure_type = actor
-			fj_name           = Phandalyn
-			fj_cre_resref     = PHANDA
-			fj_dlg_resref	  = PHANDA
-		END
 		//add region triggers
 		LPF fj_are_structure
 			INT_VAR
