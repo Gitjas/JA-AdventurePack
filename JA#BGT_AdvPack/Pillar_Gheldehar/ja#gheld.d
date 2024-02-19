@@ -18,7 +18,7 @@ END
 
 IF ~Global("JA#GHELD_JOB","GLOBAL",0)~ THEN BEGIN 1
   SAY @5
-  IF ~~ THEN REPLY @6 DO ~SetGlobal("JA#GHELD_JOB","GLOBAL",1)~ UNSOLVED_JOURNAL @7 EXIT
+  IF ~~ THEN REPLY @6 DO ~SetGlobal("JA#GHELD_JOB","GLOBAL",1)~ UNSOLVED_JOURNAL @1057 EXIT
   IF ~~ THEN REPLY @8 DO ~SetGlobal("JA#GHELD_JOB","GLOBAL",2)~ GOTO 7
 END
 
@@ -29,7 +29,7 @@ END
 
 IF ~PartyHasItem("JA#GHELD")Global("JA#GHELD_JOB","GLOBAL",1)Dead("JA#PILAR")~ THEN BEGIN 3
   SAY @10
-  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")AddexperienceParty(400)EraseJournalEntry(@7)~ SOLVED_JOURNAL @11 EXIT
+  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")AddexperienceParty(400)EraseJournalEntry(@1057)~ SOLVED_JOURNAL @1058 EXIT
 END
 
 IF ~PartyHasItem("JA#GHELD")
@@ -42,7 +42,7 @@ HPPercent(Player4,100)
 HPPercent(Player5,100)
 HPPercent(Player6,100)~ THEN BEGIN 4
   SAY @12
-  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")GiveGoldForce(90)AddexperienceParty(400)EraseJournalEntry(@7)~ SOLVED_JOURNAL @11 EXIT
+  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")GiveGoldForce(90)AddexperienceParty(400)EraseJournalEntry(@1057)~ SOLVED_JOURNAL @1058 EXIT
 END
 
 IF ~PartyHasItem("JA#GHELD")
@@ -56,7 +56,7 @@ HPPercentLT(Player4,100)
 HPPercentLT(Player5,100)
 HPPercentLT(Player6,100)~ THEN BEGIN 5
   SAY @13
-  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")AddexperienceParty(400)EraseJournalEntry(@7)ForceSpell([PC],CLERIC_MASS_CURE)~ SOLVED_JOURNAL @11 EXIT
+  IF ~~ THEN DO ~TakePartyItem("JA#GHELD")SetGlobal("JA#GHELD_JOB","GLOBAL",2)DestroyItem("JA#GHELD")AddexperienceParty(400)EraseJournalEntry(@1057)ForceSpell([PC],CLERIC_MASS_CURE)~ SOLVED_JOURNAL @1058 EXIT
 END
 
 IF ~True()~ THEN BEGIN 6

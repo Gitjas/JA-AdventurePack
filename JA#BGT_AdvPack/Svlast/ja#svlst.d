@@ -32,12 +32,12 @@ END
 
 IF ~~ THEN BEGIN 5
   SAY @15
-  IF ~~ THEN DO ~EraseJournalEntry(@1009)AddExperienceParty(320)~ SOLVED_JOURNAL @16 EXIT
+  IF ~~ THEN DO ~EraseJournalEntry(@1009)AddExperienceParty(320)~ SOLVED_JOURNAL @1080 EXIT
 END
 
 IF ~~ THEN BEGIN 6
   SAY @17
-  IF ~~ THEN DO ~EraseJournalEntry(@1009)Enemy()~ SOLVED_JOURNAL @18 EXIT
+  IF ~~ THEN DO ~EraseJournalEntry(@1009)Enemy()~ SOLVED_JOURNAL @1081 EXIT
 END
 
 

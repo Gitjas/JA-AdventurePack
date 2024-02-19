@@ -2,7 +2,8 @@
 //RESTORED: Item-descriptions - Rythe's Last Arrow
 ///////////////////////////////////////////////////
 
-COPY_EXISTING ~AX1H06.ITM~ ~override/JA#AX1H6.ITM~
+COPY_EXISTING ~AX1H05.ITM~ ~override/JA#AX1H6.ITM~
+	SAY NAME2 @2023
 	SAY DESC @2000
 
 COPY_EXISTING ~PRAT.CRE~ ~override~

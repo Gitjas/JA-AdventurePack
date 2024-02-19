@@ -17,7 +17,7 @@ BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~ChangeClass(Myself,PALADIN)
 Enemy()~
-  "JOURNAL" ~@2~
+  "JOURNAL" ~@1036~
 END
 
 REPLACE_STATE_TRIGGER PHANDA 3 ~NumTimesTalkedToGT(0)~
@@ -38,7 +38,6 @@ APPEND PHANDA
 
 IF ~~ THEN BEGIN JA#PHANDA_1
 SAY @1
-IF ~~ THEN DO ~ChangeClass(Myself,PALADIN)
-Enemy()~ JOURNAL @2 EXIT
+IF ~~ THEN DO ~Enemy()~ JOURNAL @1036 EXIT
 END
 END

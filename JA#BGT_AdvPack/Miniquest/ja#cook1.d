@@ -10,7 +10,7 @@ IF ~~ THEN BEGIN JA#COOK1_2
 SAY @3
 IF ~~ THEN REPLY @4 GOTO JA#COOK1_3
 IF ~~ THEN REPLY @5 GOTO JA#COOK1_3
-IF ~~ THEN REPLY @6 UNSOLVED_JOURNAL @80 EXIT
+IF ~~ THEN REPLY @6 UNSOLVED_JOURNAL @1053 EXIT
 END
 
 IF ~~ THEN BEGIN JA#COOK1_3
@@ -77,7 +77,7 @@ END
 
 IF ~~ THEN BEGIN JA#COOK1_14
 SAY @28
-IF ~~ THEN DO ~AddexperienceParty(100) SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",6) EraseJournalEntry(@80)~ SOLVED_JOURNAL @81 EXIT
+IF ~~ THEN DO ~AddexperienceParty(100) SetGlobal("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",6) EraseJournalEntry(@1053)~ SOLVED_JOURNAL @1054 EXIT
 END
 
 IF ~GlobalGT("JA#CUKEG","%EBaldursGate_ElfsongTavern_L1%",5)RandomNum(3,1)~ THEN BEGIN JA#COOK1_15

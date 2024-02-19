@@ -43,7 +43,7 @@ COPY_EXISTING ~PHANDALY.bcs~ ~override~
 		SPRINT textToReplace ~Attack(\[0\.0\.0\.0\.0\.0\.MASK_EVIL\])~
 		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
 		PATCH_IF (num_matches > 0) BEGIN
-			REPLACE_TEXTUALLY ~\(%textToReplace%\)~ ~Continue()~
+			REPLACE_TEXTUALLY ~\(%textToReplace%\)~ ~Continue()~ // attack is already handle by WDASIGHT.BCS
 			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
 		END ELSE BEGIN
 			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~

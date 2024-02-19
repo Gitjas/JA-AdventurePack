@@ -172,7 +172,7 @@ END
 
 IF ~~ THEN BEGIN JA#TENYA_07
 SAY @21
-IF ~~ THEN DO ~EraseJournalEntry(@1022)SetGlobal("JA#TENYA_QUEST","GLOBAL",3)AddExperienceParty(1000)GiveItemCreate("JA#TENYA",LastTalkedToBy,1,0,0)~ SOLVED_JOURNAL @22 EXIT
+IF ~~ THEN DO ~EraseJournalEntry(@1022)SetGlobal("JA#TENYA_QUEST","GLOBAL",3)AddExperienceParty(1000)GiveItemCreate("JA#TENYA",LastTalkedToBy,1,0,0)~ SOLVED_JOURNAL @1034 EXIT
 END
 
 IF ~!Global("Chapter","GLOBAL",%tutu_chapter_7%)Global("JA#TENYA_QUEST","GLOBAL",3)~ THEN BEGIN JA#TENYA_08

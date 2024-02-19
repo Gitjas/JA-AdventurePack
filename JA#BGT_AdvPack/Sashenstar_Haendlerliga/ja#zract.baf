@@ -1,0 +1,28 @@
+IF
+	Opened([ANYONE])
+	Range(LastTrigger,1)
+	See("ZORL")  // Zorl Miyar
+	!Allegiance("ZORL",CHARMED)  // Zorl Miyar
+	!Allegiance("ZORL",CONTROLLED)  // Zorl Miyar
+	!StateCheck("ZORL",STATE_BLIND)  // Zorl Miyar
+	!StateCheck("ZORL",STATE_CHARMED)  // Zorl Miyar
+	!StateCheck("ZORL",STATE_CONFUSED)  // Zorl Miyar
+	!StateCheck("ZORL",STATE_STUNNED)  // Zorl Miyar
+	!StateCheck("ZORL",STATE_STONE_DEATH)  // Zorl Miyar
+	!StateCheck("ZORL",CD_STATE_NOTVALID)  // Zorl Miyar
+	!StateCheck(LastTrigger,STATE_INVISIBLE)
+	!StateCheck(LastTrigger,STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		DisplayString(LastTrigger,@41)  // You have been snooping around long enough, meat being. This ends now!
+		Wait(3)
+		SetGlobal("ZorlDopple","GLOBAL",1)
+END
+
+IF
+	Opened([ANYONE])
+	Delay(6)
+THEN
+	RESPONSE #100
+		CloseDoor(Myself)
+END

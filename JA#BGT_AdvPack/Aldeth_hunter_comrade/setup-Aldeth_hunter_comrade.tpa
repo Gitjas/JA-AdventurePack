@@ -8,6 +8,17 @@ COPY ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.CRE~ ~override~
 
 COMPILE ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.D~
 
+COPY_EXISTING ~ALDETH.dlg~ ~override~
+  LPF READ_JOURNAL_STRREF
+    INT_VAR 
+	state = 0
+//	stateResponse = 0  //is already set to "0"
+    RET strref
+  END
+  SET aldeth1 = strref
+
+COMPILE ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#ALDETH.D~ EVALUATE_BUFFER
+
 COMPILE ~%MOD_FOLDER%/Aldeth_hunter_comrade/JA#PALIN.BAF~
 
 COPY_EXISTING ~%CloakwoodLodge%.ARE~ ~override~

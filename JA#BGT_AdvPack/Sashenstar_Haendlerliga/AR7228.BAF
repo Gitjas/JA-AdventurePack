@@ -1,6 +1,6 @@
 IF
 	Global("JA#ALD_MOVE1","%SWBaldursGate_MerchantLeague_L2%",0)
-	GlobalGT("JA#CUIRL","GLOBAL",1)
+	GlobalGT("JA#CUIRL","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("JA#ALD_MOVE1","%SWBaldursGate_MerchantLeague_L2%",1)

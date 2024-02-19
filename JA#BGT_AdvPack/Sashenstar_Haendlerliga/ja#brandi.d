@@ -17,7 +17,7 @@ Global("HelpBrandilar","GLOBAL",0)~
 EXTEND_BOTTOM BRANDI 7
 IF ~Global("JA#BRANDIHELP1","LOCALS",0)
 Global("ZorlParty","GLOBAL",1)
-Global("TalkToBrandilar","GLOBAL",1)~ THEN REPLY @0 GOTO JA#BRANDI_00
+Global("HelpBrandilar","GLOBAL",1)~ THEN REPLY @0 GOTO JA#BRANDI_00
 END
 
 EXTEND_BOTTOM BRANDI 14

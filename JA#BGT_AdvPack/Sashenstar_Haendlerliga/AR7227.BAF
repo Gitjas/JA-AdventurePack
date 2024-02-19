@@ -1,5 +1,4 @@
 IF
-//	!Exists("Irlentre")
 	Exists("Irlentre")
 	!Dead("Irlentre")
 	Global("JA#IRLENT_CUT01","%SWBaldursGate_MerchantLeague_L1%",0)

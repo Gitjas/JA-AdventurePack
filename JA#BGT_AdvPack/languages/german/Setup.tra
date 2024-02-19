@@ -51,106 +51,6 @@ Kann nur verwendet werden von:
 @42   = ~Aaah! Die wollen meine Hunde zerfleischen! Hilfe!~
 @43   = ~BG1 Unfinished Business Komponente #21 wird benötigt.~
 @44   = ~Honk~
-@1000   = ~Das Rätsel um die verstummte Geisterstimme
-
-Das berühmte nächtliche Geisterlied in der Taverne Elfgesang ist seit einiger Zeit verstummt. Ich habe der Inhaberin "Lady" Alyth Elendara angeboten, nach Hinweisen zu suchen, um der Sache auf den Grund zu gehen. Vielleicht wissen einige Gäste des Elfgesangs mehr und können etwas Licht in das Dunkel bringen. Im Moment stehe ich jedenfalls noch ohne jeden Anhaltspunkt da.~
-@1001   = ~Das Rätsel um die verstummte Geisterstimme
-
-Keiner der Gäste konnte mir viel über das Verschwinden der Geisterstimme erzählen. Aber anscheinend hat der ehemalige Besitzer des Elfgesangs "Wilyn" ein besonderes Interesse an der singenden Elfendame gezeigt. Vielleicht ist das ja eine Spur.~
-@1002   = ~Das Rätsel um die verstummte Geisterstimme
-
-Nathan berichtete mir gegen einen kleinen Obolus, dass der alte Wilyn nun in einem kleinen Haus nördlich des großen Turmes auf der östlichen Seite der Hafeneinfahrt wohne, gleich neben einer kleinen Taverne.~
-@1003   = ~Das Rätsel um die verstummte Geisterstimme
-
-Ich habe mit Wilyn gesprochen. Es stellte sich heraus, dass er nichts mit dem Verschwinden der geisterhaften Stimme im Elfgesang zu tun hat. Er hat jedoch von einem auffälligen Gast gesprochen, der eine alte, unspielbare Harfe mit nur drei Saiten dabei hatte und sehr erbost war, als man ihn aus der Taverne rausschmiss. Nicht gerade ein heiße Spur, denn seltsame Typen zieht das Elfgesang an wie der Fischmarkt die Möwen. Ich sollte nochmal mit den Gästen in der Taverne sprechen. Vielleicht habe ich etwas übersehen.~
-@1004   = ~Das Rätsel um die verstummte Geisterstimme
-
-Bekki, die Schankdirne im Elfgesang, hat mir den Namen des Magiers mit der seltsamen Harfe genannt - Vaalahor. Aber wirklich verdächtig gemacht hat er sich nicht. Wahrscheinlich läuft diese ganze Sucherei am Ende auf rein gar nichts hinaus. Schade, ich hätte den Geistergesang auch gerne mal gehört.~
-@1005   = ~Das Rätsel um die verstummte Geisterstimme
-
-Ich habe den Magier Vaalahor im Allerlei Zauberei getroffen. Es stellte sich heraus, dass er versucht hat, die Geisterstimme in der Taverne Elfgesang mit einem Zauber an eine Harfe zu binden. Dabei ist wohl irgendwas schiefgegangen. Jetzt müssen wir die Stimme *nur* wieder aus dem Instrument und in die Taverne befördern.~
-@1006   = ~Das Rätsel um die verstummte Geisterstimme
-
-Im oberen Stockwerk des Elfgesangs ist mir der Geist der Elfendame erschienen. Sie schien zu ihrer vermissten Liebe zu sprechen und nahm mich nur am Rande war. Als sich die Erscheinung wieder auflöste, war mit ihr die Harfe von Vaalahor verschwunden. Ich denke, damit dürfte die Dame ihre Stimme wiedergefunden haben. Jetzt muss ich nur noch Alyth von meinem Erfolg berichten.~
-@1007   = ~Der Baum der Dryade
-
-Als ich durch die Wolkengipfel reiste, traf ich eine Dryade. Sie bat mich darum, ihren Baum zu beschützen. Wie hätte ich eine solche Bitte ablehnen können?~
-@1008   = ~Überfall auf die Karawane
-
-Eine Karawane wurde am Küstenweg von Räubern überfallen und geplündert. Die Reisenden sind allesamt tot oder verschleppt, wir fanden jedoch einen schwer verletzten Händler, der unsere Hilfe benötigt.~
-/* #15713 */
-@1009   = ~Svlast, der gefallene Paladin
-
-Ich bin in den Ruinen von Feuerwein Zeuge trauriger Ereignisse geworden. Ein ehemaliger Paladin namens Svlast wird vom Geist seines Glaubensbruders, den er einst verraten hat, verfolgt. Noch nie habe ich eine betrübtere und beschämtere Seele gesehen als den armen Svlast. Er hat mich gebeten, mich nicht einzumischen, aber bei einer solchen Wahl wird mir das Herz schwer...~
-@1010   = ~Krammoch Arkhstaff und der Eisenthron
-
-Ich habe Krammoch Arkhstaff versprochen, das Leben von Thaldorn Tenhevich zu schonen, wenn ich in das Hauptquartier des Eisenthrons eindringe. Die beiden scheinen sich recht nahe zu stehen.~
-@1011   = ~Svlast, der gefallene Paladin
-
-Der bedauernswerte Paladin Svlast ist tot. Auch wenn dies das Ende war, das er sich gewünscht hatte, erfüllen mich die Ereignisse doch mit Trauer. Es scheint unmöglich, die wehmütige Stimmung über diesen Ruinen von sich fernzuhalten.~
-@1012   = ~Scars Ermordung
-
-Jhasso bat uns herauszufinden, was es mit der rätselhaften Krankheit des Großherzogs Eltan auf sich hat. Er befürchtet eine Intrige, zu der er auch Scars Ermordung rechnet. Er schlug uns vor, wir sollten Ermittlungen in der "Errötenden Nixe" anstellen, denn dort könnte es Hinweise zum Mord an Scar geben.~
-@1013   = ~Scars Ermordung
-
-Jhasso glaubt, dass die Doppelgänger, die für Scars Tod verantwortlich sind, auch hinter Eltans mysteriöser Krankheit stecken. Ich sollte ihn sofort im Hauptquartier der Flammenden Faust einen Besuch abstatten.~
-@1014   = ~Scars Ermordung
-
-In seiner Ecke in der Taverne "Zur Errötenden Nixe" verlangt Ivanne 10 Goldmünzen für seine finstere Geschichte. Scar wurde offensichtlich in meiner Abwesenheit ermordet, und sollte ich je Genaueres darüber erfahren wollen, muss dies wohl aus Ivannes Mund kommen. Es wäre gut, hierher zurückzukehren, wenn ich mehr Zeit zum Zuhören habe.~
-@1015   = ~Scars Ermordung
-
-Ich habe die Erzählung von Ivanne gehört, dem einzigen Zeugen von Scars Tod, mit Ausnahme des Mörders. Demzufolge wurde Scar von einem weiteren Doppelgänger, der ohne Zweifel vom Eisenthron bezahlt wurde, in seinen grausamen Tod gelockt, obwohl Ivanne meinte, dass Angelo ein gutes Motiv hätte. Glücklicherweise musste Scar nur kurz leiden, doch mehr aus Gründen der List denn aus Mitleid. Ja, ich habe in letzter Zeit so viele dieser miesen Spiegelwesen gesehen, doch ich bete, dass ich mich nie an ihre verfluchten, sich wandelnden Gesichter gewöhne. Um diesem Mord auf den Grund zu kommen, gibt es nur zwei Orte, an denen ich suchen kann - den Turm des Eisenthrons oder die Kaserne der Flammenden Faust, wo Herzog Eltan angeblich bleich wie der Tod danieder liegt. Sonst scheint alles andere bedeutungslos.~
-@1016   = ~Scars Ermordung
-
-Ich habe die Geschichte von Ivanne gehört, dem einzigen Zeugen von Scars Tod, mit Ausnahme des Mörders. Ihr zufolge wurde Scar von einem weiteren Doppelgänger, der ohne Zweifel vom Eisenthron bezahlt wurde, in seinen grausamen Tod gelockt, obwohl Ivanne meinte, dass Angelo ein gutes Motiv hätte. Gnädiger Weise musste Scar nur kurz leiden, doch mehr aus Gründen der List denn aus Mitleid. Ja, ich habe in letzter Zeit so viele dieser miesen Spiegelwesen gesehen, doch ich bete, dass ich mich nie an ihre verfluchten, sich wandelnden Gesichter gewöhnen werde. Um diesem Mord auf den Grund zu gehen, sollte ich den Turm des Eisenthrons durchsuchen. Alles andere scheint mir bedeutungslos.~
-@1017   = ~Scars Ermordung
-
-Ich habe die Geschichte von Ivanne gehört, dem einzigen Zeugen von Scars Tod, mit Ausnahme des Mörders. Ihr zufolge wurde Scar von einem weiteren Doppelgänger, der ohne Zweifel vom Eisenthron bezahlt wurde, in seinen grausamen Tod gelockt, obwohl Ivanne meinte, dass Angelo ein gutes Motiv hätte. Gnädiger Weise musste Scar nur kurz leiden, doch mehr aus Gründen der List denn aus Mitleid. Ja, ich habe in letzter Zeit so viele dieser miesen Spiegelwesen gesehen, doch ich bete, dass ich mich nie an ihre verfluchten, sich wandelnden Gesichter gewöhnen werde. Um diesem Mord auf den Grund zu gehen, sollte ich die Kaserne der Flammenden Faust durchsuchen, wo Herzog Eltan angeblich bleich wie der Tod danieder liegt. Alles andere scheint mir bedeutungslos.~
-@1018   = ~Scars Ermordung
-
-Ich habe die Geschichte von Ivanne gehört, dem einzigen Zeugen von Scars Tod, mit Ausnahme des Mörders. Ihr zufolge wurde Scar von einem weiteren Doppelgänger, der ohne Zweifel vom Eisenthron bezahlt wurde, in seinen grausamen Tod gelockt, obwohl Ivanne meinte, dass Angelo ein gutes Motiv hätte. Gnädiger Weise musste Scar nur kurz leiden, doch mehr aus Gründen der List denn aus Mitleid. Ja, ich habe in letzter Zeit so viele dieser miesen Spiegelwesen gesehen, doch ich bete, dass ich mich nie an ihre verfluchten, sich wandelnden Gesichter gewöhnen werde.~
-@1019   = ~Krammoch Arkhstaff und der Eisenthron
-
-Krammoch Arkhstaff war überaus glücklich, dass ich seinen Geliebten Thaldorn bei der Durchsuchung des Eisenthrons verschont habe. Er bot mir seine Hilfe an, wann immer ich sie nötig habe. Ob Krammoch und Thaldorn nun die Rache der anderen Anführer des Eisenthrons zu befürchten haben?~
-@1020   = ~Ein Wächter in Beregost sprach von einer Belohnung über 5000 Goldmünzen. Jedoch sagte er nicht, auf was sie ausgesetzt ist.~
-@1021   = ~Räuber!
-
-Die Räuber, die auf dem Küstenweg ihr Unwesen treiben, sind mehr an Eisen interessiert als an Gold.~
-@1022   = ~Zwischen Wasser und Sturm
-
-Ich habe der zwölfjährigen Umberlee-Priesterin Tenya versprochen den Tod ihrer Mutter zu rächen. Ein Talos-Anhänger namens Storwyn steckt dahinter. Er wohnt nahe des Gasthauses "Zur Funkelnden Klinge" - aber nicht mehr lange...~
-@1023   = ~Der verführte Onkel Ragefast
-
-Ich habe Jopi, den Reisenden aus dem Freundlichen Arm, in Baldurs Tor wiedergetroffen. Er macht sich Sorgen um seinen Onkel Ragefast, dem anscheinend irgendein junges Ding den Kopf verdreht hat. Der Liebe bin ich auf meinen Reisen bisher wahrlich nicht zu oft begegnet, könnte eine nette Abwechslung im Abenteuereinerlei sein...~
-@1024   = ~Xzars Hintermänner
-
-Wir haben in Baldurs Tor anscheinend Xzars Auftraggeber getroffen. Es handelt sich um Agenten der Zentarim. Auch sie sind Feinde des Eisenthrons und könnten sich als nützliche Verbündete erweisen. Ihr Anführer Niemain wartet im Elfgesang auf weitere Berichte von Xzar.~
-@1025	= ~Die Untersuchung der Händlerliga
-
-Doppelgänger in der Händlerliga! Offensichtlich wurden Aldeths Geschäftspartner Zorl und Irlentree durch gestaltwandelnde Kreaturen ausgetauscht. Das würde ihr merkwürdiges Verhalten in letzter Zeit erklären.~
-@1026	= ~Die Untersuchung der Händlerliga
-
-Die Köchin der Händlerliga hat mir berichtet, dass Zorl und Irlentree sich seit einiger Zeit auffällig verhalten. Sie essen und schlafen nicht mehr. Etwas Seltsames geht hier vor.~
-@1027	= ~Die Untersuchung der Händlerliga
-
-Irlentree ist von den Vorbereitungen für Aldeths Jahrfeier zurückgekehrt und hat alle Gäste aufgefordert sich in den dritten Stock zu begeben. Jetzt, wo sie alle abgelenkt sind, kann ich vielleicht ungestört im restlichen Gebäude herumsstöbern.~
-@1028	= ~Die Untersuchung der Händlerliga
-
-Ich habe Zorl Miyar, einen Geschäftspartner von Aldeth, kennengelernt. Ich hatte das Gefühl, dass er uns die Geschichte, wir seien Aldeths Jugendfreunde, nicht abgekauft hat. Vielleicht ahnt er etwas.~
-@1029	= ~Die Untersuchung der Händlerliga
-
-Nachdem ich Deagan bezauberte, erfuhr ich, dass es bei der Händlerliga viele Unruhen gegeben hat.~
-@1030   = ~Die Untersuchung der Händlerliga
-
-Ich habe erfahren, dass Zorl und Irlentree sich in letzter Zeit seltsam verhalten haben und mit ihren Geschäften die Händlerliga in den Ruin treiben, als wollten sie der Organisation gezielt Schaden zufügen.~
-@1031   = ~Anscheinend ist die elfische Geisterstimme, welche die Taverne "Elfgesang" so berühmt gemacht hat, seit einiger Zeit verstummt. Niemand scheint den Grund dafür zu kennen. Nach allem, was ich gehört habe, ist die Stimme von unbeschreiblicher Schönheit und jeder, der sich getraut, seinen Fuß in den Elfgesang zu setzen, sollte sich die Zeit nehmen, ihr zu lauschen. Wer weiß, möglicherweise taucht der Geistergesang ja in einigen Tagen wieder von selbst auf.~
-@1032   = ~Die Probleme der Diebesgilde
-
-Die Flammende Faust hat in letzter Zeit bei der Diebesgilde ganz schön hart durchgegriffen.~
-@1033   = ~Überfall auf die Karawane
-
-Der verwundete Kaufmann ist nun tot. Wenn ich ihn hätte retten wollen, hätte ich mich eher um ihn kümmern müssen.~
-
 
 @2000   = ~Die Geschichte dieser Waffe verlor ihre Bedeutung in dem Meer der großartigen Geschichten, die man sich über den Hochwald erzählt, aber das Lied des herausragenden Bogenschützen Adaniss Rhyte wird noch heute von vielen Barden gesungen:
 
@@ -355,6 +255,7 @@ Kann nicht verwendet werden von:
 - Klerikern
 - Magiern
 - Mönchen~
+@2023	= ~Rhytes letzter Pfeil~
 @2024	= ~Durlags Stolz~
 @2025	= ~Der Rand der Welt~
 @2026	= ~Das pfeifende Schwert~

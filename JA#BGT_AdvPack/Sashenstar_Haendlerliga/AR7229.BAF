@@ -66,10 +66,8 @@ THEN
 		SetGlobal("ZorlDopple","GLOBAL",1)
 END
 
-
-
 IF
-	NumDead("DopZorl",10)
+	NumDeadGT("DopZorl",9)
 	Dead("Zorl")
 	Dead("Irlentre")
 	Global("AldethDopple","GLOBAL",0)

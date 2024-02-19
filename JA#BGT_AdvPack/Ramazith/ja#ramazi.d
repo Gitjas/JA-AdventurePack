@@ -339,7 +339,7 @@ SetGlobal("JA#RamazithDeal","GLOBAL",1)
 DialogInterrupt(TRUE)
 ForceSpell(Myself,DRYAD_TELEPORT)
 Wait(1)
-DestroySelf()~ SOLVED_JOURNAL @18 EXIT
+DestroySelf()~ SOLVED_JOURNAL @1035 EXIT
 END
 
 END

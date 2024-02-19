@@ -15,14 +15,6 @@ COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP.D~
 
 COPY_EXISTING ~ALDETH.dlg~ ~override~
   LPF READ_JOURNAL_STRREF
-    INT_VAR 
-	state = 0
-//	stateResponse = 0  //is already set to "0"
-    RET strref
-  END
-  SET aldeth1 = strref
-COPY_EXISTING ~ALDETH.dlg~ ~override~
-  LPF READ_JOURNAL_STRREF
     INT_VAR state = 13
     RET strref
   END
@@ -130,6 +122,9 @@ COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DPZRL.BAF~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#DOPP1.BAF~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ALDET.BAF~
 COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#MGUAR.BAF~
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLEN.BAF~ EVALUATE_BUFFER
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZORL.BAF~ EVALUATE_BUFFER
+COMPILE ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZRACT.BAF~ EVALUATE_BUFFER
 
 EXTEND_TOP ~%NBaldursGate_ThreeOldKegs_L1%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7219.BAF~
 EXTEND_TOP ~%SWBaldursGate_MerchantLeague_L1%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7227.BAF~ EVALUATE_BUFFER
@@ -146,17 +141,18 @@ COPY_EXISTING ~FLAMAL.BCS~ ~override~
 	END
 BUT_ONLY
 
+// Those scripts are added in the ja#irlen.baf and ja#zorl.baf
+// EXTEND_BOTTOM ~IRLENTRE.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLENT.BAF~ EVALUATE_BUFFER
 
-EXTEND_BOTTOM ~IRLENTRE.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#IRLENT.BAF~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~ZORL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZORL.BAF~ EVALUATE_BUFFER
-	REPLACE ~999999~ @41
+// EXTEND_BOTTOM ~ZORL.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/JA#ZORL.BAF~ EVALUATE_BUFFER
+	// REPLACE ~999999~ @41
 
 /* changed the following REPLACE_TEXTUALLY so the former extra script blocks in the area script are not needed */
 COPY_EXISTING ~%SWBaldursGate_MerchantLeague_L2%.BCS~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY EXACT_MATCH ~("ALDETH",[217.491],0)~ ~("ALDETH",[1244.720],2)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~("ALDETH",[217.491],0)~ ~("ALDETH",[1244.720],2)~
 //    	REPLACE_TEXTUALLY EXACT_MATCH ~ActionOverride("Aldeth",SetNumTimesTalkedTo(1))~ ~Continue()~
-		REPLACE_TEXTUALLY EXACT_MATCH ~NumDeadGT("DopZorl",5)~ ~NumDeadGT("DopZorl",9)
+		REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~NumDeadGT("DopZorl",5)~ ~NumDeadGT("DopZorl",9)
 		Dead("Zorl")
 		Dead("Irlentre")~
 	END
@@ -192,26 +188,27 @@ BUT_ONLY_IF_IT_CHANGES
 New try:
 */
 
-COPY_EXISTING ~IRLENTRE.BCS~ ~override~
-	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[768.607],0)~ ~UseItem("JA#DPIRL",Myself)~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[710.673],0)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[881.661],0)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[942.567],0)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[768.607],S)~ ~UseItem("JA#DPIRL",Myself)~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[710.673],S)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[881.661],S)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[942.567],S)~ ~~
-		REPLACE_TEXTUALLY EXACT_MATCH ~ForceSpell(Myself,DOPPLEGANGER_CHANGE2)~ ~~
-	END
-BUT_ONLY
+// Those scripts are added in the ja#irlen.baf and ja#zorl.baf
+// COPY_EXISTING ~IRLENTRE.BCS~ ~override~
+	// DECOMPILE_AND_PATCH BEGIN
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[768.607],0)~ ~UseItem("JA#DPIRL",Myself)~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[710.673],0)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[881.661],0)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[942.567],0)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[768.607],S)~ ~UseItem("JA#DPIRL",Myself)~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[710.673],S)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[881.661],S)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~CreateCreature("DOPZORL",[942.567],S)~ ~~
+		// REPLACE_TEXTUALLY EXACT_MATCH ~ForceSpell(Myself,DOPPLEGANGER_CHANGE2)~ ~~
+	// END
+// BUT_ONLY
 
 
-COPY_EXISTING ~ZORL.BCS~ ~override~
-	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY EXACT_MATCH ~ForceSpell(Myself,DOPPLEGANGER_CHANGE2)~ ~UseItem("JA#DPZRL",Myself)~
-	END
-BUT_ONLY
+// COPY_EXISTING ~ZORL.BCS~ ~override~
+	// DECOMPILE_AND_PATCH BEGIN
+		// REPLACE_TEXTUALLY EXACT_MATCH ~ForceSpell(Myself,DOPPLEGANGER_CHANGE2)~ ~UseItem("JA#DPZRL",Myself)~
+	// END
+// BUT_ONLY
 
 EXTEND_TOP ~%EBaldursGate%.BCS~ ~%MOD_FOLDER%/Sashenstar_Haendlerliga/AR7800.BAF~
 
@@ -283,6 +280,7 @@ COPY_EXISTING ~IRLENT.CRE~ ~override~
 	WRITE_BYTE 0x275 4	//Gender
 	ADD_CRE_ITEM ~JA#DPIRL~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
 	REPLACE_CRE_ITEM ~CHAN04~ #0 #0 #0 ~NONE~ ~ARMOR~ EQUIP
+	WRITE_ASCII 0x250 ~JA#IRLEN~	#8 // Custom Class Script
 
 COPY_EXISTING ~ZORL.CRE~ ~override~
 	SAY NAME1 @2109
@@ -290,6 +288,7 @@ COPY_EXISTING ~ZORL.CRE~ ~override~
 	WRITE_BYTE 0x271 255	//General
 	ADD_CRE_ITEM ~JA#ZRLKY~ #0 #0 #0 ~IDENTIFIED~ ~INV1~
 	ADD_CRE_ITEM ~JA#DPZRL~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
+	WRITE_ASCII 0x250 ~JA#ZORL~	#8 // Custom Class Script
 
 COPY_EXISTING ~MERCHG.CRE~ ~override~
 	WRITE_ASCII 0x250 ~NONE~	#8 //no runaway
@@ -390,6 +389,7 @@ COPY_EXISTING ~%SWBaldursGate_MerchantLeague_L2%.ARE~ ~override~
 		container_name = ~Container 2~
 		lock_difficulty  = 100
 		container_key = ~JA#ZRLKY~
+		container_script = ~JA#ZRACT~
 	END
 	READ_LONG 0xbc "JA#OFF_SNG"
 	WRITE_LONG "JA#OFF_SNG" ~0~

@@ -1,4 +1,28 @@
 IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SetGlobal("ZorlDopple","GLOBAL",1)
+END
+
+IF
+	Global("ZorlDopple","GLOBAL",0)
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("ZorlDopple","GLOBAL",1)
+END
+
+IF
+	Global("ZorlDopple","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		UseItem("JA#DPIRL",Myself)  // Necklace of Missiles
+END
+
+IF
 	NumTimesTalkedTo(0)
 	Allegiance(Myself,NEUTRAL)
 	AreaCheck("%SWBaldursGate_MerchantLeague_L1%")
@@ -10,12 +34,12 @@ THEN
 END
 
 IF
-	Global("JA#IRLENT_CUT01","%SWBaldursGate_MerchantLeague_L1%",1)
+	Global("JA#IRLENT_CUT01","%SWBaldursGate_MerchantLeague_L1%",2)
 	Allegiance(Myself,NEUTRAL)
 	AreaCheck("%SWBaldursGate_MerchantLeague_L1%")
 THEN
 	RESPONSE #100
-		SetGlobal("JA#IRLENT_CUT01","%SWBaldursGate_MerchantLeague_L1%",2)
+		// SetGlobal("JA#IRLENT_CUT01","%SWBaldursGate_MerchantLeague_L1%",3)
 		Wait(1)
 		StartDialogueNoSet([PC])
 END

@@ -168,7 +168,7 @@ EraseJournalEntry(@1004)
 EraseJournalEntry(@1005)
 EraseJournalEntry(@1006)
 AddExperienceParty(500)
-GiveGoldForce(400)SetGlobalTimer("JA#HARP_TIMER","AR7706",ONE_DAY)~ SOLVED_JOURNAL @70 EXIT
+GiveGoldForce(400)SetGlobalTimer("JA#HARP_TIMER","AR7706",ONE_DAY)~ SOLVED_JOURNAL @1055 EXIT
 END
 
 IF ~Global("JA#ELFSONG_QUEST","GLOBAL",10)~ THEN BEGIN JA#ALYTH_22

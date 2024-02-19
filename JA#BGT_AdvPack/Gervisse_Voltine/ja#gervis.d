@@ -41,7 +41,7 @@ EraseJournalEntry(%gervis1%)
 EraseJournalEntry(%gervis2%)
 EraseJournalEntry(%gervis3%)~
   "REPLY" ~@84~ 
-  "SOLVED_JOURNAL" ~@82~ 
+  "SOLVED_JOURNAL" ~@1043~ 
 END
 */
 
@@ -225,7 +225,7 @@ END
 ADD_TRANS_ACTION VOLTIN
 BEGIN 3 END
 BEGIN 0 END
-~EraseJournalEntry(@45)~
+~EraseJournalEntry(@1039)~
 
 ALTER_TRANS VOLTIN // file name
 BEGIN 4 END // state number (can be more than one)
@@ -281,7 +281,7 @@ END
 
 IF ~~ THEN BEGIN JA_VOLTIN_4
   SAY @42
-  IF ~~ THEN DO ~SetGlobal("JA#VOLT_QUEST","GLOBAL",2)~ UNSOLVED_JOURNAL @43 EXIT
+  IF ~~ THEN DO ~SetGlobal("JA#VOLT_QUEST","GLOBAL",2)~ UNSOLVED_JOURNAL @1038 EXIT
 END
 
 IF ~~ THEN BEGIN JA_VOLTIN_5
@@ -290,7 +290,7 @@ IF ~~ THEN BEGIN JA_VOLTIN_5
 EraseJournalEntry(%gervis1%)
 EraseJournalEntry(%gervis2%)
 EraseJournalEntry(%gervis3%)
-EraseJournalEntry(@43)ActionOverride("Gervisse",Attack("Voltine"))Attack("Gervisse")~ SOLVED_JOURNAL @45 EXIT
+EraseJournalEntry(@1038)ActionOverride("Gervisse",Attack("Voltine"))Attack("Gervisse")~ SOLVED_JOURNAL @1039 EXIT
 END
 
 IF WEIGHT #-1
@@ -322,7 +322,7 @@ IF ~~ THEN BEGIN JA_VOLTIN_9
 EraseJournalEntry(%gervis1%)
 EraseJournalEntry(%gervis2%)
 EraseJournalEntry(%gervis3%)
-EraseJournalEntry(@43)
+EraseJournalEntry(@1038)
 Enemy()~ EXIT
 END
 
@@ -368,7 +368,7 @@ BEGIN 4 END // state number (can be more than one)
 BEGIN 0 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "TRIGGER" ~Dead("Voltine")Dead("Gervisse")~
-  "SOLVED_JOURNAL" ~@81~ 
+  "SOLVED_JOURNAL" ~@1042~ 
 END
 
 EXTEND_BOTTOM LAERTA 1
@@ -391,14 +391,14 @@ EXTEND_BOTTOM LAERTA 4
 IF ~Dead("Voltine")!Dead("Gervisse")~ THEN DO ~SetGlobal("JA#QUESTDONE","%NWBaldursGate_LaertasHouse_L1%",1)
 SetGlobal("HelpLaerta","GLOBAL",2)
 AddexperienceParty(500)
-GiveItem("SCRL78",LastTalkedToBy)~ SOLVED_JOURNAL @57 EXIT
+GiveItem("SCRL78",LastTalkedToBy)~ SOLVED_JOURNAL @1040 EXIT
 END
 
 EXTEND_BOTTOM LAERTA 4
 IF ~!Dead("Voltine")Dead("Gervisse")~ THEN DO ~SetGlobal("JA#QUESTDONE","%NWBaldursGate_LaertasHouse_L1%",1)
 SetGlobal("HelpLaerta","GLOBAL",2)
 AddexperienceParty(500)
-GiveItem("SCRL78",LastTalkedToBy)~ SOLVED_JOURNAL @58 EXIT
+GiveItem("SCRL78",LastTalkedToBy)~ SOLVED_JOURNAL @1041 EXIT
 END
 
 

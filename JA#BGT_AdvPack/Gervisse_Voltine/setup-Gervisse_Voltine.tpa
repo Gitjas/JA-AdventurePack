@@ -122,7 +122,7 @@ IF ~~ THEN DO ~SetGlobal("HelpVoltine","GLOBAL",1)
 EraseJournalEntry(%gervis1%)
 EraseJournalEntry(%gervis2%)
 EraseJournalEntry(%gervis3%)
-EraseJournalEntry(@43)
+EraseJournalEntry(@1038)
 ActionOverride("voltine",Enemy()) LeaveParty() SetLeavePartyDialogFile() ChangeAIScript("",DEFAULT) Enemy()~ EXIT
 END
 END

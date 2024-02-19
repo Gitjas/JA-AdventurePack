@@ -75,20 +75,24 @@ ALWAYS
 			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 		END
 	END
+	
+	ACTION_IF (!MOD_IS_INSTALLED ~bg2gtueestyle.tp2~ ~0~ AND GAME_IS ~bgt~ AND (~%LANGUAGE%~ STR_EQ ~english~)) BEGIN
+		LOAD_TRA ~%MOD_FOLDER%/languages/english/journal_bgt.tra~
+	END
+
 END
 
 AUTO_TRA ~%MOD_FOLDER%/Languages/%s~
 
 LANGUAGE ~Deutsch~
-         ~german~
-         ~%MOD_FOLDER%/languages/german/Setup.tra~
+		 ~german~
+		 ~%MOD_FOLDER%/languages/german/Setup.tra~
+		 ~%MOD_FOLDER%/languages/german/journal.tra~
 
 LANGUAGE ~English~
-         ~english~
-         ~%MOD_FOLDER%/languages/english/Setup.tra~
-
-
-
+		 ~english~
+		 ~%MOD_FOLDER%/languages/english/Setup.tra~
+		 ~%MOD_FOLDER%/languages/english/journal.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -105,6 +109,7 @@ LANGUAGE ~English~
 BEGIN ~Useful Tweaks & Repairs~ DESIGNATED 0
 // DEPRECATED ~This Component is included in JA#BGT_TWEAK~
 LABEL "JA#BGT_AdvPack-Tweaks"
+
 INCLUDE ~%MOD_FOLDER%/Tweaks/setup-Tweaks.tpa~
 
 /////////////////////////////////////////////////////////////

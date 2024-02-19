@@ -30,7 +30,7 @@ END
 
 IF ~~ THEN BEGIN JA#DEAGAN_5
 SAY @11
-IF ~~ THEN DO ~ClearAllActions()StartCutSceneMode()StartCutScene("JA#CUDEA")~ UNSOLVED_JOURNAL @12 EXIT
+IF ~~ THEN DO ~ClearAllActions()StartCutSceneMode()StartCutScene("JA#CUDEA")~ UNSOLVED_JOURNAL @1044 EXIT
 END
 
 IF ~Global("JA#DEAGAN_SEQ","GLOBAL",1)~ THEN BEGIN JA#DEAGAN_6
@@ -41,12 +41,12 @@ END
 
 IF ~Global("JA#DEAGAN_SEQ","GLOBAL",3)~ THEN BEGIN JA#DEAGAN_7
 SAY @16
-IF ~NumInPartyAliveGT(5)~ THEN DO ~GiveGoldForce(30)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
-IF ~NumInPartyAliveLT(6)~ THEN DO ~GiveGoldForce(25)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
-IF ~NumInPartyAliveLT(5)~ THEN DO ~GiveGoldForce(20)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
-IF ~NumInPartyAliveLT(4)~ THEN DO ~GiveGoldForce(15)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
-IF ~NumInPartyAliveLT(3)~ THEN DO ~GiveGoldForce(10)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
-IF ~NumInPartyAliveLT(2)~ THEN DO ~GiveGoldForce(5)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@12)~ SOLVED_JOURNAL @17 EXTERN ALDETH 9
+IF ~NumInPartyAliveGT(5)~ THEN DO ~GiveGoldForce(30)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1045 EXTERN ALDETH 9
+IF ~NumInPartyAliveLT(6)~ THEN DO ~GiveGoldForce(25)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1045 EXTERN ALDETH 9
+IF ~NumInPartyAliveLT(5)~ THEN DO ~GiveGoldForce(20)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1045 EXTERN ALDETH 9
+IF ~NumInPartyAliveLT(4)~ THEN DO ~GiveGoldForce(15)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1045 EXTERN ALDETH 9
+IF ~NumInPartyAliveLT(3)~ THEN DO ~GiveGoldForce(10)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1045 EXTERN ALDETH 9
+IF ~NumInPartyAliveLT(2)~ THEN DO ~GiveGoldForce(5)SetGlobal("JA#DEAGAN_SEQ","GLOBAL",4)EraseJournalEntry(@1044)~ SOLVED_JOURNAL @1044 EXTERN ALDETH 9
 END
 
 IF ~Global("JA#DEAGAN_SEQ","GLOBAL",4)!Global("AldethMove","GLOBAL",2)~ THEN BEGIN JA#DEAGAN_8

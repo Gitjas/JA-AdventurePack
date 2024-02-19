@@ -1,4 +1,28 @@
 IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SetGlobal("ZorlDopple","GLOBAL",1)
+END
+
+IF
+	Global("ZorlDopple","GLOBAL",0)
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("ZorlDopple","GLOBAL",1)
+END
+
+IF
+	Global("ZorlDopple","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		UseItem("JA#DPZRL",Myself)  // Necklace of Missiles
+END
+
+IF
 	HasItem("JA#ZRLKY",Myself)
 	AreaCheck("%SWBaldursGate_MerchantLeague_L3%")
 	OR(4)
@@ -38,11 +62,9 @@ IF
 	See(LastTrigger)
 THEN
 	RESPONSE #100
-		DisplayStringHead(Myself,999999)
+		DisplayStringHead(Myself,@41)
 		Wait(2)
 		SetGlobal("ZorlDopple","GLOBAL",1)
-	RESPONSE #50
-		NoAction()
 END
 
 IF
@@ -52,7 +74,7 @@ IF
 	PartyHasItem("SCRL2P")
 THEN
 	RESPONSE #100
-		DisplayStringHead(Myself,999999)
+		DisplayStringHead(Myself,@41)
 		Wait(2)
 		SetGlobal("ZorlDopple","GLOBAL",1)
 END

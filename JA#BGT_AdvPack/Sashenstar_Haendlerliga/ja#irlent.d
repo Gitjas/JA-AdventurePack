@@ -72,8 +72,8 @@ BEGIN // list of changes, see below for flags
 END
 
 ALTER_TRANS ZORL // file name
-BEGIN 3 END // state number (can be more than one)
-BEGIN 0 END // transition number (can be more than one)
+BEGIN 2 END // state number (can be more than one)
+BEGIN 0 1 2 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "ACTION" ~AddJournalEntry(@1028,QUEST)~
 END

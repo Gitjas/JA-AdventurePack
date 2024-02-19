@@ -19,7 +19,7 @@ END
 
 IF ~~ THEN BEGIN 1
   SAY @7
-  IF ~~ THEN REPLY @8 DO ~SetGlobal("JA#PILAR_JOB","GLOBAL",1)~ UNSOLVED_JOURNAL @9 EXIT
+  IF ~~ THEN REPLY @8 DO ~SetGlobal("JA#PILAR_JOB","GLOBAL",1)~ UNSOLVED_JOURNAL @1077 EXIT
   IF ~~ THEN REPLY @10 GOTO 2
 END
 
@@ -35,12 +35,12 @@ END
 
 IF ~PartyHasItem("JA#PILAR")Global("JA#PILAR_JOB","GLOBAL",1)Dead("JA#GHELD")~ THEN BEGIN 4
   SAY @13
-  IF ~~ THEN DO ~TakePartyItem("JA#PILAR")SetGlobal("JA#PILAR_JOB","GLOBAL",2)DestroyItem("JA#PILAR")EraseJournalEntry(@9)AddexperienceParty(280)~ SOLVED_JOURNAL @14 EXIT
+  IF ~~ THEN DO ~TakePartyItem("JA#PILAR")SetGlobal("JA#PILAR_JOB","GLOBAL",2)DestroyItem("JA#PILAR")EraseJournalEntry(@9)AddexperienceParty(280)~ SOLVED_JOURNAL @1078 EXIT
 END
 
 IF ~PartyHasItem("JA#PILAR")Global("JA#PILAR_JOB","GLOBAL",1)~ THEN BEGIN 5
   SAY @15
-  IF ~~ THEN DO ~TakePartyItem("JA#PILAR")SetGlobal("JA#PILAR_JOB","GLOBAL",2)DestroyItem("JA#PILAR")EraseJournalEntry(@9)GiveItem("JA#PILAX",LastTalkedToBy)AddexperienceParty(280)ReputationInc(1)~ SOLVED_JOURNAL @14 EXIT
+  IF ~~ THEN DO ~TakePartyItem("JA#PILAR")SetGlobal("JA#PILAR_JOB","GLOBAL",2)DestroyItem("JA#PILAR")EraseJournalEntry(@9)GiveItem("JA#PILAX",LastTalkedToBy)AddexperienceParty(280)ReputationInc(1)~ SOLVED_JOURNAL @1078 EXIT
 END
 
 IF ~~ THEN BEGIN 6

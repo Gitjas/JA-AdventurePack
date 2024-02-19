@@ -18,5 +18,5 @@ EraseJournalEntry(%gervis1%)
 EraseJournalEntry(%gervis2%)
 EraseJournalEntry(%gervis3%)
 EscapeAreaDestroy(90)~
-"SOLVED_JOURNAL" ~@82~
+"SOLVED_JOURNAL" ~@1043~
 END

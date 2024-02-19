@@ -206,12 +206,12 @@ END
 
 IF ~~ THEN BEGIN JA#JHASSO_20
 SAY @50
-IF ~~ THEN DO ~ReputationInc(1)GiveGoldForce(1000)EraseJournalEntry(@1012)EraseJournalEntry(@1013)EraseJournalEntry(@1014)EraseJournalEntry(@1015)EraseJournalEntry(@1016)EraseJournalEntry(@1017)EraseJournalEntry(@1018)~ SOLVED_JOURNAL @51 EXIT
+IF ~~ THEN DO ~ReputationInc(1)GiveGoldForce(1000)EraseJournalEntry(@1012)EraseJournalEntry(@1013)EraseJournalEntry(@1014)EraseJournalEntry(@1015)EraseJournalEntry(@1016)EraseJournalEntry(@1017)EraseJournalEntry(@1018)~ SOLVED_JOURNAL @1052 EXIT
 END
 
 IF ~~ THEN BEGIN JA#JHASSO_21
 SAY @52
-IF ~~ THEN DO ~ReputationInc(1)EraseJournalEntry(@1012)EraseJournalEntry(@1013)EraseJournalEntry(@1014)EraseJournalEntry(@1015)EraseJournalEntry(@1016)EraseJournalEntry(@1017)EraseJournalEntry(@1018)~ SOLVED_JOURNAL @51 EXIT
+IF ~~ THEN DO ~ReputationInc(1)EraseJournalEntry(@1012)EraseJournalEntry(@1013)EraseJournalEntry(@1014)EraseJournalEntry(@1015)EraseJournalEntry(@1016)EraseJournalEntry(@1017)EraseJournalEntry(@1018)~ SOLVED_JOURNAL @1052 EXIT
 END
 
 IF ~Global("JA#JHASSO_QUEST","GLOBAL",3)!Global("ENDOFBG1","GLOBAL",2)~ THEN BEGIN JA#JHASSO_22
