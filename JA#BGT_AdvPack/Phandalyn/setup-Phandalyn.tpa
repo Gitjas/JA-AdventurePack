@@ -8,11 +8,11 @@ COPY_EXISTING ~PHANDA.CRE~ ~override~
 BUT_ONLY
 
 /* Better: cycle through the existing actors, first (in case area was altered by another mod) */
-
-COPY_EXISTING ~%SWBaldursGate_Tavern_L1%.are~ ~override~
+COPY_EXISTING ~%SWBaldursGate_Tavern_L1%.ARE~ ~override~
+	//delete not needed actors
 	FOR (cnt=BYTE_AT 0x58 -1; cnt>=0; --cnt) BEGIN
 		READ_ASCII SHORT_AT 0x54 +(0x110 * (cnt))+0x80 actors_filename (32) NULL
-		PATCH_IF (~%actors_filename%~ STR_EQ  ~Phandalyn~) BEGIN
+		PATCH_IF (~%actors_filename%~ STR_EQ  ~PHANDA~) BEGIN
 			LPF fj_are_structure
 				INT_VAR fj_delete_mode = EVAL %cnt%
 				STR_VAR fj_structure_type = actor
