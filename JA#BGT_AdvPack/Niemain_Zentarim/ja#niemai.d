@@ -217,7 +217,7 @@ SAY
 @29
 = @30
 IF ~~ THEN DO ~EraseJournalEntry(
-@1024)AddexperienceParty(400)EscapeAreaDestroy(90)~ SOLVED_JOURNAL @1075 EXIT
+@1024)AddexperienceParty(400)EscapeAreaDestroy(90)SetGlobal("JA#NIEMAIN_SPWN","GLOBAL",3)~ SOLVED_JOURNAL @1075 EXIT
 END
 
 IF ~AreaCheck("%EBaldursGate_ElfsongTavern_L2%")!InParty("XZAR")~ THEN BEGIN JA#NIEMAI_xx0
@@ -226,7 +226,7 @@ IF ~~ THEN DO ~EraseJournalEntry(
 @1024)EscapeAreaDestroy(90)~ EXIT
 END
 
-IF ~Global("JA#NIEMAIN_SPWN","GLOBAL",3)~ THEN BEGIN JA#NIEMAI_x19
+IF ~Global("JA#NIEMAIN_SPWN","GLOBAL",4)~ THEN BEGIN JA#NIEMAI_x19
 SAY @48
 IF ~~ THEN REPLY @49 GOTO JA#NIEMAI_x20
 IF ~~ THEN REPLY @50 GOTO JA#NIEMAI_x21
@@ -239,7 +239,7 @@ END
 
 IF ~~ THEN BEGIN JA#NIEMAI_x21
 SAY @52
-IF ~~ THEN DO ~SetGlobal("JA#NIEMAIN_SPWN","GLOBAL",4)EscapeAreaDestroy(90)~ JOURNAL @1076 EXIT
+IF ~~ THEN DO ~SetGlobal("JA#NIEMAIN_SPWN","GLOBAL",5)EscapeAreaDestroy(90)~ JOURNAL @1076 EXIT
 END
 
 

@@ -1,9 +1,10 @@
 IF
 	!Dead("NIEMAIN")
-	Global("JA#NIEMAIN_SPWN","GLOBAL",2)
+	Global("JA#NIEMAIN_SPWN","GLOBAL",3)
 	InParty("XZAR")
+	Global("Chapter","GLOBAL",%tutu_chapter_7%)
 THEN
 	RESPONSE #100
-		SetGlobal("JA#NIEMAIN_SPWN","GLOBAL",3)
+		SetGlobal("JA#NIEMAIN_SPWN","GLOBAL",4)
 		CreateCreature("JA#NIEMA",[1031.460],2)
 END

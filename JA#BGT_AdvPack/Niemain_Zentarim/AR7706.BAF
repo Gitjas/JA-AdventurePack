@@ -9,7 +9,7 @@ END
 
 IF
 	Global("Chapter","GLOBAL",%tutu_chapter_7%)
-	GlobalGT("JA#NIEMAIN_SPWN","GLOBAL",1)
+	Exists("NIEMAIN")
 THEN
 	RESPONSE #100
 		ActionOverride("NIEMAIN",DestroySelf())
