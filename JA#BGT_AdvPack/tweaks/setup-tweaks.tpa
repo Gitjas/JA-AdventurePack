@@ -96,7 +96,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_vertex_3     = 3897 + (2211 << 16)
 			STR_VAR
 			fj_structure_type   = region
-			fj_destination_area	= EVAL %FriendlyArmInn_TempleofWisdom%
+			fj_destination_area	= ar680_ja
 			fj_destination_name	= JA#FR6800
 			fj_name             = JA#DOOR6804
 		END
@@ -128,7 +128,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_vertex_4     = 489 + (225 << 16)
 			STR_VAR
 			fj_structure_type   = region
-			fj_destination_area	= EVAL %FriendlyArmInn%
+			fj_destination_area	= ar680_ja
 			fj_destination_name	= JA#FR6804
 			fj_name             = JA#DOOR6804
 		END
@@ -141,6 +141,10 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_structure_type = entrance
 			fj_name           = JA#FR6800
 		END
+	COPY_EXISTING ~%FriendlyArmInn_TempleofWisdom%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~ar680_ja~ ~%FriendlyArmInn%~ (8)
+	COPY_EXISTING ~%FriendlyArmInn%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~ar680_ja~ ~%FriendlyArmInn_TempleofWisdom%~ (8)
 
 	/////////////////////////////////////////////////////////////
 	//backdoor added to Waterqueen's House
@@ -162,7 +166,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_vertex_3     = 649 + (2325 << 16)
 			STR_VAR
 			fj_structure_type   = region
-			fj_destination_area	= EVAL %BaldursGateDocks_WaterQueensHouse%
+			fj_destination_area	= AR760_ja
 			fj_destination_name	= JA#FR8100
 			fj_name             = DOORJA#609
 		END
@@ -192,7 +196,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_vertex_3     = 342 + (559 << 16)
 			STR_VAR
 			fj_structure_type   = region
-			fj_destination_area	= EVAL %BaldursGateDocks%
+			fj_destination_area	= AR760_ja
 			fj_destination_name	= JA#FR7609
 			fj_name             = DOORJA#81
 		END
@@ -205,6 +209,10 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 150 BEGIN
 			fj_structure_type = entrance
 			fj_name           = JA#FR8100
 		END
+	COPY_EXISTING ~%BaldursGateDocks_WaterQueensHouse%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~AR760_ja~ ~%BaldursGateDocks%~ (8)
+	COPY_EXISTING ~%BaldursGateDocks%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~AR760_ja~ ~%BaldursGateDocks_WaterQueensHouse%~ (8)
 END	
 	/////////////////////////////////////////////////////////////
 	//Nashkel & Gnollfortress - improved Searchmap and Wallgroups, ar8100
