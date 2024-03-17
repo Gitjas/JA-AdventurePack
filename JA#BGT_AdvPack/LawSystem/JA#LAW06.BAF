@@ -1,5 +1,6 @@
 IF
 	Opened([ANYONE])
+	Global("C#st_HeroOfBG","GLOBAL",0)
 	Range(LastTrigger,1)
 	OR(2)
 		See([NOTGOOD.HUMANOID.0.FLAMING_FIST])
@@ -45,6 +46,7 @@ END
 
 IF
 	Opened([ANYONE])
+	Global("C#st_HeroOfBG","GLOBAL",0)
 	Range(LastTrigger,1)
 	CombatCounter(0)
 	!See([NOTGOOD.HUMANOID.0.FLAMING_FIST])
