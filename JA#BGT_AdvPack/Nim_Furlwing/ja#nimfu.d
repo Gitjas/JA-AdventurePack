@@ -10,7 +10,7 @@ IF ~NumDead("JA#HOUND",3)Global("JA#CUNIM","MYAREA",1)~ THEN BEGIN 1
   IF ~~ THEN DO ~SetGlobal("JA#CUNIM","MYAREA",2)~ JOURNAL @1 EXIT
 END
 
-IF ~NumDeadLT("JA#HOUND",2)Global("JA#CUNIM","%Peldvale%",1)~ THEN BEGIN 2
+IF ~NumDeadLT("JA#HOUND",2)Global("JA#CUNIM","MYAREA",1)~ THEN BEGIN 2
   SAY @3 
   IF ~~ THEN DO ~SetGlobal("JA#CUNIM","MYAREA",2)AddexperienceParty(280)GiveItem("JA#PR402",LastTalkedToBy(Myself))~ JOURNAL @4 EXIT
 END
