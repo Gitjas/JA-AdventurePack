@@ -12,19 +12,17 @@ COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.TIS~ ~override~
 	~%MOD_FOLDER%/Arkhstaff/JA#C04SR.BMP~ ~override~
 
 COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.ARE~ ~override~
-	PATCH_IF GAME_IS ~bgee eet~ BEGIN
-		LPF ALTER_AREA_REGION
-			STR_VAR region_name			= ~Door7607~
-					destination_area	= EVAL ~%BaldursGateDocks_OgreMagiHouse_L1%~
-		END
-		LPF ALTER_AREA_REGION
-			STR_VAR region_name			= ~Traniron~
-					destination_area	= EVAL ~%BaldursGateDocks_IronThrone_Cellar%~
-		END
-		LPF ALTER_AREA_REGION
-			STR_VAR region_name			= ~Sewers~
-					destination_area	= EVAL ~%WSewers%~
-		END
+	LPF ALTER_AREA_REGION
+		STR_VAR region_name			= ~Door7607~
+				destination_area	= EVAL ~%BaldursGateDocks_OgreMagiHouse_L1%~
+	END
+	LPF ALTER_AREA_REGION
+		STR_VAR region_name			= ~Traniron~
+				destination_area	= EVAL ~%BaldursGateDocks_IronThrone_Cellar%~
+	END
+	LPF ALTER_AREA_REGION
+		STR_VAR region_name			= ~Sewers~
+				destination_area	= EVAL ~%WSewers%~
 	END
 
 COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.CRE~ ~override~

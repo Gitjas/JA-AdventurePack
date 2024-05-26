@@ -461,7 +461,7 @@ COPY_EXISTING ~%NBaldursGate_DucalPalace_Cellar%.ARE~ ~override~
 		fj_vertex_3     = 611 + (308 << 16)
 		STR_VAR
 		fj_structure_type   = region
-		fj_destination_area	= EVAL %CentralSewers%
+		fj_destination_area	= AR721_ja
 		fj_destination_name	= JA#7211
 		fj_name             = JA#AR7325
 	END
@@ -621,9 +621,9 @@ COPY_EXISTING ~%CentralSewers%.are~ ~override~
 		fj_vertex_3     = 596 + (1907 << 16)
 		STR_VAR
 		fj_structure_type   = region
-		fj_destination_area	= EVAL %NBaldursGate_DucalPalace_Cellar%
-		fj_destination_name	= JA#7211
-		fj_name             = JA#7211
+		fj_destination_area	= AR721_ja
+		fj_destination_name	= JA#7325
+		fj_name             = JA#AR7211
 	END
 	LPF  ~fj_are_structure~
 		INT_VAR
@@ -634,6 +634,10 @@ COPY_EXISTING ~%CentralSewers%.are~ ~override~
 		fj_structure_type = entrance
 		fj_name           = JA#7211
 	END
+	COPY_EXISTING ~%CentralSewers%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~AR721_ja~ ~%NBaldursGate_DucalPalace_Cellar%~ (8)
+	COPY_EXISTING ~%NBaldursGate_DucalPalace_Cellar%.ARE~ ~override~
+		REPLACE_TEXTUALLY ~AR721_ja~ ~%CentralSewers%~ (8)
 
 COPY_EXISTING ~HUSAM.dlg~ ~override~
 	LPF ~READ_JOURNAL_STRREF~
