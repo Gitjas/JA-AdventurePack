@@ -32,7 +32,6 @@ BEGIN 8 END // state number (can be more than one)
 BEGIN 2 END // transition number (can be more than one)
 BEGIN // list of changes, see below for flags
   "TRIGGER" ~NumDeadGT("SSDOPPLE",4)
-Global("JA#DOPPSE_TALK","GLOBAL",1)
-!Dead("jhasso")~
+Global("JA#DOPPSE_TALK","GLOBAL",1)~
 END
 

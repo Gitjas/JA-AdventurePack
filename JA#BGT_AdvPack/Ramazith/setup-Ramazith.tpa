@@ -77,6 +77,7 @@ EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7300.BAF~ EVALUATE_BUFF
 	COMPILE ~%MOD_FOLDER%/Ramazith/JA#CUJO1.BAF~
 	COMPILE ~%MOD_FOLDER%/Ramazith/JA#IMP01.BAF~
 
+ACTION_IF GAME_IS ~bgt~ BEGIN
 	COPY ~%MOD_FOLDER%/Ramazith/AR7226.WED~ ~override/%WBaldursGate_RagefastsHouse%.WED~
 	COPY ~%MOD_FOLDER%/Ramazith/AR7238.WED~ ~override/%NBaldursGate_RamazithsTower_L6%.WED~
 	INCLUDE ~%MOD_FOLDER%/lib/alter_searchmap.tpa~
@@ -85,4 +86,4 @@ EXTEND_TOP ~%NBaldursGate%.BCS~ ~%MOD_FOLDER%/Ramazith/AR7300.BAF~ EVALUATE_BUFF
 		path_to_2da_file = EVAL ~%MOD_FOLDER%/Ramazith/AR7238SR_changes.2da~
 		areaname = EVAL ~%NBaldursGate_RamazithsTower_L6%~
 	END
-
+END

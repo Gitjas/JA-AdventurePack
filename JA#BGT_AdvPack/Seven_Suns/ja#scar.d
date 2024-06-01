@@ -45,5 +45,5 @@ END
 
 EXTEND_TOP SCAR 8 #3
 + ~Global("Doppleganger","GLOBAL",1)
-Dead("jhasso")~ + @0 DO ~GiveGoldForce(4000)AddexperienceParty(4000)~ GOTO 17
+Dead("jhasso")~ + @0 DO ~GiveGoldForce(2000)AddexperienceParty(4000)~ GOTO 17
 END
