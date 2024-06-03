@@ -133,8 +133,8 @@ BUT_ONLY
 //Mongo wird zu Honk
 ACTION_IF GAME_IS ~eet bgee~ BEGIN
 	COPY_EXISTING ~Mongo.cre~ ~override/JA#Honk.cre~
-		SAY NAME1 @44
-		SAY NAME2 @44
+		SAY NAME1 @4
+		SAY NAME2 @4
 		WRITE_EVALUATED_ASCII 0x280 ~Honk~ #32 // script name / DV
 	<<<<<<<< ...inlined/JA#Silenc_mongo.d
 	
