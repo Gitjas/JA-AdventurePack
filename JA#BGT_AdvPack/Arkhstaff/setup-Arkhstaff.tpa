@@ -10,19 +10,22 @@ COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.TIS~ ~override~
 	~%MOD_FOLDER%/Arkhstaff/JA#C04HT.BMP~ ~override~
 	~%MOD_FOLDER%/Arkhstaff/JA#C04LM.BMP~ ~override~
 	~%MOD_FOLDER%/Arkhstaff/JA#C04SR.BMP~ ~override~
-
 COPY ~%MOD_FOLDER%/Arkhstaff/JA#C04.ARE~ ~override~
-	LPF ALTER_AREA_REGION
-		STR_VAR region_name			= ~Door7607~
-				destination_area	= EVAL ~%BaldursGateDocks_OgreMagiHouse_L1%~
-	END
-	LPF ALTER_AREA_REGION
-		STR_VAR region_name			= ~Traniron~
-				destination_area	= EVAL ~%BaldursGateDocks_IronThrone_Cellar%~
-	END
-	LPF ALTER_AREA_REGION
-		STR_VAR region_name			= ~Sewers~
-				destination_area	= EVAL ~%WSewers%~
+	PATCH_IF GAME_IS ~bgee eet~ BEGIN
+		LPF ALTER_AREA_REGION
+			STR_VAR region_name			= ~Door7607~
+					destination_area	= EVAL ~%BaldursGateDocks_OgreMagiHouse_L1%~
+		END
+		LPF ALTER_AREA_REGION
+			STR_VAR region_name			= ~Traniron~
+					destination_area	= EVAL ~%BaldursGateDocks_IronThrone_Cellar%~
+					entrance_name = ~Exit0224~
+		END
+		LPF ALTER_AREA_REGION
+			STR_VAR region_name			= ~Sewers~
+					destination_area	= EVAL ~%WSewers%~
+					entrance_name = ~Exit0611~
+		END
 	END
 
 COPY ~%MOD_FOLDER%/Arkhstaff/JA#ARKHS.CRE~ ~override~
@@ -65,11 +68,19 @@ COMPILE ~%MOD_FOLDER%/Arkhstaff/JA#THALDO.D~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Arkhstaff/JA#IRONH.D~
 
 COPY_EXISTING ~%BaldursGateDocks_IronThrone_Cellar%.ARE~ ~override~
-	LPF	ALTER_AREA_REGION
+    PATCH_IF GAME_IS ~BGT~ BEGIN
+	  LPF	ALTER_AREA_REGION
 		STR_VAR region_name			= ~Door7324~
 				destination_area	= ~JA#C04~
 				entrance_name 		= ~Fr7611~
-	END
+	  END
+    END ELSE BEGIN
+	  LPF	ALTER_AREA_REGION
+		STR_VAR region_name			= ~Door0224~
+				destination_area	= ~JA#C04~
+				entrance_name 		= ~Fr7611~
+	  END
+    END
 	PATCH_DEFINE_ARRAY x_coord BEGIN 705 END
 	PATCH_DEFINE_ARRAY y_coord BEGIN 501 END
 	PATCH_PHP_EACH x_coord AS index => x BEGIN
@@ -90,11 +101,19 @@ COPY_EXISTING ~%BaldursGateDocks_IronThrone_Cellar%.ARE~ ~override~
 BUT_ONLY
 
 COPY_EXISTING ~%WSewers%.ARE~ ~override~
+  PATCH_IF GAME_IS ~BGT~ BEGIN
 	LPF	ALTER_AREA_REGION
 		STR_VAR region_name			= ~Door7611~
 				destination_area	= ~JA#C04~
 				entrance_name 		= ~Fr7324~
 	END
+  END ELSE BEGIN
+	LPF	ALTER_AREA_REGION
+		STR_VAR region_name			= ~Door0611~
+				destination_area	= ~JA#C04~
+				entrance_name 		= ~Fr7324~
+	END
+  END
 BUT_ONLY
 
 COPY_EXISTING ~%BaldursGateDocks%.ARE~ ~override~

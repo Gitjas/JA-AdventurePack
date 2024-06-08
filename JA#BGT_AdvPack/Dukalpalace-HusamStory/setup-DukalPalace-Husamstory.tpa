@@ -625,6 +625,7 @@ COPY_EXISTING ~%CentralSewers%.are~ ~override~
 		fj_destination_name	= JA#7325
 		fj_name             = JA#AR7211
 	END
+	//add entrance
 	LPF  ~fj_are_structure~
 		INT_VAR
 		fj_loc_x       = 667    //x
