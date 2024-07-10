@@ -48,6 +48,15 @@ EraseJournalEntry(%gervis3%)~
 END
 */
 
+ALTER_TRANS GERVIS // file name
+BEGIN 2 END // state number (can be more than one)
+BEGIN 0 END // transition number (can be more than one)
+BEGIN // list of changes, see below for flags
+  "ACTION" ~SetGlobal("HelpLaerta","GLOBAL",1)
+EraseJournalEntry(%gervis1%)
+EraseJournalEntry(%gervis2%)
+EraseJournalEntry(%gervis3%)~ 
+END
 
 ALTER_TRANS GERVIS // file name
 BEGIN 3 END // state number (can be more than one)
