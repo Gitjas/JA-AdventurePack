@@ -193,7 +193,11 @@ END
 REPLACE_STATE_TRIGGER VOLTIN 0 ~NumTimesTalkedTo(0)
 AreaCheck("JA#C08")~
 
-REPLACE_STATE_TRIGGER VOLTIN 2 ~False()~
+REPLACE_STATE_TRIGGER VOLTIN 2 ~~
+
+REPLACE_STATE_TRIGGER VOLTIN 3 ~~
+
+REPLACE_STATE_TRIGGER VOLTIN 4 ~~
 
 REPLACE_STATE_TRIGGER VOLTIN 5 ~Global("HelpVoltine","GLOBAL",1)~
 
@@ -254,7 +258,7 @@ APPEND VOLTIN
 /* Gervisse is dead - not PC can acceot Gervisse's thanks or kill her, too. This will work with bg1npc as long as no other mod introduces a weighted dialogue higher than this one */
 
 IF WEIGHT #-1 ~Dead("Gervisse")
-Global("HelpVoltine","GLOBAL",0)
+GlobalLT("JA#VOLT_QUEST","GLOBAL",2)
 ~ THEN BEGIN gervisse_is_dead
 SAY @88
 ++ @89 + 3
@@ -304,16 +308,18 @@ IF WEIGHT #-1
 ~Global("JA#VOLT_QUEST","GLOBAL",1)!Dead("Gervisse")~ THEN BEGIN JA_VOLTIN_6
   SAY @46
   IF ~Global("JA#GERVIS_QUEST","GLOBAL",1)~ THEN REPLY @31 GOTO JA_VOLTIN_2
-  IF ~~ THEN REPLY @32 GOTO JA_VOLTIN_3
+  IF ~Global("JA#GERVIS_QUEST","GLOBAL",10)~ THEN REPLY @32 GOTO JA_VOLTIN_3
+  IF ~~ THEN REPLY @37 GOTO JA_VOLTIN_3
   IF ~~ THEN REPLY @33 GOTO JA_VOLTIN_9
   IF ~~ THEN REPLY @34 GOTO JA_VOLTIN_5
 END
 
 IF WEIGHT #-1
-~Global("JA#VOLT_QUEST","GLOBAL",2)!Dead("Gervisse")~ THEN BEGIN JA_VOLTIN_7
+~Global("JA#VOLT_QUEST","GLOBAL",2)~ THEN BEGIN JA_VOLTIN_7
   SAY @47
   IF ~~ THEN REPLY @48 GOTO JA_VOLTIN_8
   IF ~~ THEN REPLY @49 GOTO JA_VOLTIN_9
+  IF ~Dead("Gervisse")~ THEN REPLY @89 + 3
   IF ~Dead("Gervisse")~ THEN REPLY @50 + JA_VOLTIN_9
   IF ~~ THEN REPLY @34 GOTO JA_VOLTIN_5
 END
