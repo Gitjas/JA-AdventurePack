@@ -7,31 +7,67 @@
 // safty check for intalled mod
 ACTION_IF MOD_IS_INSTALLED ~GARRICK-TT.TP2~ ~0~ BEGIN
 	OUTER_SET check_for_garrick = 1
-	OUTER_SET check_for_garrick1 = 2	
+	OUTER_SET check_for_garrick1 = 2
+	ACTION_IF GAME_IS ~bgt~ BEGIN
+		<<<<<<<< ...inlined/JA#Silenc_garrick.d
+		
+		ALTER_TRANS SILENC // file name
+		BEGIN 1 END // state number (can be more than one)
+		BEGIN %check_for_garrick1% END // transition number (can be more than one)
+		BEGIN // list of changes, see below for flags
+		  "REPLY" ~#%garrick1%~
+		END
+		>>>>>>>>
+	END ELSE ACTION_IF GAME_IS ~eet bgee~ BEGIN
+		<<<<<<<< ...inlined/JA#Silenc_garrick.d
+
+		ALTER_TRANS SILENC // file name
+		BEGIN 2 END // state number (can be more than one)
+		BEGIN %check_for_garrick1% END // transition number (can be more than one)
+		BEGIN // list of changes, see below for flags
+		  "REPLY" ~#%garrick1%~
+		END
+		>>>>>>>>
+	END
 END ELSE BEGIN
 	OUTER_SET check_for_garrick = 0
 	OUTER_SET check_for_garrick1 = 1
+	<<<<<<<< ...inlined/JA#Silenc_garrick.d
+	>>>>>>>>
 END
-
-COPY_EXISTING ~SILENC.dlg~ ~override~		
-	LPF ~READ_RESPONSE_STRREF~
-		INT_VAR
-		state         = "1"  // state index
-		stateResponse = 1     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
-		RET
-		strref    // returned string reference, or -1 if not available
-	END
-SET garrick1 = strref
 
 ACTION_IF GAME_IS ~bgt~ BEGIN
+	COPY_EXISTING ~SILENC.dlg~ ~override~		
+		LPF ~READ_RESPONSE_STRREF~
+			INT_VAR
+			state         = "1"  // state index
+			stateResponse = 1     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
+			RET
+			strref    // returned string reference, or -1 if not available
+		END
+	SET garrick1 = strref
+
 	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#SILENC.D~
+	COMPILE EVALUATE_BUFFER ~...inlined/JA#Silenc_garrick.d~	
+
 END
 ACTION_IF GAME_IS ~eet bgee~ BEGIN
+	COPY_EXISTING ~SILENC.dlg~ ~override~		
+		LPF ~READ_RESPONSE_STRREF~
+			INT_VAR
+			state         = "2"  // state index
+			stateResponse = 1     // relative response index (e.g. 0 for first response associated with the state, 1 for second response, and so on...)
+			RET
+			strref    // returned string reference, or -1 if not available
+		END
+	SET garrick1 = strref
+
 	COPY_EXISTING ~SILENC.DLG~ ~override~
 		DECOMPILE_AND_PATCH BEGIN
 			REPLACE_TEXTUALLY EXACT_MATCH ~!Global("Chapter","GLOBAL",7)~ ~GlobalLT("Chapter","GLOBAL",%tutu_chapter_7%)~
 		END	
 	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#SILENC_eet.D~ USING ~%MOD_FOLDER%/languages/%s/JA#SILENC.tra~
+	COMPILE EVALUATE_BUFFER ~...inlined/JA#Silenc_garrick.d~	
 END
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Shop_of_Silence/JA#MONGO.D~
@@ -70,7 +106,7 @@ COPY_EXISTING ~%EBaldursGate_Inn_L2%.ARE~ ~override~
 		fj_orientation    = 9      
 		STR_VAR
 		fj_structure_type = actor
-		fj_name           = Schattendieb
+		fj_name           = Shadow thief
 		fj_cre_resref     = JA#STH02
 		fj_dlg_resref	  = JA#STH02
 	END
@@ -96,7 +132,7 @@ COPY_EXISTING ~%EBaldursGate_SilencesShop%.ARE~ ~override~
 		fj_orientation    = 2      
 		STR_VAR
 		fj_structure_type = actor
-		fj_name           = Schattendieb
+		fj_name           = Shadow thief
 		fj_cre_resref     = JA#STH01
 		fj_dlg_resref	  = JA#STH01
 	END
@@ -129,17 +165,24 @@ COPY_EXISTING ~%EBaldursGate_SilencesShop%.ARE~ ~override~
 	END
 BUT_ONLY
 
-//Mongo and JA#Mongo sollten nicht gleichzeitig erscheinen
-//Mongo wird zu Honk
+//Mongo and JA#Mongo should not appear at the same time
+//Mongo becomes Honk
 ACTION_IF GAME_IS ~eet bgee~ BEGIN
 	COPY_EXISTING ~Mongo.cre~ ~override/JA#Honk.cre~
-		SAY NAME1 @4
-		SAY NAME2 @4
+		SAY NAME1 @44
+		SAY NAME2 @44
 		WRITE_EVALUATED_ASCII 0x280 ~Honk~ #32 // script name / DV
 	<<<<<<<< ...inlined/JA#Silenc_mongo.d
 	
-	REPLACE_TRANS_ACTION SILENC
-	BEGIN 8 END BEGIN 0 END ~CreateCreature("mongo",[661.372],NW)~ ~CreateCreature("Honk",[661.372],NW)~
+	ALTER_TRANS SILENC // file name
+	BEGIN 8 END // state number (can be more than one)
+	BEGIN 0 END // transition number (can be more than one)
+	BEGIN // list of changes, see below for flags
+		"ACTION" ~DialogueInterrupt(FALSE)
+			Wait(3)
+			CreateCreature("JA#Honk",[661.372],NW)
+			Enemy()~
+	END
 	>>>>>>>>
 	COMPILE EVALUATE_BUFFER ~...inlined/JA#Silenc_mongo.d~
 END

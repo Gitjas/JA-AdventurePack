@@ -24,13 +24,6 @@ BEGIN 2 END // state number (can be more than one)
 BEGIN 1 %check_for_garrick1% END // transition number (can be more than one)
 ~SetGlobal("JA#SILENCE_STO","LOCALS",1)~
 
-ALTER_TRANS SILENC // file name
-BEGIN 2 END // state number (can be more than one)
-BEGIN %check_for_garrick1% END // transition number (can be more than one)
-BEGIN // list of changes, see below for flags
-  "REPLY" ~#%garrick1%~
-END
-
 ADD_STATE_TRIGGER SILENC 4 
 ~Global("JA#SILENCE_STO","LOCALS",0) Global("JA#SILENCE_CH8","LOCALS",0)~
 
