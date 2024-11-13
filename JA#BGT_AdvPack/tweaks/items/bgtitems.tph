@@ -57,8 +57,10 @@ LAUNCH_PATCH_MACRO ~DELETE_CRE_ITEM~
 COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX02.BAM~ ~override~
 COPY_EXISTING ~BGSW2H07.ITM~	~override~		//Der Rand der Welt
 SAY NAME2 @2025
+WRITE_LONG 0x60 3
 WRITE_ASCII 0x3a ~JA#SWX02~	#8
 WRITE_ASCII 0x76 ~JA#SWX02~	#8
+BUT_ONLY IF_EXISTS
 
 COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX03.BAM~ ~override~
 COPY ~%MOD_FOLDER%/tweaks/items/JA#SWX03.ITM~ ~override~	//Durlags Stolz

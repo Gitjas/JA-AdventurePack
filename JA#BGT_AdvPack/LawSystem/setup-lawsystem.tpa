@@ -331,6 +331,7 @@ BUT_ONLY
 //From Dukal Palace and Husam Story
 COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW05.BAF~
 COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW06.BAF~
+COMPILE ~%MOD_FOLDER%/LawSystem/JA#LAW07.BAF~
 
 COPY_EXISTING ~%NBaldursGate_DucalPalace_L1%.ARE~ ~override~
 	//Edit Container Script
@@ -374,25 +375,25 @@ COPY_EXISTING ~%NBaldursGate_DucalPalace_L3%.ARE~ ~override~
 	LPF ALTER_AREA_CONTAINER
 		STR_VAR
 		container_name = ~Container 4~
-		container_script = ~JA#LAW06~
+		container_script = ~JA#LAW07~
 	END
 	LPF ALTER_AREA_CONTAINER
 		STR_VAR
 		container_name = ~Container 5~
-		container_script = ~JA#LAW06~
+		container_script = ~JA#LAW07~
 	END
 	LPF ALTER_AREA_CONTAINER
 		STR_VAR
 		container_name = ~Container 6~
-		container_script = ~JA#LAW06~
+		container_script = ~JA#LAW07~
 	END
 	LPF ALTER_AREA_CONTAINER
 		STR_VAR
 		container_name = ~Container 7~
-		container_script = ~JA#LAW06~
+		container_script = ~JA#LAW07~
 	END
 	LPF ALTER_AREA_CONTAINER
 		STR_VAR
 		container_name = ~Container 8~
-		container_script = ~JA#LAW06~
+		container_script = ~JA#LAW07~
 	END

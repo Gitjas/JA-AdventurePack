@@ -72,7 +72,7 @@ END
 	/////////////////////////////////////////////////////////////
 	//BG1-Item descriptions restored
 	///////////////////////////////////////////////////////////////
-ACTION_IF NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 136 BEGIN
+ACTION_IF (NOT MOD_IS_INSTALLED ~Setup-JA#BGT_Tweak.tp2~ 136 AND GAME_IS ~bgt~) BEGIN
 	INCLUDE ~%MOD_FOLDER%/tweaks/items/bgtitems.tph~
 END
 	/////////////////////////////////////////////////////////////
