@@ -34,7 +34,7 @@ Unpack the content of the zip-folder into your main game folder and start the _S
 This mod compatibile with BG:EE, EET and BGT.\
 It is aviable in German and English.
 
-Suggested [install order](JA%23BGT_AdvPack/JA%23BGT_AdvPack.ini#L29-L31) when installing with other mods:
+Suggested install order with other mods:
 
 - BG1 Unfinished Business
 - Endless BG1
