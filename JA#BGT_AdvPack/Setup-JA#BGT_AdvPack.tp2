@@ -69,7 +69,9 @@ LANGUAGE ~English~
 		 ~english~
 		 ~JA#BGT_AdvPack/languages/english/setup.tra~
 
-
+LANGUAGE ~Chinese~
+		 ~schinese~
+		 ~JA#BGT_AdvPack/languages/schinese/setup.tra~
 
 
 /////////////////////////////////////////////////////////////////////////////////
