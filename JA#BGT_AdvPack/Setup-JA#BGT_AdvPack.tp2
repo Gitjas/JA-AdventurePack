@@ -13,18 +13,18 @@ ALWAYS
 
 	ACTION_MATCH _ WITH
 		ANY GAME_IS ~bgt~ BEGIN
-			PRINT ~Baldur's Gate Trilogy detected...~
+			PRINT @51
 			INCLUDE ~JA#BGT_AdvPack/lib/g3_bgt_cpmvars.tpa~
 		END
 		ANY GAME_IS ~bgee~ BEGIN
-			PRINT ~BG:EE detected...~
+			PRINT @52
 			INCLUDE ~JA#BGT_AdvPack/lib/g3_bgee_cpmvars.tpa~
 		END
 		ANY GAME_IS ~eet~ BEGIN
-			PRINT ~EET detected...~
+			PRINT @53
 			INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 		END
-		DEFAULT FAIL ~Game version not supported!~
+		DEFAULT FAIL @50
 	END
 
 
@@ -69,6 +69,10 @@ LANGUAGE ~English~
 		 ~english~
 		 ~JA#BGT_AdvPack/languages/english/setup.tra~
 
+LANGUAGE ~Polish (by my_summertime, SoM Membress, part of CoB Clan)~
+		 ~polish~
+		 ~JA#BGT_AdvPack/languages/polish/setup.tra~
+
 
 
 
@@ -76,9 +80,9 @@ LANGUAGE ~English~
 // LAW SYSTEM in FRIENDLY ARM INN, ELFSONG TAVERN, BL. MERMAID and DUCAL PALACE
 /////////////////////////////////////////////////////////////////////////////////
 
-BEGIN ~Extended Law System~ DESIGNATED 1
+BEGIN @101 DESIGNATED 1
 LABEL "JA#BGT_AdvPack-Law_System"
-FORBID_COMPONENT ~JA#BGT_AdvPack/Setup-JA#BGT_AdvPack.tp2~ 6 ~This component cannot be installed after "IMPROVED/RESTORED: Ducal Palace"~
+FORBID_COMPONENT ~JA#BGT_AdvPack/Setup-JA#BGT_AdvPack.tp2~ 6 @61
 
 INCLUDE ~JA#BGT_AdvPack/Law_System/setup-Law_System.tpa~
 
@@ -87,11 +91,11 @@ INCLUDE ~JA#BGT_AdvPack/Law_System/setup-Law_System.tpa~
 // Ramazith
 /////////////
 
-BEGIN ~Ramazith~ DESIGNATED 2
+BEGIN @102 DESIGNATED 2
 LABEL "JA#BGT_AdvPack-Ramazith"
-FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 6 ~This component cannot be installed after Baldur's Gate Romantic Encounters~
-FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 30 ~This component cannot be installed after Baldur's Gate Romantic Encounters~
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 6 @62
+FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 30 @62
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Ramazith/setup-Ramazith.tpa~
 
@@ -100,7 +104,7 @@ INCLUDE ~JA#BGT_AdvPack/Ramazith/setup-Ramazith.tpa~
 // Jopi and his uncle Ragefast
 ////////////////////////////////
 
-BEGIN ~Jopi and his uncle Ragefast~ DESIGNATED 3
+BEGIN @103 DESIGNATED 3
 LABEL "JA#BGT_AdvPack-Jopi"
 
 INCLUDE ~JA#BGT_AdvPack/Jopi/setup-Jopi.tpa~
@@ -110,7 +114,7 @@ INCLUDE ~JA#BGT_AdvPack/Jopi/setup-Jopi.tpa~
 // Yuxi - Ragefast's imp
 //////////////////////////
 
-BEGIN ~Yuxi - Ragefast's imp~ DESIGNATED 4
+BEGIN @104 DESIGNATED 4
 LABEL "JA#BGT_AdvPack-Yuxi"
 
 INCLUDE ~JA#BGT_AdvPack/Yuxi/setup-Yuxi.tpa~
@@ -120,7 +124,7 @@ INCLUDE ~JA#BGT_AdvPack/Yuxi/setup-Yuxi.tpa~
 // Husam's story line finished
 ////////////////////////////////
 
-BEGIN ~Husam's story line finished~ DESIGNATED 5
+BEGIN @105 DESIGNATED 5
 LABEL "JA#BGT_AdvPack-Husam"
 
 INCLUDE ~JA#BGT_AdvPack/Husam/setup-Husam.tpa~
@@ -130,7 +134,7 @@ INCLUDE ~JA#BGT_AdvPack/Husam/setup-Husam.tpa~
 // IMPROVED/RESTORED: Ducal Palace
 ////////////////////////////////////
 
-BEGIN ~IMPROVED/RESTORED: Ducal Palace~ DESIGNATED 6
+BEGIN @106 DESIGNATED 6
 LABEL "JA#BGT_AdvPack-Ducal_Palace"
 
 INCLUDE ~JA#BGT_AdvPack/Ducal_Palace/setup-Ducal_Palace.tpa~
@@ -140,9 +144,9 @@ INCLUDE ~JA#BGT_AdvPack/Ducal_Palace/setup-Ducal_Palace.tpa~
 // Gervisse & Voltine
 ///////////////////////
 
-BEGIN ~Gervisse & Voltine~ DESIGNATED 7
+BEGIN @107 DESIGNATED 7
 LABEL "JA#BGT_AdvPack-Gervisse_Voltine"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Gervisse_Voltine/setup-Gervisse_Voltine.tpa~
 
@@ -151,7 +155,7 @@ INCLUDE ~JA#BGT_AdvPack/Gervisse_Voltine/setup-Gervisse_Voltine.tpa~
 // Seven Suns
 ///////////////
 
-BEGIN ~Seven Suns~ DESIGNATED 8
+BEGIN @108 DESIGNATED 8
 LABEL "JA#BGT_AdvPack-Seven_Suns"
 
 INCLUDE ~JA#BGT_AdvPack/Seven_Suns/setup-Seven_Suns.tpa~
@@ -161,7 +165,7 @@ INCLUDE ~JA#BGT_AdvPack/Seven_Suns/setup-Seven_Suns.tpa~
 // Krammoch Arkhstaff
 ///////////////////////
 
-BEGIN ~Krammoch Arkhstaff~ DESIGNATED 9
+BEGIN @109 DESIGNATED 9
 LABEL "JA#BGT_AdvPack-Arkhstaff"
 
 INCLUDE ~JA#BGT_AdvPack/Arkhstaff/setup-Arkhstaff.tpa~
@@ -171,9 +175,9 @@ INCLUDE ~JA#BGT_AdvPack/Arkhstaff/setup-Arkhstaff.tpa~
 // Iron Throne guard
 //////////////////////
 
-BEGIN ~Iron Throne guard~ DESIGNATED 10
+BEGIN @110 DESIGNATED 10
 LABEL "JA#BGT_AdvPack-Iron_Throne"
-REQUIRE_COMPONENT ~JA#BGT_AdvPack/Setup-JA#BGT_AdvPack.tp2~ 9 ~This component requires "Krammoch Arkhstaff"~
+REQUIRE_COMPONENT ~JA#BGT_AdvPack/Setup-JA#BGT_AdvPack.tp2~ 9 @60
 
 INCLUDE ~JA#BGT_AdvPack/Iron_Throne/setup-Iron_Throne.tpa~
 
@@ -182,9 +186,9 @@ INCLUDE ~JA#BGT_AdvPack/Iron_Throne/setup-Iron_Throne.tpa~
 // RESTORED: Palin - Aldeth's hunter comrade
 //////////////////////////////////////////////
 
-BEGIN ~RESTORED: Palin - Aldeth's hunter comrade~ DESIGNATED 11
+BEGIN @111 DESIGNATED 11
 LABEL "JA#BGT_AdvPack-Palin"
-REQUIRE_PREDICATE !GAME_IS ~bgee eet~ ~Already restored in BG:EE~
+REQUIRE_PREDICATE !GAME_IS ~bgee eet~ @70
 
 INCLUDE ~JA#BGT_AdvPack/Palin/setup-Palin.tpa~
 
@@ -193,10 +197,10 @@ INCLUDE ~JA#BGT_AdvPack/Palin/setup-Palin.tpa~
 // RESTORED: Svlast - the fallen Paladin
 //////////////////////////////////////////
 
-BEGIN ~RESTORED: Svlast - the fallen Paladin~ DESIGNATED 12
+BEGIN @112 DESIGNATED 12
 LABEL "JA#BGT_AdvPack-Svlast"
-FORBID_FILE ~override/ntsvlast.cre~ ~Svlast, the Fallen Paladin is already restored by Northern Tales of the Sword Coast~
-FORBID_FILE ~override/UBSVLAST.CRE~ ~Svlast, the Fallen Paladin is already restored by BG1 Unfinished Business~
+FORBID_FILE ~override/ntsvlast.cre~ @71
+FORBID_FILE ~override/UBSVLAST.CRE~ @72
 
 INCLUDE ~JA#BGT_AdvPack/Svlast/setup-Svlast.tpa~
 
@@ -205,7 +209,7 @@ INCLUDE ~JA#BGT_AdvPack/Svlast/setup-Svlast.tpa~
 // RESTORED: Nashkel Garrison soldier
 ///////////////////////////////////////
 
-BEGIN ~RESTORED: Nashkel Garrison soldier~ DESIGNATED 13
+BEGIN @113 DESIGNATED 13
 LABEL "JA#BGT_AdvPack-Nashkel_Garrison"
 
 INCLUDE ~JA#BGT_AdvPack/Nashkel_Garrison/setup-Nashkel_Garrison.tpa~
@@ -215,7 +219,7 @@ INCLUDE ~JA#BGT_AdvPack/Nashkel_Garrison/setup-Nashkel_Garrison.tpa~
 // RESTORED: Velvet - Cockfight
 /////////////////////////////////
 
-BEGIN ~RESTORED: Velvet - Cockfight~ DESIGNATED 14
+BEGIN @114 DESIGNATED 14
 LABEL "JA#BGT_AdvPack-Velvet"
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ OR (GAME_IS ~bgt~ AND MOD_IS_INSTALLED ~infinityanimations/setup-infinityanimations.tp2~ 0) @37
 
@@ -226,10 +230,10 @@ INCLUDE ~JA#BGT_AdvPack/Velvet/setup-Velvet.tpa~
 // RESTORED: Nim Furlwing
 ///////////////////////////
 
-BEGIN ~RESTORED: Nim Furlwing~ DESIGNATED 15
+BEGIN @115 DESIGNATED 15
 LABEL "JA#BGT_AdvPack-Nim_Furlwing"
-FORBID_FILE ~override/ntnimfur.cre~ ~NimFurlwing is already restored by Northern Tales of the Sword Coast~
-FORBID_FILE ~override/ubnimfur.cre~ ~NimFurlwing is already restored by BG1 Unfinished Business~
+FORBID_FILE ~override/ntnimfur.cre~ @73
+FORBID_FILE ~override/ubnimfur.cre~ @74
 
 INCLUDE ~JA#BGT_AdvPack/Nim_Furlwing/setup-Nim_Furlwing.tpa~
 
@@ -238,7 +242,7 @@ INCLUDE ~JA#BGT_AdvPack/Nim_Furlwing/setup-Nim_Furlwing.tpa~
 // RESTORED: Caravan merchant
 ///////////////////////////////
 
-BEGIN ~RESTORED: Caravan merchant~ DESIGNATED 16
+BEGIN @116 DESIGNATED 16
 LABEL "JA#BGT_AdvPack-Caravan_merchant"
 
 INCLUDE ~JA#BGT_AdvPack/Caravan_merchant/setup-Caravan_merchant.tpa~
@@ -248,7 +252,7 @@ INCLUDE ~JA#BGT_AdvPack/Caravan_merchant/setup-Caravan_merchant.tpa~
 // RESTORED: Galtoth - the fence
 //////////////////////////////////
 
-BEGIN ~RESTORED: Galtoth - the fence~ DESIGNATED 17
+BEGIN @117 DESIGNATED 17
 LABEL "JA#BGT_AdvPack-Galtoth"
 
 INCLUDE ~JA#BGT_AdvPack/Galtoth/setup-Galtoth.tpa~
@@ -258,7 +262,7 @@ INCLUDE ~JA#BGT_AdvPack/Galtoth/setup-Galtoth.tpa~
 // Phandalyn waits in Elfsong Tavern
 //////////////////////////////////////
 
-BEGIN ~Phandalyn waits in Elfsong Tavern~ DESIGNATED 18
+BEGIN @118 DESIGNATED 18
 LABEL "JA#BGT_AdvPack-Phandalyn"
 
 INCLUDE ~JA#BGT_AdvPack/Phandalyn/setup-Phandalyn.tpa~
@@ -268,9 +272,9 @@ INCLUDE ~JA#BGT_AdvPack/Phandalyn/setup-Phandalyn.tpa~
 // RESTORED: Suthie & Sthief at Silence's Store
 /////////////////////////////////////////////////
 
-BEGIN ~RESTORED: Suthie & Sthief at Silence's Store~ DESIGNATED 19
+BEGIN @119 DESIGNATED 19
 LABEL "JA#BGT_AdvPack-Suthie_Sthief"
-REQUIRE_PREDICATE !GAME_IS ~bgee eet~ ~Already restored in BG:EE~
+REQUIRE_PREDICATE !GAME_IS ~bgee eet~ @70
 
 INCLUDE ~JA#BGT_AdvPack/Suthie_Sthief/setup-Suthie_Sthief.tpa~
 
@@ -279,7 +283,7 @@ INCLUDE ~JA#BGT_AdvPack/Suthie_Sthief/setup-Suthie_Sthief.tpa~
 // RESTORED: Warehouse Workers
 ////////////////////////////////
 
-BEGIN ~RESTORED: Warehouse Workers~ DESIGNATED 20
+BEGIN @120 DESIGNATED 20
 LABEL "JA#BGT_AdvPack-Warehouse_Workers"
 
 INCLUDE ~JA#BGT_AdvPack/Warehouse_Workers/setup-Warehouse_Workers.tpa~
@@ -289,7 +293,7 @@ INCLUDE ~JA#BGT_AdvPack/Warehouse_Workers/setup-Warehouse_Workers.tpa~
 // RESTORED: Townspeople dialogues
 ////////////////////////////////////
 
-BEGIN ~RESTORED: Townspeople dialogues~ DESIGNATED 21
+BEGIN @121 DESIGNATED 21
 LABEL "JA#BGT_AdvPack-Townspeople_dialogues"
 
 INCLUDE ~JA#BGT_AdvPack/Townspeople_dialogues/setup-Townspeople_dialogues.tpa~
@@ -299,7 +303,7 @@ INCLUDE ~JA#BGT_AdvPack/Townspeople_dialogues/setup-Townspeople_dialogues.tpa~
 // RESTORED: Yago's guard in Low Lantern
 //////////////////////////////////////////
 
-BEGIN ~RESTORED: Yago's guard in Low Lantern~ DESIGNATED 22
+BEGIN @122 DESIGNATED 22
 LABEL "JA#BGT_AdvPack-Yago"
 
 INCLUDE ~JA#BGT_AdvPack/Yago/setup-Yago.tpa~
@@ -309,7 +313,7 @@ INCLUDE ~JA#BGT_AdvPack/Yago/setup-Yago.tpa~
 // RESTORED: Ignatio Phleed - the invitation seller
 /////////////////////////////////////////////////////
 
-BEGIN ~RESTORED: Ignatio Phleed - the invitation seller~ DESIGNATED 23
+BEGIN @123 DESIGNATED 23
 LABEL "JA#BGT_AdvPack-Ignatio_Phleed"
 
 INCLUDE ~JA#BGT_AdvPack/Ignatio_Phleed/setup-Ignatio_Phleed.tpa~
@@ -319,7 +323,7 @@ INCLUDE ~JA#BGT_AdvPack/Ignatio_Phleed/setup-Ignatio_Phleed.tpa~
 // RESTORED: Shalasin
 ///////////////////////
 
-BEGIN ~RESTORED: Shalasin~ DESIGNATED 24
+BEGIN @124 DESIGNATED 24
 LABEL "JA#BGT_AdvPack-Shalasin"
 
 INCLUDE ~JA#BGT_AdvPack/Shalasin/setup-Shalasin.tpa~
@@ -329,7 +333,7 @@ INCLUDE ~JA#BGT_AdvPack/Shalasin/setup-Shalasin.tpa~
 // RESTORED: Sir Artolas
 //////////////////////////
 
-BEGIN ~RESTORED: Sir Artolas~ DESIGNATED 25
+BEGIN @125 DESIGNATED 25
 LABEL "JA#BGT_AdvPack-Artolas"
 
 INCLUDE ~JA#BGT_AdvPack/Artolas/setup-Artolas.tpa~
@@ -339,9 +343,9 @@ INCLUDE ~JA#BGT_AdvPack/Artolas/setup-Artolas.tpa~
 // RESTORED: Pilar & Gheldehar
 ////////////////////////////////
 
-BEGIN ~RESTORED: Pilar & Gheldehar~ DESIGNATED 26
+BEGIN @126 DESIGNATED 26
 LABEL "JA#BGT_AdvPack-Pilar_Gheldehar"
-FORBID_FILE ~override/ntghelde.cre~ ~Pilar und Gheldehar is already restored by Northern Tales of the Sword Coast~
+FORBID_FILE ~override/ntghelde.cre~ @75
 
 INCLUDE ~JA#BGT_AdvPack/Pilar_Gheldehar/setup-Pilar_Gheldehar.tpa~
 
@@ -350,9 +354,9 @@ INCLUDE ~JA#BGT_AdvPack/Pilar_Gheldehar/setup-Pilar_Gheldehar.tpa~
 // RESTORED: Llindellyn - the archer
 //////////////////////////////////////
 
-BEGIN ~RESTORED: Llindellyn - the archer~ DESIGNATED 27
+BEGIN @127 DESIGNATED 27
 LABEL "JA#BGT_AdvPack-Llindellyn"
-FORBID_FILE ~override/ntllinde.cre~ ~Llyndellyn's Lucky Arrow is already restored by Northern Tales of the Sword Coast~
+FORBID_FILE ~override/ntllinde.cre~ @76
 
 INCLUDE ~JA#BGT_AdvPack/Llindellyn/setup-Llindellyn.tpa~
 
@@ -361,9 +365,9 @@ INCLUDE ~JA#BGT_AdvPack/Llindellyn/setup-Llindellyn.tpa~
 // RESTORED: Mal-Kalen - Ulcaster's Adept
 ///////////////////////////////////////////
 
-BEGIN ~RESTORED: Mal-Kalen - Ulcaster's Adept~ DESIGNATED 28
+BEGIN @128 DESIGNATED 28
 LABEL "JA#BGT_AdvPack-Mal-Kalen"
-FORBID_FILE ~override/UBMALKAL.CRE~ ~Mal-Kalen, the Ulcaster Ghost is already restored by BG1 Unfinished Business~
+FORBID_FILE ~override/UBMALKAL.CRE~ @77
 
 INCLUDE ~JA#BGT_AdvPack/Mal-Kalen/setup-Mal-Kalen.tpa~
 
@@ -372,9 +376,9 @@ INCLUDE ~JA#BGT_AdvPack/Mal-Kalen/setup-Mal-Kalen.tpa~
 // RESTORED: Keelor & Nasha
 /////////////////////////////
 
-BEGIN ~RESTORED: Keelor & Nasha~ DESIGNATED 29
+BEGIN @129 DESIGNATED 29
 LABEL "JA#BGT_AdvPack-Keelor_Nasha"
-FORBID_FILE ~override/ntkeelor.cre~ ~Keelor & Nasha is already restored by Northern Tales of the Sword Coast~
+FORBID_FILE ~override/ntkeelor.cre~ @78
 
 INCLUDE ~JA#BGT_AdvPack/Keelor_Nasha/setup-Keelor_Nasha.tpa~
 
@@ -383,9 +387,9 @@ INCLUDE ~JA#BGT_AdvPack/Keelor_Nasha/setup-Keelor_Nasha.tpa~
 // RESTORED: Marl - Tavern brawl at Feldepost's Inn
 /////////////////////////////////////////////////////
 
-BEGIN ~RESTORED: Marl - Tavern brawl at Feldepost's Inn~ DESIGNATED 30
+BEGIN @130 DESIGNATED 30
 LABEL "JA#BGT_AdvPack-Marl"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Marl/setup-Marl.tpa~
 
@@ -394,7 +398,7 @@ INCLUDE ~JA#BGT_AdvPack/Marl/setup-Marl.tpa~
 // RESTORED: Beregost guards
 //////////////////////////////
 
-BEGIN ~RESTORED: Beregost guards~ DESIGNATED 31
+BEGIN @131 DESIGNATED 31
 LABEL "JA#BGT_AdvPack-Beregost_guards"
 
 INCLUDE ~JA#BGT_AdvPack/Beregost_guards/setup-Beregost_guards.tpa~
@@ -404,7 +408,7 @@ INCLUDE ~JA#BGT_AdvPack/Beregost_guards/setup-Beregost_guards.tpa~
 // RESTORED ITEM: Rythe's Last Arrow
 //////////////////////////////////////
 
-BEGIN ~RESTORED ITEM: Rythe's Last Arrow~ DESIGNATED 32
+BEGIN @132 DESIGNATED 32
 LABEL "JA#BGT_AdvPack-Rythes_Last_Arrow"
 
 INCLUDE ~JA#BGT_AdvPack/Rythes_Last_Arrow/setup-Rythes_Last_Arrow.tpa~
@@ -414,7 +418,7 @@ INCLUDE ~JA#BGT_AdvPack/Rythes_Last_Arrow/setup-Rythes_Last_Arrow.tpa~
 // RESTORED ITEM: The Protector of the Unworthy
 /////////////////////////////////////////////////
 
-BEGIN ~RESTORED ITEM: The Protector of the Unworthy~ DESIGNATED 33
+BEGIN @133 DESIGNATED 33
 LABEL "JA#BGT_AdvPack-The_Protector_of_the_Unworthy"
 
 INCLUDE ~JA#BGT_AdvPack/The_Protector_of_the_Unworthy/setup-The_Protector_of_the_Unworthy.tpa~
@@ -424,7 +428,7 @@ INCLUDE ~JA#BGT_AdvPack/The_Protector_of_the_Unworthy/setup-The_Protector_of_the
 // IMPROVED/FIXED: Counting House
 ///////////////////////////////////
 
-BEGIN ~IMPROVED/FIXED: Counting House~ DESIGNATED 34
+BEGIN @134 DESIGNATED 34
 LABEL "JA#BGT_AdvPack-Counting_House"
 
 INCLUDE ~JA#BGT_AdvPack/Counting_House/setup-Counting_House.tpa~
@@ -434,9 +438,9 @@ INCLUDE ~JA#BGT_AdvPack/Counting_House/setup-Counting_House.tpa~
 // Merchants' League investigations
 /////////////////////////////////////
 
-BEGIN ~Merchants' League investigations~ DESIGNATED 35
+BEGIN @135 DESIGNATED 35
 LABEL "JA#BGT_AdvPack-Merchants_League"
-FORBID_COMPONENT ~stratagems/setup-stratagems.tp2~ 7000 ~This component cannot be installed after Sword Coast Stratagems component "Improved doppelgangers"~
+FORBID_COMPONENT ~stratagems/setup-stratagems.tp2~ 7000 @64
 
 INCLUDE ~JA#BGT_AdvPack/Merchants_League/setup-Merchants_League.tpa~
 
@@ -445,9 +449,9 @@ INCLUDE ~JA#BGT_AdvPack/Merchants_League/setup-Merchants_League.tpa~
 // Aldeth & Seniyad
 /////////////////////
 
-BEGIN ~Aldeth & Seniyad~ DESIGNATED 36
+BEGIN @136 DESIGNATED 36
 LABEL "JA#BGT_AdvPack-Aldeth_Seniyad"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Aldeth_Seniyad/setup-Aldeth_Seniyad.tpa~
 
@@ -456,7 +460,7 @@ INCLUDE ~JA#BGT_AdvPack/Aldeth_Seniyad/setup-Aldeth_Seniyad.tpa~
 // Aldeth's Sellout
 /////////////////////
 
-BEGIN ~Aldeth's Sellout~ DESIGNATED 37
+BEGIN @137 DESIGNATED 37
 LABEL "JA#BGT_AdvPack-Sellout"
 
 INCLUDE ~JA#BGT_AdvPack/Sellout/setup-Sellout.tpa~
@@ -466,9 +470,9 @@ INCLUDE ~JA#BGT_AdvPack/Sellout/setup-Sellout.tpa~
 // Tenya and the fishermen
 ////////////////////////////
 
-BEGIN ~Tenya and the fishermen~ DESIGNATED 38
+BEGIN @138 DESIGNATED 38
 LABEL "JA#BGT_AdvPack-Tenya"
-FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 ~This component cannot be installed after Garrick Tales of a Troubadour~
+FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 @65
 
 INCLUDE ~JA#BGT_AdvPack/Tenya/setup-Tenya.tpa~
 
@@ -477,10 +481,10 @@ INCLUDE ~JA#BGT_AdvPack/Tenya/setup-Tenya.tpa~
 // Tenya's quest in Temple of Umberlee
 ////////////////////////////////////////
 
-BEGIN ~Tenya's quest in Temple of Umberlee~ DESIGNATED 39
+BEGIN @139 DESIGNATED 39
 LABEL "JA#BGT_AdvPack-Tenya2"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
-FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 ~This component cannot be installed after Garrick Tales of a Troubadour~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
+FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 @65
 
 INCLUDE ~JA#BGT_AdvPack/Tenya2/setup-Tenya2.tpa~
 
@@ -489,7 +493,7 @@ INCLUDE ~JA#BGT_AdvPack/Tenya2/setup-Tenya2.tpa~
 // Nashkel
 ////////////
 
-BEGIN ~Nashkel~ DESIGNATED 40
+BEGIN @140 DESIGNATED 40
 LABEL "JA#BGT_AdvPack-Nashkel"
 
 INCLUDE ~JA#BGT_AdvPack/Nashkel/setup-Nashkel.tpa~
@@ -499,7 +503,7 @@ INCLUDE ~JA#BGT_AdvPack/Nashkel/setup-Nashkel.tpa~
 // Stationary soldiers in Nashkel
 ///////////////////////////////////
 
-BEGIN ~Stationary soldiers in Nashkel~ DESIGNATED 41
+BEGIN @141 DESIGNATED 41
 LABEL "JA#BGT_AdvPack-Nashkel_soldiers"
 
 INCLUDE ~JA#BGT_AdvPack/Nashkel_soldiers/setup-Nashkel_soldiers.tpa~
@@ -509,7 +513,7 @@ INCLUDE ~JA#BGT_AdvPack/Nashkel_soldiers/setup-Nashkel_soldiers.tpa~
 // Imoen at Winthrop's inn
 ////////////////////////////
 
-BEGIN ~Imoen at Winthrop's inn~ DESIGNATED 42
+BEGIN @142 DESIGNATED 42
 LABEL "JA#BGT_AdvPack-Imoen_Winthrop"
 
 INCLUDE ~JA#BGT_AdvPack/Imoen_Winthrop/setup-Imoen_Winthrop.tpa~
@@ -519,7 +523,7 @@ INCLUDE ~JA#BGT_AdvPack/Imoen_Winthrop/setup-Imoen_Winthrop.tpa~
 // Priest of Oghma, Gond and Ilmater in Baldur's Gate
 ///////////////////////////////////////////////////////
 
-BEGIN ~Priest of Oghma, Gond and Ilmater in Baldur's Gate~ DESIGNATED 43
+BEGIN @143 DESIGNATED 43
 LABEL "JA#BGT_AdvPack-Priests"
 
 INCLUDE ~JA#BGT_AdvPack/Priests/setup-Priests.tpa~
@@ -530,7 +534,7 @@ INCLUDE ~JA#BGT_AdvPack/Priests/setup-Priests.tpa~
 ////////////////////////////////
 
 
-BEGIN ~Extended/Improved dialogues~ DESIGNATED 44
+BEGIN @144 DESIGNATED 44
 LABEL "JA#BGT_AdvPack-Improved_dialogues"
 
 INCLUDE ~JA#BGT_AdvPack/Improved_dialogues/setup-Improved_dialogues.tpa~
@@ -540,9 +544,9 @@ INCLUDE ~JA#BGT_AdvPack/Improved_dialogues/setup-Improved_dialogues.tpa~
 // Caldo can be charmed
 /////////////////////////
 
-BEGIN ~Caldo can be charmed~ DESIGNATED 45
+BEGIN @145 DESIGNATED 45
 LABEL "JA#BGT_AdvPack-Caldo"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Caldo/setup-Caldo.tpa~
 
@@ -551,7 +555,7 @@ INCLUDE ~JA#BGT_AdvPack/Caldo/setup-Caldo.tpa~
 // Hulrik and his cows
 ////////////////////////
 
-BEGIN ~Hulrik and his cows~ DESIGNATED 46
+BEGIN @146 DESIGNATED 46
 LABEL "JA#BGT_AdvPack-Hulrik"
 
 INCLUDE ~JA#BGT_AdvPack/Hulrik/setup-Hulrik.tpa~
@@ -561,9 +565,9 @@ INCLUDE ~JA#BGT_AdvPack/Hulrik/setup-Hulrik.tpa~
 // Improved Shop of Silence
 /////////////////////////////
 
-BEGIN ~Improved Shop of Silence~ DESIGNATED 47
+BEGIN @147 DESIGNATED 47
 LABEL "JA#BGT_AdvPack-Shop_of_Silence"
-FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 ~This component cannot be installed after Garrick Tales of a Troubadour~
+FORBID_COMPONENT ~GARRICK-TT/SETUP-GARRICK-TT.TP2~ 0 @65
 
 INCLUDE ~JA#BGT_AdvPack/Shop_of_Silence/setup-Shop_of_Silence.tpa~
 
@@ -572,9 +576,9 @@ INCLUDE ~JA#BGT_AdvPack/Shop_of_Silence/setup-Shop_of_Silence.tpa~
 // Ender Sai in Baldur's Gate
 ///////////////////////////////
 
-BEGIN ~Ender Sai in Baldur's Gate~ DESIGNATED 48
+BEGIN @148 DESIGNATED 48
 LABEL "JA#BGT_AdvPack-Ender_Sai"
-FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 27 ~This component is not compatible with Ender Sai from Baldur's Gate Romantic Encounters~
+FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 27 @66
 
 INCLUDE ~JA#BGT_AdvPack/Ender_Sai/setup-Ender_Sai.tpa~
 
@@ -583,7 +587,7 @@ INCLUDE ~JA#BGT_AdvPack/Ender_Sai/setup-Ender_Sai.tpa~
 // Sorcerous Sundries
 ///////////////////////
 
-BEGIN ~Sorcerous Sundries~ DESIGNATED 49
+BEGIN @149 DESIGNATED 49
 LABEL "JA#BGT_AdvPack-Sorcerous_Sundries"
 
 INCLUDE ~JA#BGT_AdvPack/Sorcerous_Sundries/setup-Sorcerous_Sundries.tpa~
@@ -593,11 +597,11 @@ INCLUDE ~JA#BGT_AdvPack/Sorcerous_Sundries/setup-Sorcerous_Sundries.tpa~
 // RESTORED: Elfsong Tavern movie
 ///////////////////////////////////
 
-BEGIN ~RESTORED: Elfsong Tavern Movie~ DESIGNATED 50
+BEGIN @150 DESIGNATED 50
 LABEL "JA#BGT_AdvPack-Elfsong_movie"
-REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~ubtavern.mve~ ~Already restored by BG1 Unfinished Business~
-FORBID_FILE ~movies/TAVERN.wbm~ ~Already restored by BG:EE Classic Movies~
-FORBID_FILE ~lang/%EE_LANGUAGE%/movies/TAVERN.wbm~ ~Already restored by Baldur's Gate: Enhanced Edition Trilogy (EET)~
+REQUIRE_PREDICATE !FILE_EXISTS_IN_GAME ~ubtavern.mve~ @79
+FORBID_FILE ~movies/TAVERN.wbm~ @80
+FORBID_FILE ~lang/%EE_LANGUAGE%/movies/TAVERN.wbm~ @81
 
 INCLUDE ~JA#BGT_AdvPack/Elfsong_movie/setup-Elfsong_movie.tpa~
 
@@ -606,10 +610,10 @@ INCLUDE ~JA#BGT_AdvPack/Elfsong_movie/setup-Elfsong_movie.tpa~
 // Mini-Quest "The mystery of the silent ghostly voice"
 /////////////////////////////////////////////////////////
 
-BEGIN ~Mini-Quest "The mystery of the silent ghostly voice"~ DESIGNATED 51
+BEGIN @151 DESIGNATED 51
 LABEL "JA#BGT_AdvPack-Miniquest"
-FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 41 ~This component cannot be installed after Baldur's Gate Romantic Encounters~
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1re/setup-bg1re.tp2~ 41 @62
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Miniquest/setup-Miniquest.tpa~
 
@@ -618,7 +622,7 @@ INCLUDE ~JA#BGT_AdvPack/Miniquest/setup-Miniquest.tpa~
 // Unusual keg in Elfsong Tavern
 //////////////////////////////////
 
-BEGIN ~Unusual keg in Elfsong Tavern~ DESIGNATED 52
+BEGIN @152 DESIGNATED 52
 LABEL "JA#BGT_AdvPack-Unusual_keg"
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ OR (GAME_IS ~bgt~ AND MOD_IS_INSTALLED ~infinityanimations/setup-infinityanimations.tp2~ 0) @37
 
@@ -629,7 +633,7 @@ INCLUDE ~JA#BGT_AdvPack/Unusual_keg/setup-Unusual_keg.tpa~
 // Black Alaric's Cave
 ////////////////////////
 
-BEGIN ~Black Alaric's Cave~ DESIGNATED 53
+BEGIN @153 DESIGNATED 53
 LABEL "JA#BGT_AdvPack-Black_Alarics_Cave"
 
 INCLUDE ~JA#BGT_AdvPack/Black_Alarics_Cave/setup-Black_Alarics_Cave.tpa~
@@ -639,7 +643,7 @@ INCLUDE ~JA#BGT_AdvPack/Black_Alarics_Cave/setup-Black_Alarics_Cave.tpa~
 // RESTORED: Cloakwood druid
 //////////////////////////////
 
-BEGIN ~RESTORED: Cloakwood druid~ DESIGNATED 54
+BEGIN @154 DESIGNATED 54
 LABEL "JA#BGT_AdvPack-Cloakwood_druid"
 
 INCLUDE ~JA#BGT_AdvPack/Cloakwood_druid/setup-Cloakwood_druid.tpa~
@@ -649,9 +653,9 @@ INCLUDE ~JA#BGT_AdvPack/Cloakwood_druid/setup-Cloakwood_druid.tpa~
 // Extended meeting between Xzar and Niemain
 //////////////////////////////////////////////
 
-BEGIN ~Extended meeting between Xzar and Niemain~ DESIGNATED 55
+BEGIN @155 DESIGNATED 55
 LABEL "JA#BGT_AdvPack-Niemain_Zentarim"
-FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 ~This component cannot be installed after BG1NPC~
+FORBID_COMPONENT ~bg1npc/bg1npc.tp2~ 10 @63
 
 INCLUDE ~JA#BGT_AdvPack/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
 
@@ -660,9 +664,9 @@ INCLUDE ~JA#BGT_AdvPack/Niemain_Zentarim/setup-Niemain_Zentarim.tpa~
 // Graphical improvements: Animated torches and candles
 /////////////////////////////////////////////////////////
 
-BEGIN ~Graphical improvements: Animated torches and candles~ DESIGNATED 100
+BEGIN @200 DESIGNATED 100
 LABEL "JA#BGT_AdvPack-Graphical"
-DEPRECATED ~Baldurs Gate Graphical Overhaul (BGGO) is a superset of this component~
+DEPRECATED @90
 
 INCLUDE ~JA#BGT_AdvPack/Graphical/setup-Graphical.tpa~
 
@@ -671,7 +675,7 @@ INCLUDE ~JA#BGT_AdvPack/Graphical/setup-Graphical.tpa~
 // Backdoor to Gellana's temple
 /////////////////////////////////
 
-BEGIN ~Backdoor to Gellana's temple~ DESIGNATED 101
+BEGIN @201 DESIGNATED 101
 LABEL "JA#BGT_AdvPack-Backdoor_Gellana"
 
 INCLUDE ~JA#BGT_AdvPack/Backdoor_Gellana/setup-Backdoor_Gellana.tpa~
@@ -681,7 +685,7 @@ INCLUDE ~JA#BGT_AdvPack/Backdoor_Gellana/setup-Backdoor_Gellana.tpa~
 // Backdoor to Waterqueen's House
 ///////////////////////////////////
 
-BEGIN ~Backdoor to Waterqueen's House~ DESIGNATED 102
+BEGIN @202 DESIGNATED 102
 LABEL "JA#BGT_AdvPack-Backdoor_Waterqueen"
 
 INCLUDE ~JA#BGT_AdvPack/Backdoor_Waterqueen/setup-Backdoor_Waterqueen.tpa~

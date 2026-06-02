@@ -1,0 +1,24 @@
+@0    = ~Ach, to znowu wy. Jak miło! Co mogę dla was zrobić?~
+@1    = ~Daj mi te buty, proszę.~
+@2    = ~Nie, wszystko w porządku. Bywaj.~
+@3    = ~Nie ma sprawy, skoro ma cię to uszczęśliwić. Szczerze mówiąc, i tak śmierdzą dość dziwnie.~
+@4    = ~Postaw kolejkę, to pogadamy.~
+@5    = ~Nie ma sprawy. Po długiej podróży kufel piwa to dokładnie to, czego mi trzeba.~
+@6    = ~Kup sobie własne piwo, półelfko. Spieszymy się.~
+/* #15508 */
+@7    = ~Podróżni, nieprawdaż? Nie wiem, czemu wybraliście tę drogę, ale jeśli kiedykolwiek dotrzecie do Wrót Baldura, to zwróćcie uwagę na Gheldehara, gnomiego kapłana. Bardziej jest on podstępny niż najstarszy ze smoków. Cały czas ma w swoim posiadaniu mój stary pierścień, który bardzo chętnie bym zobaczyła z powrotem. Powiedziałam: „bardzo chętnie zobaczyła z powrotem”. To była subtelna aluzja. Łapiecie?~
+@8    = ~Zobaczymy, co da się zrobić.~
+/* @9 -> journal entry @1035 */
+@10   = ~Sama załatwiaj swoje sprawy. Nie będę latać na posyłki dla każdego, kogo spotkam na szlaku.~
+/* #15509 */
+@11   = ~Dzięki za piwo, frajerzy.~
+/* #15510 */
+@12   = ~Byliście już we Wrotach? Uważajcie na Gheldehara, jak już tam będziecie....~
+/* #15511 */
+@13   = ~Dziękuję za pomoc! Pozwólcie mi założyć ten pierścionek. Ach, ile to już czasu minęło....~
+/* @14 -> journal entry @1036 */
+/* #15512 */
+@15   = ~Dobra robota. Proszę, weźcie ten w zamian.~
+/* #15513 */
+@16   = ~Bardzo dobrze. Głupie czyny zdradzają głupców.~
+@17   = ~O, znowu w okolicy?~

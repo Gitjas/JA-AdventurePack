@@ -1,0 +1,33 @@
+@29 = ~Gervisse nie żyje, ale tobie też nie ufam. Dla bezpieczeństwa dzieci muszę wyeliminować także ciebie.~ 
+@30 = ~Nie spodziewałam się tu kogoś takiego jak wy. Kolejni intruzi, którzy zagrażają dziewczynkom?~
+@31 = ~Skończ z tą maskaradą! Gervisse wszystko mi wyśpiewał. Nie pozwolę ci porwać tych bliźniaczek!~
+@32 = ~Gervisse już mi o tobie opowiedział, ale najpierw chcę wysłuchać, co ty masz do powiedzenia.~
+@33 = ~Zamknij się i giń!~
+@34 = ~Nie chcę się w to mieszać. Zostawiam was, żebyście sami załatwili tę sprawę.~
+@35 = ~Porwać? Powiedział ci, że chcę je porwać? Naprawdę nie widzisz, co ten stary oblech chce zrobić z tymi dziećmi?~
+@36 = ~Daruj sobie te gadki! Wierzę Gervisse'owi, a ty zaraz zginiesz!~
+@37 = ~Dobra, niech będzie. Mów, co masz do powiedzenia.~
+@38 = ~Gervisse to stary zboczeniec. Wielokrotnie widziałam, jak po nocach zagląda ludziom przez okna.~
+@39 = ~Ostatnio kręcił się pod oknem tych dziewczynek. Nawet nie chcę myśleć, co on tam knuje, ale zapewniam cię, że to on jest dla nich zagrożeniem!~
+@40 = ~Sprawiasz wrażenie uczciwej. Porozmawiam z Gervisse'em.~
+@41 = ~Najważniejsze, żeby dziewczynkom nic się nie stało. Skoro nie mam pewności, które z was jest groźniejsze, będę musiał zabić was oboje.~ ~Najważniejsze, żeby dziewczynkom nic się nie stało. Skoro nie mam pewności, które z was jest groźniejsze, będę musiała zabić was oboje.~
+@42 = ~I słusznie, tylko uważaj na siebie. Nie wiem, na co właściwie go stać, więc lepiej przygotuj się do walki!~ ~I słusznie, tylko uważaj na siebie. Nie wiem, na co właściwie go stać, więc lepiej przygotuj się do walki!~
+/* @43 -> journal entry @1043 */
+@44 = ~W takim razie jesteś takim samym łajdakiem jak on. Wynoś się stąd!~ ~W takim razie jesteś taką samą łajdaczką jak on. Wynoś się stąd!~
+// @45 = ~Laerta i Louise
+
+// Nie mieliśmy zamiaru ingerować w spór między Gervisse'em a Voltine. Którekolwiek z nich, a może oboje, stanowi prawdziwe zagrożenie dla bliźniaczek Laerty i Louise, będą musiały same się z tym zmierzyć. Przy odrobinie szczęścia bogowie dopilnują, aby w nadchodzącym pojedynku wymierzona została należna sprawiedliwość.~
+@46 = ~To ty! Znalazłeś już Gervisse'a? Ten typ knuje coś niedobrego i nie spocznie, dopóki nie dobierze się do tych dzieci!~ ~To ty! Znalazłaś już Gervisse'a? Ten typ knuje coś niedobrego i nie spocznie, dopóki nie dobierze się do tych dzieci!~
+@47 = ~Wróciłeś. Udało ci się powstrzymać Gervisse'a?~ ~Wróciłaś. Udało ci się powstrzymać Gervisse'a?~
+@48 = ~Jeszcze nie, ale zajmę się tym.~
+@49 = ~Ufam Gervisse'owi bardziej niż tobie, Voltine. Zamierzam raz na zawsze skończyć z twoimi mrocznymi planami!~
+// @50 = ~Gervisse nie żyje, ale tobie też nie ufam. Zabiję cię, by mieć pewność, że dziewczynki będą bezpieczne.~
+@51 = ~Pospiesz się! Dzieci nie będą bezpieczne, dopóki ten człowiek kręci się w pobliżu.~
+// @52 = ~Zatem poczujesz gniew Voltine!~
+// @86 = ~Dziękuję, Voltine. Żegnaj.~
+/* new for v0.7 */
+@88 = ~Zabiłeś Gervisse'a, prawda?~ ~Zabiłaś Gervisse'a, prawda?~
+@89 = ~Tak, już po wszystkim.~
+@90 = ~Oszalałeś?! Nie pozwolę ci zabić druidki tylko dlatego, że uwierzyłeś na słowo jakiemuś marnemu magowi!~ ~Oszalałaś?! Nie pozwolę ci zabić druidki tylko dlatego, że uwierzyłaś na słowo jakiemuś marnemu magowi!~
+@91 = ~Co tu się dzieje?~
+@92 = ~Nie chcę się w to mieszać.~

@@ -1,0 +1,55 @@
+/* #4730 */
+@0  = ~Na pomoc! Musicie mi pomóc, błagam. Straciłem... dużo krwi.~
+/* #4731 */
+@1  = ~Co tu się stało? Kto ci to zrobił?~
+/* #4732 */
+@2  = ~Odczep się, zdechlaku.~
+/* #4733 */
+@3  = ~Nie możecie mnie zostawić, żebym umarł. *szlocha*~
+/* #4734 */
+@4  = ~Bandyci! Bandyci na Nadbrzeżnym Trakcie. Zaatakowali moją karawanę... Nikt nie przeżył... Moja biedna Shelley. *szlocha* Jestem taki słaby, jest mi coraz... zimniej.~
+@5    = ~Proszę, wypij tę miksturę.~
+@6    = ~Mam eliksir uzdrawiający, to ci pomoże.~
+@7    = ~Masz, zjedz te dobre jagody.~
+@8    = ~Zobaczymy, co mogę dla ciebie zrobić. Nie ruszaj się.~
+@9    = ~Jesteś już jedną nogą w grobie, nic dla ciebie nie zrobimy.~
+// @10 = ~Atak na karawanę
+
+// Na Nadbrzeżnym Trakcie została zaatakowana i splądrowana przez bandytów karawana. Wszyscy pasażerowie zginęli lub zostali porwani. Jeden z kupców, kiedy go znaleźliśmy, jeszcze żył, ale prawdopodobnie nie ma dla niego nadziei. Być może powinniśmy skrócić jego agonię, nim zajmą się nim dzikie zwierzęta?~
+/* #4735 */
+@11 = ~Jestem ocalony! Niech bogowie błogosławią wasze dusze. Jak wam się teraz odwdzięczę?~
+/* #4737 */
+@12 = ~Możesz nam dać pieniądze. Im więcej, tym lepiej.~
+@13 = ~Atak na karawanę
+
+Udało nam się uratować jedną z ofiar napadu na karawanę na drodze wzdłuż Wybrzeża. Kupiec był bliski śmierci, gdy go znaleźliśmy. Niestety bandyci zabrali mu całe złoto, więc za nasz dobry uczynek nie otrzymaliśmy żadnej nagrody.~
+/* #4738 */
+@14 = ~Możesz nam rzec coś więcej o tych bandytach, o których mówiłeś.~
+@15 = ~Atak na karawanę
+
+Udało nam się uratować jedną z ofiar napadu na karawanę na drodze wzdłuż Wybrzeża. Kupiec był bliski śmierci, gdy go znaleźliśmy. Można powiedzieć, że pojawiliśmy się w samą porę.~
+/* #4739 */
+@16 = ~Nie, ale dzięki za propozycję.~
+/* #4740 */
+@17 = ~Nie sądzę, byś mógł coś dla nas zrobić. Jesteśmy potężnymi poszukiwaczami przygód, ty zaś jesteś tylko miernym kmiotkiem.~
+@18 = ~Atak na karawanę
+
+Udało nam się uratować jedną z ofiar napadu na karawanę na drodze wzdłuż Wybrzeża. Kupiec był bliski śmierci, gdy go znaleźliśmy. Trzeba jednak przyznać, że jego wdzięczność była, oględnie mówiąc, dość skromna.~
+/* #4741 */
+@19 = ~Nie mam żadnych pieniędzy. Przy... przykro mi, ale muszę już iść.~
+/* #4742 */
+@20 = ~A niech to! Po co się od razu obrażać. Bardzo przepraszam, że zająłem wam chwilkę waszego cennego czasu!~
+/* #4743 */
+@21 = ~Nie dużo wiem o tych bandytach. Pojawili się nie wiadomo skąd. Hobgobliny i ludzie. Powiedzieli, żebyśmy się poddali i oddali im zapasy żelaza, ale nasz kapitan nie chciał się zgodzić. Co za kretyn! Rzucili się na nas niczym stado krwiożerczych wilków. Ledwie udało mi się ujść z życiem. Tylko tyle pamiętam. Lepiej już pójdę, muszę powiadomić rodziny tych, którzy zginęli.~
+@22   = ~Bandyci!
+
+Po uleczeniu ciężko rannego kupca dowiedzieliśmy się, że bandyci, którzy napadli na jego karawanę, to mieszana grupa ludzi i nieludzi. Wygląda na to, że polowali konkretnie na transporty żelaza.~
+/* #6299 */
+@23   = ~Wiele ostatnio słyszałem. Ciężko zdobyć żelazo, a tu jeszcze ci bandyci i słaba ruda z Nashkel. Szykują się kłopoty w kontaktach pomiędzy Wrotami Baldura a Amn. Nie zdziwiłbym się, gdyby wybuchła tam wojna.~
+@24   = ~Bandyci!
+
+Po uleczeniu rannego handlarza usłyszeliśmy kilka niejasnych informacji o braku żelaza, bandytach i widmie nadchodzącej wojny.~
+/* # 9164 */
+@25   = ~Nie mam do was ani krzty zaufania!~
+@26   = ~Tutaj! Pomóżcie mi... ach, czuję, że słabnę...~
+@27   = ~Niedługo wrócimy z pomocą.~

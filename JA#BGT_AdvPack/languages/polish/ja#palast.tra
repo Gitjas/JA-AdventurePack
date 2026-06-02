@@ -1,0 +1,44 @@
+@0    = ~O, witajcie. Was też zaproszono na to durne przyjęcie? Możecie w to uwierzyć?! Ten zbir Sarevok ma zostać jednym z Wielkich Książąt?! Równie dobrze moglibyśmy oddać miasto w ręce chłopstwa!~
+@1    = ~Hmf, jesteście tu z powodu mianowania książąt? Prawdę mówiąc, wasz wygląd sugeruje co innego. Pewnie należycie do pachołków tego brutala Sarevoka, co?~
+@2    = ~Zgadza się. Wiesz, gdzie go znajdę?~
+@3    = ~Absolutnie nie. Jesteśmy tu, żeby go powstrzymać.~
+@4    = ~Co wiesz o Sarevoku?~
+@5    = ~Nie mam czasu na te bzdury. Bywaj.~
+@6    = ~A skąd mam to wiedzieć?! Mam tylko nadzieję, że zaraz się zjawi i będziemy mieli z głowy tę farsę z głosowaniem.~
+@7    = ~Jeśli jednak trzymacie z nim sztamę, to trzymajcie się z dala od pięter. Moja córka Nila i bez was ma pstro w głowie, a wasze towarzystwo tylko pogorszyłoby sprawę. Ta smarkula i tak sprawia wystarczająco dużo kłopotów!~
+@8    = ~Haha, chcecie głosować przeciwko niemu? Powodzenia! Sarevok zostanie wybrany, albo mi kaktus na dłoni wyrośnie.~
+@9    = ~Co o nim wiem? To zwykły, bezczelny bękart! Wybił się z nizin, więc w waszym towarzystwie pewnie czuje się jak u siebie.~
+@10   = ~Mam nadzieję, że panowie oszczędzą nam tych swoich nudnych wywodów i przejdą prosto do rzeczy.~
+@11   = ~Zostawcie mnie w spokoju! Nudzicie mnie.~
+@12   = ~Tylko nie podsuwajcie Nili kolejnych głupich pomysłów. Dziewczyna i tak nie grzeszy inteligencją. A jej zachowanie... *wzdycha*~
+@13   = ~O, witajcie. Obawiam się, że pomyliliście pokoje. Jesteście w kwaterach pana Sarevoka Ancheva.~
+@14   = ~Gdzie w tej chwili przebywa Sarevok?~
+@15   = ~A ty co tutaj robisz?~
+@16   = ~Dobrze wiedzieć. W takim razie wychodzę.~
+@17   = ~Wyszedł z pałacu, żeby załatwić kilka spraw, ale lada chwila powinien wrócić. Będzie miał przemowę do szlachty zebranej na parterze.~
+@18   = ~Jaką przemowę?~
+@19   = ~JAKĄ PRZEMOWĘ? Doprawdy! Jesteście pewni, że macie prawo tu przebywać? Chcecie mi powiedzieć, że nie słyszeliście o wyborze Sarevoka na nowego Wielkiego Księcia Wrót Baldura?!~
+@20   = ~Ach, tak, TĘ przemowę.. Oczywiście, że o tym wiem.~
+@21   = ~Muszę iść. Bywaj.~
+@22   = ~Tak też myślałem. A teraz wybaczcie, muszę wracać do pracy. Przygotowania do fety nie mogą czekać. Bywajcie i postarajcie się nie nanieść za dużo błota. Wasze buty wyglądają, jakbyście dopiero co wyleźli z kanałów...~
+@23   = ~Bywajcie i nie nanieście za dużo błota. Wasze buty wyglądają, jakbyście przed chwilą wyszli z kanałów...~
+@24   = ~Jestem skarbnikiem pałacu i dbam o to, by możnowładcom niczego nie brakowało. Trwają przygotowania do mianowania Sarevoka i wciąż zostało mnóstwo do zrobienia.~
+@27   = ~Goście nie mają wstępu na piętro. Proszę wrócić na dół.~
+@28   = ~Te pokoje są zarezerwowane dla książąt. Proszę natychmiast wyjść.~
+@29   = ~Nie macie tu nic do roboty. Proszę zejść na parter.~
+@30   = ~Życzę miłego pobytu w Pałacu Książęcym.~
+@31   = ~Tylko proszę bez żadnych ekscesów w tych murach.~
+@32   = ~Nie będziemy tolerować żadnych ekscesów, więc zachowujcie się jak należy.~
+/* #1636 */
+@33   = ~Słyszałem, że Sarevok chce podarować żelazo na potrzeby miasta.~
+/* #1637 */
+@34   = ~W nadchodzących wyborach z pewnością będę głosował na Sarevoka. Może i jest nowy, ale ma dużo do zaoferowania naszemu miastu.~
+/* #1638 */
+@35   = ~Mam nadzieję, że ci szubrawcy, którzy uciekli z Candlekeep, zostaną złapani. Z tego co słyszałem, próbowali wrobić Żelazny Tron w to, co naprawdę zrobili ci z Amn. I pomyśleć, że książę Eltan zaufał amnijskim szpiegom!~
+@36   = ~Ciszej! Zakłócacie ceremonię!~
+@37   = ~Pssssst... Sarevok nie wygląda na kogoś, kto lubi, gdy mu się przerywa!~
+@38   = ~To poważna uroczystość. Proszę o odrobinę ogłady!~
+@39   = ~O Sarevoku krążą najróżniejsze plotki. To, że zostanie nowym Wielkim Księciem, wydaje się już przesądzone, ale prawdziwy niepokój budzi co innego – podobno poważnie myśli o wojnie... przeciwko Amn!~
+@40   = ~Cóż za brak manier! I to przy takiej okazji! Precz stąd, prostaku!~
+@41   = ~Powinniście skupić uwagę na Sarevoku. W końcu to dla niego tu jesteśmy.~
+@42   = ~Coś... coś z tym człowiekiem jest nie tak. Może to tylko moja wyobraźnia, ale bije od niego jakiś niepokój... coś mrocznego.~

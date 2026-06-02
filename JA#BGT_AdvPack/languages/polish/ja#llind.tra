@@ -1,0 +1,28 @@
+/* #14999 */
+@0    = ~Witajcie.~
+@1    = ~Witaj, przyjacielu.~ 
+@2    = ~Ee, czy chcesz powiedzieć nam o czymś konkretnym?~
+/* #15002*/
+@3    = ~Być może wasz łucznik mógłby mi pomóc.~
+@4    = ~Musi tu gdzieś być.~
+/* #15003 */
+@5    = ~Zgubiłem gdzieś tu niedaleko moją szczęśliwą strzałę i nie mogę jej znaleźć.~
+/* #15731 + title */
+@6    = ~Szczęśliwa strzała Llindellyna
+
+Oto my, kolejni niedoświadczeni poszukiwacze przygód, którzy tłuką się po krzaczorach w poszukiwaniu szczęśliwej strzały dla nieznajomego. Nie znaczy to, że nie uważam Lindellyna za bardzo miłego... ale czy nie nastał czas na zabijanie tarrasque'a albo jemu podobnych?~  
+/* #15004 */
+@7    = ~I co tam z moją strzałą?~
+/* #15005 */
+@8    = ~Wielkie dzięki. Proszę, weźcie to w zamian... Udanych łowów.~
+@9    = ~Szczęśliwa strzała Llindellyna
+
+Poszukiwanie strzały Llindellyna było miłą odskocznią od codziennej harówki poszukiwaczy przygód. Ten elf to bez wątpienia jedna z sympatyczniejszych osób, jakie spotkaliśmy w tej dziczy, ale obawiam się, że brutalna rzeczywistość wkrótce znów mu o sobie przypomni.~
+/* #15006 */
+@10   = ~Ja wiem, że to głupie, ale jakoś nie czułem się dobrze bez mojej szczęśliwej strzały. Pozwólcie ofiarować sobie coś w zamian.~
+/* #15007 */
+@11   = ~Moja szczęśliwa strzała! Inne mogą być celniejsze albo bardziej śmiercionośne, ale bez mojej szczęśliwej strzały równie dobrze mógłbym nosić kij, a nie łuk. Proszę, weźcie w zamian kilka wybuchających strzał!~
+/* #15008 */
+@12   = ~Och, to dopiero będzie zabawa.~
+/* #15009 */
+@13   = ~Jak się sprawiły te strzały, które wam dałem?~

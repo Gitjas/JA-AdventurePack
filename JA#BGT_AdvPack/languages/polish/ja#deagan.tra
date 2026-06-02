@@ -1,0 +1,61 @@
+/* unused: Journal entry:
+Zauroczyliśmy Deagana i dowiedzieliśmy się, że są jakieś poważne kłopoty w siedzibie Ligi Kupieckiej.
+(StrRef: 6580)*/
+
+/* #3684 */
+@0    = ~Jestem Deagan, sługa Aldetha Sashenstara. Ostatnio Liga Kupiecka, którą zarządza mój pan, miała pewne problemy. Dlatego też polecił mi, żebym znalazł grupę najemników, którzy by nam pomogli. Nie mam nic więcej do dodania, chyba, że chcecie usłyszeć o problemach z moją żoną. Nie? To dobrze.~
+/* #1262 */
+@1    = ~Czy mogę zająć wam chwilkę?~
+/* #1269 */
+@2    = ~Nie, precz mi z oczu.~
+/* #1270 */
+@3    = ~Czego chcesz?~
+/* #1263 */
+@4    = ~Nie musicie być tacy niegrzeczni.~
+/* #1264 */
+@5    = ~Słyszałem, że koło miasta pojawiła się nowa grupa najemników. Czy to o was mówią?~
+/* #1271 */
+@6    = ~Źle trafiłeś... My musimy iść swoją drogą.~
+/* #1272 */
+@7    = ~A jaki masz w tym interes?~
+/* #1265 */
+@8    = ~Zanim przejdziemy do rzeczy, chyba powinienem się przedstawić. Jestem Deagan, pracownik Ligi Kupieckiej. Mój pan, jeden z właścicieli, potrzebuje usług kogoś takiego jak wy. Już za samą rozmowę zapłaciłby każdemu po pięć sztuk złota. Co wy na to?~
+/* #1273 */
+@9    = ~Odpowiedź brzmi „nie”.~
+/* #1274 */
+@10   = ~Darmowa gotówka... czemu nie?~
+/* #1266 */
+@11   = ~Jeżeli bylibyście na tyle uprzejmi, żeby iść za mną, to zaraz was do niego zaprowadzę. Chce się z wami spotkać w gospodzie „Pod Trzema Baryłkami”.~
+/* #6579 */
+@12   = ~Pan Deagana
+
+Zgodziliśmy się podążyć za mężczyzną o imieniu Deagan, żeby spotkać się z jego mistrzem, który zatrzymał się w gospodzie „Pod Trzema Baryłkami”.~
+/* #1267 */
+@13   = ~Myślałem, że zgodziliście się pójść. Chyba się teraz nie rozmyśliliście, prawda?~
+/* #1275 */
+@14   = ~Poczekaj, już idziemy!~
+/* #1276 */
+@15   = ~A jednak. Żegnaj.~
+/* #1268 */
+@16   = ~To właśnie jest mój pan, Aldeth Sashenstar.~
+@17   = ~Pan Deagana
+
+Poszliśmy za Deaganem do karczmy „Pod Trzema Baryłkami” i spotkaliśmy się z jego panem. Okazało się, że to nikt inny jak Aldeth Sashenstar, którego poznaliśmy już w Kniei Otulisko.~
+@18 = ~Witajcie! Naprawdę powinniście rozważyć ofertę mojego pana.~
+@19   = ~O, to wy! Witajcie. Udało wam się już pomóc mojemu panu?~
+@20   = ~Jeszcze nie. Co możesz mi powiedzieć o Lidze Kupieckiej?~
+@21   = ~Wciąż nad tym pracujemy. Bywaj.~
+@22   = ~Nie znam szczegółów, ale podobno wspólnik mojego pana ostatnio nieźle nabroił. Marnotrawienie złota i te sprawy. Pan Sashenstar boi się, że jeśli tak dalej pójdzie, Liga Kupiecka może wkrótce zbankrutować.~
+@23   = ~Hej ho! Chwała naszym bohaterom, którzy uratowali nas przed tymi szaroskórymi lustrotwarzymi!~
+@24   = ~Znowu wy. Chcecie odpocząć chwilę od przygód?~
+@25   = ~Ach, jesteście. To ja, Deagan. W końcu! Bałem się, że Płomienna Pięść dorwie was pierwsza. Jesteście w wielkim niebezpieczeństwie, moi przyjaciele.~
+@26   = ~Natychmiast zaprowadzę was do mojego pana, Aldetha Sashenstara. Pilnie potrzebujecie pomocy wpływowych ludzi, a pan Sashenstar ma nadzieję, że zdoła odwdzięczyć się wam za wasze dawne czyny. Chodźcie za mną i śpieszcie się, zaprowadzę was do siedziby Ligi Kupieckiej, gdzie na was czeka.~
+@27   = ~Pomoc dobrego przyjaciela bardzo nam się przyda. Prowadź do Aldetha.~
+@28   = ~Przykro mi, Deaganie. Mamy własne plany i poradzimy sobie sami.~
+@29   = ~Chodźcie więc za mną, bohaterowie.~
+@30   = ~Cała straż miejska i niezliczeni najemnicy siedzą wam na ogonie. Muszę nalegać, byście przyjęli pomocną dłoń mojego pana.~
+@31   = ~Masz rację, Deaganie. Zaprowadź nas do Aldetha.~
+@32   = ~Podjąłem już decyzję. Podziękuj Aldethowi, ale poradzę sobie bez niczyjej pomocy.~ ~Podjęłam już decyzję. Podziękuj Aldethowi, ale poradzę sobie bez niczyjej pomocy.~
+@33   = ~Nie potrzebuję niczyjej pomocy. Zjeżdżaj mi z oczu!~
+@34   = ~W porządku, ale pamiętaj, że cię ostrzegałem. Mam nadzieję, że wiesz, co robisz. Żegnaj.~
+@35   = ~Z chęcią przyjmiemy tę ofertę.~

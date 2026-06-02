@@ -51,6 +51,93 @@ Gewicht: 3~
 @42   = ~Aaah! Die wollen meine Hunde zerfleischen! Hilfe!~
 @43   = ~BG1 Unfinished Business Komponente #21 wird benötigt.~
 
+/////////////////////////////////////////////////////////////
+// extra - untraified string from setup - components, etc. //
+/////////////////////////////////////////////////////////////
+
+@50   = ~Game version not supported!~
+@51   = ~Baldur's Gate Trilogy detected...~
+@52   = ~BG:EE detected...~
+@53   = ~EET detected...~
+@60   = ~This component requires "Krammoch Arkhstaff"~
+@61   = ~This component cannot be installed after "IMPROVED/RESTORED: Ducal Palace"~
+@62   = ~This component cannot be installed after Baldur's Gate Romantic Encounters~
+@63   = ~This component cannot be installed after BG1NPC~
+@64   = ~This component cannot be installed after Sword Coast Stratagems component "Improved doppelgangers"~
+@65   = ~This component cannot be installed after Garrick Tales of a Troubadour~
+@66   = ~This component is not compatible with Ender Sai from Baldur's Gate Romantic Encounters~
+@70   = ~Already restored in BG:EE~
+@71   = ~Svlast, the Fallen Paladin is already restored by Northern Tales of the Sword Coast~
+@72   = ~Svlast, the Fallen Paladin is already restored by BG1 Unfinished Business~
+@73   = ~NimFurlwing is already restored by Northern Tales of the Sword Coast~
+@74   = ~NimFurlwing is already restored by BG1 Unfinished Business~
+@75   = ~Pilar und Gheldehar is already restored by Northern Tales of the Sword Coast~
+@76   = ~Llyndellyn's Lucky Arrow is already restored by Northern Tales of the Sword Coast~
+@77   = ~Mal-Kalen, the Ulcaster Ghost is already restored by BG1 Unfinished Business~
+@78   = ~Keelor & Nasha is already restored by Northern Tales of the Sword Coast~
+@79   = ~Already restored by BG1 Unfinished Business~
+@80   = ~Already restored by BG:EE Classic Movies~
+@81   = ~Already restored by Baldur's Gate: Enhanced Edition Trilogy (EET)~
+@90   = ~Baldurs Gate Graphical Overhaul (BGGO) is a superset of this component~
+@101  = ~Extended Law System~
+@102  = ~Ramazith~
+@103  = ~Jopi and his uncle Ragefast~
+@104  = ~Yuxi - Ragefast's imp~
+@105  = ~Husam's story line finished~
+@106  = ~IMPROVED/RESTORED: Ducal Palace~
+@107  = ~Gervisse & Voltine~
+@108  = ~Seven Suns~
+@109  = ~Krammoch Arkhstaff~
+@110  = ~Iron Throne guard~
+@111  = ~RESTORED: Palin - Aldeth's hunter comrade~
+@112  = ~RESTORED: Svlast - the fallen Paladin~
+@113  = ~RESTORED: Nashkel Garrison soldier~
+@114  = ~RESTORED: Velvet - Cockfight~
+@115  = ~RESTORED: Nim Furlwing~
+@116  = ~RESTORED: Caravan merchant~
+@117  = ~RESTORED: Galtoth - the fence~
+@118  = ~Phandalyn waits in Elfsong Tavern~
+@119  = ~RESTORED: Suthie & Sthief at Silence's Store~
+@120  = ~RESTORED: Warehouse Workers~
+@121  = ~RESTORED: Townspeople dialogues~
+@122  = ~RESTORED: Yago's guard in Low Lantern~
+@123  = ~RESTORED: Ignatio Phleed - the invitation seller~
+@124  = ~RESTORED: Shalasin~
+@125  = ~RESTORED: Sir Artolas~
+@126  = ~RESTORED: Pilar & Gheldehar~
+@127  = ~RESTORED: Llindellyn - the archer~
+@128  = ~RESTORED: Mal-Kalen - Ulcaster's Adept~
+@129  = ~RESTORED: Keelor & Nasha~
+@130  = ~RESTORED: Marl - Tavern brawl at Feldepost's Inn~
+@131  = ~RESTORED: Beregost guards~
+@132  = ~RESTORED ITEM: Rythe's Last Arrow~
+@133  = ~RESTORED ITEM: The Protector of the Unworthy~
+@134  = ~IMPROVED/FIXED: Counting House~
+@135  = ~Merchants' League investigations~
+@136  = ~Aldeth & Seniyad~
+@137  = ~Aldeth's Sellout~
+@138  = ~Tenya and the fishermen~
+@139  = ~Tenya's quest in Temple of Umberlee~
+@140  = ~Nashkel changes~
+@141  = ~Stationary soldiers in Nashkel~
+@142  = ~Imoen at Winthrop's Inn~
+@143  = ~Priest of Oghma, Gond and Ilmater in Baldur's Gate~
+@144  = ~Extended/Improved dialogues~
+@145  = ~Caldo can be charmed~
+@146  = ~Hulrik and his cows~
+@147  = ~Improved Shop of Silence~
+@148  = ~Ender Sai in Baldur's Gate~
+@149  = ~Sorcerous Sundries~
+@150  = ~RESTORED: Elfsong Tavern Movie~
+@151  = ~Mini-Quest "The mystery of the silent ghostly voice"~
+@152  = ~Unusual keg in Elfsong Tavern~
+@153  = ~Black Alaric's Cave~
+@154  = ~RESTORED: Cloakwood druid~
+@155  = ~Extended meeting between Xzar and Niemain~
+@200  = ~Graphical improvements: Animated torches and candles~
+@201  = ~Backdoor to Gellana's temple~
+@202  = ~Backdoor to Waterqueen's House~
+
 @1000   = ~Das Rätsel um die verstummte Geisterstimme
 
 Das berühmte nächtliche Geisterlied in der Taverne Elfgesang ist seit einiger Zeit verstummt. Ich habe der Inhaberin „Lady“ Alyth Elendara angeboten, nach Hinweisen zu suchen, um der Sache auf den Grund zu gehen. Vielleicht wissen einige Gäste des Elfgesangs mehr und können etwas Licht in das Dunkel bringen. Im Moment stehe ich jedenfalls noch ohne jeden Anhaltspunkt da.~
@@ -389,3 +476,9 @@ In seltenen Fällen wendet sich der Meeresdiener gegen seinen Meister.~
 
 @2124 = ~Priester des Oghma~
 @2125 = ~Priesterin des Ilmater~
+
+/* new CRE names */
+@2130 = ~Lacedon~
+@2131 = ~Lacedon~
+@2132 = ~Sahuagin~
+@2133 = ~Sahuagin~

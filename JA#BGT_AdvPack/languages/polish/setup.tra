@@ -1,0 +1,546 @@
+@1    = ~Dom Voltine~
+@2    = ~Świątynia Oghmy~
+@3    = ~Kaplica Cierpienia~
+@4    = ~Mongo~
+@5    = ~Świątynia Maski~
+@6    = ~Saznar Vron~
+@7    = ~Czerwony mag z Thay~
+@8    = ~Velara~
+@9    = ~Gnomka~
+@10   = ~Naiduja~
+@12   = ~Wymagany jest komponent nr 19 modyfikacji BG1 Unfinished Business.~
+@13   = ~Harfa Vaalahora~
+@14   = ~To harfa Vaalahora, maga, który próbował uwięzić w tym instrumencie głos zjawy z tawerny „Elfia Pieśń”. Wygląda jednak na to, że mu się nie udało, ponieważ harfa milczy.~
+@15   = ~Była to harfa Vaalahora, maga, który próbował ukraść pieśń zjawy z tawerny „Elfia Pieśń”. Właścicielka Alyth Elendara podarowała ci ten instrument, gdy udało ci się rozwiązać tę sprawę. Wcześniej poprosiła zaprzyjaźnionego maga o jego zaklęcie, dzięki czemu przez tę niegdyś zniszczoną harfę przepływają teraz magiczne moce.
+
+PARAMETRY:
+
+Właściwości ładunków:
+– Zauroczenie osoby, trzy razy dziennie (rzut obronny przeciw czarom neguje)
+Zasięg: 8 metrów
+Czas działania: 5 rund
+Obszar działania: 1 istota
+
+Waga: 3~
+@16   = ~Bartley~
+@17   = ~„Lady” Alyth Elendara~
+/* @18   = ~"Lady" Alyth Elendara~ */
+/* @19   = ~Łotrzyk~ */
+@20   = ~Gość~
+@21   = ~Brulgon Wodorzygacz~
+/* @22   = ~Krasnolud~ */
+@23   = ~Nathan~
+@24   = ~Wilyn~
+@25   = ~Vaalahor~
+@26   = ~Zjawa elfiej damy~
+@27   = ~Bekki~
+@28   = ~Dziewka z gospody~
+@29   = ~Beczka~
+@30   = ~Złodziejka~
+@31   = ~Niziołka~
+@32 = ~Wypchana głowa obserwatora. Trofeum wciąż budzi grozę, mimo że jest jest mocno zakurzone.~
+@33 = ~Jaskinia Czarnego Alaryka~
+@34 = ~Szkielet pirata~
+@35 = ~Czerwony Beric~
+@36 = ~Widmowa postać~
+@37   = ~Wymagany jest komponent nr 0 modyfikacji Infinity Animations.~
+/* @38   = ~Wymagany jest komponent nr 0 modyfikacji BG2 Fixpack.~ */
+@39 = ~Próbujesz okraść MNIE?! Rozum ci odjęło! Zjeżdżaj stąd, póki możesz!~
+@40 = ~Dom Krammocha Arkhstaffa~
+@41 = ~Dość tego węszenia, kupo mięsa. Nadchodzi twój koniec!~
+@42 = ~Aaaa! One chcą pożreć moje psy! Ratunku!~
+@43 = ~Wymagany jest komponent nr 21 modyfikacji BG1 Unfinished Business.~
+
+@50   = ~Wersja gry nie jest wspierana!~
+@51   = ~Wykryto Baldur's Gate Trilogy...~
+@52   = ~Wykryto BG I EE...~
+@53   = ~Wykryto Enhanced Edition Trilogy...~
+@60   = ~Ten komponent wymaga "Krammocha Arkhstaffa"~
+@61   = ~Ten komponent nie moze byc zainstalowany po "Palacu Ksiazecym"~
+@62   = ~Ten komponent nie moze byc zainstalowany po Baldur's Gate Romantic Encounters~
+@63   = ~Ten komponent nie moze byc zainstalowany po BG1NPC~
+@64   = ~Ten komponent nie moze byc zainstalowany po komponencie "Ulepszeni zmiennoksztaltni" modyfikacji Sword Coast Stratagems~
+@65   = ~Ten komponent nie moze byc zainstalowany po Garrick Tales of a Troubadour~
+@66   = ~Ten komponent nie jest kompatybilny z Enderem Sai z Baldur's Gate Romantic Encounters~
+@70   = ~Przywrocono juz w BG I EE~
+@71   = ~Svlast, upadly paladyn zostal juz przywrocony w Northern Tales of the Sword Coast~
+@72   = ~Svlast, upadly paladyn zostal juz przywrocony w BG1 Unfinished Business~
+@73   = ~Nim Furlwing zostal juz przywrocony w Northern Tales of the Sword Coast~
+@74   = ~Nim Furlwing zostal juz przywrocony w BG1 Unfinished Business~
+@75   = ~Pilar i Gheldehar zostali juz przywroceni w Northern Tales of the Sword Coast~
+@76   = ~Szczesliwa strzala Llindellyna zostala juz przywrocona w Northern Tales of the Sword Coast~
+@77   = ~Mal-Kalen, duch z Ulcastera zostal juz przywrocony w BG1 Unfinished Business~
+@78   = ~Keelor & Nasha zostali juz przywroceni w Northern Tales of the Sword Coast~
+@79   = ~Przywrocono juz w BG1 Unfinished Business~
+@80   = ~Przywrocono juz w BG:EE Classic Movies~
+@81   = ~Przywrocono juz w Baldur's Gate: Enhanced Edition Trilogy (EET)~
+@90   = ~Baldurs Gate Graphical Overhaul (BGGO) to mod przewodni tego komponentu~
+@101  = ~Jarl's Adventure Pack: Rozszerzony system prawa~
+@102  = ~Jarl's Adventure Pack: Ramazith~
+@103  = ~Jarl's Adventure Pack: Jopi i jego wuj Ragefast~
+@104  = ~Jarl's Adventure Pack: Yuxi – imp Ragefasta~
+@105  = ~Jarl's Adventure Pack: Zakonczona historia Husama~
+@106  = ~Jarl's Adventure Pack: Palac Ksiazecy~
+@107  = ~Jarl's Adventure Pack: Gervisse & Voltine~
+@108  = ~Jarl's Adventure Pack: Siedem Slonc~
+@109  = ~Jarl's Adventure Pack: Krammoch Arkhstaff~
+@110  = ~Jarl's Adventure Pack: Straz Zelaznego Tronu~
+@111  = ~Jarl's Adventure Pack: Palin – towarzysz lowow Aldetha~
+@112  = ~Jarl's Adventure Pack: Svlast – upadly paladyn~
+@113  = ~Jarl's Adventure Pack: Zolnierz garnizonu w Nashkel~
+@114  = ~Jarl's Adventure Pack: Velvet – walki kogutow~
+@115  = ~Jarl's Adventure Pack: Nim Furlwing~
+@116  = ~Jarl's Adventure Pack: Handlarz karawany~
+@117  = ~Jarl's Adventure Pack: Galtoth – paser~
+@118  = ~Jarl's Adventure Pack: Phandalyn czeka w Elfiej Piesni~
+@119  = ~Jarl's Adventure Pack: Suthie & Sthief w sklepie Ciszy~
+@120  = ~Jarl's Adventure Pack: Pracownicy magazynu~
+@121  = ~Jarl's Adventure Pack: Dialogi miejscowych~
+@122  = ~Jarl's Adventure Pack: Straz Yago w Pochylej Latarni~
+@123  = ~Jarl's Adventure Pack: Ignatio Phleed – sprzedawca zaproszen~
+@124  = ~Jarl's Adventure Pack: Shalasin~
+@125  = ~Jarl's Adventure Pack: Sir Artolas~
+@126  = ~Jarl's Adventure Pack: Pilar & Gheldehar~
+@127  = ~Jarl's Adventure Pack: Llindellyn – lucznik~
+@128  = ~Jarl's Adventure Pack: Mal-Kalen – adept Ulcastera~
+@129  = ~Jarl's Adventure Pack: Keelor & Nasha~
+@130  = ~Jarl's Adventure Pack: Marl – pieniacz w Gospodzie Feldeposta~
+@131  = ~Jarl's Adventure Pack: Straznicy Beregostu~
+@132  = ~Jarl's Adventure Pack: Ostatnia strzala Rythe'a~
+@133  = ~Jarl's Adventure Pack: Obronca niegodnych~
+@134  = ~Jarl's Adventure Pack: Dom Rozliczeniowy~
+@135  = ~Jarl's Adventure Pack: Sledztwo w Lidze Kupieckiej~
+@136  = ~Jarl's Adventure Pack: Aldeth & Seniyad~
+@137  = ~Jarl's Adventure Pack: Wyprzedaz Aldetha~
+@138  = ~Jarl's Adventure Pack: Tenya i rybacy~
+@139  = ~Jarl's Adventure Pack: Zadanie Tenyi w swiatyni Umberlee~
+@140  = ~Jarl's Adventure Pack: Zmiany w Nashkel~
+@141  = ~Jarl's Adventure Pack: Zawodowy zolnierz w Nashkel~
+@142  = ~Jarl's Adventure Pack: Imoen w Gospodzie Winthropa~
+@143  = ~Jarl's Adventure Pack: Kaplan Oghmy, Gonda i Ilmatera we Wrotach Baldura~
+@144  = ~Jarl's Adventure Pack: Rozszerzone/ulepszone dialogi~
+@145  = ~Jarl's Adventure Pack: Caldo moze zostac zauroczony~
+@146  = ~Jarl's Adventure Pack: Hulrik i jego krowy~
+@147  = ~Jarl's Adventure Pack: Ulepszony sklep Ciszy~
+@148  = ~Jarl's Adventure Pack: Ender Sai we Wrotach Baldura~
+@149  = ~Jarl's Adventure Pack: Czarodziejskie Rozmaitosci~
+@150  = ~Jarl's Adventure Pack: Film z Elfiej Piesni~
+@151  = ~Jarl's Adventure Pack: Minizadanie "Tajemnica cichego widmowego glosu"~
+@152  = ~Jarl's Adventure Pack: Niezwykla beczka w Elfiej Piesni~
+@153  = ~Jarl's Adventure Pack: Jakinia Czarnego Alarica~
+@154  = ~Jarl's Adventure Pack: Driady z Otuliska~
+@155  = ~Jarl's Adventure Pack: Rozszerzone spotkania miedzy Xzarem i Niemainem~
+@200  = ~Ulepszenia graficzne: ożywione świece i latarnie~
+@201  = ~Jarl's Adventure Pack: Zaplecze swiatyni siostry Gellany~
+@202  = ~Jarl's Adventure Pack: Zaplecze Domu Krolowej Wod~
+
+@1000 = ~Tajemnica zamilkłej pieśni
+
+Słynna pieśń zjawy, którą co noc można było usłyszeć w tawernie „Elfia Pieśń”, od pewnego czasu nie wybrzmiewa. Zaoferowaliśmy właścicielce, „Lady” Alyth Elendarze, pomoc w znalezieniu poszlak i wyjaśnieniu, co właściwie się stało. Być może któryś z gości wie coś więcej i rzuci nowe światło na tę sprawę. Na razie nie mam jednak żadnych śladów.~ 
+
+@1001 = ~Tajemnica zamilkłej pieśni
+
+Żaden z gości nie potrafił mi powiedzieć nic konkretnego o nagłym zniknięciu głosu zjawy. Dowiedzieliśmy się jednak, że poprzedni właściciel „Elfiej Pieśni” wykazywał szczególne zainteresowanie śpiewającą damą. Może to jakaś wskazówka.~ 
+
+@1002 = ~Tajemnica zamilkłej pieśni
+
+Nathan wyjawił mi za niewielką opłatą, że stary Wilyn mieszka teraz w małym domku na północ od wielkiej wieży, po wschodniej stronie wejścia do portu, tuż obok małej karczmy.~
+
+@1003 = ~Tajemnica zamilkłej pieśni
+
+Rozmawialiśmy z Wilynem. Okazało się, że nie ma on nic wspólnego ze zniknięciem pieśni z tawerny. Wspomniał jednak o pewnym znamienitym gościu, który posiadał starą, niezdatną do użytku harfę o trzech strunach i wpadł w furię, gdy wyrzucono go z lokalu. Nie są to może zbyt obiecujące wieści – w „Elfiej Pieśni” nie brakuje dziwaków – ale spróbuję jeszcze raz rozpytać gości. Może coś mi umknęło.~ 
+
+@1004 = ~Tajemnica zamilkłej pieśni
+
+Bekki, służka z „Elfiej Pieśni”, zdradziła mi imię maga z dziwną harfą – to Vaalahor. Podobno nie zrobił nic podejrzanego, więc te poszukiwania mogą ostatecznie spełznąć na niczym. Szkoda, bardzo chcieliśmy choć raz usłyszeć tę legendarną pieśń.~ 
+
+@1005 = ~Tajemnica zamilkłej pieśni
+
+W „Czarodziejskich Rozmaitościach” spotkaliśmy maga Vaalahora. Wyznał mi, że próbował za pomocą zaklęcia uwięzić głos z „Elfiej Pieśni” w harfie, lecz najwyraźniej coś poszło nie tak. Teraz musimy „tylko” wydostać pieśń z instrumentu i sprawić, by wróciła do tawerny.~ 
+
+@1006 = ~Tajemnica zamilkłej pieśni
+
+Na piętrze „Elfiej Pieśni” ukazała mi się zjawa elfiej damy. Zdawała się przemawiać do utraconego ukochanego i ledwie dostrzegać moją obecność. Wraz z jej zniknięciem zniknęła również harfa Vaalahora – zjawa najwyraźniej zabrała ją ze sobą. Sądzę, że dzięki temu odzyskała swój głos. Pozostaje mi tylko powiadomić Alyth o sukcesie.~
+
+@1008 = ~Atak na karawanę
+
+Na drodze wzdłuż wybrzeża bandyci napadli i złupili karawanę. Wszyscy podróżni zginęli lub zostali uprowadzeni, jednak udało nam się odnaleźć ciężko rannego kupca, który potrzebuje pomocy.~
+
+/* #15713 */
+@1009 =  ~Męki Svlasta
+
+Byliśmy świadkami smutnych wydarzeń w ruinach Firewine. Były paladyn o imieniu Svlast jest prześladowany przez ducha, jego brata w wierze, którego niesprawiedliwie zabił. Nigdy przedtem nie dane mi było widzieć kogoś bardziej przygnębionego i skruszonego niż biedny Svlast. Błagał nas, abyśmy się nie wtrącali, ale trudno było mi się z tym pogodzić...~
+
+@1010 = ~Krammoch Arkhstaff i Żelazny Tron
+
+Obiecaliśmy Krammochowi Arkhstaffowi, że oszczędzę Thaldorna Tenhevicha, który przebywa się w kwaterze głównej Żelaznego Tronu. Wygląda na to, że są ze sobą dość blisko.~ 
+
+@1011 = ~Svlast, upadły paladyn
+
+Nieszczęsny paladyn Svlast nie żyje. Nawet jeśli właśnie takiego końca dla siebie pragnął, jego śmierć napawa mnie smutkiem.~ 
+
+@1012 = ~Choroba księcia Eltana
+
+Jhasso poprosił nas o zbadanie sprawy tajemniczej choroby Wielkiego Księcia Eltana. Obawia się on spisku i sądzi, że może mieć to związek z morderstwem Scara. Zasugerował, abyśmy przeprowadzili śledztwo w „Spłonionej Syrenie”, gdyż tam właśnie mogą znajdować się ślady prowadzące do zabójców Scara.~
+
+@1013 = ~Choroba księcia Eltana
+
+Jhasso wierzy, że sobowtórniaki odpowiedzialne za śmierć Scara stoją również za tajemniczą chorobą Eltana. Powinniśmy niezwłocznie odwiedzić księcia w kwaterze głównej Płomiennej Pięści.~ 
+
+@1014 = ~Choroba księcia Eltana
+
+Jhasso wierzy, że agenci Żelaznego Tronu stoją również za tajemniczą chorobą Eltana. Powinniśmy niezwłocznie odwiedzić księcia w kwaterze głównej Płomiennej Pięści.~ 
+
+@1019 = ~Krammoch Arkhstaff i Żelazny Tron
+
+Krammoch Arkhstaff był niezmiernie rad, że podczas przeszukiwania siedziby Żelaznego Tronu oszczędziliśmy jego drogiego Thaldorna. Zaoferował nam swą pomoc, gdybyśmy tylko znaleźli się w potrzebie. Zastanawiam się jednak, czy Krammoch i Thaldorn nie muszą teraz obawiać się zemsty ze strony pozostałych przywódców organizacji.~ 
+
+@1020 = ~Pewien strażnik w Beregoście wspomniał o nagrodzie w wysokości pięć tysięcy sztuk złota. Nie powiedział jednak, za co można ją otrzymać.~
+
+@1021 = ~Bandyci!
+
+Bandyci grasujący na drodze wzdłuż wybrzeża sieją tam zamęt, lecz bardziej niż złotem zdają się interesować żelazem.~
+
+@1022 = ~Między Wodą a Burzą
+
+Obiecaliśmy Tenyi, dwunastoletniej kapłance Umberlee, że pomszczę śmierć jej matki. Stoi za nią wyznawca Talosa imieniem Storwyn. Mieszka on w pobliżu gospody „Ostrze i Gwiazdy”, lecz jego dni są już policzone...~ 
+
+@1023 = ~Uwiedziony wuj Ragefast
+
+We Wrotach Baldura spotkaliśmy Jopiego, podróżnika z gospody „Pod Pomocną Dłonią”. Martwi się on o swojego wuja, Ragefasta, któremu jakaś młoda dziewczyna najwyraźniej zawróciła w głowie. Podczas moich wędrówek rzadko miewam okazję obcować z prawdziwą miłością, więc ta sprawa może być miłą odmianą od trudów przygody...~ 
+
+@1024 = ~Mocodawcy Xzara
+
+Wygląda na to, że we Wrotach Baldura natknęliśmy się na zleceniodawców Xzara. To agenci Zhentarimów – oni również nienawidzą Żelaznego Tronu, więc mogą być dla nas cennymi sojusznikami. Ich przywódca, Niemain, przebywa w tawernie „Elfia Pieśń”, gdzie oczekuje na wieści od Xzara.~
+
+@1025 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+W siedzibie Ligi Kupieckiej znajdowały się sobowtórniaki! Najwyraźniej partnerzy biznesowi Aldetha, Zorl i Irlentree, zostali zastąpieni przez te zmiennokształtne istoty. To by wyjaśniało ich dziwne zachowanie w ostatnim czasie.~
+
+@1026 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+Kucharz Ligi wyjawił mi, że Zorl i Irlentree od jakiegoś czasu zachowują się nad wyraz osobliwie. Przestali pić, jeść i spać. Ewidentnie dzieje się tu coś bardzo niepokojącego.~ 
+
+@1027 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+Irlentree wrócił z przygotowań do rocznicy Aldetha i poprosił wszystkich gości o przejście na trzecie piętro. Wykorzystując ogólne zamieszanie, spróbuję niepostrzeżenie rozejrzeć się po reszcie budynku.~
+
+@1028 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+Spotkaliśmy Zorla Miyara, wspólnika Aldetha. Dało się odnieść wrażenie, że nie uwierzył w nasze zapewnienia o tym, że jesteśmy przyjaciółmi Aldetha z dzieciństwa. Wygląda na to, że nabrał wobec nas podejrzeń.~ 
+
+@1029 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+Udało mi się zauroczyć Deagana i dowiedzieć, że w szeregach Ligi Kupieckiej panuje wielki niepokój.~ 
+
+@1030 = ~Dochodzenie w siedzibie Ligi Kupieckiej
+
+Dowiedzieliśmy się, że Zorl i Irlentree zachowują się ostatnio osobliwie. Prowadzone przez nich interesy narażają Ligę Kupiecką na straty, zupełnie jakby z rozmysłem działali na jej szkodę..~ 
+
+@1031 = ~Wygląda na to, że głos elfiej zjawy, który przyniósł tawernie „Elfia Pieśń” tak wielką sławę, od pewnego czasu milczy. Nikt zdaje się nie znać przyczyny tego stanu rzeczy. Z tego, co słyszeliśmy, ów śpiew odznacza się nieopisanym pięknem i każdy, kto odważy się przekroczyć próg „Elfiej Pieśni”, powinien poświęcić chwilę, by go wysłuchać. Kto wie, może za kilka dni duch sam z siebie powróci do swej pieśni.~ 
+
+@1032 = ~Problemy Gildii Złodziei
+
+Płomienna Pięść mocno dopiekła ostatnio Gildii Złodziei.~
+
+@1033 = ~Atak na karawanę
+
+Ranny kupiec zmarł. Gdybyśmy tylko pomogli mu wcześniej, pewnie udałoby się go uratować.~ 
+
+/* #26870 */
+@1034 = ~Nie ma winy bez kary
+
+Tajemniczy bard z rasy niziołków, Bellamy, ostrzegł nas, byśmy unikali paladyna, który kręci się na tyłach jednej z portowych tawern Wrót Baldura. Nazywa się on Phandalyn i wydaje się, że już o mnie słyszał.~
+
+/* #15800 + title */
+@1035   = ~Pilar i Gheldehar
+
+Gdy siedzieliśmy przy piwie w gospodzie „Pod Pomocną Dłonią”, półelfka Pilar ostrzegła nas przed Gheldeharem, starym gnomim kapłanem z Wrót Baldura. Powiedziała nam, że ma on jej stary pierścień i gdyby udało nam się go odzyskać, na pewno tego nie pożałujemy.~
+
+@1036 = ~Pilar i Gheldehar
+
+Zwróciliśmy Pilar jej pierścień, odzyskany od gnomiego kapłana, Gheldehara. Wciąż jednak nie rozumiem, co jest przyczyną tak głębokiej wrogości między tą dwójką.~ 
+
+/* #15797 + title */
+@1037    = ~Pilar i Gheldehar
+
+W jednej z uliczek wpadliśmy na nieciekawie wyglądającego gnoma, Gheldehara. Twierdzi on, że jego stara „przyjaciółka” Pilar, która przebywa obecnie w gospodzie „Pod Pomocną Dłonią”, ukradła jego stare buty. Gnom chciałby je odzyskać, a ponieważ zdawał się nie dbać o to, w jaki sposób odzyskamy te buty, określenie „przyjaciółka” było chyba tylko mydleniem oczu.~
+
+@1038    = ~Pilar i Gheldehar
+
+Odzyskaliśmy od Pilar buty gnomiego kapłana Gheldehara. Wątpię jednak, by miało to położyć kres ich osobliwym niesnaskom.~ 
+
+@1039   = ~Badanie kopalni Nashkel
+
+Bardolan z amnijskiej straży w Nashkel nie miał mi nic nowego do powiedzenia w kwestii kłopotów w kopalniach. Miejscowi zdają się wierzyć, że to sprawka jakichś „demonów”.~ 
+
+/* #5810 + title */
+@1040   = ~Historia kapitana Brage'a
+
+Gwardziści w Nashkel nie potrafili odnaleźć oszalałego kapitana Brage'a.~
+
+@1043 = ~Laerta i Louise
+
+Voltine wyjawiła mi prawdziwą naturę Gervisse'a, a w zamian otrzymała obietnicę, że ochronię dziewczynki przed jego zakusami.~ 
+
+@2000 = ~Ostatnia strzała Rhyte'a +2~
+
+@2001 = ~Opowieści o tej broni straciły trochę na ważności wobec ogromnej ilości historii o Wysokim Lesie, ale niektórzy bardowie do dzisiejszego dnia śpiewają pieśń o niezrównanym łuczniku imieniem Adaniss Rhyte.
+
+Ach, pada zwierzyna z ręki Adanissa.
+Trafiona strzałą z łuku potężnego słaną
+Dawno temu, za Ziemi Spokojnej
+W Lesie Wysokim głos rogów słyszano.
+
+Książę Everlund z dumy swej znany,
+z trofeów wspaniałych, którymi zwykł się chlubić,
+Niemało się gniewu nałykał w konkurach
+Z rywalem swym, którego od zawsze chciał zgubić.
+
+Kraina ta jednak tragedii jest świadkiem
+Gdy śmiercią tajemną ogar księcia ginie.
+Pod wielkim wiązem pada zwierz ten
+Ze strzałą w sercu, co z łuku płynie.
+
+Zwierzyna na łasce jego strzał tkwi.
+A ręka ni drgnie przy naciągu
+Niechybna to śmierć gdy on wrogiem twym
+Nikt Adanissa Rhyte nie zrówna się oku.
+
+By błąd swój okropny odkupić.
+O zmroku Adaniss do księcia już śle
+Lecz gniew szlachciury ukoić nie łatwo
+I topór katowski łucznika dłoń tnie.
+
+Zły pan to przekleństwo na ramię pewne zesłał,
+Więc ranny zemsty za cenę ogromną zapragnął
+I Rhyte przyrzekł święcie przed mocą tajemną,
+Że strzała ogara nie będzie ostatnią.
+
+W bólu miasto wykuło więc topór
+Dni chwały łucznikowi przypominający.
+Draśnięte strzałą Rhyte'a jego ostrze
+Wraży szczep jak ona zabijający.
+
+Zwierzyna na łasce jego strzał tkwi.
+A ręka ni drgnie przy naciągu
+Niechybna to śmierć gdy on wrogiem twym
+Nikt Adanissa Rhyte nie zrówna się oku.
+
+I znowu w tych kniejach zwierzynę poszczuto
+A Adaniss cennych nie chybi zaszczytów.
+To sokół a ogrom jego jak wiatr bezkresny
+Mknie po niebie śród Samotnych Szczytów.
+
+I znowu to książę w konkury już gna
+Boć bez Rhyte'a nad niego nie ma łucznika.
+By posiąść trofeum wspaniałe.
+Wzrok swój kieruje na sokolika
+
+Więc obaj na szczyty się wspięli
+Dni wiele bez dechu szukając.
+Lecz los ich złączył na skale wysokiej
+Jadem nienawiści w ich sercach trwając.
+
+Zwierzyna na łasce jego strzał tkwi.
+A ręka ni drgnie przy naciągu
+Niechybna to śmierć gdy on wrogiem twym
+Nikt Adanissa Rhyte nie zrówna się oku.
+
+Książę naciągnął cięciwę na schwał
+Lecz topór Rhyte'a był szybszy od strzały.
+cięty szlachcic spadł w przepaść bez dna
+Z ostatnią strzałą Rhyte'a dni się dokonały...
+
+Zwierzyna na łasce jego strzał tkwi.
+A ręka ni drgnie przy naciągu
+Niechybna to śmierć gdy on wrogiem twym
+Nikt Adanissa Rhyte nie zrówna się oku.
+Nikt Adanissa Rhyte nie zrówna się oku.
+
+PARAMETRY:
+
+Specjalne:
+– Szansa na uzyskanie trafienia krytycznego: +5% (dotyczy tylko tej broni)
+– Po rzucie wraca do właściciela
+
+Obrażenia: 1k6 +3
+TraK0: +2
+Typ obrażeń (walka wręcz): sieczne
+Typ obrażeń (rzucony): pocisk
+Opóźnienie: 2
+Rodzaj biegłości: topór
+Typ broni: 1-ręczna
+
+Wymagania:
+– Siła: 4
+
+Waga: 3~
+
+@2037 = ~Kapitan~
+@2040 = ~Pomniejszy gliniany golem~
+@2042 = ~Yuxi~
+@2044 = ~Skarbnik~
+@2045 = ~Vrok Nelfas~
+@2046 = ~Więzień~
+@2047 = ~Lady Odelia~
+@2048 = ~Kizska~
+@2049 = ~Krammoch Arkhstaff~
+@2050 = ~Klucz Krammocha~
+
+@2051 = ~To klucz otrzymany od Krammocha Arkhstaffa. Dzięki niemu otworzysz tajne wejście do siedziby Żelaznego Tronu.
+
+PARAMETRY:
+
+Waga: 0~
+
+@2052 = ~Pogromca bazyliszków~
+
+@2053 = ~Ten amulet podarował ci Krammoch Arkhstaff, podejrzany kupiec z Wrót Baldura, znany ze swej rozległej wiedzy na temat bazyliszków. Posunął się on w swych badaniach tak daleko, że oswoił kilka tych niebezpiecznych stworzeń i trzymał je w swej miejskiej posiadłości jako osobliwe zwierzęta domowe. Wzburzeni mieszkańcy Wrót Baldura ostatecznie skierowali sprawę do sądu, a Wielcy Książęta zakazali trzymania bazyliszków w obrębie murów miasta.
+
+PARAMETRY:
+
+Specjalne:
+– Odporność na petryfikację
+
+Waga: 1~
+
+@2054 = ~Palin~
+/* @2055 = ~Svlast~ */
+@2056 = ~Velvet~
+@2057 = ~Kogut bojowy~
+/* @2058 = ~Nim Furlwing~ */
+@2059 = ~Pies myśliwski~
+@2060 = ~Galtoth~
+/* @2061 = ~Dieb~ */
+@2062 = ~Pracownicy magazynu~
+/* @2063 = ~Ignatio Phleed~ */
+/* @2064 = ~Shalasin~ */
+@2065 = ~Sir Artolas~
+/* @2066 = ~Gheldehar~ */
+/* @2067 = ~Pilar~ */
+
+@2068 = ~Buty Gheldehara~
+
+@2069 = ~Para znoszonych butów, odebranych na prośbę Gheldehara półelfce imieniem Pilar. Masz jednak spore wątpliwości, czy trud włożony w ich odzyskanie był tego wart.
+
+PARAMETRY:
+
+Waga: 4~ 
+
+@2070 = ~Pierścień Pilar~
+
+@2071 = ~Pierścień półelfki Pilar, który udało ci się „odzyskać” od Gheldehara. To zwyczajna złota obrączka, nieposiadająca żadnych wykrywalnych właściwości specjalnych ani magicznych.
+
+PARAMETRY:
+
+Waga: 0~
+
+@2072 = ~Pierścień sługi Natury~
+
+@2073 = ~Ten zaklęty pierścień pochodzi z kręgu druidów zamieszkujących Wysokie Wrzosowiska. Grupa łupieżców, poszukująca z marnym skutkiem dawno zaginionych skarbów Królestwa Athalantaru, napadła na siedziby druidów i zagrabiła wszelkie kosztowności, by później sprzedać je w okolicach Waterdeep.
+
+PARAMETRY:
+
+Specjalne:
+– Pozwala zapamiętać po jednym dodatkowym zaklęciu druida z poziomów 1-3
+
+Waga: 0~
+
+/* @2074 = ~Llindellyn~ */
+@2075 = ~Strzała Llindellyna~
+
+@2076 = ~To ulubiona strzała Llindellyna, elfiego łucznika, którego spotkaliście w Kniei Otulisko. Nie jest ona ani dobrze wyważona, ani starannie wykonana. Można przypuszczać, że ma dla właściciela wartość sentymentalną, której nie sposób dostrzec na pierwszy rzut oka.
+
+PARAMETRY:
+
+Obrażenia: 1k6 -2
+TraK0: -2
+Typ obrażeń: pocisk
+Wyrzutnia: łuk
+
+Waga: 0~ 
+
+/* @2077 = ~Mal-Kalen~ */
+@2078 = ~Ranny krasnolud~
+/* @2079 = ~Keelor~ */
+/* @2080 = ~Nasha~ */
+
+@2081 = ~Uścisk wojownika~
+@2082 = ~Amulet ten trafił do głębokich podziemi w Grzmiących Wierchach blisko sześćset lat temu. Jego właściciel, przeceniając jego moc, zapuścił się zbyt daleko i przypłacił to życiem. W jaki sposób amulet wydobyto z mrocznych czeluści – tego nie wiadomo, podobnie jak to, kim był człowiek, który go odnalazł.
+
+PARAMETRY:
+
+Specjalne:
+– Klasa Pancerza: +1 (+1 przeciw broniom siecznym)
+– Rzuty obronne: +1
+
+Waga: 1~
+
+@2085 = ~Strażnik~
+
+@2093 = ~Obrońca niegodnych~
+@2094 = ~Reputację tego pasa splamiła ponura sława jego właściciela, lecz mimo to wciąż pozostaje on użytecznym przedmiotem. Morinden zwany Niegodziwym utrzymywał się z ograbiania ciał swych ofiar. Prowokował prawdziwych wojowników do honorowych pojedynków, choć sam niewiele wiedział o honorze. Śmiał się, gdy broń wypadała z rąk jego przeciwników. Ostatecznie jednak zginął z ręki rozgniewanego drwala, który roztropnie porzucił miecz i chwycił potężny pień drzewa.
+
+PARAMETRY:
+
+Specjalne:
+– Klasa Pancerza: +2 przeciw broniom siecznym
+
+Waga: 2~
+
+/* @2098 = ~Deagan~ */
+@2099 = ~Shalak~
+@2100 = ~Jased~
+@2101 = ~Pierścień Aldetha~
+@2102 = ~Pierścień ten należał do Aldetha Sashenstara, wpływowego szlachcica z Wrót Baldura, którego spotkaliście w Kniei Otulisko. Nie jest on jedynie ozdobą – zaklęty wieloma czarami zapewnia noszącemu pełną swobodę ruchów. Dar ten okazywał się niezwykle przydatny podczas łowieckich wypraw Aldetha w dzikie ostępy.
+
+PARAMETRY:
+
+Specjalne:
+– Niewrażliwość na wszelkie efekty wpływające na swobodę ruchów, zarówno magiczne, jak i fizyczne. Dotyczy to czarów i zdolności takich jak: Unieruchomienie osoby, Pajęczyna, Śliskość, Splątanie, Spowolnienie, Paraliż oraz Ogłuszające uderzenie.
+
+Waga: 1~
+
+@2103 = ~Klucz Zorla~
+@2104 = ~Klucz należący do Zorla Miyara, jednego z przywódców Ligi Kupieckiej. Może okazać się przydatny, jeśli zechcemy przejrzeć dobytek Zorla.
+
+Waga: 0~
+
+@2105 = ~Ciało Zorla~
+@2106 = ~Ciało Zorla Miyara, wspólnika Aldetha Sashenstara z Ligi Kupieckiej. Sobowtórniaki najwyraźniej zamordowały go, by przybrać jego postać, a następnie pożreć go podczas sfingowanego przyjęcia jubileuszowego. Prawdopodobnie to samo zamierzały uczynić z tobą i Aldethem.~ 
+
+@2107 = ~Ciało Irlentree~
+@2108 = ~Ciało Irlentree, wspólnika Aldetha Sashenstara z Ligi Kupieckiej. Sobowtórniaki najwyraźniej zamordowały go, by przybrać jego postać, a następnie pożreć go podczas sfingowanego przyjęcia jubileuszowego. Prawdopodobnie to samo zamierzały uczynić z tobą i Aldethem.~ 
+
+@2109 = ~Zorl Miyar~
+@2111 = ~Żywiołak wodopodobny~
+@2112 = ~Misa~
+@2113 = ~Misa głębin~
+@2114 = ~Misa głębin jest artefaktem złowrogiej bogini mórz, Umberlee. Okoliczności powstania tego przedmiotu spowija mrok równie głęboki jak oceaniczne odmęty, z których się wyłonił. Za jego pomocą właściciel może przyzywać istoty głębin – sługi Umberlee, lecz podobnie jak sama Królowa Głębin, misa bywa kapryśna, a niektórzy z jej poprzednich posiadaczy przypłacili to zgubą.
+
+PARAMETRY:
+
+Specjalne:
+– Raz dziennie pozwala przywołać stworzenie z głębin.
+
+W rzadkich przypadkach morski sługa może obrócić się przeciwko swemu panu.~
+
+@2115 = ~Ta kunsztownie wykonana srebrna misa pachnie słoną wodą i wydaje się pochodzić prosto z morza.~
+@2116 = ~Storwyn~
+@2117 = ~Sługa fal~
+@2118 = ~Reis Kensiddar~
+@2119 = ~Północne Światło~
+@2120 = ~Gość~
+
+/* nowe dla v 0.7 */
+@2122 = ~Brązowy kogut bojowy~
+@2123 = ~Biały kogut bojowy~
+@2124 = ~Kapłan Oghmy~
+@2125 = ~Kapłanka Ilmatera~
+
+/* nowe CRE */
+@2130 = ~Lacedon~
+@2131 = ~Lacedon~
+@2132 = ~Sahuagin~
+@2133 = ~Sahuagin~

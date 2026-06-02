@@ -1,0 +1,57 @@
+@0    = ~No dobrze, na mnie już pora.~
+@1    = ~Trzymajcie się cieni! W tym mieście czai się wiele niebezpieczeństw. Zajmijcie się Żelaznym Tronem, a wtedy wiele spraw wyjaśni się samo. Jak już poczynicie jakieś postępy, szukajcie mnie w tawernie „Elfia Pieśń”.~
+@3    = ~Jeśli poczynicie postępy, to przyjdźcie do mnie do tawerny „Elfia Pieśń”.~
+@4    = ~Jak dowiecie się czegoś więcej, to znajdźcie mnie w tawernie „Elfia Pieśń”.~
+@5    = ~No proszę, a kogo my tu mamy? Wygląda na to, że jakieś wścibskie nosy węszą w naszych sprawach! I to wścibskie nosy najgorszego sortu, jak mi się zdaje!~
+@6    = ~Przeklęty harfiarski pomiot! Dlaczego zawsze musicie wtykać nos w nie swoje sprawy, co?! Oduczę was tego! Dalej, chłopaki, pokazać im!~
+@7    = ~Nie, tylko nie wy! Znowu będziecie nam zawracać głowę i odciągać od naszych obowiązków, bo nic nie rozumiecie?~
+@8    = ~O jakich konkretnie obowiązkach mowa?~
+@9    = ~Patrząc na was, trudno uwierzyć, by były to uczciwe zajęcia... Doprawdy, przypominacie mi bandę włóczęgów, z którymi niedawno miałem do czynienia.~ ~Patrząc na was, trudno uwierzyć, by były to uczciwe zajęcia... Doprawdy, przypominacie mi bandę włóczęgów, z którymi niedawno miałam do czynienia.~ 
+@10   = ~Nie, przepraszamy. Już nas nie nie ma.~
+@11   = ~To nie wasz interes. Słuchajcie, wiemy, że jesteście ważnym elementem tej układanki. Choć wszystkim nam nie po drodze z Żelaznym Tronem, to wcale nie czyni nas to przyjaciółmi. Trzymajcie się z dala.~
+@12   = ~Doprawdy? Wy również interesujecie się intrygami Żelaznego Tronu?~
+@13   = ~Skąd wiecie o mojej roli w tej grze?~
+@14   = ~No cóż. Żegnajcie.~
+@15   = ~Pożałujecie tego! Zaznacie bólu, o jakim wam się nie śniło! Dalej, zetrzyjcie im te głupie uśmieszki z gęb!~
+@16   = ~Ciszej! To nie są tematy do publicznych dyskusji. Sprawdźcie wieżę Żelaznego Tronu w zachodniej części miasta. To wszystko, co mogę wam na razie powiedzieć.~
+@17   = ~Cóż, mam swoje źródła i doskonale znam wasze dokonania. Możecie się nam faktycznie przydać. Sprawdźcie wieżę Żelaznego Tronu w zachodniej części miasta. Nic więcej wam nie powiem.~
+@18   = ~Trzymajcie się z daleka. Wasza obecność sprowadza na nas wszystkich niebezpieczeństwo.~
+@19   = ~Stul pysk, harfiarska suko! Daruj sobie te moralizatorskie bzdury i szykuj się na śmierć!~
+@20   = ~Xzar nie żyje? To fatalnie! Bardzo źle to wróży naszym planom. Wydarzenia we Wrotach Baldura wymykają się spod kontroli... będziemy musieli pomyśleć, co z tym fantem zrobić.~
+@21   = ~Życzę wam powodzenia w walce z Żelaznym Tronem. To jedyne, czego możecie się spodziewać z mojej strony.~
+@22   = ~Xzar faktycznie dobrał sobie mizerne towarzystwo. To do niego niepodobne...~
+@23   = ~Co robi tutaj grupa wszego pokroju?~
+@24   = ~A, oto i wy. Sprawdziliście wieżę Żelaznego Tronu?~
+@25   = ~Tak, zbadaliśmy wieżę i odkryliśmy, że za wszystkim stoją ich przywódcy, Rieltar i Bruno. Obecnie przebywają w Candlekeep, więc to tam muszę się teraz udać.~
+@26   = ~Nie, wciąż nic nowego. Bywajcie.~ 
+@27   = ~Jesteś tylko pyskatą, intrygancką suką! I jak to u waszych bywa, nie masz bladego pojęcia o tym, co tu się naprawdę święci.~
+@28   = ~Dowiedziałeś się czegoś nowego, <CHARNAME>?~ ~Dowiedziałaś się czegoś nowego, <CHARNAME>?~
+@29   = ~Wyświadczyliście mi nieocenioną przysługę, kiedy uderzyliście w kwaterę główną Żelaznego Tronu. Sami nie mogliśmy tego zrobić. W mieście już i tak sądzą, że to my stoimy za tym chaosem. Nie możemy się teraz wychylać.~
+@30   = ~Ruszaj do Candlekeep i dowiedz się, co planują Rieltar i Bruno. Powodzenia, przyda ci się!~
+@31   = ~Mocodawcy Xzara
+
+Złożyliśmy raport przełożonemu Xzara, Niemainowi, przedstawiając szczegółowo wydarzenia, do których doszło w wieży Żelaznego Tronu. Przyjął nasze wyjaśnienia z wdzięcznością, doceniając wysiłek włożony w zdobycie dowodów. Dzięki nim Zhentarimowie zostali oczyszczeni z zarzutów o wywołanie zamieszek na Wybrzeżu Mieczy.~
+@32   = ~Ha! Wiedziałam, że macie z tym coś wspólnego. Jesteście jak rak, który toczy ten świat!~
+@33   = ~To, kogo lub co można uznać za „mizerne towarzystwo”, zależy od punktu widzenia.~
+@34   = ~Jestem tu, by sprawdzić, czy ludzie waszego pokroju mają coś wspólnego z kryzysem żelaza i widmem wojny. Zawsze podejrzewaliśmy Czarną Sieć...~
+@35   = ~Cóż, to się jeszcze okaże...~
+@36   = ~Jajko czy kura... <CHARNAME>, rozumiesz już?~
+@37   = ~Ha! Ten stuknięty mag w końcu wpadł i krztusi się własną krwią! Niech wilki ucztują na jego truchle!~
+@38   = ~Xzar był niezwykle użytecznym narzędziem. Miał w sobie więcej potencjału, niż mogłoby się wydawać na pierwszy rzut oka.~
+@39   = ~Jakkolwiek by nie było, nie będziemy tęsknić za tym jego szaleńczym bełkotem!~
+@40   = ~Efekt jest taki, Montaronie, że TY nie jesteś nam już potrzebny. Zimnokrwistego mordercę można wynająć w każdej portowej tawernie, podczas gdy Xzar był kluczowy dla naszych planów.~
+@41   = ~Taa! Idźcie już sobie, zmykajcie i chowajcie się w tych waszych dziurach! Przeklęta banda magów, wiecznie tylko knujących!~
+@42   = ~Ach. Spójrz, mistrzu. Oto i oni.~
+@43   = ~Przeklęty głupiec...~
+@44   = ~Lepiej porozmawiaj z Niemainem.~
+@45   = ~Nie mam wam nic do powiedzenia. Idźcie już sobie.~
+@46   = ~Wszędzie mają swoje oczy i uszy. Trzymajcie się cieni.~
+@47   = ~Nie podróżujecie już z Xzarem? W takim razie jesteście mi zbędni. Żegnajcie.~
+@48   = ~Mamy mało czasu, więc słuchajcie uważnie. Wieści o jatce w Candlekeep rozchodzą się błyskawicznie. Płomienna Pięść już depcze wam po piętach, a Żelazny Tron wyznaczył nagrodę za wasze głowy za zamordowanie Rieltara i Bruna.~
+@49   = ~To nie ja ich zabiłem. To spisek Sarevoka!~ ~To nie ja ich zabiłam. To spisek Sarevoka!~
+@50   = ~Wiemy o tym aż za dobrze. Co jeszcze masz nam do przekazania?~
+@51   = ~To bez znaczenia. Dybią na wasze życie. Waszą jedyną szansą jest ich uprzedzić. Musicie szybko dowiedzieć się, co planuje Sarevok i gdzie się ukrywa.~
+@52   = ~Sytuacja w mieście wcale się nie poprawiła. Odkąd Scar zginął, Angelo Dosan, wierny pachołek Sarevoka, dowodzi Płomienną Pięścią, a książę Eltan dogorywa. Nie traćcie czasu!~
+@53   = ~Finał
+
+Agent Zhentarimów Niemain nie miał dla mnie dobrych wieści. Wygląda na to, że wszystko obraca się przeciwko nam, a triumf Sarevoka jest bliski.~

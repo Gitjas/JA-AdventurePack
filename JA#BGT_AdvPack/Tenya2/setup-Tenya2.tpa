@@ -16,9 +16,17 @@ COPY ~JA#BGT_AdvPack/Tenya2/JA#C03.ARE~ ~override~
 
 
 COPY ~JA#BGT_AdvPack/Tenya2/JA#SUTY1.CRE~ ~override~
+	SAY NAME1 @2130
+	SAY NAME2 @2131
 COPY ~JA#BGT_AdvPack/Tenya2/JA#SUTY2.CRE~ ~override~
+	SAY NAME1 @2132
+	SAY NAME2 @2133
 COPY ~JA#BGT_AdvPack/Tenya2/JA#SUTY3.CRE~ ~override~
+	SAY NAME1 @2130
+	SAY NAME2 @2131
 COPY ~JA#BGT_AdvPack/Tenya2/JA#SUTY4.CRE~ ~override~
+	SAY NAME1 @2132
+	SAY NAME2 @2133
 COPY ~JA#BGT_AdvPack/Tenya2/JA#CTENY.BAM~ ~override~
 COPY ~JA#BGT_AdvPack/Tenya2/JA#TENYA.BAM~ ~override~
 COPY ~JA#BGT_AdvPack/Tenya2/JA#TENYA.ITM~ ~override~

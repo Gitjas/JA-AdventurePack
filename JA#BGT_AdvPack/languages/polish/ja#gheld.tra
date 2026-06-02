@@ -1,0 +1,24 @@
+@0    = ~Ach, to wy. Mało kogo potrafię zdzierżyć tak dobrze jak was.~
+@1    = ~Daj mi ten stary pierścień, który masz przy sobie. Proszę.~
+@2    = ~W porządku. Bywaj.~
+@3    = ~Hmm, ten pierścień? Skoro tak wam na nim zależy, to go bierzcie. Hehe, mała Pilar pęknie ze złości, hehehe.~
+/* #15499 */
+@4    = ~Idźcie sobie gdzie indziej ze swoją pobożnością. Tu nie ma na to miejsca.~
+/* #15500 */
+@5    = ~Moja stara „przyjaciółka” coś za bardzo polubiła moje buty. Na imię jej Pilar i podejrzewam, że ukrywa się w gospodzie „Pod Pomocną Dłonią”, jeśli dobrze ją znam. Nie dbam o to jak, ale macie odzyskać dla mnie te buty.~
+@6    = ~Zobaczymy, co da się zrobić.~
+/* @7 -> journal entry @1037 */
+@8    = ~Nie mam zamiaru bawić się dla ciebie w złodzieja. Żegnam!~ ~Nie mam zamiaru bawić się dla ciebie w złodziejkę. Żegnam!~
+/* #15501 */
+@9    = ~Widzę, że nie macie jeszcze moich butów? Nie wystawiajcie dłużej na próbę mojej cierpliwości.~
+/* #15502 */
+@10   = ~Moje buty... Pozwólcie mi je wdziać na chwilę...~
+/* @11 -> journal entry @1038 */
+/* #15503 */
+@12   = ~Wykonaliście zadanie wzorowo. Macie tu dziewięćdziesiąt sztuk złota, byście mogli się zabawić...~
+/* #15504 */
+@13   = ~Ach, moje buty. Dobrze się spisaliście. Pozwólcie mi uleczyć wasze rany.~
+/* #15505 */
+@14   = ~Wasze powtarzające się wizyty są bardzo niedyskretne. Zaprzestańcie tego natychmiast.~
+/* #15506 */
+@15   = ~Czujecie się tacy dzielni, co?~

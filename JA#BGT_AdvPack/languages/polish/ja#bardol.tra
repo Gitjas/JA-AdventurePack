@@ -1,0 +1,20 @@
+@0    = ~Ach, przyjaciele! Dobrze was widzieć. Ludzie tacy jak wy nie mają się czego obawiać ze strony straży.~ 
+@1    = ~Ach, oto i bohaterowie Nashkel! Kawał dobrej roboty w tych kopalniach, doprawdy! Sami chcieliśmy wysłać tam kilku ludzi, ale nie mogliśmy nikogo oddelegować. Słyszałem, że Wrota Baldura mają przysłać posiłki do Beregostu.~
+@2    = ~Dziękujemy, musimy już iść.~
+@3    = ~Mogę zadać ci kilka pytań?~
+@4    = ~Ach, wróciliście. Bawcie się dobrze i nie sprawiajcie kłopotów w mieście.~
+@5    = ~Witajcie ponownie. Co was tym razem sprowadza do Nashkel?~
+@6    = ~Tak, oczywiście. O co chcecie zapytać?~
+@7    = ~Dzieje się w okolicy coś dziwnego?~
+/* @8 -> journal entry @1040 */
+@9    = ~Co wiesz o problemach w kopalniach?~
+/* @10 -> journal entry @1039 */
+@11   = ~Co możesz mi powiedzieć o samym Nashkel?~
+@12   = ~Och, w zasadzie to o nic. Bywaj.~
+@13   = ~Szukamy naszego byłego dowódcy, Brage'a. Pewnej nocy, w przypływie szału, zamordował żonę, dzieci i każdego, kto nawinął mu się pod rękę. Potem uciekł w góry. Wciąż gdzieś tam jest. Opłakujemy go tak samo jak jego ofiary...~
+@14   = ~Poza tym uganiamy się po okolicy za goblinami, xvartami i półorkami. Mamy pełne ręce roboty przy ochronie karawan i pobliskich gospodarstw.~
+@15   = ~Mam jeszcze jedno pytanie.~
+@16   = ~Dzięki, bywaj.~
+@17   = ~Nikt nie wie, dlaczego żelazo ostatnio kruszeje i do niczego się nie nadaje. Co więcej, krążą plotki, że w głębinach kopalni czają się demony.~
+@18   = ~Jesteśmy najbardziej wysuniętą na północ placówką Amn. Ze względu na oddalenie, Nashkel cieszy się sporą niezależnością. Zimą, gdy przełęcze w Chmurnych Szczytach zasypuje śnieg, jesteśmy całkowicie odcięci od reszty kraju.~
+@19   = ~Obecnie władzę sprawuje ród Ghastkillów – Berrun jest naszym burmistrzem – ale wiele innych amnijskich rodzin również ma tutaj swoich przedstawicieli.~

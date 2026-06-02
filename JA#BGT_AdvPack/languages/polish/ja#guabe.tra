@@ -1,0 +1,74 @@
+/* #363 */
+@5    = ~Lepiej zostańcie tutaj w Beregoście, przyjaciele. Drogi są bardzo niebezpieczne, ale biorąc pod uwagę tych rozbójników, podróżowanie to prawdziwe szaleństwo.~
+/* #9029 */
+@6    = ~Nie jesteście tu mile widziani!~
+/* #366 */
+@7    = ~Ruszajcie się, obywatelu.~
+/* #364 */
+@8    = ~Teoretycznie, jeżeli zaatakują was rozbójnicy, powinniście dać im czego tylko zażądają. Od trupa ciężko wydobyć jakiekolwiek informacje.~
+/* #6952 + title */
+@9    = ~Bandyci!
+
+Strażnicy w Beregoście powiedzieli nam, żebyśmy nie sprzeciwiali się żądaniom bandytów, jeżeli się na nich natkniemy.~
+/* #365 */
+@10   = ~A tak swoją drogą, gdyby ci przeklęci bandyci mnie napadli, dałbym im powąchać mój miecz! Przynajmniej po śmierci zostałbym bohaterem!~
+@11   = ~Witajcie!~
+@12   = ~Kim jesteś?~
+@13   = ~My również witamy. Musimy już iść. Bywaj.~
+@14   = ~Ostatnio podróżni i miejscowi donoszą, że na południowy zachód od Beregostu gromadzą się hordy zombie, rzekomo pod dowództwem niejakiego Bassilusa.~
+/* #362 */
+@15   = ~Ostatnio ginie dużo bydła. To zastanawiające. To mi nie wygląda na robotę bandytów.~
+@16   = ~Na farmach wokół Beregostu ginie bydło.~
+/* #368 */
+@17   = ~Bandyci, którzy grasują na drodze wzdłuż brzegu, są za dobrze zorganizowani jak na zwykłych rzezimieszków. Przysiągłbym, że to najemnicy, ale nie mówcie o tym nikomu, bo straciłbym pracę.~
+/* #369 */
+@18   = ~Moje ostrze i zbroja są tak zniszczone, że jeszcze chwila, a będą zupełnie bezużyteczne!~
+/* #370 */
+@19   = ~Jeżeli ten brak żelaza potrwa trochę dłużej, to chyba przyjdzie mi nosić skóry i wymachiwać maczugą! Straż jest bezsilna!~
+/* #6954 + title */
+@20   = ~Braki w dostawach żelaza
+
+Strażnicy w Beregoście obawiają się, że braki w dostawach żelaza uniemożliwią im wykonywanie obowiązków.~
+/* #372 */
+@21   = ~Zombie nie stanowią dużego problemu dla zaprawionych w boju żołnierzy, ale słyszałem, że Bassilus dobrze ich ćwiczy. Potrzeba czasu, żeby zdobyć przewagę.~
+/* #6956 */
+@22   = ~Szalony Bassilus
+
+Strażnik w Beregoście mówił coś o „Bassilusie” i o „zombie”.~
+/* #6950 */
+@23   = ~Jestem gwardzistą i strzegę spokoju w Beregoście. Ostatnio krąży tu wiele dziwnych plotek.~
+@24   = ~Jakie to plotki?~
+@25   = ~Wydarzyło się ostatnio w Beregoście coś dziwnego?~
+@26   = ~Co wiesz o kryzysie żelaza?~
+@27   = ~Co możesz mi powiedzieć o tych łotrach, przez których na Nadbrzeżnym Trakcie jest tak niebezpiecznie?~
+@28   = ~W porządku. Bywaj.~
+@29   = ~Nie mam czasu na pogaduszki, jestem na służbie.~
+@30   = ~Słuchaj no! Fajrant po pracy to najlepsza część dnia, a my chcemy się w spokoju napić, więc pilnuj własnego nosa!~
+@31   = ~Hej! Pogadaj z kimś innym.~
+@32   = ~Hm. Przestań wreszcie tak mielić ozorem!~
+@33   = ~Jako członek straży mam pewne przywileje, nawet przy barze. Czekaj na swoją kolej!~
+/* #371 */
+@34   = ~Pięć tysięcy sztuk złota! Na taki żołd musiałbym pracować całe życie!~
+@35   = ~Mówię ci! Stary Kelddath najwyraźniej głęboko sięgnął do świątynnego skarbca.~
+@36   = ~Żebyś wiedział! A my musimy pić te pomyje!~
+@37   = ~Z drugiej strony cieszę się, że nie musimy ruszać przeciwko temu szaleńcowi. Niech inni się z nim użerają!~
+@38   = ~Trzęsiesz portkami, co?! Haha! Mówię ci, ten gość nie jest nawet w połowie tak groźny, jak wszyscy myślą.~
+@39   = ~Skąd ta pewność?~
+/* #384 */
+@40   = ~Każdy, kto stawia czoło umarłym, musi być bardzo mężny. Szkoda, że większość tych, którzy zostali i walczyli, gdy Twierdza Zhentil padła pod oblężeniem, zniknęła w dziwnych okolicznościach.~
+@41   = ~Ja tam z chęcią pozwoliłbym temu facetowi zamienić parę słów z moim mieczem.~
+@42   = ~Stary blagier! Lepiej zamów następną kolejkę!~
+@43   = ~Podobno było ich trzydziestu. Wielkie chłopy!~
+@44   = ~Weszli do kopalń, wykopali stamtąd gobliny, demony i nie wiadomo co jeszcze.~
+@45   = ~Nam tutaj też by się tacy przydali.~
+@46   = ~Jasna sprawa! Z takimi zuchami w mig byśmy tych bandziorów stąd przepędzili i powiesili ich na najbliższym drzewie!~
+@47   = ~Mogliby nas też uwolnić od ducha w tej starej szkole. Na samą myśl o tym robi mi się niedobrze!~
+@48   = ~Napij się jeszcze piwa. To pomaga.~
+@49   = ~...więc dałem temu łajdakowi posmakować stali!~
+/* #367 */
+@50   = ~Pierwszy raz słyszę o rozbójnikach, których bardziej interesuje żelazo niż złoto. Coś tu jest nie tak.~
+@51   = ~Ciężkie czasy nastały.~
+@52   = ~Tak, kiedyś wszystko było lepsze.~
+@53   = ~Chcesz jeszcze jedno piwo?~
+@54   = ~A moja kolczuga rozpada się w rękach!~
+@55   = ~Dobra, ja stawiam tę kolejkę.~

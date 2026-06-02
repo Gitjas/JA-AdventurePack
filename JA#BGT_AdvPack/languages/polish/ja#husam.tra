@@ -1,0 +1,34 @@
+@0    = ~Znasz jakiś sposób, żeby dostać się do głównej siedziby Żelaznego Tronu?~
+@1    = ~No dobra, powiedz mi, Husam, kto właściwie dowodzi Żelaznym Tronem?~
+@2    = ~Znacie Krammacha Arhsstaffa? Sresztą to niewaszne. Jego *czka* dom leszy zaraz przy... eee... sytadeli Tronu. On jest blisko Rieltara... he, he... no wiesie. S jego piwnicy można przejść do piwnic Tronu.~
+/* first part of #16946 */
+@3    = ~To się zdarzy dziś w nocy! Jeśli im się powiedzie, to Sarevok zdobędzie kontrolę nad całym miastem. Musimy natychmiast ruszać i dotrzeć do książąt, zanim będzie za późno. Musimy koniecznie wejść do pałacu.~
+@4    = ~Husam i Złodzieje Cienia
+
+Nie ma czasu do stracenia! Atak na pozostałych książąt Wrót Baldura jest bliski. Husam i jego Złodzieje Cienia chcą pomóc zapobiec katastrofie. Spotkamy się z Husamem przed Pałacem Książęcym.~
+/* @5 + @6 is #16947 */
+@5    = ~No, jesteśmy na miejscu. Musimy dostać się do środka. Wy skorzystajcie z zaproszenia, które macie, a my spróbujemy wejść kanałami pod miastem. Z tego, co wiem, jest tam tajne przejście do pałacu, ale niestety pilnie strzeżone. I tu wchodzicie wy – będziecie musieli zdjąć te wszystkie bariery i pułapki i unieszkodliwić strażników.~
+/* second part of #16946 */
+@6    = ~Kiedy będziemy w środku, wtedy my, Złodzieje Cienia, wywołamy zamieszanie, abyście wy mogli dostać się do komnaty elekcyjnej. Zobaczcie, gdzie są sobowtórniaki i zabijcie ich. Pamiętaj, bądź pewny, którzy to są. Jeżeli trafisz dobrze, to przybiorą swoją prawdziwą formę, jeżeli trafisz źle, to znajdziesz się w prawdziwych kłopotach. Nie wiem, na ile nam się poszczęści, więc wszystko w twoich rękach.~
+@7    = ~Husam i Złodzieje Cienia
+
+Husam rozstawił już swoich ludzi. Są gotowi, by przeniknąć do pałacowych kanałów. Aby to się udało, musimy otworzyć im tajne przejście w piwnicy pałacu i pozbyć się tamtejszych strażników. Wszystko zależy teraz od nas.~
+@8    = ~Dobra robota! Poszło jak w zegarku. A jak tam wasze rozeznanie w pałacu? Ceremonia już się zaczęła?~
+@9    = ~Nie, jeszcze nie. Musimy sprawdzić jeszcze kilka rzeczy.~
+@10   = ~Przeszukaliśmy kwatery Sarevoka w pałacu i znaleźliśmy jego dziennik. To powinno wystarczyć, żeby przekonać książąt i szlachtę, że to on stoi za tym kryzysem i morderstwami.~
+@11   = ~To się streszczajcie! Kończcie szybko to, co macie do roboty, bo czasu zostało niewiele!~
+@12   = ~Moi ludzie i ja poczekamy tutaj, aż usłyszymy pierwsze odgłosy walki. Wtedy wpadniemy na górę, żeby was wesprzeć. Powodzenia nam wszystkim!~
+@13   = ~Husam i Złodzieje Cienia
+
+Otworzyliśmy tajne przejście do piwnicy i ludzie Husama są już w środku. Pomogą nam w walce, gdy tylko zdemaskujemy sobowtórniaki. Teraz musimy szybko wracać na górę i dalej badać pałac.~
+@14   = ~Dobra robota, przyjaciele. Teraz wracajcie i czekajcie na rozpoczęcie uroczystości. Gdy tylko pojawi się Sarevok ze swoją świtą, musicie obnażyć prawdę o sobowtórniakach i za wszelką cenę chronić życie pozostałych książąt, Belta i Lii.~
+@15   = ~Husam i Złodzieje Cienia
+
+Otworzyliśmy tajne przejście do piwnicy i ludzie Husama są już w środku. Pomogą nam w walce, gdy tylko zdemaskujemy sobowtórniaki. Teraz musimy szybko wracać na górę i czekać na przybycie Sarevoka oraz rozpoczęcie ceremonii.~
+@16   = ~Wracajcie na górę, szybko! Uroczystości zaraz się zaczną.~
+@17   = ~Udało się, <CHARNAME>! Złodzieje Cienia mają u ciebie dług wdzięczności. Ujawniłeś spisek Żelaznego Tronu, udowodniłeś winę Sarevoka i ocaliłeś nas przed straszliwą wojną.~ ~Udało się, <CHARNAME>! Złodzieje Cienia mają u ciebie dług wdzięczności. Ujawniłaś spisek Żelaznego Tronu, udowodniłaś winę Sarevoka i ocaliłaś nas przed straszliwą wojną.~
+@18   = ~Teraz musisz dopaść Sarevoka na własną rękę. Nasza robota tutaj skończona. Może znowu się spotkamy, jeśli kiedykolwiek zawitasz do Athkatli. Bywaj, <CHARNAME>, i powodzenia.~
+@19   = ~Husam i Złodzieje Cienia
+
+Husam podziękował nam za współpracę i życzył powodzenia w walce z Sarevokiem. Zdołaliśmy dostarczyć dowody na to, że Złodzieje Cienia nie odpowiadają za ostatnie morderstwa. Być może znów spotkam Husama, jeśli kiedyś trafię do Athkatli.~
+// @20	= ~Tak zrobię. Dzięki za informacje.~
