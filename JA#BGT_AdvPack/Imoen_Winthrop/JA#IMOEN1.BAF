@@ -3,6 +3,7 @@ IF
 	AreaCheck("%Candlekeep_Inn_L1%")
 	Global("JA#IMOEN","LOCALS",0)
 	GlobalLT("CHAPTER","GLOBAL",%tutu_chapter_1%)
+	!InParty("%bg1_imoen%")
 THEN
 	RESPONSE #100
 		SetGlobal("JA#IMOEN","LOCALS",1)
@@ -15,6 +16,7 @@ IF
 	AreaCheck("%Candlekeep_Inn_L2%")
 	Global("JA#IMOEN","LOCALS",1)
 	GlobalLT("CHAPTER","GLOBAL",%tutu_chapter_1%)
+	!InParty("%bg1_imoen%")
 THEN
 	RESPONSE #100
 		SetGlobal("JA#IMOEN","LOCALS",2)
